@@ -206,12 +206,12 @@ remote:
 
 camera: !include camera.yaml
 
-# custom_updater:
-  # track:
-    # - cards
-    # - components
-  # card_urls:
-    # - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+custom_updater:
+  track:
+    - cards
+    - components
+  card_urls:
+    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
     
 # bmw_connected_drive:
  # name:

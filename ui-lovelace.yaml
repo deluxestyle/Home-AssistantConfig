@@ -1,6 +1,8 @@
 resources:
   - url: /local/mini-media-player/mini-media-player.js?v=0.9.2
-    type: module  
+    type: module
+  - url: /local/tracker-card.js?v=0.1.5
+    type: js
 
 title: Home
 views:
@@ -311,3 +313,8 @@ views:
           - sensor.pws_weather
           - sensor.pws_temp_c
           - sensor.pws_feelslike_c
+      - type: custom:tracker-card
+        title: Updates
+        trackers:
+          - sensor.custom_card_tracker
+          - sensor.custom_component_tracker
