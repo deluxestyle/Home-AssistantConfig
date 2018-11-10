@@ -1,0 +1,14 @@
+  # auto_heat_hour:
+    # name: Stunden
+    # icon: mdi:timer
+    # initial: 6
+    # min: 0
+    # max: 23
+    # step: 1
+  # auto_heat_min:
+    # name: Minuten
+    # icon: mdi:timer
+    # initial: 5
+    # min: 0
+    # max: 55
+    # step: 5

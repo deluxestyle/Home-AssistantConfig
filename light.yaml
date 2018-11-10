@@ -1,0 +1,34 @@
+#### Hue ####
+# - platform: hue
+  # host: 192.168.200.52
+  
+#### Sonoff ####
+- platform: mqtt
+  name: "sonoff_office"
+  state_topic: "stat/sonoff/POWER"
+  command_topic: "cmnd/sonoff/POWER"
+  availability_topic: "tele/hass1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+  
+#### groups ####
+- platform: group
+  name: lights_living_room
+  entities:
+      - light.decke
+      - light.tisch
+      - light.leselampe
+      
+- platform: group
+  name: lights_all
+  entities:
+      - light.decke
+      - light.tisch
+      - light.leselampe
+      - light.schlafzimmer
+      - light.gateway_light_7811dcb258d1
+      - light.sonoff_office

@@ -1,0 +1,23 @@
+sonos_group:
+    name: Sonos Gruppe
+    icon: mdi:speaker-wireless
+
+camera_cctv:
+    name: Kameraaufnahme
+    icon: mdi:cctv
+    
+automation_xiaomi_vacuum:
+    name: Staubsaugerautomatisierung
+    icon: mdi:home-assistant
+    
+automation_radiator:
+    name: Heizungsautomatisierung
+    icon: mdi:home-assistant
+    
+automation_light:
+    name: Lichtautomatisierung
+    icon: mdi:home-assistant
+
+automation_sonos:
+    name: Sonosautomatisierung
+    icon: mdi:home-assistant

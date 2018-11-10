@@ -1,0 +1,289 @@
+'1532173931522':
+  alias: Sonos_Start
+  sequence:
+  - data:
+      entity_id: media_player.bad, media_player.schlafzimmer
+      master: media_player.schlafzimmer
+    service: media_player.sonos_join
+  - data:
+      entity_id: media_player.schlafzimmer
+      source: Superfly FM
+    service: media_player.select_source
+  - data:
+      entity_id: media_player.bad, media_player.schlafzimmer
+      volume_level: '0.15'
+    service: media_player.volume_set
+'1532175994947':
+  alias: Sonos_Stop
+  sequence:
+  - data:
+      entity_id: media_player.bad, media_player.schlafzimmer
+    service: media_player.media_stop
+'1532275617247':
+  alias: Harman Kardon AVR ausschalten
+  sequence:
+  - data:
+      entity_id: media_player.harman_kardon_avr
+    service: media_player.turn_off
+'1532545372807':
+  alias: Harman Kardon AVR - lauter
+  sequence:
+  - data:
+      entity_id: media_player.harman_kardon_avr
+    service: media_player.volume_up
+'1532545486902':
+  alias: Harman Kardon AVR - leiser
+  sequence:
+  - data:
+      entity_id: media_player.harman_kardon_avr
+    service: media_player.volume_down
+'1532545541640':
+  alias: Harman Kardon AVR - Ton aus
+  sequence:
+  - data:
+      entity_id: media_player.harman_kardon_avr
+      is_volume_muted: 'true'
+    service: media_player.volume_mute
+'1533660351040':
+  alias: Harman Kardon AVR - Ton an
+  sequence:
+  - data:
+      entity_id: media_player.harman_kardon_avr
+      is_volume_muted: 'false'
+    service: media_player.volume_mute
+'1534539954375':
+  alias: Xiaomi Staubsauger einschalten
+  sequence:
+  - data:
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+    service: vacuum.turn_on
+'1534540060262':
+  alias: Xiaomi Staubsauger ausschalten
+  sequence:
+  - data:
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+    service: vacuum.turn_off
+'1534621188695':
+  alias: sonos_bed_room_alarm_enable
+  sequence:
+  - data:
+      alarm_id: '324'
+      enabled: 'true'
+      entity_id: media_player.schlafzimmer
+    service: media_player.sonos_update_alarm
+'1534621226775':
+  alias: sonos_bed_room_alarm_disable
+  sequence:
+  - data:
+      alarm_id: '324'
+      enabled: 'false'
+      entity_id: media_player.schlafzimmer
+    service: media_player.sonos_update_alarm
+'1535747172583':
+  alias: Heizung Schlafzimmer sperren
+  sequence:
+  - data:
+      entity_id: homematic.ccu2
+      name: block_bed_room
+      value: 'true'
+    service: homematic.set_variable_value
+'1535747298118':
+  alias: Heizung Schlafzimmer entsperren
+  sequence:
+  - data:
+      entity_id: homematic.ccu2
+      name: block_bed_room
+      value: 'false'
+    service: homematic.set_variable_value
+'1535749160991':
+  alias: Heizung Wohnzimmer sperren
+  sequence:
+  - data:
+      entity_id: homematic.ccu2
+      name: block_living_room
+      value: 'true'
+    service: homematic.set_variable_value
+'1535749518298':
+  alias: Heizung Wohnzimmer entsperren
+  sequence:
+  - data:
+      entity_id: homematic.ccu2
+      name: block_living_room
+      value: 'false'
+    service: homematic.set_variable_value
+'1535749599600':
+  alias: Heizung Büro sperren
+  sequence:
+  - data:
+      entity_id: homematic.ccu2
+      name: block_office
+      value: 'true'
+    service: homematic.set_variable_value
+'1535749633757':
+  alias: Heizung Büro entsperren
+  sequence:
+  - data:
+      entity_id: homematic.ccu2
+      name: block_office
+      value: 'false'
+    service: homematic.set_variable_value
+'1538057479069':
+  alias: Fernseher ausschalten
+  sequence:
+  - data:
+      entity_id: remote.harmony_hub
+    service: remote.turn_off
+'1538058955033':
+  alias: Entertainment - SmartTV
+  sequence:
+  - data:
+      activity: SmartTV
+      entity_id: remote.harmony_hub
+    service: remote.turn_on
+'1538068809592':
+  alias: Entertainment - Telekom
+  sequence:
+  - data:
+      activity: Fernsehen Telekom
+      entity_id: remote.harmony_hub
+    service: remote.turn_on
+'1538072504227':
+  alias: Entertainment - Musik
+  sequence:
+  - data:
+      activity: Musik hören
+      entity_id: remote.harmony_hub
+    service: remote.turn_on
+'1538128738934':
+  alias: Samsung off
+  sequence:
+  - data:
+      command: PowerOff
+      device: '57574101'
+      entity_id: remote.harmony_hub
+    service: remote.send_command
+'1538129107690':
+  alias: Harman Kardon AVR off
+  sequence:
+  - data:
+      command: PowerOff
+      device: '57574103'
+      entity_id: remote.harmony_hub
+    service: remote.send_command
+'1538143115062':
+  alias: Telekom MR 400 off
+  sequence:
+  - data:
+      command: PowerToggle
+      device: '57574102'
+      entity_id: remote.harmony_hub
+    service: remote.send_command
+'1538143893265':
+  alias: Heizung Büro ausschalten
+  sequence:
+  - data:
+      entity_id: climate.int0000002
+      temperature: 4.5
+    service: climate.set_temperature
+'1538143929416':
+  alias: Heizung Wohnzimmer ausschalten
+  sequence:
+  - data:
+      entity_id: climate.oeq1696358
+      temperature: 4.5
+    service: climate.set_temperature
+'1538143964007':
+  alias: Heizung Schlafzimmer ausschalten
+  sequence:
+  - data:
+      entity_id: climate.oeq1696369
+      temperature: 4.5
+    service: climate.set_temperature
+'1538167052403':
+  alias: Telekom MR 400 on
+  sequence:
+  - data:
+      command: PowerToggle
+      device: '57574102'
+      entity_id: remote.harmony_hub
+    service: remote.send_command
+'1538167144011':
+  alias: Samsung on
+  sequence:
+  - data:
+      command: PowerOn
+      device: '57574101'
+      entity_id: remote.harmony_hub
+    service: remote.send_command
+'1538167294875':
+  alias: Harman Kardon AVR on
+  sequence:
+  - data:
+      command: PowerOn
+      device: '57574103'
+      entity_id: remote.harmony_hub
+    service: remote.send_command
+'1538501968289':
+  alias: Heizung Bad sperren
+  sequence:
+  - data:
+      entity_id: homematic.ccu2
+      name: block_bath
+      value: 'true'
+    service: homematic.set_variable_value
+'1538502054685':
+  alias: Heizung Bad entsperren
+  sequence:
+  - data:
+      entity_id: homematic.ccu2
+      name: block_bath
+      value: 'false'
+    service: homematic.set_variable_value
+'1538502214360':
+  alias: Heizung Bad ausschalten
+  sequence:
+  - data:
+      entity_id: climate.oeq1714751
+      temperature: 4.5
+    service: climate.set_temperature
+'1538646823835':
+  alias: Heizung Bad einschalten
+  sequence:
+  - data:
+      entity_id: climate.oeq1714751
+      temperature: 22
+    service: climate.set_temperature
+'1540232132608':
+  alias: Heizung StandBy
+  sequence:
+  - data:
+      entity_id: climate.int0000002
+      temperature: '19'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.oeq1696358
+      temperature: '17'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.oeq1696369
+      temperature: '17'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.oeq1714751
+      temperature: 4.5
+    service: climate.set_temperature
+'1541097052191':
+  alias: Xiaomi - Alarm ausschalten
+  sequence:
+  - data:
+      gw_mac: 7811DCB258D1
+    service: xiaomi_aqara.stop_ringtone
+'1541264856783':
+  alias: Heizung ausschalten
+  sequence:
+  - alias: ''
+    data: {}
+    service: script.1538502214360
+  - service: script.1538143893265
+  - service: script.1538143964007
+  - service: script.1538143929416

@@ -1,0 +1,41 @@
+scenes_living_room:
+    name: "Szenen"
+    options:
+      - --
+      - Wohnzimmer Licht
+      - Sehr hell
+      - Gedimmt
+      - Lesen
+      - Konzentrieren
+      - Energie tanken
+      - Entspannen
+      - Nachtlicht
+    initial: '--'
+    
+scenes_bed_room:
+    name: "Szenen"
+    options:
+      - --
+      - Hell
+      - Nachtlicht
+      - Gedimmt
+    initial: '--'
+
+master_sonos:
+    name: Master Sonos Player
+    icon: mdi:itunes
+    options:
+      - Schlafzimmer
+      - Bad
+      
+avr_source:
+    name: AVR Quelle
+    icon: mdi:playlist-play
+    options:
+        - --
+        - Telekom
+        - TV
+        - AirPlay
+        - Turntable
+        - vTurner
+        - Home Network

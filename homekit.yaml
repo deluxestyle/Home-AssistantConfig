@@ -1,0 +1,9 @@
+filter:
+    include_entities:
+      - light.buro
+      - light.flur
+      - climate.int0000002
+      - climate.oeq1696358
+      - climate.oeq1696369
+      - climate.oeq1701003
+      - climate.oeq1714751

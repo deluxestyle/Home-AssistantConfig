@@ -1,0 +1,36 @@
+2018-08-18 11:49:55.543865 WARNING css: /home exists, but is not writeable, owner: root
+2018-08-18 11:49:55.549813 WARNING javascript: /home exists, but is not writeable, owner: root
+2018-08-18 11:51:09.279623 INFO Compiling dashboard 'Hello'
+2018-08-18 11:51:11.583400 INFO function [get_dashboard] finished in 2326 ms
+2018-08-18 11:51:12.617519 INFO HADashboard: New dashboard connected: Hello Panel
+2018-08-18 11:51:19.150526 INFO HADashboard: Dashboard disconnected
+2018-08-18 11:51:34.591874 WARNING css: /home exists, but is not writeable, owner: root
+2018-08-18 11:51:34.598114 WARNING javascript: /home exists, but is not writeable, owner: root
+2018-08-18 11:53:23.589252 WARNING css: /home exists, but is not writeable, owner: root
+2018-08-18 11:53:23.596466 WARNING javascript: /home exists, but is not writeable, owner: root
+2018-08-18 11:57:33.970247 INFO function [get_dashboard] finished in 154 ms
+2018-08-18 11:57:34.321240 INFO HADashboard: New dashboard connected: Hello Panel
+2018-08-18 11:59:57.836534 INFO HADashboard: Dashboard disconnected
+2018-08-18 12:00:00.248040 INFO Compiling dashboard 'dashboard'
+2018-08-18 12:00:01.878859 INFO function [get_dashboard] finished in 1650 ms
+2018-08-18 12:00:02.082441 INFO HADashboard: New dashboard connected: Main Panel
+2018-08-18 12:00:04.166483 INFO HADashboard: Dashboard disconnected
+2018-08-18 12:01:24.003435 INFO Compiling dashboard 'dashboard'
+2018-08-18 12:01:25.032054 WARNING Unable to find widget definition for 'media_player'
+2018-08-18 12:01:25.855597 INFO function [get_dashboard] finished in 1877 ms
+2018-08-18 12:01:26.175629 INFO HADashboard: New dashboard connected: Main Panel
+2018-08-18 12:02:28.006140 INFO Compiling dashboard 'dashboard'
+2018-08-18 12:02:29.986420 INFO function [get_dashboard] finished in 2001 ms
+2018-08-18 12:02:30.001328 INFO HADashboard: Dashboard disconnected
+2018-08-18 12:02:30.268818 INFO HADashboard: New dashboard connected: Main Panel
+2018-08-18 12:03:35.693140 INFO HADashboard: Dashboard disconnected
+2018-08-18 12:06:33.850025 INFO function [get_dashboard] finished in 161 ms
+2018-08-18 12:06:34.182648 INFO HADashboard: New dashboard connected: Main Panel
+2018-08-18 12:10:52.896336 INFO Compiling dashboard 'dashboard'
+2018-08-18 12:10:54.511023 INFO function [get_dashboard] finished in 1631 ms
+2018-08-18 12:10:54.523942 INFO HADashboard: Dashboard disconnected
+2018-08-18 12:10:54.857919 INFO HADashboard: New dashboard connected: Main Panel
+2018-08-18 12:13:15.402450 INFO Compiling dashboard 'dashboard'
+2018-08-18 12:13:17.146490 INFO function [get_dashboard] finished in 1760 ms
+2018-08-18 12:13:17.158763 INFO HADashboard: Dashboard disconnected
+2018-08-18 12:13:17.500712 INFO HADashboard: New dashboard connected: Main Panel

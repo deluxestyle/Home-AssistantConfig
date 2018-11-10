@@ -1,0 +1,313 @@
+resources:
+  - url: /local/mini-media-player/mini-media-player.js?v=0.9.1
+    type: module  
+
+title: Home
+views:
+##### Licht #####
+  - title: Licht
+    id: light
+    icon: mdi:ceiling-light
+    cards:
+      - type: entities
+        title: Licht
+        show_header_toggle: false
+        entities:
+          - light.lights_all
+          - input_boolean.automation_light
+      - type: entities
+        title: Wohnzimmer
+        show_header_toggle: false
+        entities:
+          - light.lights_living_room
+          - light.tisch
+          - light.decke
+          - light.leselampe
+          - input_select.scenes_living_room
+      - type: entities
+        title: Schlafzimmer
+        show_header_toggle: false
+        entities:
+          - light.schlafzimmer
+          - input_select.scenes_bed_room
+      - type: entities
+        title: Büro
+        show_header_toggle: false
+        entities:
+          - light.sonoff_office
+      - type: entities
+        title: Flur
+        show_header_toggle: false
+        entities:
+          - light.gateway_light_7811dcb258d1
+          - sensor.illumination_7811dcb258d1
+
+##### Heizung #####
+  - title: Heizung
+    id: radiator
+    icon: mdi:radiator
+    cards:
+      - type: entities
+        title: Bad
+        show_header_toggle: false
+        entities:
+          - climate.oeq1714751
+          - script.1538646823835
+          - script.1538502214360
+          - switch.radiator_bath_keylock
+          - type: section
+          - automation.heizung_bad_timer
+          - input_datetime.radiator_bath_1
+          - type: section
+          - sensor.temperature_158d00023258bd
+          - sensor.humidity_158d00023258bd
+          - sensor.valve_bath
+          - binary_sensor.door_window_sensor_158d00022f13a0
+      - type: entities
+        title: Wohnzimmer
+        show_header_toggle: false
+        entities:
+          - climate.oeq1696358
+          - script.1538143929416
+          - switch.radiator_living_room_keylock
+          - type: section
+          - sensor.temperature_158d0001b8c998
+          - sensor.humidity_158d0001b8c998
+          - sensor.valve_living_room
+      - type: entities
+        title: Schlafzimmer
+        show_header_toggle: false
+        entities:
+          - climate.oeq1696369
+          - script.1538143964007
+          - switch.radiator_bed_room_keylock
+          - type: section
+          - sensor.temperature_158d0001b8c96c
+          - sensor.humidity_158d0001b8c96c
+          - sensor.valve_bed_room
+      - type: entities
+        title: Büro
+        show_header_toggle: false
+        entities:
+          - climate.int0000002
+          - script.1538143893265
+          - switch.radiator_office_keylock
+          - type: section
+          - sensor.oeq1667238_temperature
+          - sensor.oeq1667238_humidity
+          - sensor.valve_office
+      - type: entities
+        title: Küche
+        show_header_toggle: false
+        entities:
+          - sensor.temperature_158d0002239fb5
+          - sensor.humidity_158d0002239fb5
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - input_boolean.automation_radiator
+          - automation.heizung_abwesenheitsschaltung
+          - script.1540232132608
+          - script.1541264856783 
+          
+##### Staubsauger #####
+  - title: Staubsauger
+    id: vacuum
+    icon: mdi:robot-vacuum
+    cards:
+      - type: entities
+        title: Staubsauger
+        show_header_toggle: false
+        entities:
+          - vacuum.xiaomi_vacuum_cleaner
+          #- sensor.xiaomi_vacuum_status
+          - type: section
+          - counter.xiaomo_runs
+          - sensor.xiaomi_vacum_side_brush_left
+          - sensor.xiaomi_vacum_sensor_dirty_left
+          - sensor.xiaomi_vacum_main_brush_left
+          - sensor.xiaomi_vacum_filter_left
+          - type: section
+          - automation.xiaomi_staubsauger_automatisch_starten
+          - automation.xiaomi_staubsauger_taglich_saugen
+          - input_boolean.automation_xiaomi_vacuum
+
+##### Entertainment #####
+  - title: Entertainment
+    id: entertainment
+    icon: mdi:arrow-right-drop-circle-outline
+    cards:
+      - type: entities
+        title: Wohnzimmer Multimedia
+        show_header_toggle: false
+        entities:
+          - light.steckdose
+          - type: section
+          - sensor.remote_state
+          - switch.samsung_tv
+          - switch.telekom_mr_400
+          - switch.avr_151
+          - input_select.avr_source
+          - type: custom:mini-media-player
+            entity: media_player.harman_kardon_avr
+            hide_controls: true
+            volume_stateless: true
+            hide_power: true
+            group: true
+          - type: section
+          - script.1538058955033
+          - script.1538068809592
+          - script.1538072504227
+          - script.1538057479069
+      - type: entities
+        title: Sonos
+        show_header_toggle: false
+        entities:
+          - type: custom:mini-media-player
+            entity: media_player.bad
+            icon: 'mdi:cast'
+            artwork_border: true
+            power_color: true
+            show_source: true
+            group: true
+          - type: section
+          - type: custom:mini-media-player
+            entity: media_player.schlafzimmer
+            icon: 'mdi:cast'
+            artwork_border: true
+            power_color: true
+            show_source: true
+            group: true
+          - type: section
+          - script.1532173931522
+          - script.1532175994947
+          - type: section
+          - script.1534621188695
+          - script.1534621226775
+          - type: section
+          - input_boolean.sonos_group
+          - input_select.master_sonos
+          - type: section
+          - input_boolean.automation_sonos
+
+##### Steckdosen #####
+  - title: Steckdosen
+    id: socket
+    icon: mdi:power-socket-eu
+    cards:
+      - type: entities
+        title: Steckdosen
+        show_header_toggle: false
+        entities:
+          - light.steckdose
+          - light.steckdose_3
+          - light.steckdose_2
+          - light.onoff_plug_1
+
+##### Überwachung #####
+  - title: Überwachung
+    id: cctv
+    icon: mdi:cctv
+    cards:
+      - type: entities
+        title: Bewegung
+        show_header_toggle: flase
+        entities:
+          - binary_sensor.motion_sensor_158d00023e77cb
+          - sensor.illumination_158d00023e77cb
+          - type: section
+          - automation.bewegungsmelder__alarm
+          - script.1541097052191
+          - type: section
+          - automation.benachrichtigung__bewegung_erkannt
+      - type: entities
+        title: Überwachung
+        show_header_toggle: false
+        entities:
+          - light.onoff_plug_1
+          - input_boolean.camera_cctv
+      - type: conditional
+        conditions:
+          - entity: light.onoff_plug_1
+            state: "on"
+        card:
+          type: picture-entity
+          entity: camera.ffmpeg
+          camera_image: camera.ffmpeg
+          show_info: true
+          tap_action: dialog
+          title: Kamera
+
+##### Auto ##### 
+  # - title: BMW X2
+    # icon: mdi:car-hatchback
+    # cards:
+      # - type: entities
+        # title: BMW X2 Funktionen
+        # show_header_toggle: false
+        # entities:
+          # - lock.x2_sdrive18i_lock
+          # - script.1536178184062
+          # - script.1536178244890
+          # - script.1536178219164
+          # - script.1536178274313
+      # - type: entities
+        # title: "BMW X2 Übersicht"
+        # show_header_toggle: false
+        # entities:
+          # - binary_sensor.x2_sdrive18i_condition_based_services
+          # - binary_sensor.x2_sdrive18i_door_lock_state
+          # - binary_sensor.x2_sdrive18i_lids
+          # - binary_sensor.x2_sdrive18i_windows
+          # - sensor.x2_sdrive18i_mileage
+          # - sensor.x2_sdrive18i_remaining_fuel
+          # - sensor.x2_sdrive18i_remaining_range_total
+          # - binary_sensor.x2_sdrive18i_lights_parking
+          # - device_tracker.x2_sdrive18i
+      # - type: map
+        # entities:
+          # - entity: device_tracker.x2_sdrive18i
+          # - zone.home
+        # aspect_ratio: 50%
+
+##### Sonstiges #####
+  - title: Sonstiges
+    id: other
+    icon: mdi:library-books
+    cards:
+      - type: entities
+        title: Anwesenheit
+        show_header_toggle: false
+        entities:
+          - device_tracker.iphone8
+          - device_tracker.anitasiphone
+      - type: entities
+        title: FritzBox
+        show_header_toggle: false
+        entities:
+          - sensor.fritz_netmonitor
+      - type: entities
+        title: Sensoren
+        show_header_toggle: false
+        entities:
+          - sensor.ccu_servicemessages
+          - sensor.pressure_158d0002239fb5
+          - sensor.pressure_158d00023258bd
+      - type: entities
+        title: Sonnenstand
+        show_header_toggle: true
+        entities:
+          - sun.sun
+      - type: entities
+        title: HA Status
+        show_header_toggle: true
+        entities:
+          - sensor.online_time
+          - sensor.ssl_certificate_expiry
+      - type: entities
+        title: Wetter
+        show_header_toggle: false
+        entities:
+          - sensor.pws_weather
+          - sensor.pws_temp_c
+          - sensor.pws_feelslike_c

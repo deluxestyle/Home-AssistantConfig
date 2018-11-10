@@ -1,0 +1,285 @@
+light.bad:
+  hidden: true
+light.buro:
+  hidden: true
+light.all_hue_lights:
+  hidden: true
+light.schlafzimmer_1:
+  hidden: true
+light.schlafzimmer_2:
+  hidden: true
+media_player.bad:
+  homebridge_visible: 'true'
+media_player.schlafzimmer:
+  homebridge_visible: 'true'
+light.steckdose:
+  effect_list:
+  - ''
+  homebridge_visible: 'true'
+  icon: mdi:power-socket-eu
+light.steckdose_2:
+  effect_list:
+  - ''
+  friendly_name: Sonstige Steckdose
+  homebridge_visible: 'true'
+  icon: mdi:power-socket-eu
+climate.hygrometer:
+  homebridge_visible: 'true'
+vacuum.xiaomi_vacuum_cleaner:
+  homebridge_visible: 'true'
+climate.oeq1696358:
+  friendly_name: Wohnzimmer Heizung
+  homebridge_visible: 'true'
+  icon: mdi:radiator
+climate.oeq1696369:
+  friendly_name: Schlafzimmer Heizung
+  homebridge_visible: 'true'
+  icon: mdi:radiator
+sensor.oeq1667238_humidity:
+  friendly_name: Luftfeuchtigkeit Büro
+  homebridge_visible: 'true'
+sensor.oeq1667238_temperature:
+  friendly_name: Temperatursensor Büro
+  homebridge_visible: 'true'
+climate.int0000002:
+  friendly_name: Heizung Büro
+  homebridge_visible: 'true'
+  icon: mdi:radiator
+sensor.valve_office:
+  icon: mdi:fan
+sensor.valve_bed_room:
+  icon: mdi:fan
+sensor.valve_living_room:
+  icon: mdi:fan
+device_tracker.anitasiphone:
+  friendly_name: iPhone Anita
+sensor.temperature_158d0001b8c96c:
+  friendly_name: Temperatursensor Schlafzimmer
+  homebridge_visible: 'true'
+sensor.temperature_158d0001b8c998:
+  friendly_name: Temperatursensor Wohnzimmer
+  homebridge_visible: 'true'
+sensor.humidity_158d0001b8c96c:
+  friendly_name: Luftfeuchtigkeit Schlafzimmer
+  homebridge_visible: 'true'
+  icon: mdi:water-percent
+sensor.humidity_158d0001b8c998:
+  friendly_name: Luftfeuchtigkeit Wohnzimmer
+  homebridge_visible: 'true'
+  icon: mdi:water-percent
+light.gateway_light_7811dcb258d1:
+  friendly_name: Xiaomi Nachtlicht
+  homebridge_visible: 'true'
+sensor.illumination_7811dcb258d1:
+  friendly_name: Lichtmesser
+switch.lights_living_room:
+  friendly_name: Wohnzimmer Licht
+  icon: mdi:lightbulb-on
+light.hue_white_lamp_1:
+  friendly_name: Büro Licht
+switch.lights_all:
+  friendly_name: alle Lichter
+  icon: mdi:lightbulb-on
+device_tracker.iphone8:
+  friendly_name: iPhone Wolfgang
+sensor.humidity_158d0002239fb5:
+  friendly_name: Luftfeuchtigkeit Küche
+  icon: mdi:water-percent
+sensor.pressure_158d0002239fb5:
+  friendly_name: Luftdruck Küche
+  icon: mdi:gauge
+sensor.temperature_158d0002239fb5:
+  friendly_name: Temperatursensor Küche
+group.battery_stats:
+  control: hidden
+  icon: mdi:battery-50´
+light.sonoff_office:
+  friendly_name: Licht Büro
+  homebridge_visible: 'true'
+sensor.online_time:
+  friendly_name: HA Time Online
+light.lights_all:
+  friendly_name: Alle Lichter
+light.lights_living_room:
+  friendly_name: Wohnzimmer Lichter
+group.bed_room:
+  control: hidden
+  order: 3
+group.others:
+  control: hidden
+  order: 4
+group.devices:
+  control: hidden
+group.diagram_humidity:
+  control: hidden
+group.family:
+  control: hidden
+group.fritz:
+  control: hidden
+group.kitchen:
+  control: hidden
+  order: 7
+group.weather:
+  control: hidden
+  order: 8
+group.light:
+  control: hidden
+group.lights_bed_room:
+  control: hidden
+group.lights_floor:
+  control: hidden
+  order: 6
+group.lights_group:
+  control: hidden
+  order: 1
+group.lights_living_room:
+  control: hidden
+group.lights_office:
+  control: hidden
+group.living_room:
+  control: hidden
+  order: 2
+group.music:
+  control: hidden
+  homebridge_visible: 'true'
+group.office:
+  control: hidden
+  order: 5
+group.presence:
+  control: hidden
+group.radiator:
+  control: hidden
+sensor.battery_radiator_office_1:
+  icon: mdi:battery-50
+sensor.battery_radiator_office_2:
+  icon: mdi:battery-50
+sensor.battery_radiator_bedroom:
+  icon: mdi:battery-50
+sensor.battery_radiator_livingroom:
+  icon: mdi:battery-50
+sensor.battery_sensor_bedroom:
+  icon: mdi:battery-50
+sensor.battery_sensor_livingroom:
+  icon: mdi:battery-50
+sensor.battery_sensor_kitchen:
+  icon: mdi:battery-50
+sensor.battery_sensor_button_1:
+  icon: mdi:battery-50
+sensor.battery_sensor_button_2:
+  icon: mdi:battery-50
+sensor.pws_temp_c:
+  friendly_name: Temperatur
+sensor.pws_feelslike_string:
+  friendly_name: gefühlte Temperatur
+sensor.pws_feelslike_c:
+  friendly_name: gefühlte Temperatur
+sensor.pws_weather:
+  friendly_name: Zusammenfassung
+counter.xiaomo_runs:
+  friendly_name: 'Gesaugt heute:'
+group.vacuum:
+  control: hidden
+group.vacuum_group:
+  control: hidden
+sensor.xiaomi_vacum_main_brush_left:
+  friendly_name: Staubsauger Hauptbürste
+sensor.xiaomi_vacum_side_brush_left:
+  friendly_name: Staubsauger Seitenbürste
+group.power_sockets:
+  control: hidden
+  friendly_name: 'Steckdosen '
+light.steckdose_3:
+  homebridge_visible: 'true'
+  icon: mdi:printer
+light.onoff_plug_1:
+  icon: mdi:cctv
+group.power_sockets_group:
+  control: hidden
+script.1532173931522:
+  friendly_name: 'Sonos: Superfly FM starten'
+  homebridge_visible: 'true'
+  icon: mdi:play
+script.1532175994947:
+  friendly_name: Sonos ausschalten
+  homebridge_visible: 'true'
+  icon: mdi:stop
+script.1532275617247:
+  homebridge_visible: 'true'
+  icon: mdi:power
+script.1534621188695:
+  friendly_name: Wecker Schlafzimmer einschalten
+  icon: mdi:alarm
+script.1534621226775:
+  friendly_name: Wecker Schlafzimmer ausschalten
+  icon: mdi:alarm-off
+input_boolean.camera_cctv:
+  friendly_name: Aufnahme
+group.radiator_living_room:
+  control: hidden
+group.radiator_bed_room:
+  control: hidden
+group.radiator_office:
+  control: hidden
+script.1536178184062:
+  icon: mdi:bullhorn
+script.1536178219164:
+  icon: mdi:air-conditioner
+script.1536178244890:
+  icon: mdi:flashlight
+script.1536178274313:
+  icon: mdi:update
+lock.x2_sdrive18i_lock:
+  friendly_name: X2 Ent-/Verriegeln
+group.all_automations:
+  control: hidden
+  friendly_name: Automatisierungen
+  hidden: false
+group.all_scripts:
+  control: hidden
+  friendly_name: Skripte
+  hidden: false
+input_select.avr_source:
+  icon: mdi:playlist-play
+sensor.humidity_158d00023258bd:
+  friendly_name: Luftfeuchtigkeit
+  icon: mdi:water-percent
+sensor.temperature_158d00023258bd:
+  friendly_name: Temperatur
+  icon: mdi:thermometer
+sensor.pressure_158d00023258bd:
+  friendly_name: Luftdruck Bad
+  icon: mdi:gauge
+counter.counter_mailbox:
+  friendly_name: Post
+  icon: mdi:mailbox
+sensor.remote_state:
+  friendly_name: Aktuell
+script.1538143893265:
+  icon: mdi:radiator-off
+script.1538143964007:
+  icon: mdi:radiator-off
+script.1538143929416:
+  icon: mdi:radiator-off
+sensor.valve_bath:
+  icon: mdi:fan
+climate.oeq1714751:
+  homebridge_visible: 'true'
+  icon: mdi:radiator
+script.1538502214360:
+  icon: mdi:radiator-off
+script.1538646823835:
+  icon: mdi:radiator
+script.1538068809592:
+  icon: mdi:television
+script.1538058955033:
+  icon: mdi:television-guide
+script.1538072504227:
+  icon: mdi:music
+script.1538057479069:
+  icon: mdi:television-off
+input_datetime.radiator_bath_1:
+  friendly_name: Startzeit
+automation.bewegungsmelder__alarm:
+  icon: mdi:alarm-light
+script.1541097052191:
+  homebridge_visible: 'true'

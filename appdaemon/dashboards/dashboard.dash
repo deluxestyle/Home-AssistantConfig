@@ -1,0 +1,32 @@
+##
+## Main arguments, all optional
+##
+title: Main Panel
+widget_dimensions: [120, 120]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+    namespace: default
+    devices:
+      media_player:
+        step: 5
+        
+layout:
+    - temperature_living_room
+    - radiator_living_room
+    
+temperature_living_room:
+    widget_type: sensor
+    title: Wohnzimmer
+    units: "&deg;C"
+    precision: 0
+    entity: sensor.temperature_158d0001b8c998
+
+radiator_living_room:
+    widget_type: climate
+    title: Wohnzimmer
+    entity: climate.oeq1696358

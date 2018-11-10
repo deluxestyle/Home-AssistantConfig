@@ -1,0 +1,51 @@
+2018-08-18 11:49:55.419389 INFO AppDaemon Version 3.0.1 starting
+2018-08-18 11:49:55.420901 INFO Configuration read from: /home/homeassistant/.homeassistant/appdaemon/appdaemon.yaml
+2018-08-18 11:49:55.427760 WARNING config_file: /home/homeassistant/.homeassistant/appdaemon/appdaemon.yaml is owned by pi but appdaemon is running as homeassistant
+2018-08-18 11:49:55.432148 INFO AppDaemon: Starting Apps
+2018-08-18 11:49:55.435410 WARNING config_dir: /home exists, but is not writeable, owner: root
+2018-08-18 11:49:55.441186 WARNING appdir: /home/homeassistant/.homeassistant/appdaemon/apps does not exist exist
+2018-08-18 11:49:55.453325 INFO AppDaemon: Loading Plugin HASS using class HassPlugin from module hassplugin
+2018-08-18 11:49:55.531383 INFO AppDaemon: HASS: HASS Plugin Initializing
+2018-08-18 11:49:55.533346 INFO AppDaemon: HASS: HASS Plugin initialization complete
+2018-08-18 11:49:55.534855 INFO Starting Dashboards
+2018-08-18 11:49:55.574996 INFO API is disabled
+2018-08-18 11:49:55.681171 INFO AppDaemon: HASS: Connected to Home Assistant 0.76.0
+2018-08-18 11:49:55.927673 INFO AppDaemon: Got initial state from namespace default
+2018-08-18 11:49:57.986050 INFO AppDaemon: App initialization complete
+2018-08-18 11:51:26.013750 INFO SIGTERM Recieved
+2018-08-18 11:51:26.027848 INFO AppDaemon: HASS: Disconnecting from Home Assistant
+2018-08-18 11:51:26.628196 INFO AppDeamon Exited
+2018-08-18 11:51:34.463675 INFO AppDaemon Version 3.0.1 starting
+2018-08-18 11:51:34.465004 INFO Configuration read from: /home/homeassistant/.homeassistant/appdaemon/appdaemon.yaml
+2018-08-18 11:51:34.472161 WARNING config_file: /home/homeassistant/.homeassistant/appdaemon/appdaemon.yaml is owned by pi but appdaemon is running as homeassistant
+2018-08-18 11:51:34.476307 INFO AppDaemon: Starting Apps
+2018-08-18 11:51:34.479446 WARNING config_dir: /home exists, but is not writeable, owner: root
+2018-08-18 11:51:34.484294 WARNING appdir: /home/homeassistant/.homeassistant/appdaemon/apps does not exist exist
+2018-08-18 11:51:34.494380 INFO AppDaemon: Loading Plugin HASS using class HassPlugin from module hassplugin
+2018-08-18 11:51:34.582014 INFO AppDaemon: HASS: HASS Plugin Initializing
+2018-08-18 11:51:34.584113 INFO AppDaemon: HASS: HASS Plugin initialization complete
+2018-08-18 11:51:34.585700 INFO Starting Dashboards
+2018-08-18 11:51:34.625023 INFO API is disabled
+2018-08-18 11:51:34.831274 INFO AppDaemon: HASS: Connected to Home Assistant 0.76.0
+2018-08-18 11:51:35.496635 INFO AppDaemon: Got initial state from namespace default
+2018-08-18 11:51:37.191740 INFO AppDaemon: App initialization complete
+2018-08-18 11:52:04.564049 INFO SIGTERM Recieved
+2018-08-18 11:52:04.578681 INFO AppDaemon: HASS: Disconnecting from Home Assistant
+2018-08-18 11:52:05.373977 INFO AppDeamon Exited
+2018-08-18 11:53:23.466932 INFO AppDaemon Version 3.0.1 starting
+2018-08-18 11:53:23.468313 INFO Configuration read from: /home/homeassistant/.homeassistant/appdaemon/appdaemon.yaml
+2018-08-18 11:53:23.475442 WARNING config_file: /home/homeassistant/.homeassistant/appdaemon/appdaemon.yaml is owned by pi but appdaemon is running as homeassistant
+2018-08-18 11:53:23.480144 INFO AppDaemon: Starting Apps
+2018-08-18 11:53:23.483540 WARNING config_dir: /home exists, but is not writeable, owner: root
+2018-08-18 11:53:23.488706 WARNING appdir: /home/homeassistant/.homeassistant/appdaemon/apps does not exist exist
+2018-08-18 11:53:23.500001 INFO AppDaemon: Loading Plugin HASS using class HassPlugin from module hassplugin
+2018-08-18 11:53:23.576824 INFO AppDaemon: HASS: HASS Plugin Initializing
+2018-08-18 11:53:23.579352 INFO AppDaemon: HASS: HASS Plugin initialization complete
+2018-08-18 11:53:23.581367 INFO Starting Dashboards
+2018-08-18 11:53:23.621897 INFO API is disabled
+2018-08-18 11:53:23.750638 INFO AppDaemon: HASS: Connected to Home Assistant 0.76.0
+2018-08-18 11:53:24.035162 INFO AppDaemon: Got initial state from namespace default
+2018-08-18 11:53:26.071187 INFO AppDaemon: App initialization complete
+2018-08-18 12:17:38.399790 INFO SIGTERM Recieved
+2018-08-18 12:17:38.450062 INFO AppDaemon: HASS: Disconnecting from Home Assistant
+2018-08-18 12:17:38.517037 INFO AppDeamon Exited
