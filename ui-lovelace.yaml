@@ -110,7 +110,7 @@ views:
           - input_boolean.automation_radiator
           - automation.heizung_abwesenheitsschaltung
           - script.1540232132608
-          - script.1541264856783 
+          - script.1541264856783
           
 ##### Staubsauger #####
   - title: Staubsauger

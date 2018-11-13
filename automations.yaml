@@ -64,7 +64,10 @@
     entity_id: input_boolean.automation_light
     state: 'on'
   action:
-  - delay: '00:15:00'
+  - delay: 00:15:00
+  - condition: state
+    entity_id: sensor.presence
+    state: not_home
   - data:
       entity_id: scene.lights_off
     service: scene.turn_on
@@ -200,7 +203,10 @@
     condition: numeric_state
     entity_id: counter.xiaomo_runs
   action:
-  - delay: '00:15:00'
+  - delay: 00:15:00
+  - condition: state
+    entity_id: sensor.presence
+    state: not_home
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.start
@@ -254,7 +260,10 @@
     to: not_home
   condition: []
   action:
-  - delay: '00:15:00'
+  - delay: 00:15:00
+  - condition: state
+    entity_id: sensor.presence
+    state: not_home
   - data: {}
     service: script.1540232132608
   - data:

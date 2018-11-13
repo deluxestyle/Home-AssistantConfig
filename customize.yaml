@@ -283,3 +283,5 @@ automation.bewegungsmelder__alarm:
   icon: mdi:alarm-light
 script.1541097052191:
   homebridge_visible: 'true'
+light.hgrp0000015422:
+  hidden: true
