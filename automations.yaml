@@ -1,40 +1,3 @@
-- id: sonos_ungroup
-  alias: 'Sonos: ungruppieren'
-  trigger:
-  - entity_id: input_boolean.sonos_group
-    from: 'on'
-    platform: state
-    to: 'off'
-  condition:
-  - condition: state
-    entity_id: sensor.sonos_grouped
-    state: 'on'
-  action:
-  - data:
-      entity_id:
-      - media_player.bad
-      - media_player.schlafzimmer
-    service: media_player.sonos_unjoin
-- id: sonos_group
-  alias: 'Sonos: gruppieren'
-  trigger:
-    platform: state
-    entity_id: input_boolean.sonos_group
-    from: 'off'
-    to: 'on'
-  condition:
-  - condition: state
-    entity_id: sensor.sonos_grouped
-    state: 'off'
-  action:
-  - service: media_player.sonos_join
-    data_template:
-      master: '{% if is_state("input_select.master_sonos", "Schlafzimmer") %}media_player.schlafzimmer
-        {% elif is_state("input_select.master_sonos", "Bad") %}media_player.bad {%
-        endif %}'
-      entity_id:
-      - media_player.bad
-      - media_player.schlafzimmer
 - id: update_notification
   alias: Benachrichtigung - Update HASS
   trigger:
@@ -57,6 +20,7 @@
   alias: Anwesenheit - Familie nicht zu hause
   trigger:
   - entity_id: sensor.presence
+    for: 0:15:00
     platform: state
     to: not_home
   condition:
@@ -64,10 +28,9 @@
     entity_id: input_boolean.automation_light
     state: 'on'
   action:
-  - delay: 00:15:00
-  - condition: state
-    entity_id: sensor.presence
-    state: not_home
+  - data:
+      entity_id: light.steckdose
+    service: scene.turn_on
   - data:
       entity_id: scene.lights_off
     service: scene.turn_on
@@ -183,6 +146,7 @@
   alias: 'Xiaomi Staubsauger: automatisch starten'
   trigger:
   - entity_id: sensor.presence
+    for: 0:15:00
     platform: state
     to: not_home
   condition:
@@ -196,17 +160,10 @@
     - fri
     - sat
     - sun
-  - condition: state
-    entity_id: input_boolean.automation_xiaomi_vacuum
-    state: 'on'
   - below: '1'
     condition: numeric_state
     entity_id: counter.xiaomo_runs
   action:
-  - delay: 00:15:00
-  - condition: state
-    entity_id: sensor.presence
-    state: not_home
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.start
@@ -260,10 +217,6 @@
     to: not_home
   condition: []
   action:
-  - delay: 00:15:00
-  - condition: state
-    entity_id: sensor.presence
-    state: not_home
   - data: {}
     service: script.1540232132608
   - data:
@@ -402,9 +355,6 @@
   - condition: state
     entity_id: device_tracker.anitasiphone
     state: not_home
-  - condition: state
-    entity_id: input_boolean.automation_xiaomi_vacuum
-    state: 'on'
   - below: '2'
     condition: numeric_state
     entity_id: counter.xiaomo_runs
@@ -609,10 +559,7 @@
   - entity_id: binary_sensor.motion_sensor_158d00023e77cb
     platform: state
     to: 'on'
-  condition:
-  - condition: state
-    entity_id: sensor.presence
-    state: not_home
+  condition: []
   action:
   - data:
       message: Bewegung erkannt

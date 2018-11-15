@@ -1,27 +1,5 @@
 - platform: template
   switches:
-    ###### Lichtschalter ######
-    # lights_living_room:
-        # value_template: "{{ is_state('light.decke', 'on') or  is_state('light.tisch', 'on') or is_state('light.leselampe', 'on') }}"
-        # turn_on:
-          # - service: scene.turn_on
-            # entity_id: scene.lights_off_living_room
-        # turn_off:
-          # - service: scene.turn_on
-            # entity_id: scene.lights_on_living_room
-    # lights_all:
-        # value_template: "{{ is_state('light.decke', 'on') or  
-                            # is_state('light.tisch', 'on') or 
-                            # is_state('light.leselampe', 'on') or
-                            # is_state('light.schlafzimmer', 'on') or 
-                            # is_state('light.gateway_light_7811dcb258d1', 'on') or
-                            # is_state('light.sonoff_office', 'on') }}"
-        # turn_on:
-          # - service: scene.turn_on
-            # entity_id: scene.lights_on
-        # turn_off:
-          # - service: scene.turn_on
-            # entity_id: scene.lights_off
     ###### Tastensperre für Heizung ######
     radiator_bed_room_keylock:
         friendly_name: "Tastensperre"
@@ -114,3 +92,13 @@
           - service: script.turn_on
             entity_id: script.1538143115062
         icon_template: mdi:youtube-tv
+    ###### Sonos ######
+    sonos_group:
+        friendly_name: Sonos Gruppe
+        value_template: "{{ is_state('sensor.sonos_grouped', 'on') }}"
+        turn_on:
+          - service: script.turn_on
+            entity_id: script.1542309376690
+        turn_off:
+          - service: script.turn_on
+            entity_id: script.1542309480271

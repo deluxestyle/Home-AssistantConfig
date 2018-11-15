@@ -1,7 +1,3 @@
-sonos_group:
-    name: Sonos Gruppe
-    icon: mdi:speaker-wireless
-
 camera_cctv:
     name: Kameraaufnahme
     icon: mdi:cctv

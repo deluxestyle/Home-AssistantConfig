@@ -285,3 +285,5 @@ script.1541097052191:
   homebridge_visible: 'true'
 light.hgrp0000015422:
   hidden: true
+switch.sonos_group:
+  icon: mdi:speaker-wireless

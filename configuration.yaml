@@ -19,13 +19,13 @@ homeassistant:
 # Enables the frontend
 frontend:
   javascript_version: latest
-  extra_html_url:
-    - /local/custom_ui/state-card-mini-media-player.html
-    - /local/custom_ui/state-card-tiles.html
-  extra_html_url_es5:
-    - /local/custom_ui/state-card-mini-media-player_es5.html
-    - /local/custom_ui/state-card-tiles_es5.html
-  themes: !include_dir_merge_named themes
+  # extra_html_url:
+    # - /local/custom_ui/state-card-mini-media-player.html
+    # - /local/custom_ui/state-card-tiles.html
+  # extra_html_url_es5:
+    # - /local/custom_ui/state-card-mini-media-player_es5.html
+    # - /local/custom_ui/state-card-tiles_es5.html
+  # themes: !include_dir_merge_named themes
 
 # Enables configuration UI
 config:
@@ -68,8 +68,9 @@ recorder:
       - switch
       - camera
       - switch
+      - binary_sensor
     entities:
-      - sun.sun 
+      - sun.sun
       
 # Enables support for tracking state changes over time
 history:
@@ -83,7 +84,7 @@ history:
 logbook:
   exclude:
     domains:
-      - group     
+      - group
       
 # Enables a map showing the location of tracked devices
 map:
@@ -97,7 +98,7 @@ sun:
 
 panel_iframe:
   grafana:
-    title: 'Statisik'
+    title: Statisik
     url: !secret grafana_url
     icon: mdi:elevation-rise
   configurator:
@@ -122,10 +123,8 @@ sensor: !include senors.yaml
 counter: !include counter.yaml
 ios: !include push.yaml
 #homekit: !include homekit.yaml
-
-media_player:
-  - platform: harman_kardon_avr
-    host: 192.168.200.48
+media_player: !include media_player.yaml
+camera: !include camera.yaml
 
 homematic:
   interfaces:
@@ -185,6 +184,7 @@ influxdb:
       - switch
       - media_player
       - light
+      - binary_sensor
     entities:
       - sun.sun
       - sensor.time
@@ -203,8 +203,6 @@ remote:
   - platform: harmony
     name: harmony_hub
     host: 192.168.200.55
-
-camera: !include camera.yaml
 
 custom_updater:
   track:

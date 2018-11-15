@@ -287,3 +287,22 @@
   - service: script.1538143893265
   - service: script.1538143964007
   - service: script.1538143929416
+'1542309376690':
+  alias: Sonos gruppieren
+  sequence:
+  - service: media_player.sonos_join
+    data_template:
+      master: '{% if is_state("input_select.master_sonos", "Schlafzimmer") %}media_player.schlafzimmer
+        {% elif is_state("input_select.master_sonos", "Bad") %}media_player.bad {%
+        endif %}'
+      entity_id:
+      - media_player.bad
+      - media_player.schlafzimmer
+'1542309480271':
+  alias: Sonos ungruppieren
+  sequence:
+  - service: media_player.sonos_unjoin
+    data:
+      entity_id:
+      - media_player.bad
+      - media_player.schlafzimmer

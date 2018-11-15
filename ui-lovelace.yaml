@@ -11,13 +11,15 @@ views:
     id: light
     icon: mdi:ceiling-light
     cards:
-      - type: entities
+      - id: af72c9fa5de745b592a186795efddd08  
+        type: entities
         title: Licht
         show_header_toggle: false
         entities:
           - light.lights_all
           - input_boolean.automation_light
-      - type: entities
+      - id: 8f01ce04c719444899ffae242bea75cc  
+        type: entities
         title: Wohnzimmer
         show_header_toggle: false
         entities:
@@ -26,18 +28,21 @@ views:
           - light.decke
           - light.leselampe
           - input_select.scenes_living_room
-      - type: entities
+      - id: 7a4cb19d49f14d6883c3cd8a399268b6  
+        type: entities
         title: Schlafzimmer
         show_header_toggle: false
         entities:
           - light.schlafzimmer
           - input_select.scenes_bed_room
-      - type: entities
+      - id: add88382ed0d477193aa6388e3ed8cb2  
+        type: entities
         title: Büro
         show_header_toggle: false
         entities:
           - light.sonoff_office
-      - type: entities
+      - id: a65c87cf3b014b12824a4e5e75cc4921  
+        type: entities
         title: Flur
         show_header_toggle: false
         entities:
@@ -49,7 +54,8 @@ views:
     id: radiator
     icon: mdi:radiator
     cards:
-      - type: entities
+      - id: a7fd54ae32284e4abd643b893d276f4c  
+        type: entities
         title: Bad
         show_header_toggle: false
         entities:
@@ -65,7 +71,8 @@ views:
           - sensor.humidity_158d00023258bd
           - sensor.valve_bath
           - binary_sensor.door_window_sensor_158d00022f13a0
-      - type: entities
+      - id: dd2f1db062f14b229ae41ca732bccc71  
+        type: entities
         title: Wohnzimmer
         show_header_toggle: false
         entities:
@@ -76,7 +83,8 @@ views:
           - sensor.temperature_158d0001b8c998
           - sensor.humidity_158d0001b8c998
           - sensor.valve_living_room
-      - type: entities
+      - id: a116e7dc9fc64aa7876d47744c89c4d9  
+        type: entities
         title: Schlafzimmer
         show_header_toggle: false
         entities:
@@ -87,7 +95,8 @@ views:
           - sensor.temperature_158d0001b8c96c
           - sensor.humidity_158d0001b8c96c
           - sensor.valve_bed_room
-      - type: entities
+      - id: f2baf9dcaa31414b9d7da844c7a1d785  
+        type: entities
         title: Büro
         show_header_toggle: false
         entities:
@@ -98,26 +107,29 @@ views:
           - sensor.oeq1667238_temperature
           - sensor.oeq1667238_humidity
           - sensor.valve_office
-      - type: entities
+      - id: 884ca7aafc654d7eb6af9ca2d248970d  
+        type: entities
         title: Küche
         show_header_toggle: false
         entities:
           - sensor.temperature_158d0002239fb5
           - sensor.humidity_158d0002239fb5
-      - type: entities
+      - id: 505f2d27af31444fb53485c7d84a35cb  
+        type: entities
         show_header_toggle: false
         entities:
           - input_boolean.automation_radiator
           - automation.heizung_abwesenheitsschaltung
           - script.1540232132608
           - script.1541264856783
-          
+
 ##### Staubsauger #####
   - title: Staubsauger
     id: vacuum
     icon: mdi:robot-vacuum
     cards:
-      - type: entities
+      - id: a1b3d3fba78e4a9ab5c77bd8108c6eae  
+        type: entities
         title: Staubsauger
         show_header_toggle: false
         entities:
@@ -132,14 +144,15 @@ views:
           - type: section
           - automation.xiaomi_staubsauger_automatisch_starten
           - automation.xiaomi_staubsauger_taglich_saugen
-          - input_boolean.automation_xiaomi_vacuum
+          #- input_boolean.automation_xiaomi_vacuum
 
 ##### Entertainment #####
   - title: Entertainment
     id: entertainment
     icon: mdi:arrow-right-drop-circle-outline
     cards:
-      - type: entities
+      - id: f7040ea6d3a64eb1a4fa3506f2e018c8
+        type: entities
         title: Wohnzimmer Multimedia
         show_header_toggle: false
         entities:
@@ -161,7 +174,8 @@ views:
           - script.1538068809592
           - script.1538072504227
           - script.1538057479069
-      - type: entities
+      - id: adb02f1033c0456cbc51ac87fd4ee9c4
+        type: entities
         title: Sonos
         show_header_toggle: false
         entities:
@@ -187,17 +201,19 @@ views:
           - script.1534621188695
           - script.1534621226775
           - type: section
-          - input_boolean.sonos_group
+          - switch.sonos_group
           - input_select.master_sonos
           - type: section
           - input_boolean.automation_sonos
+          # - media_player.sonos_boxen
 
 ##### Steckdosen #####
   - title: Steckdosen
     id: socket
     icon: mdi:power-socket-eu
     cards:
-      - type: entities
+      - id: 79b1b8e94af645c192affaac3c725bda  
+        type: entities
         title: Steckdosen
         show_header_toggle: false
         entities:
@@ -211,7 +227,8 @@ views:
     id: cctv
     icon: mdi:cctv
     cards:
-      - type: entities
+      - id: 2402c60089f9494ab6d16f85ca87f50b  
+        type: entities
         title: Bewegung
         show_header_toggle: flase
         entities:
@@ -222,13 +239,15 @@ views:
           - script.1541097052191
           - type: section
           - automation.benachrichtigung__bewegung_erkannt
-      - type: entities
+      - id: b230e10f94824a3e928420cbeac0fcd6  
+        type: entities
         title: Überwachung
         show_header_toggle: false
         entities:
           - light.onoff_plug_1
           - input_boolean.camera_cctv
-      - type: conditional
+      - id: 351335930abe4c4887c5387bd78ed9e9  
+        type: conditional
         conditions:
           - entity: light.onoff_plug_1
             state: "on"
@@ -277,43 +296,45 @@ views:
     id: other
     icon: mdi:library-books
     cards:
-      - type: entities
+      - id: af7f3464ec654129b2c4cb73d9cb7c39  
+        type: entities
         title: Anwesenheit
         show_header_toggle: false
         entities:
           - device_tracker.iphone8
           - device_tracker.anitasiphone
-      - type: entities
-        title: FritzBox
-        show_header_toggle: false
-        entities:
-          - sensor.fritz_netmonitor
-      - type: entities
-        title: Sensoren
-        show_header_toggle: false
-        entities:
-          - sensor.ccu_servicemessages
-          - sensor.pressure_158d0002239fb5
-          - sensor.pressure_158d00023258bd
-      - type: entities
-        title: Sonnenstand
-        show_header_toggle: true
-        entities:
-          - sun.sun
-      - type: entities
-        title: HA Status
-        show_header_toggle: true
-        entities:
-          - sensor.online_time
-          - sensor.ssl_certificate_expiry
-      - type: entities
+      - id: 841ec2f903ae44789dd8b9bc5c8e7cb2  
+        type: entities
         title: Wetter
         show_header_toggle: false
         entities:
           - sensor.pws_weather
           - sensor.pws_temp_c
           - sensor.pws_feelslike_c
-      - type: custom:tracker-card
+          - sun.sun
+      - id: 22a013a9451c45a38f72387356665fac  
+        type: entities
+        title: FritzBox
+        show_header_toggle: false
+        entities:
+          - sensor.fritz_netmonitor
+      - id: cfd3e4013c904e5ca5c512f15395a932  
+        type: entities
+        title: Sensoren
+        show_header_toggle: false
+        entities:
+          - sensor.ccu_servicemessages
+          - sensor.pressure_158d0002239fb5
+          - sensor.pressure_158d00023258bd
+      - id: 215ed5c95850451790e4913e6df778d3  
+        type: entities
+        title: HA Status
+        show_header_toggle: true
+        entities:
+          - sensor.online_time
+          - sensor.ssl_certificate_expiry
+      - id: c1e9935cae854cf3a5c754a31d443a93  
+        type: custom:tracker-card
         title: Updates
         trackers:
           - sensor.custom_card_tracker
