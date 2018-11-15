@@ -17,7 +17,6 @@ views:
         show_header_toggle: false
         entities:
           - light.lights_all
-          - input_boolean.automation_light
       - id: 8f01ce04c719444899ffae242bea75cc  
         type: entities
         title: Wohnzimmer
@@ -303,6 +302,7 @@ views:
         entities:
           - device_tracker.iphone8
           - device_tracker.anitasiphone
+          - automation.abwesenheitsschaltung
       - id: 841ec2f903ae44789dd8b9bc5c8e7cb2  
         type: entities
         title: Wetter

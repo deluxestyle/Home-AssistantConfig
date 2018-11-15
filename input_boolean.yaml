@@ -9,7 +9,3 @@ automation_xiaomi_vacuum:
 automation_radiator:
     name: Heizungsautomatisierung
     icon: mdi:home-assistant
-    
-automation_light:
-    name: Lichtautomatisierung
-    icon: mdi:home-assistant
