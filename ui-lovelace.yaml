@@ -204,7 +204,7 @@ views:
           - switch.sonos_group
           - input_select.master_sonos
           - type: section
-          - input_boolean.automation_sonos
+          - automation.sonos_automatisch_einschalten
           # - media_player.sonos_boxen
 
 ##### Steckdosen #####

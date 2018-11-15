@@ -13,7 +13,3 @@ automation_radiator:
 automation_light:
     name: Lichtautomatisierung
     icon: mdi:home-assistant
-
-automation_sonos:
-    name: Sonosautomatisierung
-    icon: mdi:home-assistant
