@@ -19,38 +19,6 @@
   - data:
       entity_id: media_player.bad, media_player.schlafzimmer
     service: media_player.media_stop
-'1532275617247':
-  alias: Harman Kardon AVR ausschalten
-  sequence:
-  - data:
-      entity_id: media_player.harman_kardon_avr
-    service: media_player.turn_off
-'1532545372807':
-  alias: Harman Kardon AVR - lauter
-  sequence:
-  - data:
-      entity_id: media_player.harman_kardon_avr
-    service: media_player.volume_up
-'1532545486902':
-  alias: Harman Kardon AVR - leiser
-  sequence:
-  - data:
-      entity_id: media_player.harman_kardon_avr
-    service: media_player.volume_down
-'1532545541640':
-  alias: Harman Kardon AVR - Ton aus
-  sequence:
-  - data:
-      entity_id: media_player.harman_kardon_avr
-      is_volume_muted: 'true'
-    service: media_player.volume_mute
-'1533660351040':
-  alias: Harman Kardon AVR - Ton an
-  sequence:
-  - data:
-      entity_id: media_player.harman_kardon_avr
-      is_volume_muted: 'false'
-    service: media_player.volume_mute
 '1534539954375':
   alias: Xiaomi Staubsauger einschalten
   sequence:

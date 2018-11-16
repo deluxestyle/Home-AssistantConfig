@@ -17,11 +17,8 @@
   condition: []
   action:
   - data:
-      entity_id: light.steckdose
-    service: scene.turn_on
-  - data:
-      entity_id: scene.lights_off
-    service: scene.turn_on
+      entity_id: light.lights_all
+    service: light.turn_off
   - data:
       entity_id: light.steckdose
     service: light.turn_off
@@ -596,3 +593,6 @@
       ringtone_id: 0
       ringtone_vol: 20
     service: xiaomi_aqara.play_ringtone
+  - delay: 00:02:00
+  - data: {}
+    service: script.1541097052191
