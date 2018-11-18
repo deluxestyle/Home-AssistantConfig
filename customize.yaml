@@ -287,3 +287,6 @@ light.hgrp0000015422:
   hidden: true
 switch.sonos_group:
   icon: mdi:speaker-wireless
+light.yeelight_bedside_7c49eb27f227:
+  friendly_name: Nachtlicht Wolfgang
+  homebridge_visible: 'true'

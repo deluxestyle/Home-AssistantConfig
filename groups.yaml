@@ -1,8 +1,10 @@
 # ###### Menü ######
-# default_view:
-    # view: yes
-    # icon: mdi:home 
-    # entities:
+default_view:
+    view: yes
+    icon: mdi:home 
+    entities:
+        - weblink.start_here
+        - weblink.info
         # - group.lights_group
         # - group.living_room
         # - group.bed_room

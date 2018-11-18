@@ -3,6 +3,10 @@ resources:
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
+  - url: /local/fold-entity-row.js?v=a310c8
+    type: js  
+  - url: /local/time-input-row.js
+    type: js
 
 title: Home
 views:
@@ -32,6 +36,8 @@ views:
         title: Schlafzimmer
         show_header_toggle: false
         entities:
+          - light.yeelight_bedside_7c49eb27f227
+          - type: section
           - light.schlafzimmer
           - input_select.scenes_bed_room
       - id: add88382ed0d477193aa6388e3ed8cb2  
@@ -64,12 +70,20 @@ views:
           - switch.radiator_bath_keylock
           - type: section
           - automation.heizung_bad_timer
-          - input_datetime.radiator_bath_1
-          - type: section
-          - sensor.temperature_158d00023258bd
-          - sensor.humidity_158d00023258bd
-          - sensor.valve_bath
-          - binary_sensor.door_window_sensor_158d00022f13a0
+          #- input_datetime.radiator_bath_1
+          - entity: input_datetime.radiator_bath_1
+            name: Startzeit
+            type: custom:time-input-row
+          #- type: section
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Sensoren
+            items:
+              - sensor.temperature_158d00023258bd
+              - sensor.humidity_158d00023258bd
+              - sensor.valve_bath
+              - binary_sensor.door_window_sensor_158d00022f13a0
       - id: dd2f1db062f14b229ae41ca732bccc71  
         type: entities
         title: Wohnzimmer
@@ -78,10 +92,14 @@ views:
           - climate.oeq1696358
           - script.1538143929416
           - switch.radiator_living_room_keylock
-          - type: section
-          - sensor.temperature_158d0001b8c998
-          - sensor.humidity_158d0001b8c998
-          - sensor.valve_living_room
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Sensoren
+            items:
+              - sensor.temperature_158d0001b8c998
+              - sensor.humidity_158d0001b8c998
+              - sensor.valve_living_room
       - id: a116e7dc9fc64aa7876d47744c89c4d9  
         type: entities
         title: Schlafzimmer
@@ -90,10 +108,14 @@ views:
           - climate.oeq1696369
           - script.1538143964007
           - switch.radiator_bed_room_keylock
-          - type: section
-          - sensor.temperature_158d0001b8c96c
-          - sensor.humidity_158d0001b8c96c
-          - sensor.valve_bed_room
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Sensoren
+            items:
+              - sensor.temperature_158d0001b8c96c
+              - sensor.humidity_158d0001b8c96c
+              - sensor.valve_bed_room
       - id: f2baf9dcaa31414b9d7da844c7a1d785  
         type: entities
         title: Büro
@@ -102,10 +124,14 @@ views:
           - climate.int0000002
           - script.1538143893265
           - switch.radiator_office_keylock
-          - type: section
-          - sensor.oeq1667238_temperature
-          - sensor.oeq1667238_humidity
-          - sensor.valve_office
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Sensoren
+            items:
+              - sensor.oeq1667238_temperature
+              - sensor.oeq1667238_humidity
+              - sensor.valve_office
       - id: 884ca7aafc654d7eb6af9ca2d248970d  
         type: entities
         title: Küche
@@ -135,14 +161,18 @@ views:
           - vacuum.xiaomi_vacuum_cleaner
           #- sensor.xiaomi_vacuum_status
           - type: section
-          - counter.xiaomo_runs
-          - sensor.xiaomi_vacum_side_brush_left
-          - sensor.xiaomi_vacum_sensor_dirty_left
-          - sensor.xiaomi_vacum_main_brush_left
-          - sensor.xiaomi_vacum_filter_left
-          - type: section
           - automation.xiaomi_staubsauger_automatisch_starten
           - automation.xiaomi_staubsauger_taglich_saugen
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Sensoren
+            items:
+              - counter.xiaomo_runs
+              - sensor.xiaomi_vacum_side_brush_left
+              - sensor.xiaomi_vacum_sensor_dirty_left
+              - sensor.xiaomi_vacum_main_brush_left
+              - sensor.xiaomi_vacum_filter_left
           #- input_boolean.automation_xiaomi_vacuum
 
 ##### Entertainment #####
@@ -173,38 +203,72 @@ views:
           - script.1538068809592
           - script.1538072504227
           - script.1538057479069
+      - id: adb02f1033c0456cbc51ac87fd4ee9de
+        title: Sonos
+        type: conditional
+        conditions:
+          - entity: switch.sonos_group
+            state: "on"
+        card:
+          type: entities
+          entities:
+            - type: custom:mini-media-player
+              entity: media_player.sonos_boxen
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
+      - id: adb02f1033c0456cbc51ac87fd4ee9df
+        type: conditional
+        conditions:
+          - entity: switch.sonos_group
+            state: "off"
+        card:
+          type: entities
+          entities:
+            - type: custom:mini-media-player
+              entity: media_player.bad
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
+            - type: section
+            - type: custom:mini-media-player
+              entity: media_player.schlafzimmer
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
       - id: adb02f1033c0456cbc51ac87fd4ee9c4
         type: entities
-        title: Sonos
         show_header_toggle: false
         entities:
-          - type: custom:mini-media-player
-            entity: media_player.bad
-            icon: 'mdi:cast'
-            artwork_border: true
-            power_color: true
-            show_source: true
-            group: true
-          - type: section
-          - type: custom:mini-media-player
-            entity: media_player.schlafzimmer
-            icon: 'mdi:cast'
-            artwork_border: true
-            power_color: true
-            show_source: true
-            group: true
-          - type: section
-          - script.1532173931522
-          - script.1532175994947
-          - type: section
-          - script.1534621188695
-          - script.1534621226775
-          - type: section
-          - switch.sonos_group
-          - input_select.master_sonos
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Gruppe
+            items:
+              - switch.sonos_group
+              - input_select.master_sonos
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Super FlyFM
+            items:
+              - script.1532173931522
+              - script.1532175994947
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Wecker
+            items:
+              - script.1534621188695
+              - script.1534621226775
           - type: section
           - automation.sonos_automatisch_einschalten
-          # - media_player.sonos_boxen
 
 ##### Steckdosen #####
   - title: Steckdosen

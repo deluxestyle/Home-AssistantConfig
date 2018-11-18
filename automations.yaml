@@ -200,6 +200,7 @@
   alias: 'Heizung: Abwesenheitsschaltung'
   trigger:
   - entity_id: sensor.presence
+    for: 0:15:00
     platform: state
     to: not_home
   condition: []

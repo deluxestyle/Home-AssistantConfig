@@ -1,15 +1,22 @@
 - platform: harman_kardon_avr
   host: 192.168.200.48
   
-# - platform: universal
-  # name: Sonos Boxen
-  # children:
-    # - media_player.schlafzimmer
-    # - media_player.bad
-  # volume_set:
-      # service: media_player.volume_set
-      # data_template:
-        # entity_id: media_player.bad
-        # volume_level: '{{ volume_level }}'
-  # attributes:
-    # volume_level: media_player.schlafzimmer|volume_level
+- platform: universal
+  name: Sonos Boxen
+  children:
+    - media_player.schlafzimmer
+    - media_player.bad
+  commands:
+      volume_set:
+          service: media_player.volume_set
+          data_template:
+            entity_id: media_player.bad, media_player.schlafzimmer
+            volume_level: '{{ volume_level }}'
+      volume_mute:
+          service: media_player.volume_mute
+          data_template:
+            entity_id: media_player.bad, media_player.schlafzimmer
+            volume_level: '{{ is_volume_muted }}'
+  attributes:
+    volume_level: media_player.schlafzimmer|volume_level
+    is_volume_muted: media_player|is_volume_muted
