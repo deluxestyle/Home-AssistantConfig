@@ -153,9 +153,35 @@ views:
     id: vacuum
     icon: mdi:robot-vacuum
     cards:
-      - id: a1b3d3fba78e4a9ab5c77bd8108c6eae  
+      - id: a1b3d3fba78e4a9ab5c77bd8108c6eag
+        type: glance
+        show_name: false
+        show_state: false
+        title: Xiaomi StaubRobo
+        entities:
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            tap_action: call-service
+            service: vacuum.start
+            icon: mdi:play
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            tap_action: call-service
+            service: vacuum.pause
+            icon: mdi:pause
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            tap_action: call-service
+            service: vacuum.stop
+            icon: mdi:stop
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            tap_action: call-service
+            service: vacuum.return_to_base
+            icon: mdi:home
+          - entity: vacuum.xiaomi_vacuum_cleaner
+            tap_action: call-service
+            service: vacuum.locate
+            icon: mdi:bell-ring
+      - id: a1b3d3fba78e4a9ab5c77bd8108c6eae
         type: entities
-        title: Staubsauger
+        #title: Staubsauger
         show_header_toggle: false
         entities:
           - vacuum.xiaomi_vacuum_cleaner
@@ -173,7 +199,6 @@ views:
               - sensor.xiaomi_vacum_sensor_dirty_left
               - sensor.xiaomi_vacum_main_brush_left
               - sensor.xiaomi_vacum_filter_left
-          #- input_boolean.automation_xiaomi_vacuum
 
 ##### Entertainment #####
   - title: Entertainment
@@ -203,47 +228,9 @@ views:
           - script.1538068809592
           - script.1538072504227
           - script.1538057479069
-      - id: adb02f1033c0456cbc51ac87fd4ee9de
-        title: Sonos
-        type: conditional
-        conditions:
-          - entity: switch.sonos_group
-            state: "on"
-        card:
-          type: entities
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.sonos_boxen
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-      - id: adb02f1033c0456cbc51ac87fd4ee9df
-        type: conditional
-        conditions:
-          - entity: switch.sonos_group
-            state: "off"
-        card:
-          type: entities
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.bad
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-            - type: section
-            - type: custom:mini-media-player
-              entity: media_player.schlafzimmer
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
       - id: adb02f1033c0456cbc51ac87fd4ee9c4
         type: entities
+        title: Sonos
         show_header_toggle: false
         entities:
           - type: custom:fold-entity-row
@@ -269,6 +256,46 @@ views:
               - script.1534621226775
           - type: section
           - automation.sonos_automatisch_einschalten
+      - id: adb02f1033c0456cbc51ac87fd4ee9de
+        title: Sonos
+        type: conditional
+        conditions:
+          - entity: switch.sonos_group
+            state: "on"
+        card:
+          type: entities
+          entities:
+            - type: custom:mini-media-player
+              entity: media_player.sonos_boxen
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
+      - id: adb02f1033c0456cbc51ac87fd4ee9df
+        type: conditional
+        title: Sonos
+        conditions:
+          - entity: switch.sonos_group
+            state: "off"
+        card:
+          type: entities
+          entities:
+            - type: custom:mini-media-player
+              entity: media_player.bad
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
+            - type: section
+            - type: custom:mini-media-player
+              entity: media_player.schlafzimmer
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
 
 ##### Steckdosen #####
   - title: Steckdosen
