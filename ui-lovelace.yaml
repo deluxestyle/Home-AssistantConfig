@@ -5,8 +5,10 @@ resources:
     type: js
   - url: /local/fold-entity-row.js?v=a310c8
     type: js  
-  - url: /local/time-input-row.js
+  - url: /local/time-input-row.js?v=f503b7
     type: js
+  - url: /local/style.css?v=0.0.5
+    type: css
 
 title: Home
 views:
@@ -65,9 +67,7 @@ views:
         show_header_toggle: false
         entities:
           - climate.oeq1714751
-          - script.1538646823835
-          - script.1538502214360
-          - switch.radiator_bath_keylock
+          - sensor.humidity_158d00023258bd
           - type: section
           - automation.heizung_bad_timer
           #- input_datetime.radiator_bath_1
@@ -78,10 +78,12 @@ views:
           - type: custom:fold-entity-row
             head:
               type: section
-              label: Sensoren
+              label: Mehr
             items:
+              - switch.radiator_bath_keylock
+              #- script.1538646823835
+              - script.1538502214360
               - sensor.temperature_158d00023258bd
-              - sensor.humidity_158d00023258bd
               - sensor.valve_bath
               - binary_sensor.door_window_sensor_158d00022f13a0
       - id: dd2f1db062f14b229ae41ca732bccc71  
@@ -90,15 +92,15 @@ views:
         show_header_toggle: false
         entities:
           - climate.oeq1696358
-          - script.1538143929416
-          - switch.radiator_living_room_keylock
+          - sensor.humidity_158d0001b8c998
           - type: custom:fold-entity-row
             head:
               type: section
-              label: Sensoren
+              label: Mehr
             items:
+              - script.1538143929416
+              - switch.radiator_living_room_keylock
               - sensor.temperature_158d0001b8c998
-              - sensor.humidity_158d0001b8c998
               - sensor.valve_living_room
       - id: a116e7dc9fc64aa7876d47744c89c4d9  
         type: entities
@@ -106,15 +108,15 @@ views:
         show_header_toggle: false
         entities:
           - climate.oeq1696369
-          - script.1538143964007
-          - switch.radiator_bed_room_keylock
+          - sensor.humidity_158d0001b8c96c
           - type: custom:fold-entity-row
             head:
               type: section
-              label: Sensoren
+              label: Mehr
             items:
+              - script.1538143964007
+              - switch.radiator_bed_room_keylock
               - sensor.temperature_158d0001b8c96c
-              - sensor.humidity_158d0001b8c96c
               - sensor.valve_bed_room
       - id: f2baf9dcaa31414b9d7da844c7a1d785  
         type: entities
@@ -122,15 +124,15 @@ views:
         show_header_toggle: false
         entities:
           - climate.int0000002
-          - script.1538143893265
-          - switch.radiator_office_keylock
+          - sensor.oeq1667238_humidity
           - type: custom:fold-entity-row
             head:
               type: section
-              label: Sensoren
+              label: Mehr
             items:
+              - script.1538143893265
+              - switch.radiator_office_keylock
               - sensor.oeq1667238_temperature
-              - sensor.oeq1667238_humidity
               - sensor.valve_office
       - id: 884ca7aafc654d7eb6af9ca2d248970d  
         type: entities
@@ -223,14 +225,60 @@ views:
             volume_stateless: true
             hide_power: true
             group: true
-          - type: section
-          - script.1538058955033
-          - script.1538068809592
-          - script.1538072504227
-          - script.1538057479069
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Fernbedienung
+            items:
+              - script.1538058955033
+              - script.1538068809592
+              - script.1538072504227
+              - script.1538057479069
+      - id: adb02f1033c0456cbc51ac87fd4ee9de
+        title: Sonos
+        type: conditional
+        conditions:
+          - entity: switch.sonos_group
+            state: "on"
+        card:
+          type: entities
+          title: Sonos MediaPlayer
+          entities:
+            - type: custom:mini-media-player
+              entity: media_player.sonos_boxen
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
+      - id: adb02f1033c0456cbc51ac87fd4ee9df
+        type: conditional
+        title: Sonos
+        conditions:
+          - entity: switch.sonos_group
+            state: "off"
+        card:
+          type: entities
+          title: Sonos MediaPlayer
+          entities:
+            - type: custom:mini-media-player
+              entity: media_player.bad
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
+            - type: section
+            - type: custom:mini-media-player
+              entity: media_player.schlafzimmer
+              icon: 'mdi:cast'
+              artwork_border: true
+              power_color: true
+              show_source: true
+              group: true
       - id: adb02f1033c0456cbc51ac87fd4ee9c4
         type: entities
-        title: Sonos
+        title: Sonos Einstellungen
         show_header_toggle: false
         entities:
           - type: custom:fold-entity-row
@@ -256,46 +304,6 @@ views:
               - script.1534621226775
           - type: section
           - automation.sonos_automatisch_einschalten
-      - id: adb02f1033c0456cbc51ac87fd4ee9de
-        title: Sonos
-        type: conditional
-        conditions:
-          - entity: switch.sonos_group
-            state: "on"
-        card:
-          type: entities
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.sonos_boxen
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-      - id: adb02f1033c0456cbc51ac87fd4ee9df
-        type: conditional
-        title: Sonos
-        conditions:
-          - entity: switch.sonos_group
-            state: "off"
-        card:
-          type: entities
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.bad
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-            - type: section
-            - type: custom:mini-media-player
-              entity: media_player.schlafzimmer
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
 
 ##### Steckdosen #####
   - title: Steckdosen

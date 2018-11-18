@@ -84,12 +84,14 @@ device_tracker.iphone8:
   friendly_name: iPhone Wolfgang
 sensor.humidity_158d0002239fb5:
   friendly_name: Luftfeuchtigkeit Küche
+  homebridge_visible: 'true'
   icon: mdi:water-percent
 sensor.pressure_158d0002239fb5:
   friendly_name: Luftdruck Küche
   icon: mdi:gauge
 sensor.temperature_158d0002239fb5:
   friendly_name: Temperatursensor Küche
+  homebridge_visible: 'true'
 group.battery_stats:
   control: hidden
   icon: mdi:battery-50´
@@ -242,6 +244,7 @@ input_select.avr_source:
   icon: mdi:playlist-play
 sensor.humidity_158d00023258bd:
   friendly_name: Luftfeuchtigkeit
+  homebridge_visible: 'true'
   icon: mdi:water-percent
 sensor.temperature_158d00023258bd:
   friendly_name: Temperatur
