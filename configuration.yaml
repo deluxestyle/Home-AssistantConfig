@@ -25,7 +25,9 @@ frontend:
   # extra_html_url_es5:
     # - /local/custom_ui/state-card-mini-media-player_es5.html
     # - /local/custom_ui/state-card-tiles_es5.html
-  # themes: !include_dir_merge_named themes
+  themes:
+    own:
+      paper-font-headline_-_font-size: 18px
 
 # Enables configuration UI
 config:
@@ -69,6 +71,7 @@ recorder:
       - camera
       - switch
       - binary_sensor
+      - climate
     entities:
       - sun.sun
       
@@ -98,7 +101,7 @@ sun:
 
 panel_iframe:
   grafana:
-    title: Statisik
+    title: Statistik
     url: !secret grafana_url
     icon: mdi:elevation-rise
   configurator:

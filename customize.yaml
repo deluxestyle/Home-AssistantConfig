@@ -184,9 +184,11 @@ group.vacuum:
 group.vacuum_group:
   control: hidden
 sensor.xiaomi_vacum_main_brush_left:
-  friendly_name: Staubsauger Hauptbürste
+  friendly_name: Hauptbürste
+  icon: mdi:blur-linear
 sensor.xiaomi_vacum_side_brush_left:
-  friendly_name: Staubsauger Seitenbürste
+  friendly_name: Seitenbürste
+  icon: mdi:blur-linear
 group.power_sockets:
   control: hidden
   friendly_name: 'Steckdosen '
@@ -293,3 +295,15 @@ switch.sonos_group:
 light.yeelight_bedside_7c49eb27f227:
   friendly_name: Nachtlicht Wolfgang
   homebridge_visible: 'true'
+light.schlafzimmer:
+  friendly_name: Deckenlicht
+script.1541264856783:
+  homebridge_visible: 'true'
+script.1540232132608:
+  homebridge_visible: 'true'
+sensor.xiaomi_vacum_filter_left:
+  friendly_name: Filter
+  icon: mdi:blur-linear
+sensor.xiaomi_vacum_sensor_dirty_left:
+  friendly_name: Sensor
+  icon: mdi:blur-linear

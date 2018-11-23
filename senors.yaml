@@ -94,6 +94,11 @@
         friendly_name: "Staubsauger Sensor"
         unit_of_measurement: 'h'
         value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.sensor_dirty_left }}'
+      xiaomi_vacum_sensor_battery:
+        friendly_name: "Staubsauger Batterie"
+        unit_of_measurement: '%'
+        value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level }}'
+        icon_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_icon }}'
       fritz_bytes_sent:
         friendly_name: "Daten gesendet"
         value_template: '{{ states.sensor.fritz_netmonitor.attributes.bytes_sent }}'

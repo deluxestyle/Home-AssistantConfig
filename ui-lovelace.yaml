@@ -1,13 +1,13 @@
 resources:
-  - url: /local/mini-media-player-bundle.js?v=0.9.2
+  - url: /local/mini-media-player-bundle.js?v=0.9.4
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
   - url: /local/fold-entity-row.js?v=a310c8
-    type: js  
+    type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/style.css?v=0.0.5
+  - url: /local/style.css?v=0.0.7
     type: css
 
 title: Home
@@ -17,13 +17,13 @@ views:
     id: light
     icon: mdi:ceiling-light
     cards:
-      - id: af72c9fa5de745b592a186795efddd08  
+      - id: af72c9fa5de745b592a186795efddd08
         type: entities
         title: Licht
         show_header_toggle: false
         entities:
           - light.lights_all
-      - id: 8f01ce04c719444899ffae242bea75cc  
+      - id: 8f01ce04c719444899ffae242bea75cc
         type: entities
         title: Wohnzimmer
         show_header_toggle: false
@@ -33,22 +33,22 @@ views:
           - light.decke
           - light.leselampe
           - input_select.scenes_living_room
-      - id: 7a4cb19d49f14d6883c3cd8a399268b6  
+      - id: 7a4cb19d49f14d6883c3cd8a399268b6
         type: entities
         title: Schlafzimmer
         show_header_toggle: false
         entities:
           - light.yeelight_bedside_7c49eb27f227
-          - type: section
+          #- type: section
           - light.schlafzimmer
           - input_select.scenes_bed_room
-      - id: add88382ed0d477193aa6388e3ed8cb2  
+      - id: add88382ed0d477193aa6388e3ed8cb2
         type: entities
         title: Büro
         show_header_toggle: false
         entities:
           - light.sonoff_office
-      - id: a65c87cf3b014b12824a4e5e75cc4921  
+      - id: a65c87cf3b014b12824a4e5e75cc4921
         type: entities
         title: Flur
         show_header_toggle: false
@@ -61,20 +61,22 @@ views:
     id: radiator
     icon: mdi:radiator
     cards:
-      - id: a7fd54ae32284e4abd643b893d276f4c  
+      - id: a7fd54ae32284e4abd643b893d276f4c
         type: entities
         title: Bad
         show_header_toggle: false
         entities:
           - climate.oeq1714751
           - sensor.humidity_158d00023258bd
-          - type: section
-          - automation.heizung_bad_timer
-          #- input_datetime.radiator_bath_1
-          - entity: input_datetime.radiator_bath_1
-            name: Startzeit
-            type: custom:time-input-row
-          #- type: section
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Timer
+            items:
+              - automation.heizung_bad_timer
+              - entity: input_datetime.radiator_bath_1
+                name: Startzeit
+                type: custom:time-input-row
           - type: custom:fold-entity-row
             head:
               type: section
@@ -86,7 +88,7 @@ views:
               - sensor.temperature_158d00023258bd
               - sensor.valve_bath
               - binary_sensor.door_window_sensor_158d00022f13a0
-      - id: dd2f1db062f14b229ae41ca732bccc71  
+      - id: dd2f1db062f14b229ae41ca732bccc71
         type: entities
         title: Wohnzimmer
         show_header_toggle: false
@@ -102,7 +104,7 @@ views:
               - switch.radiator_living_room_keylock
               - sensor.temperature_158d0001b8c998
               - sensor.valve_living_room
-      - id: a116e7dc9fc64aa7876d47744c89c4d9  
+      - id: a116e7dc9fc64aa7876d47744c89c4d9
         type: entities
         title: Schlafzimmer
         show_header_toggle: false
@@ -118,7 +120,7 @@ views:
               - switch.radiator_bed_room_keylock
               - sensor.temperature_158d0001b8c96c
               - sensor.valve_bed_room
-      - id: f2baf9dcaa31414b9d7da844c7a1d785  
+      - id: f2baf9dcaa31414b9d7da844c7a1d785
         type: entities
         title: Büro
         show_header_toggle: false
@@ -134,14 +136,14 @@ views:
               - switch.radiator_office_keylock
               - sensor.oeq1667238_temperature
               - sensor.valve_office
-      - id: 884ca7aafc654d7eb6af9ca2d248970d  
+      - id: 884ca7aafc654d7eb6af9ca2d248970d
         type: entities
         title: Küche
         show_header_toggle: false
         entities:
           - sensor.temperature_158d0002239fb5
           - sensor.humidity_158d0002239fb5
-      - id: 505f2d27af31444fb53485c7d84a35cb  
+      - id: 505f2d27af31444fb53485c7d84a35cb
         type: entities
         show_header_toggle: false
         entities:
@@ -187,16 +189,15 @@ views:
         show_header_toggle: false
         entities:
           - vacuum.xiaomi_vacuum_cleaner
-          #- sensor.xiaomi_vacuum_status
+          - sensor.xiaomi_vacum_sensor_battery
           - type: section
           - automation.xiaomi_staubsauger_automatisch_starten
           - automation.xiaomi_staubsauger_taglich_saugen
           - type: custom:fold-entity-row
             head:
               type: section
-              label: Sensoren
+              label: Wartung
             items:
-              - counter.xiaomo_runs
               - sensor.xiaomi_vacum_side_brush_left
               - sensor.xiaomi_vacum_sensor_dirty_left
               - sensor.xiaomi_vacum_main_brush_left
@@ -216,7 +217,7 @@ views:
           - type: section
           - sensor.remote_state
           - switch.samsung_tv
-          - switch.telekom_mr_400
+          - switch.telekom_mr_401
           - switch.avr_151
           - input_select.avr_source
           - type: custom:mini-media-player
@@ -310,7 +311,7 @@ views:
     id: socket
     icon: mdi:power-socket-eu
     cards:
-      - id: 79b1b8e94af645c192affaac3c725bda  
+      - id: 79b1b8e94af645c192affaac3c725bda
         type: entities
         title: Steckdosen
         show_header_toggle: false
@@ -325,7 +326,7 @@ views:
     id: cctv
     icon: mdi:cctv
     cards:
-      - id: 2402c60089f9494ab6d16f85ca87f50b  
+      - id: 2402c60089f9494ab6d16f85ca87f50b
         type: entities
         title: Bewegung
         show_header_toggle: flase
@@ -337,14 +338,14 @@ views:
           - script.1541097052191
           - type: section
           - automation.benachrichtigung__bewegung_erkannt
-      - id: b230e10f94824a3e928420cbeac0fcd6  
+      - id: b230e10f94824a3e928420cbeac0fcd6
         type: entities
         title: Überwachung
         show_header_toggle: false
         entities:
           - light.onoff_plug_1
           - input_boolean.camera_cctv
-      - id: 351335930abe4c4887c5387bd78ed9e9  
+      - id: 351335930abe4c4887c5387bd78ed9e9
         type: conditional
         conditions:
           - entity: light.onoff_plug_1
@@ -394,7 +395,7 @@ views:
     id: other
     icon: mdi:library-books
     cards:
-      - id: af7f3464ec654129b2c4cb73d9cb7c39  
+      - id: af7f3464ec654129b2c4cb73d9cb7c39
         type: entities
         title: Anwesenheit
         show_header_toggle: false
@@ -402,7 +403,7 @@ views:
           - device_tracker.iphone8
           - device_tracker.anitasiphone
           - automation.abwesenheitsschaltung
-      - id: 841ec2f903ae44789dd8b9bc5c8e7cb2  
+      - id: 841ec2f903ae44789dd8b9bc5c8e7cb2
         type: entities
         title: Wetter
         show_header_toggle: false
@@ -411,13 +412,13 @@ views:
           - sensor.pws_temp_c
           - sensor.pws_feelslike_c
           - sun.sun
-      - id: 22a013a9451c45a38f72387356665fac  
+      - id: 22a013a9451c45a38f72387356665fac
         type: entities
         title: FritzBox
         show_header_toggle: false
         entities:
           - sensor.fritz_netmonitor
-      - id: cfd3e4013c904e5ca5c512f15395a932  
+      - id: cfd3e4013c904e5ca5c512f15395a932
         type: entities
         title: Sensoren
         show_header_toggle: false
@@ -425,14 +426,14 @@ views:
           - sensor.ccu_servicemessages
           - sensor.pressure_158d0002239fb5
           - sensor.pressure_158d00023258bd
-      - id: 215ed5c95850451790e4913e6df778d3  
+      - id: 215ed5c95850451790e4913e6df778d3
         type: entities
         title: HA Status
         show_header_toggle: true
         entities:
           - sensor.online_time
           - sensor.ssl_certificate_expiry
-      - id: c1e9935cae854cf3a5c754a31d443a93  
+      - id: c1e9935cae854cf3a5c754a31d443a93
         type: custom:tracker-card
         title: Updates
         trackers:

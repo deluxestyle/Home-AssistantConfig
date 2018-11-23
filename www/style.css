@@ -1,4 +1,3 @@
-div.header { 
-    font-size: 18px !important;
-	line-height: 25px !important;
+#chartTarget, #chart{
+	display: none !important;
 }

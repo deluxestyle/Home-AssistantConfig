@@ -147,9 +147,9 @@
     - fri
     - sat
     - sun
-  - below: '1'
-    condition: numeric_state
-    entity_id: counter.xiaomo_runs
+  - condition: template
+    value_template: '{{ as_timestamp(utcnow()) + 1200 - as_timestamp(states.vacuum.xiaomi_vacuum_cleaner.last_updated)  >
+      10080 }}'
   action:
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
@@ -166,9 +166,6 @@
         }} min - gesaugte Fläche: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaned_area
         }} qm'
     service: notify.ios_iphone8
-  - data:
-      entity_id: counter.xiaomo_runs
-    service: counter.increment
 - id: xiaomi_vacuum_notification_on
   alias: 'Xiaomi Staubsauger: Benachrichtigung - gestartet'
   trigger:
@@ -337,15 +334,15 @@
 - id: '1521894687949'
   alias: 'Xiaomi Staubsauger: Täglich saugen'
   trigger:
-  - at: '16:30'
+  - at: '16:00'
     platform: time
   condition:
   - condition: state
     entity_id: device_tracker.anitasiphone
     state: not_home
-  - below: '2'
-    condition: numeric_state
-    entity_id: counter.xiaomo_runs
+  - condition: template
+    value_template: '{{ as_timestamp(utcnow()) + 1200 - as_timestamp(states.vacuum.xiaomi_vacuum_cleaner.last_updated)  >
+      10080 }}'
   action:
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
@@ -514,14 +511,14 @@
     entity_id: input_boolean.automation_radiator
     state: 'on'
   - condition: template
-    value_template: '{{ states.climate.oeq1714751.attributes.temperature < 17 }}'
+    value_template: '{{ states.climate.oeq1714751.attributes.temperature < 10 }}'
   - condition: state
     entity_id: binary_sensor.door_window_sensor_158d00022f13a0
     state: 'off'
   action:
   - data:
       entity_id: climate.oeq1714751
-      temperature: '17'
+      temperature: '10'
     service: climate.set_temperature
   - data:
       message: 'Heizung: Bad an'
@@ -604,3 +601,31 @@
   - delay: 00:02:00
   - data: {}
     service: script.1541097052191
+- id: '1542650541048'
+  alias: 'Xiaomi Staubsauger: Sensor kritisch'
+  trigger:
+  - below: '4'
+    entity_id: sensor.xiaomi_vacum_sensor_dirty_left
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: 'Sensor reinigen: {{ states.sensor.xiaomi_vacum_sensor_dirty_left.state
+        }} h übrig'
+      notification_id: xiaomi_sensor
+      title: Xiaomi StaubRobo
+    service: persistent_notification.create
+- id: '1542974689604'
+  alias: Anwesenheitsschaltung
+  trigger:
+  - entity_id: sensor.presence
+    platform: state
+    to: home
+  condition: []
+  action:
+  - data:
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+    service: vacuum.stop
+  - data:
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+    service: vacuum.return_to_base
