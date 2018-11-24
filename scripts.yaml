@@ -274,3 +274,13 @@
       entity_id:
       - media_player.bad
       - media_player.schlafzimmer
+'1543087176551':
+  alias: Gastzugang aktivieren
+  sequence:
+  - data: {}
+    service: fritzbox_guestwifi.turn_on
+'1543087223684':
+  alias: Gastzugang deaktivieren
+  sequence:
+  - data: {}
+    service: fritzbox_guestwifi.turn_off

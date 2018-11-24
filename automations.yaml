@@ -629,3 +629,14 @@
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.return_to_base
+- id: '1543074323979'
+  alias: Benachrichtigung - Abwesend
+  trigger:
+  - entity_id: sensor.presence
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data:
+      message: Niemand zu Hause
+    service: notify.ios_iphone8

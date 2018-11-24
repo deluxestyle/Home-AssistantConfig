@@ -306,3 +306,9 @@ sensor.xiaomi_vacum_sensor_dirty_left:
   icon: mdi:blur-linear
 light.nachtischlampe_wolfgang:
   homebridge_visible: 'true'
+script.1543087176551:
+  icon: mdi:wifi
+script.1543087223684:
+  icon: mdi:wifi-off
+sensor.fritz_netmonitor:
+  friendly_name: Fritz.Box

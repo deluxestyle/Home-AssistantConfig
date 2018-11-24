@@ -1,4 +1,4 @@
-#### Hue ####
+#### yeelight ####
 - platform: yeelight
   devices:
     192.168.200.59:

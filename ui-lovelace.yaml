@@ -417,6 +417,13 @@ views:
         show_header_toggle: false
         entities:
           - sensor.fritz_netmonitor
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Gastzugang
+            items:
+              - script.1543087176551
+              - script.1543087223684
       - id: cfd3e4013c904e5ca5c512f15395a932
         type: entities
         title: Sensoren
