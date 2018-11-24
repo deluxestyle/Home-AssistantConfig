@@ -38,8 +38,7 @@ views:
         title: Schlafzimmer
         show_header_toggle: false
         entities:
-          - light.yeelight_bedside_7c49eb27f227
-          #- type: section
+          - light.nachtischlampe_wolfgang
           - light.schlafzimmer
           - input_select.scenes_bed_room
       - id: add88382ed0d477193aa6388e3ed8cb2

@@ -238,7 +238,7 @@
     service: climate.set_temperature
   - data:
       entity_id: climate.oeq1714751
-      temperature: 4.5
+      temperature: 10
     service: climate.set_temperature
 '1541097052191':
   alias: Xiaomi - Alarm ausschalten

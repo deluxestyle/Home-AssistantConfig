@@ -292,9 +292,6 @@ light.hgrp0000015422:
   hidden: true
 switch.sonos_group:
   icon: mdi:speaker-wireless
-light.yeelight_bedside_7c49eb27f227:
-  friendly_name: Nachtlicht Wolfgang
-  homebridge_visible: 'true'
 light.schlafzimmer:
   friendly_name: Deckenlicht
 script.1541264856783:
@@ -307,3 +304,5 @@ sensor.xiaomi_vacum_filter_left:
 sensor.xiaomi_vacum_sensor_dirty_left:
   friendly_name: Sensor
   icon: mdi:blur-linear
+light.nachtischlampe_wolfgang:
+  homebridge_visible: 'true'

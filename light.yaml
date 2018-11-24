@@ -1,6 +1,8 @@
 #### Hue ####
-# - platform: hue
-  # host: 192.168.200.52
+- platform: yeelight
+  devices:
+    192.168.200.59:
+      name: Nachtischlampe Wolfgang
   
 #### Sonoff ####
 - platform: mqtt
@@ -32,4 +34,4 @@
       - light.schlafzimmer
       - light.gateway_light_7811dcb258d1
       - light.sonoff_office
-      - light.yeelight_bedside_7c49eb27f227
+      - light.nachtischlampe_wolfgang
