@@ -284,3 +284,21 @@
   sequence:
   - data: {}
     service: fritzbox_guestwifi.turn_off
+'1543166767000':
+  alias: BMW X2 - Klimanlage
+  sequence:
+  - data:
+      vin: WBAYH11080EM67022
+    service: bmw_connected_drive.activate_air_conditioning
+'1543167202912':
+  alias: BMW X2 - Hupe
+  sequence:
+  - data:
+      vin: WBAYH11080EM67022
+    service: bmw_connected_drive.sound_horn
+'1543167430941':
+  alias: BMW X2 - Lichthupe
+  sequence:
+  - data:
+      vin: WBAYH11080EM67022
+    service: bmw_connected_drive.light_flash

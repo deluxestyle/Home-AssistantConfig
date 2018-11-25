@@ -81,9 +81,9 @@ views:
               type: section
               label: Mehr
             items:
-              - switch.radiator_bath_keylock
               #- script.1538646823835
               - script.1538502214360
+              - switch.radiator_bath_keylock
               - sensor.temperature_158d00023258bd
               - sensor.valve_bath
               - binary_sensor.door_window_sensor_158d00022f13a0
@@ -230,7 +230,7 @@ views:
               type: section
               label: Fernbedienung
             items:
-              - script.1538058955033
+              #- script.1538058955033
               - script.1538068809592
               - script.1538072504227
               - script.1538057479069
@@ -358,36 +358,35 @@ views:
           title: Kamera
 
 ##### Auto ##### 
-  # - title: BMW X2
-    # icon: mdi:car-hatchback
-    # cards:
-      # - type: entities
-        # title: BMW X2 Funktionen
-        # show_header_toggle: false
-        # entities:
-          # - lock.x2_sdrive18i_lock
-          # - script.1536178184062
-          # - script.1536178244890
-          # - script.1536178219164
-          # - script.1536178274313
-      # - type: entities
-        # title: "BMW X2 Übersicht"
-        # show_header_toggle: false
-        # entities:
-          # - binary_sensor.x2_sdrive18i_condition_based_services
-          # - binary_sensor.x2_sdrive18i_door_lock_state
-          # - binary_sensor.x2_sdrive18i_lids
-          # - binary_sensor.x2_sdrive18i_windows
-          # - sensor.x2_sdrive18i_mileage
-          # - sensor.x2_sdrive18i_remaining_fuel
-          # - sensor.x2_sdrive18i_remaining_range_total
-          # - binary_sensor.x2_sdrive18i_lights_parking
-          # - device_tracker.x2_sdrive18i
-      # - type: map
-        # entities:
-          # - entity: device_tracker.x2_sdrive18i
-          # - zone.home
-        # aspect_ratio: 50%
+  - title: BMW X2
+    icon: mdi:car-hatchback
+    cards:
+      - type: entities
+        title: BMW X2 Funktionen
+        show_header_toggle: false
+        entities:
+          - lock.x2_sdrive18i_lock
+          - script.1543166767000
+          - script.1543167202912
+          - script.1543167430941
+      - type: entities
+        title: "BMW X2 Übersicht"
+        show_header_toggle: false
+        entities:
+          - binary_sensor.x2_sdrive18i_condition_based_services
+          - binary_sensor.x2_sdrive18i_door_lock_state
+          - binary_sensor.x2_sdrive18i_lids
+          - binary_sensor.x2_sdrive18i_windows
+          - sensor.x2_sdrive18i_mileage
+          - sensor.x2_sdrive18i_remaining_fuel
+          - sensor.x2_sdrive18i_remaining_range_total
+          - binary_sensor.x2_sdrive18i_lights_parking
+          - device_tracker.x2_sdrive18i
+      - type: map
+        default_zoom: 13
+        entities:
+          - entity: device_tracker.x2_sdrive18i
+        aspect_ratio: 50%
 
 ##### Sonstiges #####
   - title: Sonstiges

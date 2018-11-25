@@ -215,13 +215,8 @@ custom_updater:
   card_urls:
     - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
 
-fritzbox_guestwifi:
-  host: 192.168.200.1
-  username: !secret fritz_user
-  password: !secret fritz_password
-
-# bmw_connected_drive:
- # name:
-   # username: !secret bmw_user
-   # password: !secret bmw_password
-   # region: "rest_of_world"
+bmw_connected_drive:
+ name:
+   username: !secret bmw_user
+   password: !secret bmw_password
+   region: "rest_of_world"

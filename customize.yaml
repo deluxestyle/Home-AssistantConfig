@@ -312,3 +312,13 @@ script.1543087223684:
   icon: mdi:wifi-off
 sensor.fritz_netmonitor:
   friendly_name: Fritz.Box
+automation.xiaomi_staubsauger_automatisch_starten:
+  friendly_name: Automatisch starten
+automation.xiaomi_staubsauger_taglich_saugen:
+  friendly_name: Täglich saugen
+script.1543166767000:
+  icon: mdi:air-conditioner
+script.1543167202912:
+  icon: mdi:bullhorn
+script.1543167430941:
+  icon: mdi:flashlight
