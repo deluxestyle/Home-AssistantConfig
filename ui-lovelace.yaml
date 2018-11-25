@@ -7,8 +7,6 @@ resources:
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/style.css?v=0.0.7
-    type: css
 
 title: Home
 views:
@@ -184,7 +182,7 @@ views:
             icon: mdi:bell-ring
       - id: a1b3d3fba78e4a9ab5c77bd8108c6eae
         type: entities
-        #title: Staubsauger
+        title: Staubsauger
         show_header_toggle: false
         entities:
           - vacuum.xiaomi_vacuum_cleaner
@@ -320,11 +318,20 @@ views:
           - light.steckdose_2
           - light.onoff_plug_1
 
-##### Überwachung #####
-  - title: Überwachung
-    id: cctv
-    icon: mdi:cctv
+##### Personen #####
+  - title: Personen
+    id: presence
+    icon: mdi:account-multiple
     cards:
+      - id: af7f3464ec654129b2c4cb73d9cb7c39
+        type: entities
+        title: Anwesenheit
+        show_header_toggle: false
+        entities:
+          - device_tracker.iphone8
+          - device_tracker.anitasiphone
+          - type: section
+          - automation.abwesenheitsschaltung
       - id: 2402c60089f9494ab6d16f85ca87f50b
         type: entities
         title: Bewegung
@@ -362,45 +369,41 @@ views:
     icon: mdi:car-hatchback
     cards:
       - type: entities
-        title: BMW X2 Funktionen
-        show_header_toggle: false
-        entities:
-          - lock.x2_sdrive18i_lock
-          - script.1543166767000
-          - script.1543167202912
-          - script.1543167430941
-      - type: entities
         title: "BMW X2 Übersicht"
         show_header_toggle: false
         entities:
-          - binary_sensor.x2_sdrive18i_condition_based_services
-          - binary_sensor.x2_sdrive18i_door_lock_state
-          - binary_sensor.x2_sdrive18i_lids
-          - binary_sensor.x2_sdrive18i_windows
-          - sensor.x2_sdrive18i_mileage
-          - sensor.x2_sdrive18i_remaining_fuel
-          - sensor.x2_sdrive18i_remaining_range_total
-          - binary_sensor.x2_sdrive18i_lights_parking
-          - device_tracker.x2_sdrive18i
+          - type: custom:fold-entity-row
+            head: device_tracker.x2_sdrive18i
+            items:
+              - type: section
+              - binary_sensor.x2_sdrive18i_condition_based_services
+              - binary_sensor.x2_sdrive18i_door_lock_state
+              - binary_sensor.x2_sdrive18i_lids
+              - binary_sensor.x2_sdrive18i_windows
+              - sensor.x2_sdrive18i_mileage
+              - sensor.x2_sdrive18i_remaining_fuel
+              - sensor.x2_sdrive18i_remaining_range_total
+              - binary_sensor.x2_sdrive18i_lights_parking
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Funktionen
+            items:
+              - lock.x2_sdrive18i_lock
+              - script.1543166767000
+              - script.1543167202912
+              - script.1543167430941
       - type: map
-        default_zoom: 13
+        default_zoom: 14
+        aspect_ratio: 50%
         entities:
           - entity: device_tracker.x2_sdrive18i
-        aspect_ratio: 50%
 
 ##### Sonstiges #####
   - title: Sonstiges
     id: other
     icon: mdi:library-books
     cards:
-      - id: af7f3464ec654129b2c4cb73d9cb7c39
-        type: entities
-        title: Anwesenheit
-        show_header_toggle: false
-        entities:
-          - device_tracker.iphone8
-          - device_tracker.anitasiphone
-          - automation.abwesenheitsschaltung
       - id: 841ec2f903ae44789dd8b9bc5c8e7cb2
         type: entities
         title: Wetter
