@@ -302,3 +302,8 @@
   - data:
       vin: WBAYH11080EM67022
     service: bmw_connected_drive.light_flash
+'1543218125342':
+  alias: BMW X2 - Update
+  sequence:
+  - data: {}
+    service: bmw_connected_drive.update_state

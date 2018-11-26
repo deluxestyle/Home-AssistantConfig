@@ -179,7 +179,7 @@ views:
           - entity: vacuum.xiaomi_vacuum_cleaner
             tap_action: call-service
             service: vacuum.locate
-            icon: mdi:bell-ring
+            icon: mdi:map-marker
       - id: a1b3d3fba78e4a9ab5c77bd8108c6eae
         type: entities
         title: Staubsauger
@@ -366,9 +366,11 @@ views:
 
 ##### Auto ##### 
   - title: BMW X2
+    id: bmw_x2
     icon: mdi:car-hatchback
     cards:
-      - type: entities
+      - id: x2_overview
+        type: entities
         title: "BMW X2 Übersicht"
         show_header_toggle: false
         entities:
@@ -393,7 +395,9 @@ views:
               - script.1543166767000
               - script.1543167202912
               - script.1543167430941
-      - type: map
+              - script.1543218125342
+      - id: x2_map
+        type: map
         default_zoom: 14
         aspect_ratio: 50%
         entities:

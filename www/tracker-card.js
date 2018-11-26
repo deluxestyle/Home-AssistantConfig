@@ -15,9 +15,9 @@ class TrackerCard extends HTMLElement {
 
     const cardConfig = Object.assign({}, config);
     if (!cardConfig.title) {
-      cardConfig.title = '📣 Updates';
+      cardConfig.title = 'Updates';
     } else {
-      cardConfig.title = '📣 ' + cardConfig.title;
+      cardConfig.title = cardConfig.title;
     }
     const card = document.createElement('ha-card');
     const content = document.createElement('div');
