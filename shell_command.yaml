@@ -3,3 +3,5 @@ deactivate_cam: 'sudo /home/pi/syno/cam_switcher.sh 1 off'
 
 surveillance_on: 'sudo /home/pi/syno/surveillance.sh start'
 surveillance_off: 'sudo /home/pi/syno/surveillance.sh stop'
+
+access_ui_lovelace: 'sudo /home/pi/ui_lovelace.sh'

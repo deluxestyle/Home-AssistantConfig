@@ -322,3 +322,5 @@ script.1543167202912:
   icon: mdi:bullhorn
 script.1543167430941:
   icon: mdi:flashlight
+zone.home:
+  track_ios: 'false'

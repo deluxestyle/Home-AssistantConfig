@@ -640,3 +640,12 @@
   - data:
       message: Niemand zu Hause
     service: notify.ios_iphone8
+- id: '1543519090605'
+  alias: ui_lovelace Zugriff
+  trigger:
+  - entity_id: sensor.custom_card_tracker
+    platform: state
+    to: '0'
+  condition: []
+  action:
+  - service: shell_command.access_ui_lovelace
