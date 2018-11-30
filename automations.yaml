@@ -649,3 +649,12 @@
   condition: []
   action:
   - service: shell_command.access_ui_lovelace
+- id: '1543619209115'
+  alias: Starte HomeKit
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - delay: 00:01:30
+  - service: homekit.start

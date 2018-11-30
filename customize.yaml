@@ -8,42 +8,27 @@ light.schlafzimmer_1:
   hidden: true
 light.schlafzimmer_2:
   hidden: true
-media_player.bad:
-  homebridge_visible: 'true'
-media_player.schlafzimmer:
-  homebridge_visible: 'true'
 light.steckdose:
   effect_list:
   - ''
-  homebridge_visible: 'true'
   icon: mdi:power-socket-eu
 light.steckdose_2:
   effect_list:
   - ''
   friendly_name: Sonstige Steckdose
-  homebridge_visible: 'true'
   icon: mdi:power-socket-eu
-climate.hygrometer:
-  homebridge_visible: 'true'
-vacuum.xiaomi_vacuum_cleaner:
-  homebridge_visible: 'true'
 climate.oeq1696358:
   friendly_name: Wohnzimmer Heizung
-  homebridge_visible: 'true'
   icon: mdi:radiator
 climate.oeq1696369:
   friendly_name: Schlafzimmer Heizung
-  homebridge_visible: 'true'
   icon: mdi:radiator
 sensor.oeq1667238_humidity:
   friendly_name: Luftfeuchtigkeit Büro
-  homebridge_visible: 'true'
 sensor.oeq1667238_temperature:
   friendly_name: Temperatursensor Büro
-  homebridge_visible: 'true'
 climate.int0000002:
   friendly_name: Heizung Büro
-  homebridge_visible: 'true'
   icon: mdi:radiator
 sensor.valve_office:
   icon: mdi:fan
@@ -55,21 +40,16 @@ device_tracker.anitasiphone:
   friendly_name: iPhone Anita
 sensor.temperature_158d0001b8c96c:
   friendly_name: Temperatursensor Schlafzimmer
-  homebridge_visible: 'true'
 sensor.temperature_158d0001b8c998:
   friendly_name: Temperatursensor Wohnzimmer
-  homebridge_visible: 'true'
 sensor.humidity_158d0001b8c96c:
   friendly_name: Luftfeuchtigkeit Schlafzimmer
-  homebridge_visible: 'true'
   icon: mdi:water-percent
 sensor.humidity_158d0001b8c998:
   friendly_name: Luftfeuchtigkeit Wohnzimmer
-  homebridge_visible: 'true'
   icon: mdi:water-percent
 light.gateway_light_7811dcb258d1:
   friendly_name: Xiaomi Nachtlicht
-  homebridge_visible: 'true'
 sensor.illumination_7811dcb258d1:
   friendly_name: Lichtmesser
 switch.lights_living_room:
@@ -84,20 +64,17 @@ device_tracker.iphone8:
   friendly_name: iPhone Wolfgang
 sensor.humidity_158d0002239fb5:
   friendly_name: Luftfeuchtigkeit Küche
-  homebridge_visible: 'true'
   icon: mdi:water-percent
 sensor.pressure_158d0002239fb5:
   friendly_name: Luftdruck Küche
   icon: mdi:gauge
 sensor.temperature_158d0002239fb5:
   friendly_name: Temperatursensor Küche
-  homebridge_visible: 'true'
 group.battery_stats:
   control: hidden
   icon: mdi:battery-50´
 light.sonoff_office:
   friendly_name: Licht Büro
-  homebridge_visible: 'true'
 sensor.online_time:
   friendly_name: HA Time Online
 light.lights_all:
@@ -143,7 +120,6 @@ group.living_room:
   order: 2
 group.music:
   control: hidden
-  homebridge_visible: 'true'
 group.office:
   control: hidden
   order: 5
@@ -193,7 +169,6 @@ group.power_sockets:
   control: hidden
   friendly_name: 'Steckdosen '
 light.steckdose_3:
-  homebridge_visible: 'true'
   icon: mdi:printer
 light.onoff_plug_1:
   icon: mdi:cctv
@@ -201,14 +176,11 @@ group.power_sockets_group:
   control: hidden
 script.1532173931522:
   friendly_name: 'Sonos: Superfly FM starten'
-  homebridge_visible: 'true'
   icon: mdi:play
 script.1532175994947:
   friendly_name: Sonos ausschalten
-  homebridge_visible: 'true'
   icon: mdi:stop
 script.1532275617247:
-  homebridge_visible: 'true'
   icon: mdi:power
 script.1534621188695:
   friendly_name: Wecker Schlafzimmer einschalten
@@ -246,7 +218,6 @@ input_select.avr_source:
   icon: mdi:playlist-play
 sensor.humidity_158d00023258bd:
   friendly_name: Luftfeuchtigkeit
-  homebridge_visible: 'true'
   icon: mdi:water-percent
 sensor.temperature_158d00023258bd:
   friendly_name: Temperatur
@@ -268,7 +239,6 @@ script.1538143929416:
 sensor.valve_bath:
   icon: mdi:fan
 climate.oeq1714751:
-  homebridge_visible: 'true'
   icon: mdi:radiator
 script.1538502214360:
   icon: mdi:radiator-off
@@ -286,26 +256,18 @@ input_datetime.radiator_bath_1:
   friendly_name: Startzeit
 automation.bewegungsmelder__alarm:
   icon: mdi:alarm-light
-script.1541097052191:
-  homebridge_visible: 'true'
 light.hgrp0000015422:
   hidden: true
 switch.sonos_group:
   icon: mdi:speaker-wireless
 light.schlafzimmer:
   friendly_name: Deckenlicht
-script.1541264856783:
-  homebridge_visible: 'true'
-script.1540232132608:
-  homebridge_visible: 'true'
 sensor.xiaomi_vacum_filter_left:
   friendly_name: Filter
   icon: mdi:blur-linear
 sensor.xiaomi_vacum_sensor_dirty_left:
   friendly_name: Sensor
   icon: mdi:blur-linear
-light.nachtischlampe_wolfgang:
-  homebridge_visible: 'true'
 script.1543087176551:
   icon: mdi:wifi
 script.1543087223684:
