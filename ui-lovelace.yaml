@@ -3,7 +3,7 @@ resources:
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/fold-entity-row.js?v=a310c8
+  - url: /local/fold-entity-row.js?v=0636ee
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
