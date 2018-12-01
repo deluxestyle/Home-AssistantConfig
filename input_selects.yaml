@@ -11,7 +11,7 @@ scenes_living_room:
       - Entspannen
       - Nachtlicht
     initial: '--'
-    
+
 scenes_bed_room:
     name: "Szenen"
     options:
@@ -27,7 +27,7 @@ master_sonos:
     options:
       - Schlafzimmer
       - Bad
-      
+
 avr_source:
     name: AVR Quelle
     icon: mdi:playlist-play
@@ -39,3 +39,17 @@ avr_source:
         - Turntable
         - vTurner
         - Home Network
+
+vacuum_rooms:
+    name: Räume
+    icon: mdi:broom
+    options:
+        - --
+        - Wohnzimmer
+        - Schlafzimmer
+        - Büro
+        - Katzenklo
+        - Bad
+        - Küche
+        - Flur
+        - Klo

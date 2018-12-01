@@ -166,6 +166,10 @@
         }} min - gesaugte Fläche: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaned_area
         }} qm'
     service: notify.ios_iphone8
+  - data:
+      entity_id: input_select.vacuum_rooms
+      option: --
+    service: input_select.select_option
 - id: xiaomi_vacuum_notification_on
   alias: 'Xiaomi Staubsauger: Benachrichtigung - gestartet'
   trigger:
@@ -557,7 +561,7 @@
   alias: Benachrichtigung - Luftfeuchtigkeit
   trigger:
   - above: '69'
-    entity_id: "sensor.humidity_158d0001b8c96c\t"
+    entity_id: sensor.humidity_158d0001b8c96c
     platform: numeric_state
   - above: '69'
     entity_id: sensor.humidity_158d0001b8c998
@@ -658,3 +662,21 @@
   action:
   - delay: 00:01:30
   - service: homekit.start
+- id: '1543669218842'
+  alias: 'Xiaomi Staubsauger: Zonenreinigung'
+  trigger:
+  - entity_id: input_select.vacuum_rooms
+    platform: state
+  condition: []
+  action:
+  - data_template:
+      entity_id: "{% if is_state(\"input_select.vacuum_rooms\", \"Wohnzimmer\") %}\n\
+        \  script.1543666947492\n{% elif is_state(\"input_select.vacuum_rooms\", \"\
+        Schlafzimmer\") %}\n  script.1543666909272\n{% elif is_state(\"input_select.vacuum_rooms\"\
+        , \"Bad\") %}\n  script.1543666985219\n{% elif is_state(\"input_select.vacuum_rooms\"\
+        , \"Küche\") %}\n  script.1543666771838\n{% elif is_state(\"input_select.vacuum_rooms\"\
+        , \"Flur\") %}\n  script.1543666867257\n{% elif is_state(\"input_select.vacuum_rooms\"\
+        , \"Klo\") %}\n  script.1543666831509\n{% elif is_state(\"input_select.vacuum_rooms\"\
+        , \"Katzenklo\") %}\n  script.1543667402104\n{% elif is_state(\"input_select.vacuum_rooms\"\
+        , \"Büro\") %}\n  script.1543666580682\n{% endif %}\n"
+    service: script.turn_on

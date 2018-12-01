@@ -190,6 +190,8 @@ views:
           - type: section
           - automation.xiaomi_staubsauger_automatisch_starten
           - automation.xiaomi_staubsauger_taglich_saugen
+          - type: section
+          - input_select.vacuum_rooms
           - type: custom:fold-entity-row
             head:
               type: section
