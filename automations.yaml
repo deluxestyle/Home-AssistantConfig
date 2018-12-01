@@ -367,6 +367,7 @@
     service: vacuum.start
 - id: '1532176861984'
   alias: Sonos automatisch einschalten
+  initial_state: false
   trigger:
   - entity_id: device_tracker.iphone8
     platform: state
@@ -548,6 +549,7 @@
   - service: script.1538646823835
 - id: '1540494970737'
   alias: Benachrichtigung - Bewegung erkannt
+  initial_state: false
   trigger:
   - entity_id: binary_sensor.motion_sensor_158d00023e77cb
     platform: state
@@ -585,6 +587,7 @@
     service: notify.ios_iphone8
 - id: '1541096569503'
   alias: Bewegungsmelder - Alarm
+  initial_state: false
   trigger:
   - entity_id: binary_sensor.motion_sensor_158d00023e77cb
     platform: state
@@ -667,7 +670,9 @@
   trigger:
   - entity_id: input_select.vacuum_rooms
     platform: state
-  condition: []
+  condition:
+  - condition: template
+    value_template: '{{ states.input_select.vacuum_rooms.state != "--" }}'
   action:
   - data_template:
       entity_id: "{% if is_state(\"input_select.vacuum_rooms\", \"Wohnzimmer\") %}\n\

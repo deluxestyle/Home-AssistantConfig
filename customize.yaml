@@ -286,3 +286,27 @@ script.1543167430941:
   icon: mdi:flashlight
 zone.home:
   track_ios: 'false'
+script.1543666985219:
+  friendly_name: Bad
+  icon: mdi:broom
+script.1543666580682:
+  friendly_name: Büro
+  icon: mdi:broom
+script.1543666867257:
+  friendly_name: Flur
+  icon: mdi:broom
+script.1543667402104:
+  friendly_name: Katzenklo
+  icon: mdi:broom
+script.1543666831509:
+  friendly_name: Klo
+  icon: mdi:broom
+script.1543666771838:
+  friendly_name: Küche
+  icon: mdi:broom
+script.1543666909272:
+  friendly_name: Schlafzimmer
+  icon: mdi:broom
+script.1543666947492:
+  friendly_name: Wohnzimmer
+  icon: mdi:broom
