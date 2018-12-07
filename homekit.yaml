@@ -1,18 +1,25 @@
 auto_start: False
 filter:
-    include_entities:
-      - light.gateway_light_7811dcb258d1
-      - light.sonoff_office
-      - light.nachtischlampe_wolfgang
-      - climate.oeq1714751
-      - climate.oeq1696358
-      - climate.oeq1696369
-      - climate.int0000002
-      - script.1532173931522
-      - script.1532175994947
-      - light.steckdose
-      - light.steckdose_3
-      - light.steckdose_2
-      - light.onoff_plug_1
-      - media_player.bad
-      - media_player.schlafzimmer
+  include_entities:
+    - light.gateway_light_7811dcb258d1
+    - light.sonoff_office
+    - light.nachtischlampe_wolfgang
+    - climate.oeq1714751
+    - climate.oeq1696358
+    - climate.oeq1696369
+    - climate.int0000002
+    - script.1532173931522
+    - script.1532175994947
+    - light.steckdose
+    - light.steckdose_3
+    - light.steckdose_2
+    - light.onoff_plug_1
+    - media_player.bad
+    - media_player.schlafzimmer
+entity_config:
+    media_player.schlafzimmer:
+      feature_list:
+        - feature: play_pause
+    media_player.bad:
+      feature_list:
+        - feature: play_pause

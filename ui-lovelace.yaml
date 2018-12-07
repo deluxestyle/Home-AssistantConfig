@@ -299,8 +299,8 @@ views:
               type: section
               label: Gruppe
             items:
-              - switch.sonos_group
               - input_select.master_sonos
+              - switch.sonos_group
           - type: custom:fold-entity-row
             head:
               type: section
