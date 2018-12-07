@@ -10,6 +10,8 @@ filter:
     - climate.int0000002
     - script.1532173931522
     - script.1532175994947
+    - script.1541264856783
+    - script.1540232132608
     - light.steckdose
     - light.steckdose_3
     - light.steckdose_2
