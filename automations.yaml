@@ -685,3 +685,100 @@
         , \"Katzenklo\") %}\n  script.1543667402104\n{% elif is_state(\"input_select.vacuum_rooms\"\
         , \"Büro\") %}\n  script.1543666580682\n{% endif %}\n"
     service: script.turn_on
+- id: '1544362634273'
+  alias: Heizung Wohnzimmer Temperatur
+  trigger:
+  - entity_id: input_number.radiator_temp_living_room
+    platform: state
+  condition: []
+  action:
+  - data_template:
+      entity_id: climate.oeq1696358
+      temperature: '{{ states.input_number.radiator_temp_living_room.state | float
+        }}'
+    service: climate.set_temperature
+- id: '1544362634274'
+  alias: Heizung Bad Temperatur
+  trigger:
+  - entity_id: input_number.radiator_temp_bath
+    platform: state
+  condition: []
+  action:
+  - data_template:
+      entity_id: climate.oeq1714751
+      temperature: '{{ states.input_number.radiator_temp_bath.state | float }}'
+    service: climate.set_temperature
+- id: '1544362634275'
+  alias: Heizung Schlafzimmer Temperatur
+  trigger:
+  - entity_id: input_number.radiator_temp_bed_room
+    platform: state
+  condition: []
+  action:
+  - data_template:
+      entity_id: climate.oeq1696369
+      temperature: '{{ states.input_number.radiator_temp_bed_room.state | float }}'
+    service: climate.set_temperature
+- id: '1544362634276'
+  alias: Heizung Büro Temperatur
+  trigger:
+  - entity_id: input_number.radiator_temp_office
+    platform: state
+  condition: []
+  action:
+  - data_template:
+      entity_id: climate.int0000002
+      temperature: '{{ states.input_number.radiator_temp_office.state | float }}'
+    service: climate.set_temperature
+# - id: '1544379604896'
+  # alias: Heizung Wohnzimmer - set Value
+  # trigger:
+  # - entity_id: sensor.temperature_living_room
+    # platform: state
+  # - event: start
+    # platform: homeassistant
+  # condition: []
+  # action:
+  # - data_template:
+      # entity_id: input_number.radiator_temp_living_room
+      # value: '{{ states.sensor.temperature_living_room.state | int }}'
+    # service: input_number.set_value
+# - id: '1544379604897'
+  # alias: Heizung Schlafzimmer - set Value
+  # trigger:
+  # - entity_id: sensor.temperature_bed_room
+    # platform: state
+  # - event: start
+    # platform: homeassistant
+  # condition: []
+  # action:
+  # - data_template:
+      # entity_id: input_number.radiator_temp_bed_room
+      # value: '{{ states.sensor.temperature_bed_room.state | int }}'
+    # service: input_number.set_value
+# - id: '1544379604898'
+  # alias: Heizung Büro - set Value
+  # trigger:
+  # - entity_id: sensor.temperature_office
+    # platform: state
+  # - event: start
+    # platform: homeassistant
+  # condition: []
+  # action:
+  # - data_template:
+      # entity_id: input_number.radiator_temp_office
+      # value: '{{ states.sensor.temperature_office.state | int }}'
+    # service: input_number.set_value
+# - id: '1544379604899'
+  # alias: Heizung Bad - set Value
+  # trigger:
+  # - entity_id: sensor.temperature_bath
+    # platform: state
+  # - event: start
+    # platform: homeassistant
+  # condition: []
+  # action:
+  # - data_template:
+      # entity_id: input_number.radiator_temp_bath
+      # value: '{{ states.sensor.temperature_bath.state | int }}'
+    # service: input_number.set_value

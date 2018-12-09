@@ -310,3 +310,12 @@ script.1543666909272:
 script.1543666947492:
   friendly_name: Wohnzimmer
   icon: mdi:broom
+input_number.radiator_temp_living_room:
+  friendly_name: Soll °C
+input_number.radiator_temp_office:
+  friendly_name: Soll °C
+  unit_of_measurement: °C
+input_number.radiator_temp_bath:
+  friendly_name: Soll °C
+input_number.radiator_temp_bed_room:
+  friendly_name: Soll °C

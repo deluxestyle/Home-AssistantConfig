@@ -32,10 +32,22 @@
         friendly_name: "Bad Ventil"
         unit_of_measurement: "%"
         value_template: '{{ states.climate.oeq1714751.attributes.valve }}'
-      temperature_bath:
-        friendly_name: "Temperatur Bad"
-        unit_of_measurement: °C
-        value_template: '{{ states.climate.oeq1714751.attributes.current_temperature }}'
+      # temperature_bath:
+        # friendly_name: "Temperatur Bad"
+        # unit_of_measurement: °C
+        # value_template: '{{ states.climate.oeq1714751.attributes.temperature }}'
+      # temperature_bed_room:
+        # friendly_name: "Temperatur Schlafzimmer"
+        # unit_of_measurement: °C
+        # value_template: '{{ states.climate.oeq1696369.attributes.temperature }}'
+      # temperature_living_room:
+        # friendly_name: "Temperatur Wohnzimmer"
+        # unit_of_measurement: °C
+        # value_template: '{{ states.climate.oeq1696358.attributes.temperature }}'
+      # temperature_office:
+        # friendly_name: "Temperatur Büro"
+        # unit_of_measurement: °C
+        # value_template: '{{ states.climate.int0000002.attributes.temperature }}'
       battery_radiator_office_1:
         friendly_name: "Batterie Thermostat Büro"
         value_template: '{{ states.climate.oeq1667238.attributes.battery }}'
