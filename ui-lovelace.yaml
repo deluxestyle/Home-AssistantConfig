@@ -63,7 +63,6 @@ views:
         title: Bad
         show_header_toggle: false
         entities:
-          #- input_number.radiator_temp_bath
           - climate.oeq1714751
           - sensor.humidity_158d00023258bd
           - type: custom:fold-entity-row
@@ -80,7 +79,6 @@ views:
               type: section
               label: Mehr
             items:
-              #- script.1538646823835
               - script.1538502214360
               - switch.radiator_bath_keylock
               - sensor.temperature_158d00023258bd
@@ -91,7 +89,6 @@ views:
         title: Wohnzimmer
         show_header_toggle: false
         entities:
-          #- input_number.radiator_temp_living_room
           - climate.oeq1696358
           - sensor.humidity_158d0001b8c998
           - type: custom:fold-entity-row
@@ -108,7 +105,6 @@ views:
         title: Schlafzimmer
         show_header_toggle: false
         entities:
-          #- input_number.radiator_temp_bed_room
           - climate.oeq1696369
           - sensor.humidity_158d0001b8c96c
           - type: custom:fold-entity-row
@@ -125,7 +121,6 @@ views:
         title: Büro
         show_header_toggle: false
         entities:
-          #- input_number.radiator_temp_office
           - climate.int0000002
           - sensor.oeq1667238_humidity
           - type: custom:fold-entity-row
