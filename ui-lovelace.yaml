@@ -244,13 +244,18 @@ views:
           - switch.samsung_tv
           - switch.telekom_mr_401
           - switch.avr_151
-          - input_select.avr_source
-          - type: custom:mini-media-player
-            entity: media_player.harman_kardon_avr
-            hide_controls: true
-            volume_stateless: true
-            hide_power: true
-            group: true
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: AVR 151
+            items:
+              - input_select.avr_source
+              - type: custom:mini-media-player
+                entity: media_player.harman_kardon_avr
+                hide_controls: true
+                volume_stateless: true
+                hide_power: true
+                group: true
           - type: custom:fold-entity-row
             head:
               type: section
