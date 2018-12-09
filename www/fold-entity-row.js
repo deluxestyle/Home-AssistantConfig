@@ -146,17 +146,17 @@ class FoldRow extends Polymer.Element {
     let item = document.createElement('ul');
     item.appendChild(row);
     row.classList.add('state-card-dialog');
-    row.addEventListener('click', (e) => {
-      let ev = new Event('hass-more-info', {
-        bubbles: true,
-        cancelable: false,
-        composed: true,
-      });
-      const entityId = data.entity;
-      ev.detail = { entityId };
-      this.dispatchEvent(ev);
-      e.stopPropagation();
-    });
+    // row.addEventListener('click', (e) => {
+      // let ev = new Event('hass-more-info', {
+        // bubbles: true,
+        // cancelable: false,
+        // composed: true,
+      // });
+      // const entityId = data.entity;
+      // ev.detail = { entityId };
+      // this.dispatchEvent(ev);
+      // e.stopPropagation();
+    // });
     this.$.rows.appendChild(item);
   }
 

@@ -3,11 +3,11 @@ resources:
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/fold-entity-row.js?v=0636ee
+  - url: /local/fold-entity-row.js?v=0636eg
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-
+    
 title: Home
 views:
 ##### Licht #####
@@ -168,10 +168,10 @@ views:
             tap_action: call-service
             service: vacuum.pause
             icon: mdi:pause
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: call-service
-            service: vacuum.stop
-            icon: mdi:stop
+          # - entity: vacuum.xiaomi_vacuum_cleaner
+            # tap_action: call-service
+            # service: vacuum.stop
+            # icon: mdi:stop
           - entity: vacuum.xiaomi_vacuum_cleaner
             tap_action: call-service
             service: vacuum.return_to_base
@@ -197,6 +197,7 @@ views:
               type: section
               label: Zonen (Räume)
             items:
+              # - input_select.vacuum_rooms
               - script.1543667402104
               - script.1543666580682
               - script.1543666947492
