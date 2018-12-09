@@ -24,7 +24,13 @@
       - light.decke
       - light.tisch
       - light.leselampe
-      
+
+- platform: group
+  name: lights_bed_room
+  entities:
+      - light.schlafzimmer
+      - light.nachtischlampe_wolfgang
+
 - platform: group
   name: lights_all
   entities:

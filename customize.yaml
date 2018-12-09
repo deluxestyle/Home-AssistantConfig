@@ -2,6 +2,7 @@ light.bad:
   hidden: true
 light.buro:
   hidden: true
+  icon: mdi:ceiling-light
 light.all_hue_lights:
   hidden: true
 light.schlafzimmer_1:
@@ -50,6 +51,7 @@ sensor.humidity_158d0001b8c998:
   icon: mdi:water-percent
 light.gateway_light_7811dcb258d1:
   friendly_name: Xiaomi Nachtlicht
+  icon: mdi:weather-night
 sensor.illumination_7811dcb258d1:
   friendly_name: Lichtmesser
 switch.lights_living_room:
@@ -75,12 +77,14 @@ group.battery_stats:
   icon: mdi:battery-50´
 light.sonoff_office:
   friendly_name: Licht Büro
+  icon: mdi:ceiling-light
 sensor.online_time:
   friendly_name: HA Time Online
 light.lights_all:
-  friendly_name: Alle Lichter
+  friendly_name: Alle Lampen
 light.lights_living_room:
-  friendly_name: Wohnzimmer Lichter
+  friendly_name: Wohnzimmer Lampen
+  icon: mdi:ceiling-light
 group.bed_room:
   control: hidden
   order: 3
@@ -262,6 +266,7 @@ switch.sonos_group:
   icon: mdi:speaker-wireless
 light.schlafzimmer:
   friendly_name: Deckenlicht
+  icon: mdi:ceiling-light
 sensor.xiaomi_vacum_filter_left:
   friendly_name: Filter
   icon: mdi:blur-linear
@@ -319,3 +324,15 @@ input_number.radiator_temp_bath:
   friendly_name: Soll °C
 input_number.radiator_temp_bed_room:
   friendly_name: Soll °C
+light.lights_bed_room:
+  friendly_name: Schlafzimmer Lampen
+light.nachtischlampe_wolfgang:
+  icon: mdi:lamp
+light.leselampe:
+  icon: mdi:desk-lamp
+light.decke:
+  icon: mdi:ceiling-light
+light.tisch:
+  icon: mdi:floor-lamp
+media_player.harman_kardon_avr:
+  icon: mdi:speaker-wireless

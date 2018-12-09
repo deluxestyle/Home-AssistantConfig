@@ -7,7 +7,7 @@ resources:
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-    
+
 title: Home
 views:
 ##### Licht #####
@@ -27,18 +27,31 @@ views:
         show_header_toggle: false
         entities:
           - light.lights_living_room
-          - light.tisch
+          - type: section
           - light.decke
+          - light.tisch
           - light.leselampe
-          - input_select.scenes_living_room
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Szenen
+            items:
+              - input_select.scenes_living_room
       - id: 7a4cb19d49f14d6883c3cd8a399268b6
         type: entities
         title: Schlafzimmer
         show_header_toggle: false
         entities:
+          - light.lights_bed_room
+          - type: section
           - light.nachtischlampe_wolfgang
           - light.schlafzimmer
-          - input_select.scenes_bed_room
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Szenen
+            items:
+              - input_select.scenes_bed_room
       - id: add88382ed0d477193aa6388e3ed8cb2
         type: entities
         title: Büro
