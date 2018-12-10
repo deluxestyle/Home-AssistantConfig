@@ -336,16 +336,6 @@
   - data:
       message: 'Heizung: Büro aus'
     service: notify.ios_iphone8
-- action:
-  - data:
-      entity_id: counter.xiaomo_runs
-    service: counter.reset
-  alias: 'Xiaomi Staubsauger: Zähler zurücksetzen'
-  condition: []
-  id: '1521893201752'
-  trigger:
-  - at: 00:01
-    platform: time
 - id: '1521894687949'
   alias: 'Xiaomi Staubsauger: Täglich saugen'
   trigger:
@@ -466,9 +456,6 @@
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.return_to_base
-  - data:
-      entity_id: counter.xiaomo_runs
-    service: counter.decrement
 - id: '1535994680040'
   alias: Kamera aus
   trigger:
