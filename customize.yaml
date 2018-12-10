@@ -336,3 +336,9 @@ light.tisch:
   icon: mdi:floor-lamp
 media_player.harman_kardon_avr:
   icon: mdi:speaker-wireless
+script.1541264856783:
+  icon: mdi:radiator-off
+script.1540232132608:
+  icon: mdi:radiator-disabled
+light.kuche:
+  icon: mdi:ceiling-light

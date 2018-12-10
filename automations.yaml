@@ -24,6 +24,9 @@
     service: light.turn_off
   - data: {}
     service: script.1532175994947
+  - data:
+      entity_id: automation.benachrichtigung__bewegung_erkannt
+    service: automation.turn_on
 - id: camera_cctv_off
   alias: Kamera Surveillance - aus
   trigger:
@@ -119,7 +122,7 @@
     entity_id: light.leselampe
     service: light.toggle
 - id: switch2
-  alias: Lichtschalter - HUE Lampe
+  alias: Lichtschalter - Küchenlampe
   trigger:
   - event_data:
       click_type: single
@@ -127,7 +130,7 @@
     event_type: xiaomi_aqara.click
     platform: event
   action:
-  - entity_id: light.hue_white_lamp_1
+  - entity_id: light.kuche
     service: light.toggle
 - id: xiaomi_vacuum_start
   alias: 'Xiaomi Staubsauger: automatisch starten'
@@ -184,7 +187,7 @@
       message: Staubsauger gestartet
     service: notify.ios_iphone8
 - id: xiaomi_vacuum_notification_blocked
-  alias: 'Xiaomi Staubsauger: Benachrichtigung - blockiert'
+  alias: 'Xiaomi Staubsauger: Benachrichtigung - Error'
   trigger:
   - entity_id: sensor.xiaomi_vacuum_status
     platform: state
@@ -197,6 +200,13 @@
       message: 'Staubsauger blockiert - Error: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.error
         }} '
     service: notify.ios_iphone8
+  - alias: ''
+    data:
+      entity_id: automation.xiaomi_staubsauger_automatisch_starten
+    service: automation.turn_off
+  - data:
+      entity_id: automation.xiaomi_staubsauger_taglich_saugen
+    service: automation.turn_off
 - id: '1521743370575'
   alias: 'Heizung: Abwesenheitsschaltung'
   trigger:
@@ -636,6 +646,9 @@
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.return_to_base
+  - data:
+      entity_id: automation.benachrichtigung__bewegung_erkannt
+    service: automation.turn_off
 - id: '1543074323979'
   alias: Benachrichtigung - Abwesend
   trigger:

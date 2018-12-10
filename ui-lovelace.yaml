@@ -7,6 +7,8 @@ resources:
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=4dca98b
+    type: js
 
 title: Home
 views:
@@ -58,6 +60,12 @@ views:
         show_header_toggle: false
         entities:
           - light.sonoff_office
+      - id: add88382ed0d477193aa6388e3ed8cb4
+        type: entities
+        title: Küche
+        show_header_toggle: false
+        entities:
+          - light.kuche
       - id: a65c87cf3b014b12824a4e5e75cc4921
         type: entities
         title: Flur
@@ -65,12 +73,29 @@ views:
         entities:
           - light.gateway_light_7811dcb258d1
           - sensor.illumination_7811dcb258d1
+      # - type: custom:compact-custom-header
+        # notification: true
+        # menu: true
+        # options: false
+        # voice: false
+        # clock: notification
+        # clock_format: 24
+        # clock_am_pm: false
+        # header: true
 
 ##### Heizung #####
   - title: Heizung
     id: radiator
     icon: mdi:radiator
     cards:
+      - id: 505f2d27af31444fb53485c7d84a35cb
+        type: entities
+        show_header_toggle: false
+        entities:
+          - input_boolean.automation_radiator
+          - automation.heizung_abwesenheitsschaltung
+          - script.1540232132608
+          - script.1541264856783
       - id: a7fd54ae32284e4abd643b893d276f4c
         type: entities
         title: Bad
@@ -152,14 +177,6 @@ views:
         entities:
           - sensor.temperature_158d0002239fb5
           - sensor.humidity_158d0002239fb5
-      - id: 505f2d27af31444fb53485c7d84a35cb
-        type: entities
-        show_header_toggle: false
-        entities:
-          - input_boolean.automation_radiator
-          - automation.heizung_abwesenheitsschaltung
-          - script.1540232132608
-          - script.1541264856783
 
 ##### Staubsauger #####
   - title: Staubsauger
@@ -249,13 +266,13 @@ views:
               type: section
               label: AVR 151
             items:
-              - input_select.avr_source
               - type: custom:mini-media-player
                 entity: media_player.harman_kardon_avr
                 hide_controls: true
                 volume_stateless: true
                 hide_power: true
                 group: true
+              - input_select.avr_source
           - type: custom:fold-entity-row
             head:
               type: section
