@@ -32,6 +32,12 @@
       - light.nachtischlampe_wolfgang
 
 - platform: group
+  name: lights_kitchen
+  entities:
+      - light.kuche
+      - light.steckdose_2
+
+- platform: group
   name: lights_all
   entities:
       - light.decke
@@ -42,3 +48,4 @@
       - light.sonoff_office
       - light.nachtischlampe_wolfgang
       - light.kuche
+      - light.steckdose_2

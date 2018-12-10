@@ -130,7 +130,8 @@
     event_type: xiaomi_aqara.click
     platform: event
   action:
-  - entity_id: light.kuche
+  - data:
+      entity_id: light.lights_kitchen
     service: light.toggle
 - id: xiaomi_vacuum_start
   alias: 'Xiaomi Staubsauger: automatisch starten'

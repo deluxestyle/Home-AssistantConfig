@@ -14,10 +14,8 @@ light.steckdose:
   - ''
   icon: mdi:power-socket-eu
 light.steckdose_2:
-  effect_list:
-  - ''
-  friendly_name: Sonstige Steckdose
-  icon: mdi:power-socket-eu
+  friendly_name: Küchenspots
+  icon: mdi:spotlight-beam
 climate.oeq1696358:
   friendly_name: Wohnzimmer Heizung
   icon: mdi:radiator
@@ -341,4 +339,8 @@ script.1541264856783:
 script.1540232132608:
   icon: mdi:radiator-disabled
 light.kuche:
+  friendly_name: Deckenlampe
+  icon: mdi:ceiling-light
+light.lights_kitchen:
+  friendly_name: Küchenlicht
   icon: mdi:ceiling-light

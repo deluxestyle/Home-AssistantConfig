@@ -65,7 +65,14 @@ views:
         title: Küche
         show_header_toggle: false
         entities:
-          - light.kuche
+          - light.lights_kitchen
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Lampen
+            items:
+              - light.kuche
+              - light.steckdose_2
       - id: a65c87cf3b014b12824a4e5e75cc4921
         type: entities
         title: Flur
@@ -365,7 +372,6 @@ views:
         entities:
           - light.steckdose
           - light.steckdose_3
-          - light.steckdose_2
           - light.onoff_plug_1
 
 ##### Personen #####
