@@ -74,7 +74,7 @@ group.battery_stats:
   control: hidden
   icon: mdi:battery-50´
 light.sonoff_office:
-  friendly_name: Licht Büro
+  friendly_name: Bürolicht
   icon: mdi:ceiling-light
 sensor.online_time:
   friendly_name: HA Time Online
@@ -219,10 +219,10 @@ group.all_scripts:
 input_select.avr_source:
   icon: mdi:playlist-play
 sensor.humidity_158d00023258bd:
-  friendly_name: Luftfeuchtigkeit
+  friendly_name: Luftfeuchtigkeit Bad
   icon: mdi:water-percent
 sensor.temperature_158d00023258bd:
-  friendly_name: Temperatur
+  friendly_name: Temperatursensor Bad
   icon: mdi:thermometer
 sensor.pressure_158d00023258bd:
   friendly_name: Luftdruck Bad

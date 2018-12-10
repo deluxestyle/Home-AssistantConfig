@@ -19,13 +19,13 @@ views:
     cards:
       - id: af72c9fa5de745b592a186795efddd08
         type: entities
-        title: Licht
+        #title: Licht
         show_header_toggle: false
         entities:
           - light.lights_all
       - id: 8f01ce04c719444899ffae242bea75cc
         type: entities
-        title: Wohnzimmer
+        #title: Wohnzimmer
         show_header_toggle: false
         entities:
           - light.lights_living_room
@@ -41,7 +41,7 @@ views:
               - input_select.scenes_living_room
       - id: 7a4cb19d49f14d6883c3cd8a399268b6
         type: entities
-        title: Schlafzimmer
+        #title: Schlafzimmer
         show_header_toggle: false
         entities:
           - light.lights_bed_room
@@ -56,13 +56,13 @@ views:
               - input_select.scenes_bed_room
       - id: add88382ed0d477193aa6388e3ed8cb2
         type: entities
-        title: Büro
+        #title: Büro
         show_header_toggle: false
         entities:
           - light.sonoff_office
       - id: add88382ed0d477193aa6388e3ed8cb4
         type: entities
-        title: Küche
+        #title: Küche
         show_header_toggle: false
         entities:
           - light.lights_kitchen
@@ -75,7 +75,7 @@ views:
               - light.steckdose_2
       - id: a65c87cf3b014b12824a4e5e75cc4921
         type: entities
-        title: Flur
+        #title: Flur
         show_header_toggle: false
         entities:
           - light.gateway_light_7811dcb258d1
@@ -105,7 +105,7 @@ views:
           - script.1541264856783
       - id: a7fd54ae32284e4abd643b893d276f4c
         type: entities
-        title: Bad
+        #title: Bad
         show_header_toggle: false
         entities:
           - climate.oeq1714751
@@ -131,7 +131,7 @@ views:
               - binary_sensor.door_window_sensor_158d00022f13a0
       - id: dd2f1db062f14b229ae41ca732bccc71
         type: entities
-        title: Wohnzimmer
+        #title: Wohnzimmer
         show_header_toggle: false
         entities:
           - climate.oeq1696358
@@ -147,7 +147,7 @@ views:
               - sensor.valve_living_room
       - id: a116e7dc9fc64aa7876d47744c89c4d9
         type: entities
-        title: Schlafzimmer
+        #title: Schlafzimmer
         show_header_toggle: false
         entities:
           - climate.oeq1696369
@@ -163,7 +163,7 @@ views:
               - sensor.valve_bed_room
       - id: f2baf9dcaa31414b9d7da844c7a1d785
         type: entities
-        title: Büro
+        #title: Büro
         show_header_toggle: false
         entities:
           - climate.int0000002
@@ -179,7 +179,7 @@ views:
               - sensor.valve_office
       - id: 884ca7aafc654d7eb6af9ca2d248970d
         type: entities
-        title: Küche
+        #title: Küche
         show_header_toggle: false
         entities:
           - sensor.temperature_158d0002239fb5
@@ -194,7 +194,7 @@ views:
         type: glance
         show_name: false
         show_state: false
-        title: Xiaomi StaubRobo
+        #title: Xiaomi StaubRobo
         entities:
           - entity: vacuum.xiaomi_vacuum_cleaner
             tap_action: call-service
@@ -218,7 +218,7 @@ views:
             icon: mdi:map-marker
       - id: a1b3d3fba78e4a9ab5c77bd8108c6eae
         type: entities
-        title: Staubsauger
+        #title: Staubsauger
         show_header_toggle: false
         entities:
           - vacuum.xiaomi_vacuum_cleaner
@@ -259,7 +259,7 @@ views:
     cards:
       - id: f7040ea6d3a64eb1a4fa3506f2e018c8
         type: entities
-        title: Wohnzimmer Multimedia
+        #title: Wohnzimmer Multimedia
         show_header_toggle: false
         entities:
           - light.steckdose
@@ -290,14 +290,14 @@ views:
               - script.1538072504227
               - script.1538057479069
       - id: adb02f1033c0456cbc51ac87fd4ee9de
-        title: Sonos
+        #title: Sonos
         type: conditional
         conditions:
           - entity: switch.sonos_group
             state: "on"
         card:
           type: entities
-          title: Sonos MediaPlayer
+          #title: Sonos MediaPlayer
           entities:
             - type: custom:mini-media-player
               entity: media_player.sonos_boxen
@@ -308,13 +308,13 @@ views:
               group: true
       - id: adb02f1033c0456cbc51ac87fd4ee9df
         type: conditional
-        title: Sonos
+        #title: Sonos
         conditions:
           - entity: switch.sonos_group
             state: "off"
         card:
           type: entities
-          title: Sonos MediaPlayer
+          #title: Sonos MediaPlayer
           entities:
             - type: custom:mini-media-player
               entity: media_player.bad
@@ -333,7 +333,7 @@ views:
               group: true
       - id: adb02f1033c0456cbc51ac87fd4ee9c4
         type: entities
-        title: Sonos Einstellungen
+        #title: Sonos Einstellungen
         show_header_toggle: false
         entities:
           - type: custom:fold-entity-row
@@ -367,7 +367,7 @@ views:
     cards:
       - id: 79b1b8e94af645c192affaac3c725bda
         type: entities
-        title: Steckdosen
+        #title: Steckdosen
         show_header_toggle: false
         entities:
           - light.steckdose
@@ -381,7 +381,7 @@ views:
     cards:
       - id: af7f3464ec654129b2c4cb73d9cb7c39
         type: entities
-        title: Anwesenheit
+        #title: Anwesenheit
         show_header_toggle: false
         entities:
           - device_tracker.iphone8
@@ -390,7 +390,7 @@ views:
           - automation.abwesenheitsschaltung
       - id: 2402c60089f9494ab6d16f85ca87f50b
         type: entities
-        title: Bewegung
+        #title: Bewegung
         show_header_toggle: flase
         entities:
           - binary_sensor.motion_sensor_158d00023e77cb
@@ -402,7 +402,7 @@ views:
           - automation.benachrichtigung__bewegung_erkannt
       - id: b230e10f94824a3e928420cbeac0fcd6
         type: entities
-        title: Überwachung
+        #title: Überwachung
         show_header_toggle: false
         entities:
           - light.onoff_plug_1
@@ -427,7 +427,7 @@ views:
     cards:
       - id: x2_overview
         type: entities
-        title: "BMW X2 Übersicht"
+        #title: "BMW X2 Übersicht"
         show_header_toggle: false
         entities:
           - type: custom:fold-entity-row
@@ -466,16 +466,23 @@ views:
     cards:
       - id: 841ec2f903ae44789dd8b9bc5c8e7cb2
         type: entities
-        title: Wetter
+        #title: Wetter
         show_header_toggle: false
         entities:
           - sensor.pws_weather
           - sensor.pws_temp_c
           - sensor.pws_feelslike_c
           - sun.sun
+      - id: cfd3e4013c904e5ca5c512f15395a932
+        type: entities
+        #title: Sensoren
+        show_header_toggle: false
+        entities:
+          - sensor.pressure_158d0002239fb5
+          - sensor.pressure_158d00023258bd
       - id: 22a013a9451c45a38f72387356665fac
         type: entities
-        title: FritzBox
+        #title: FritzBox
         show_header_toggle: false
         entities:
           - sensor.fritz_netmonitor
@@ -486,24 +493,17 @@ views:
             items:
               - script.1543087176551
               - script.1543087223684
-      - id: cfd3e4013c904e5ca5c512f15395a932
-        type: entities
-        title: Sensoren
-        show_header_toggle: false
-        entities:
-          - sensor.ccu_servicemessages
-          - sensor.pressure_158d0002239fb5
-          - sensor.pressure_158d00023258bd
       - id: 215ed5c95850451790e4913e6df778d3
         type: entities
-        title: HA Status
+        #title: HA Status
         show_header_toggle: true
         entities:
           - sensor.online_time
           - sensor.ssl_certificate_expiry
+          - sensor.ccu_servicemessages
       - id: c1e9935cae854cf3a5c754a31d443a93
         type: custom:tracker-card
-        title: Updates
+        #title: Updates
         trackers:
           - sensor.custom_card_tracker
           - sensor.custom_component_tracker
