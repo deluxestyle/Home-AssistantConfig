@@ -11,6 +11,8 @@ git_token.txt
 .storage/auth_provider.homeassistant
 .storage/core.config_entries
 .storage/core.entity_registry
+.storage/core.device_registry
+.storage/core.restore_state
 .storage/onboarding
 .uuid
 .HA_VERSION
