@@ -519,7 +519,7 @@
                                 },
                                 "automation.benachrichtigung__bewegung_erkannt"
                             ],
-                            "show_header_toggle": "flase",
+                            "show_header_toggle": false,
                             "type": "entities"
                         },
                         {
@@ -650,7 +650,7 @@
                                 "sensor.ssl_certificate_expiry",
                                 "sensor.ccu_servicemessages"
                             ],
-                            "show_header_toggle": true,
+                            "show_header_toggle": false,
                             "type": "entities"
                         },
                         {
