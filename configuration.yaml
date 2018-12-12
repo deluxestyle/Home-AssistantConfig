@@ -123,7 +123,7 @@ input_datetime: !include input_datetime.yaml
 # input_number: !include input_number.yaml
 sensor: !include senors.yaml
 # binary_sensor: !include binary_sensors.yaml
-counter: !include counter.yaml
+# counter: !include counter.yaml
 ios: !include push.yaml
 homekit: !include homekit.yaml
 media_player: !include media_player.yaml

@@ -1,5 +1,5 @@
 resources:
-  - url: /local/mini-media-player-bundle.js?v=0.9.5
+  - url: /local/mini-media-player-bundle.js?v=0.9.6
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
@@ -312,6 +312,7 @@ views:
               power_color: true
               show_source: true
               group: true
+              #artwork_border: true
             - type: section
             - type: custom:mini-media-player
               entity: media_player.schlafzimmer

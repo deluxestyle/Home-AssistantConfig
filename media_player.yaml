@@ -16,7 +16,7 @@
           service: media_player.volume_mute
           data_template:
             entity_id: media_player.bad, media_player.schlafzimmer
-            volume_level: '{{ is_volume_muted }}'
+            is_volume_muted: '{{ is_volume_muted }}'
   attributes:
     volume_level: media_player.schlafzimmer|volume_level
-    is_volume_muted: media_player|is_volume_muted
+    is_volume_muted: media_player.schlafzimmer|is_volume_muted
