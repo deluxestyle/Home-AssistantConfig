@@ -1,0 +1,1668 @@
+{
+    "data": [
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Telekom-MR401",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "257032e208dd4c199035441a925c64bf",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.telekommr401",
+                "last_changed": "2018-12-12T14:24:13.892520+00:00",
+                "last_updated": "2018-12-12T14:24:13.892520+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Schlafzimmer aus",
+                    "id": "1521886159595",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "bac5fb86dd3143a2972de52dac5e52e8",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_schlafzimmer_aus",
+                "last_changed": "2018-12-12T14:24:15.843379+00:00",
+                "last_updated": "2018-12-12T14:24:15.843379+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung Bad Temperatur",
+                    "id": "1544362634274",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "2293700a88404eafad37ae933db0d389",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_bad_temperatur",
+                "last_changed": "2018-12-12T14:24:16.042634+00:00",
+                "last_updated": "2018-12-12T14:24:16.042634+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "iPhonevonAnita",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "adc394487df74b739b51aefd0897e032",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.iphonevonanita",
+                "last_changed": "2018-12-12T14:24:11.235149+00:00",
+                "last_updated": "2018-12-12T14:24:11.235149+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Kamera Surveillance - aus",
+                    "id": "camera_cctv_off",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "4a7a5234ac2143f8a0ba879546afdf5a",
+                    "user_id": null
+                },
+                "entity_id": "automation.kamera_surveillance__aus",
+                "last_changed": "2018-12-12T14:24:15.945534+00:00",
+                "last_updated": "2018-12-12T14:24:15.945534+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "SonosZP-Schlafzimmer",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "3df8a96de5864d4da49e8cfdddb4a146",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.sonoszpschlafzimmer",
+                "last_changed": "2018-12-12T14:24:13.786595+00:00",
+                "last_updated": "2018-12-12T14:24:13.786595+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Xiaomi Staubsauger: Benachrichtigung - fertig",
+                    "id": "xiaomi_vacuum_notification_off",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "13f31395fd614603bca2e85801b67a6d",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_benachrichtigung__fertig",
+                "last_changed": "2018-12-12T14:24:15.884357+00:00",
+                "last_updated": "2018-12-12T14:24:15.884357+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "R\u00e4ume",
+                    "icon": "mdi:broom",
+                    "options": [
+                        "--",
+                        "Wohnzimmer",
+                        "Schlafzimmer",
+                        "B\u00fcro",
+                        "Katzenklo",
+                        "Bad",
+                        "K\u00fcche",
+                        "Flur",
+                        "Klo"
+                    ]
+                },
+                "context": {
+                    "id": "e77c55036df24224bddbe010164b107a",
+                    "user_id": null
+                },
+                "entity_id": "input_select.vacuum_rooms",
+                "last_changed": "2018-12-12T14:23:14.192766+00:00",
+                "last_updated": "2018-12-12T14:23:14.192766+00:00",
+                "state": "--"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizungsautomatisierung",
+                    "icon": "mdi:home-assistant"
+                },
+                "context": {
+                    "id": "9ddc0c5a7abe418ebfc4f9647fe7d166",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.automation_radiator",
+                "last_changed": "2018-12-12T14:23:14.205045+00:00",
+                "last_updated": "2018-12-12T14:23:14.205045+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Bad an",
+                    "id": "1538676627427",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "4185964b891f48c188a0fa4226d49a6c",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_bad_an",
+                "last_changed": "2018-12-12T14:24:15.936028+00:00",
+                "last_updated": "2018-12-12T14:24:15.936028+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Xiaomi Staubsauger: Sensor kritisch",
+                    "id": "1542650541048",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "7c5fdcb45a3f4b2baabb6148ca9d5a0a",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_sensor_kritisch",
+                "last_changed": "2018-12-12T14:24:15.993721+00:00",
+                "last_updated": "2018-12-12T14:24:15.993721+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "B\u00fcrolicht",
+                    "icon": "mdi:ceiling-light",
+                    "supported_features": 0
+                },
+                "context": {
+                    "id": "d0dfc7955d704af0901fac830b4d6d75",
+                    "user_id": null
+                },
+                "entity_id": "light.sonoff_office",
+                "last_changed": "2018-12-12T14:23:14.486053+00:00",
+                "last_updated": "2018-12-12T14:23:14.486053+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung Wohnzimmer Temperatur",
+                    "id": "1544362634273",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "15b7596c3eeb41adb5c48f760d8d3e53",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_wohnzimmer_temperatur",
+                "last_changed": "2018-12-12T14:24:16.022293+00:00",
+                "last_updated": "2018-12-12T14:24:16.022293+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Benachrichtigung - Luftfeuchtigkeit",
+                    "id": "1540974552306",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "64fab9db3061450d82ca03187e9939c5",
+                    "user_id": null
+                },
+                "entity_id": "automation.benachrichtigung__luftfeuchtigkeit",
+                "last_changed": "2018-12-12T14:24:15.972718+00:00",
+                "last_updated": "2018-12-12T14:24:15.972718+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Kindle",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "1e4e23467f2a4f269074d4d9a1dc0d50",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.kindle",
+                "last_changed": "2018-12-12T14:24:11.306256+00:00",
+                "last_updated": "2018-12-12T14:24:11.306256+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "SonosZP-Bad",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "a5f767203c094795b0aed9d6994832d7",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.sonoszpbad",
+                "last_changed": "2018-12-12T14:24:13.750687+00:00",
+                "last_updated": "2018-12-12T14:24:13.750687+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Starte HomeKit",
+                    "id": "1543619209115",
+                    "last_triggered": "2018-12-12T14:24:16.269641+00:00"
+                },
+                "context": {
+                    "id": "3e20f3257c274375ae872b446281fd13",
+                    "user_id": null
+                },
+                "entity_id": "automation.starte_homekit",
+                "last_changed": "2018-12-12T14:24:16.064251+00:00",
+                "last_updated": "2018-12-12T14:24:16.270404+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "HarmonyHub",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "fe3e19983ad045b7bdda58f4b0682e8e",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.harmonyhub",
+                "last_changed": "2018-12-12T14:24:13.619087+00:00",
+                "last_updated": "2018-12-12T14:24:13.619087+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "ui_lovelace Zugriff",
+                    "id": "1543519090605",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "80f0b1003fe84be294ab7d7602e174ad",
+                    "user_id": null
+                },
+                "entity_id": "automation.ui_lovelace_zugriff",
+                "last_changed": "2018-12-12T14:24:16.074499+00:00",
+                "last_updated": "2018-12-12T14:24:16.074499+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Schlafzimmer an",
+                    "id": "1521886159585",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "87ea42bdc049465bb32b0768b85e6b40",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_schlafzimmer_an",
+                "last_changed": "2018-12-12T14:24:15.710323+00:00",
+                "last_updated": "2018-12-12T14:24:15.710323+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Bewegungsmelder - Alarm",
+                    "icon": "mdi:alarm-light",
+                    "id": "1541096569503",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "ce18f2f9d28f4214b80becbe60b48cac",
+                    "user_id": null
+                },
+                "entity_id": "automation.bewegungsmelder__alarm",
+                "last_changed": "2018-12-12T14:23:14.277295+00:00",
+                "last_updated": "2018-12-12T14:23:14.277295+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "iPhone Wolfgang",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "4518828bcd34435485bc6c19e47743bc",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.iphone8",
+                "last_changed": "2018-12-12T14:24:14.385409+00:00",
+                "last_updated": "2018-12-12T14:24:14.385409+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "AVR151",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "b4d14f7d9c8f4302b8d84fa272e14ea9",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.avr151",
+                "last_changed": "2018-12-12T14:24:13.488507+00:00",
+                "last_updated": "2018-12-12T14:24:13.488507+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Xiaomi Staubsauger: Benachrichtigung - Error",
+                    "id": "xiaomi_vacuum_notification_blocked",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "74780fbfe3cb4cbebb3a17be31a2c0ca",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_benachrichtigung__error",
+                "last_changed": "2018-12-12T14:24:15.681997+00:00",
+                "last_updated": "2018-12-12T14:24:15.681997+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Abwesenheitsschaltung",
+                    "id": "1521743370575",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "ea17b0a1288949b998e47a0819d06f61",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_abwesenheitsschaltung",
+                "last_changed": "2018-12-12T14:24:15.780128+00:00",
+                "last_updated": "2018-12-12T14:24:15.780128+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Xiaomi Staubsauger: Zonenreinigung",
+                    "id": "1543669218842",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "152e3e95e51e421fb0a64174d2c3210f",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_zonenreinigung",
+                "last_changed": "2018-12-12T14:24:16.053486+00:00",
+                "last_updated": "2018-12-12T14:24:16.053486+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Philips-hue",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "66782adcadf04590bec993a27839e29f",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.philipshue",
+                "last_changed": "2018-12-12T14:24:13.653173+00:00",
+                "last_updated": "2018-12-12T14:24:13.653173+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Lichtszenen: Schlafzimmer zur\u00fccksetzen",
+                    "id": "scenes_reset_bed_room",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "5499661da54a400dbf84899b03852188",
+                    "user_id": null
+                },
+                "entity_id": "automation.lichtszenen_schlafzimmer_zurucksetzen",
+                "last_changed": "2018-12-12T14:24:15.815686+00:00",
+                "last_updated": "2018-12-12T14:24:15.815686+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Lichtschalter - K\u00fcchenlampe",
+                    "id": "switch2",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "e33d5c7298ee40b381a2379707885c1b",
+                    "user_id": null
+                },
+                "entity_id": "automation.lichtschalter__kuchenlampe",
+                "last_changed": "2018-12-12T14:24:15.897731+00:00",
+                "last_updated": "2018-12-12T14:24:15.897731+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Benachrichtigung - Abwesend",
+                    "id": "1543074323979",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "800f03c37bae4fdb9da094365b919190",
+                    "user_id": null
+                },
+                "entity_id": "automation.benachrichtigung__abwesend",
+                "last_changed": "2018-12-12T14:24:16.096000+00:00",
+                "last_updated": "2018-12-12T14:24:16.096000+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Abwesenheitsschaltung",
+                    "id": "family_not_home",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "a0552e72d38a4688a616a1a6f5a3d30c",
+                    "user_id": null
+                },
+                "entity_id": "automation.abwesenheitsschaltung",
+                "last_changed": "2018-12-12T14:24:15.926448+00:00",
+                "last_updated": "2018-12-12T14:24:15.926448+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sonos Gruppenstatus ein",
+                    "id": "1532272367335",
+                    "last_triggered": "2018-12-12T14:36:09.162161+00:00"
+                },
+                "context": {
+                    "id": "b8687837fed74451be93e25b511b5a35",
+                    "user_id": null
+                },
+                "entity_id": "automation.sonos_gruppenstatus_ein",
+                "last_changed": "2018-12-12T14:24:15.723129+00:00",
+                "last_updated": "2018-12-12T14:36:09.162719+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Xiaomi Staubsauger: Benachrichtigung - gestartet",
+                    "id": "xiaomi_vacuum_notification_on",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "46b5c27b3264452ba674be8f3920932d",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_benachrichtigung__gestartet",
+                "last_changed": "2018-12-12T14:24:15.665439+00:00",
+                "last_updated": "2018-12-12T14:24:15.665439+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "fritz.repeater",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "11b7aec1eb04499aaee5137891ffd41f",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.fritzrepeater",
+                "last_changed": "2018-12-12T14:24:14.124206+00:00",
+                "last_updated": "2018-12-12T14:24:14.124206+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Aufnahme",
+                    "icon": "mdi:cctv"
+                },
+                "context": {
+                    "id": "8f19a25d2be54ecc9ca3368001136973",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.camera_cctv",
+                "last_changed": "2018-12-12T14:23:14.206595+00:00",
+                "last_updated": "2018-12-12T14:23:14.206595+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "raspberrypi",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "bcd7d4d5460d499a9dc0e1aac8c63b57",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.raspberrypi",
+                "last_changed": "2018-12-12T14:24:14.514401+00:00",
+                "last_updated": "2018-12-12T14:24:14.514401+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "LMUC696020",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "e9545b57439448e19751a12281bd9dc5",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.lmuc696020",
+                "last_changed": "2018-12-12T14:24:11.321108+00:00",
+                "last_updated": "2018-12-12T14:24:11.321108+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "iPhone Anita",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "3d7c77213d334c4a9f327706eb666649",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.anitasiphone",
+                "last_changed": "2018-12-12T14:24:11.217831+00:00",
+                "last_updated": "2018-12-12T14:24:11.217831+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Badfenster offen",
+                    "id": "1538505553055",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "20abc2a50750441cb8fd32b7529c2d48",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_badfenster_offen",
+                "last_changed": "2018-12-12T14:24:15.825138+00:00",
+                "last_updated": "2018-12-12T14:24:15.825138+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Wohnzimmer an",
+                    "id": "1521886159584",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "3ccaff2c9ee04e32a5e1c064f7b4295e",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_wohnzimmer_an",
+                "last_changed": "2018-12-12T14:24:15.798338+00:00",
+                "last_updated": "2018-12-12T14:24:15.798338+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Lichtszenen: Schlafzimmer ausw\u00e4hlen",
+                    "id": "scenes_bed_room",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "8958fca39a284511aeb441e49b19f4a0",
+                    "user_id": null
+                },
+                "entity_id": "automation.lichtszenen_schlafzimmer_auswahlen",
+                "last_changed": "2018-12-12T14:24:15.788936+00:00",
+                "last_updated": "2018-12-12T14:24:15.788936+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: B\u00fcro aus",
+                    "id": "1521886159596",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "6de63d8367ed4ca8b3d2db5a8993da0f",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_buro_aus",
+                "last_changed": "2018-12-12T14:24:15.701929+00:00",
+                "last_updated": "2018-12-12T14:24:15.701929+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sonos automatisch einschalten",
+                    "id": "1532176861984",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "d4c89a17fb4745de94d2d5ba4c25951a",
+                    "user_id": null
+                },
+                "entity_id": "automation.sonos_automatisch_einschalten",
+                "last_changed": "2018-12-12T14:23:14.209934+00:00",
+                "last_updated": "2018-12-12T14:23:14.209934+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "T\u00e4glich saugen",
+                    "id": "1521894687949",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "d3b718f60f5b423988e287be0b970c79",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_taglich_saugen",
+                "last_changed": "2018-12-12T14:24:15.864916+00:00",
+                "last_updated": "2018-12-12T14:24:15.864916+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Xiaomi Staubsauger: Neustart",
+                    "id": "1523001167559",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "11e48c6ec2e64cf994cef7ce9a768d3b",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_neustart",
+                "last_changed": "2018-12-12T14:24:16.085654+00:00",
+                "last_updated": "2018-12-12T14:24:16.085654+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Harman Kardon AVR - Quelle ausw\u00e4hlen",
+                    "id": "1532273712071",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "795cf58ed0154bc182b16d549bd636a4",
+                    "user_id": null
+                },
+                "entity_id": "automation.harman_kardon_avr__quelle_auswahlen",
+                "last_changed": "2018-12-12T14:24:15.752823+00:00",
+                "last_updated": "2018-12-12T14:24:15.752823+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung B\u00fcro Temperatur",
+                    "id": "1544362634276",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "7629f1e292ad47d0b97dbf635141ce45",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_buro_temperatur",
+                "last_changed": "2018-12-12T14:24:15.691046+00:00",
+                "last_updated": "2018-12-12T14:24:15.691046+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Anwesenheitsschaltung",
+                    "id": "1542974689604",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "432f8aac3483490199be250f6edad0c8",
+                    "user_id": null
+                },
+                "entity_id": "automation.anwesenheitsschaltung",
+                "last_changed": "2018-12-12T14:24:16.003779+00:00",
+                "last_updated": "2018-12-12T14:24:16.003779+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Szenen",
+                    "options": [
+                        "--",
+                        "Hell",
+                        "Nachtlicht",
+                        "Gedimmt"
+                    ]
+                },
+                "context": {
+                    "id": "f5c9b53c97c7408aa2c855a4d81c7221",
+                    "user_id": null
+                },
+                "entity_id": "input_select.scenes_bed_room",
+                "last_changed": "2018-12-12T14:23:14.195370+00:00",
+                "last_updated": "2018-12-12T14:23:14.195370+00:00",
+                "state": "--"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Benachrichtigung - Bewegung erkannt",
+                    "id": "1540494970737",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "cbfc39a5243f4b18912e4d8b18be779b",
+                    "user_id": null
+                },
+                "entity_id": "automation.benachrichtigung__bewegung_erkannt",
+                "last_changed": "2018-12-12T14:23:14.259249+00:00",
+                "last_updated": "2018-12-12T14:23:14.259249+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sonos Gruppenstatus aus",
+                    "id": "1532626662990",
+                    "last_triggered": "2018-12-12T14:36:17.314619+00:00"
+                },
+                "context": {
+                    "id": "c7cd5a53c9c44971ac7ada4daa3d2d22",
+                    "user_id": null
+                },
+                "entity_id": "automation.sonos_gruppenstatus_aus",
+                "last_changed": "2018-12-12T14:24:15.852844+00:00",
+                "last_updated": "2018-12-12T14:36:17.315161+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Bad aus",
+                    "id": "1538674889813",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "7ac71747a0474ff6ba1c148857c806e3",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_bad_aus",
+                "last_changed": "2018-12-12T14:24:15.983677+00:00",
+                "last_updated": "2018-12-12T14:24:15.983677+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "airport-express",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "b61626f9af82415fac33762cc247b2cd",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.airportexpress",
+                "last_changed": "2018-12-12T14:24:14.003846+00:00",
+                "last_updated": "2018-12-12T14:24:14.003846+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Xiaomi Staubsauger: Stoppen nach Push",
+                    "id": "1533984172028",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "563e73ec832241edbfc1828163b9d4b6",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_stoppen_nach_push",
+                "last_changed": "2018-12-12T14:24:15.744363+00:00",
+                "last_updated": "2018-12-12T14:24:15.744363+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "StaubRobo",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "5150f8f4f23147c791679de683773c8c",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.staubrobo",
+                "last_changed": "2018-12-12T14:24:13.841492+00:00",
+                "last_updated": "2018-12-12T14:24:13.841492+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "UE55J6250",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "1434b8afe7524e2caddfdec8191064a4",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.ue55j6250",
+                "last_changed": "2018-12-12T14:24:13.945473+00:00",
+                "last_updated": "2018-12-12T14:24:13.945473+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "AppleWaWolfgang",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "da95ff4479ac4f96b51d1ce76a44a8dd",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.applewawolfgang",
+                "last_changed": "2018-12-12T14:24:11.297136+00:00",
+                "last_updated": "2018-12-12T14:24:11.297136+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: B\u00fcro an",
+                    "id": "1521886159586",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "9339a5a47aea471bb27f117c4257f7e8",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_buro_an",
+                "last_changed": "2018-12-12T14:24:15.732510+00:00",
+                "last_updated": "2018-12-12T14:24:15.732510+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Kamera aus",
+                    "id": "1535994680040",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "0ae830b4ef1a4c2dbe886d1032a06e30",
+                    "user_id": null
+                },
+                "entity_id": "automation.kamera_aus",
+                "last_changed": "2018-12-12T14:24:16.032490+00:00",
+                "last_updated": "2018-12-12T14:24:16.032490+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "lumi-gateway-v3-miio78458155",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "d86b903fa7454f8182553b236b1deb02",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.lumigatewayv3miio78458155",
+                "last_changed": "2018-12-12T14:24:14.444241+00:00",
+                "last_updated": "2018-12-12T14:24:14.444241+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Startzeit",
+                    "has_date": false,
+                    "has_time": true
+                },
+                "context": {
+                    "id": "e7c2bbe6355745c8bf8d7e24c0983aaf",
+                    "user_id": null
+                },
+                "entity_id": "input_datetime.radiator_bath_1",
+                "last_changed": "2018-12-12T14:23:14.201662+00:00",
+                "last_updated": "2018-12-12T14:23:14.201662+00:00",
+                "state": "unknown"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Benachrichtigung - HomeMatic CCU Servicemessage",
+                    "id": "1537870591748",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "6333cc87cff340f29e9e5de87b5a321a",
+                    "user_id": null
+                },
+                "entity_id": "automation.benachrichtigung__homematic_ccu_servicemessage",
+                "last_changed": "2018-12-12T14:24:15.673490+00:00",
+                "last_updated": "2018-12-12T14:24:15.673490+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "X2 sDrive18i",
+                    "gps_accuracy": 0,
+                    "icon": "mdi:car",
+                    "latitude": 48.104694,
+                    "longitude": 11.579513,
+                    "source_type": "gps",
+                    "vin": "WBAYH11080EM67022"
+                },
+                "context": {
+                    "id": "b9cd371811a84cc7b221ae7438ddfddc",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.x2_sdrive18i",
+                "last_changed": "2018-12-12T14:24:11.437937+00:00",
+                "last_updated": "2018-12-12T14:24:11.437937+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "HP79BA53",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "9ed64b20c7714fca979c5151ec53d662",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.hp79ba53",
+                "last_changed": "2018-12-12T14:24:11.232652+00:00",
+                "last_updated": "2018-12-12T14:24:11.232652+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "AVR Quelle",
+                    "icon": "mdi:playlist-play",
+                    "options": [
+                        "--",
+                        "Telekom",
+                        "TV",
+                        "AirPlay",
+                        "Turntable",
+                        "vTurner",
+                        "Home Network"
+                    ]
+                },
+                "context": {
+                    "id": "2f4a22fd4d194e8cb80ea6a383e7ed8c",
+                    "user_id": null
+                },
+                "entity_id": "input_select.avr_source",
+                "last_changed": "2018-12-12T14:23:14.196979+00:00",
+                "last_updated": "2018-12-12T14:23:14.196979+00:00",
+                "state": "--"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "RedmiNote6Pro-Redmi",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "3004db85653e4cc3966d5a64ccd9e322",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.redminote6proredmi",
+                "last_changed": "2018-12-12T14:24:13.695904+00:00",
+                "last_updated": "2018-12-12T14:24:13.695904+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Lichtschalter - Leselampe",
+                    "id": "switch_leselampe",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "e4dd3c0ae0db46c8b9c3ba935e6d11fd",
+                    "user_id": null
+                },
+                "entity_id": "automation.lichtschalter__leselampe",
+                "last_changed": "2018-12-12T14:24:15.762755+00:00",
+                "last_updated": "2018-12-12T14:24:15.762755+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "fritz.box",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "13d1431eb04841ef9e90e091f0f4e96f",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.fritzbox",
+                "last_changed": "2018-12-12T14:24:14.063180+00:00",
+                "last_updated": "2018-12-12T14:24:14.063180+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Benachrichtigung - Update HASS",
+                    "id": "update_notification",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "146048174c4749f980cc69057937fcb4",
+                    "user_id": null
+                },
+                "entity_id": "automation.benachrichtigung__update_hass",
+                "last_changed": "2018-12-12T14:24:15.874133+00:00",
+                "last_updated": "2018-12-12T14:24:15.874133+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung Schlafzimmer Temperatur",
+                    "id": "1544362634275",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "83614538498d458a9fef7d643081e304",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_schlafzimmer_temperatur",
+                "last_changed": "2018-12-12T14:24:15.657552+00:00",
+                "last_updated": "2018-12-12T14:24:15.657552+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "homematic-ccu2",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "f76ed593c4214c68a65e95d5180ee489",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.homematicccu2",
+                "last_changed": "2018-12-12T14:24:14.187942+00:00",
+                "last_updated": "2018-12-12T14:24:14.187942+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "yeelink-light-bslamp1-mibt88415446",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "82baaf1fb11f4f84a51d83b85e102088",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.yeelinklightbslamp1mibt88415446",
+                "last_changed": "2018-12-12T14:24:14.655545+00:00",
+                "last_updated": "2018-12-12T14:24:14.655545+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "iPad",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "beb22c33dd20432ebfc000403148f730",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.ipad",
+                "last_changed": "2018-12-12T14:24:14.258542+00:00",
+                "last_updated": "2018-12-12T14:24:14.258542+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Szenen",
+                    "options": [
+                        "--",
+                        "Wohnzimmer Licht",
+                        "Sehr hell",
+                        "Gedimmt",
+                        "Lesen",
+                        "Konzentrieren",
+                        "Energie tanken",
+                        "Entspannen",
+                        "Nachtlicht"
+                    ]
+                },
+                "context": {
+                    "id": "c689dc944e2f4fa49bb5eb0b305a7529",
+                    "user_id": null
+                },
+                "entity_id": "input_select.scenes_living_room",
+                "last_changed": "2018-12-12T14:23:14.198449+00:00",
+                "last_updated": "2018-12-12T14:23:14.198449+00:00",
+                "state": "--"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Staubsaugerautomatisierung",
+                    "icon": "mdi:home-assistant"
+                },
+                "context": {
+                    "id": "68169378c8914a4db8fc24d4bb820b45",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.automation_xiaomi_vacuum",
+                "last_changed": "2018-12-12T14:23:14.203466+00:00",
+                "last_updated": "2018-12-12T14:23:14.203466+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "iPhone-WTR",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "5f102e83432a4819b0c226522cc0ae4a",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.iphonewtr",
+                "last_changed": "2018-12-12T14:24:14.311585+00:00",
+                "last_updated": "2018-12-12T14:24:14.311585+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Harman Kardon AVR - verbinden",
+                    "id": "1533660030341",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "a0eee35e34154023a1a09cf5ddddf783",
+                    "user_id": null
+                },
+                "entity_id": "automation.harman_kardon_avr__verbinden",
+                "last_changed": "2018-12-12T14:24:15.646947+00:00",
+                "last_updated": "2018-12-12T14:24:15.646947+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Lichtszenen: Wohnzimmer ausw\u00e4hlen",
+                    "id": "scenes_living_room",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "7d8061a7b16043529469bb01f13c164f",
+                    "user_id": null
+                },
+                "entity_id": "automation.lichtszenen_wohnzimmer_auswahlen",
+                "last_changed": "2018-12-12T14:24:15.771225+00:00",
+                "last_updated": "2018-12-12T14:24:15.771225+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Kamera Surveillance - an",
+                    "id": "camera_cctv_on",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "651162b3180947a7b14d2a265faa830f",
+                    "user_id": null
+                },
+                "entity_id": "automation.kamera_surveillance__an",
+                "last_changed": "2018-12-12T14:24:15.916462+00:00",
+                "last_updated": "2018-12-12T14:24:15.916462+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Master Sonos Player",
+                    "icon": "mdi:itunes",
+                    "options": [
+                        "Schlafzimmer",
+                        "Bad"
+                    ]
+                },
+                "context": {
+                    "id": "eee2c5a988bd4487b8e411efbf11ccfd",
+                    "user_id": null
+                },
+                "entity_id": "input_select.master_sonos",
+                "last_changed": "2018-12-12T14:23:14.199978+00:00",
+                "last_updated": "2018-12-12T14:23:14.199978+00:00",
+                "state": "Schlafzimmer"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "DS114",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "cb410b09ad2f4c57865a0dfca63d6c9a",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.ds114",
+                "last_changed": "2018-12-12T14:24:13.529061+00:00",
+                "last_updated": "2018-12-12T14:24:13.529061+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "HP-SPECTRE",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "8d8f48301bbe44beb4bab9b217339bee",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.hpspectre",
+                "last_changed": "2018-12-12T14:24:13.568521+00:00",
+                "last_updated": "2018-12-12T14:24:13.568521+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "sonoff-6295",
+                    "gps_accuracy": 0,
+                    "latitude": 48.104721,
+                    "longitude": 11.579769,
+                    "scanner": "FritzBoxScanner",
+                    "source_type": "router"
+                },
+                "context": {
+                    "id": "19b6a969e68d403bb24481e8f089a21e",
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.sonoff6295",
+                "last_changed": "2018-12-12T14:24:14.585680+00:00",
+                "last_updated": "2018-12-12T14:24:14.585680+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Wohnzimmer aus",
+                    "id": "1521886159594",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "72aa71514c334cdca76ae321cadb17b7",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_wohnzimmer_aus",
+                "last_changed": "2018-12-12T14:24:15.834257+00:00",
+                "last_updated": "2018-12-12T14:24:15.834257+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Heizung: Bad Timer",
+                    "id": "dsfasdfasdfsafsadfsdfdsf",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "b4cf5f23e74a4b20824367b8af5f0cc7",
+                    "user_id": null
+                },
+                "entity_id": "automation.heizung_bad_timer",
+                "last_changed": "2018-12-12T14:24:15.959034+00:00",
+                "last_updated": "2018-12-12T14:24:15.959034+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Lichtszenen: Wohnzimmer zur\u00fccksetzen",
+                    "id": "scenes_reset_living_room",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "8dbe28261cc44e52a1eb91f977b388ed",
+                    "user_id": null
+                },
+                "entity_id": "automation.lichtszenen_wohnzimmer_zurucksetzen",
+                "last_changed": "2018-12-12T14:24:15.807081+00:00",
+                "last_updated": "2018-12-12T14:24:15.807081+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-12T14:39:15.024005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Automatisch starten",
+                    "id": "xiaomi_vacuum_start",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "675464063f254e46b744e61d7bef8d08",
+                    "user_id": null
+                },
+                "entity_id": "automation.xiaomi_staubsauger_automatisch_starten",
+                "last_changed": "2018-12-12T14:24:15.907133+00:00",
+                "last_updated": "2018-12-12T14:24:15.907133+00:00",
+                "state": "on"
+            }
+        }
+    ],
+    "key": "core.restore_state",
+    "version": 1
+}

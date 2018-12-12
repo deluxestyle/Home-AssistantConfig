@@ -214,6 +214,7 @@ custom_updater:
     - components
   card_urls:
     - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+    - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
 
 bmw_connected_drive:
  name:

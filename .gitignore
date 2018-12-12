@@ -7,7 +7,6 @@ home-assistant_v2.db
 home-assistant.log
 git_token.txt
 .homekit.state
-.storage
 .storage/auth
 .storage/auth_provider.homeassistant
 .storage/core.config_entries

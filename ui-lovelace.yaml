@@ -1,499 +1,504 @@
-resources:
-  - url: /local/mini-media-player-bundle.js?v=0.9.6
-    type: module
-  - url: /local/tracker-card.js?v=0.1.5
-    type: js
-  - url: /local/fold-entity-row.js?v=0636eg
-    type: js
-  - url: /local/time-input-row.js?v=f503b7
-    type: js
+#### deprecated due to the new use of the UI editor
+####
 
-title: Home
-views:
-##### Licht #####
-  - title: Licht
-    id: light
-    icon: mdi:ceiling-light
-    cards:
-      - id: af72c9fa5de745b592a186795efddd08
-        type: entities
-        #title: Licht
-        show_header_toggle: false
-        entities:
-          - light.lights_all
-      - id: 8f01ce04c719444899ffae242bea75cc
-        type: entities
-        #title: Wohnzimmer
-        show_header_toggle: false
-        entities:
-          - light.lights_living_room
-          - type: section
-          - light.decke
-          - light.tisch
-          - light.leselampe
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Szenen
-            items:
-              - input_select.scenes_living_room
-      - id: 7a4cb19d49f14d6883c3cd8a399268b6
-        type: entities
-        #title: Schlafzimmer
-        show_header_toggle: false
-        entities:
-          - light.lights_bed_room
-          - type: section
-          - light.nachtischlampe_wolfgang
-          - light.schlafzimmer
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Szenen
-            items:
-              - input_select.scenes_bed_room
-      - id: add88382ed0d477193aa6388e3ed8cb2
-        type: entities
-        #title: Büro
-        show_header_toggle: false
-        entities:
-          - light.sonoff_office
-      - id: add88382ed0d477193aa6388e3ed8cb4
-        type: entities
-        #title: Küche
-        show_header_toggle: false
-        entities:
-          - light.lights_kitchen
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Lampen
-            items:
-              - light.kuche
-              - light.steckdose_2
-      - id: a65c87cf3b014b12824a4e5e75cc4921
-        type: entities
-        #title: Flur
-        show_header_toggle: false
-        entities:
-          - light.gateway_light_7811dcb258d1
-          - sensor.illumination_7811dcb258d1
+# resources:
+  # - url: /local/mini-media-player-bundle.js?v=0.9.5
+    # type: module
+  # - url: /local/tracker-card.js?v=0.1.5
+    # type: js
+  # - url: /local/fold-entity-row.js?v=0636eg
+    # type: js
+  # - url: /local/time-input-row.js?v=f503b7
+    # type: js
+  # - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.0.1
+    # type: js
 
-##### Heizung #####
-  - title: Heizung
-    id: radiator
-    icon: mdi:radiator
-    cards:
-      - id: 505f2d27af31444fb53485c7d84a35cb
-        type: entities
-        show_header_toggle: false
-        entities:
-          - input_boolean.automation_radiator
-          - automation.heizung_abwesenheitsschaltung
-          - script.1540232132608
-          - script.1541264856783
-      - id: a7fd54ae32284e4abd643b893d276f4c
-        type: entities
-        #title: Bad
-        show_header_toggle: false
-        entities:
-          - climate.oeq1714751
-          - sensor.humidity_158d00023258bd
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Timer
-            items:
-              - automation.heizung_bad_timer
-              - entity: input_datetime.radiator_bath_1
-                name: Startzeit
-                type: custom:time-input-row
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Mehr
-            items:
-              - script.1538502214360
-              - switch.radiator_bath_keylock
-              - sensor.temperature_158d00023258bd
-              - sensor.valve_bath
-              - binary_sensor.door_window_sensor_158d00022f13a0
-      - id: dd2f1db062f14b229ae41ca732bccc71
-        type: entities
-        #title: Wohnzimmer
-        show_header_toggle: false
-        entities:
-          - climate.oeq1696358
-          - sensor.humidity_158d0001b8c998
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Mehr
-            items:
-              - script.1538143929416
-              - switch.radiator_living_room_keylock
-              - sensor.temperature_158d0001b8c998
-              - sensor.valve_living_room
-      - id: a116e7dc9fc64aa7876d47744c89c4d9
-        type: entities
-        #title: Schlafzimmer
-        show_header_toggle: false
-        entities:
-          - climate.oeq1696369
-          - sensor.humidity_158d0001b8c96c
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Mehr
-            items:
-              - script.1538143964007
-              - switch.radiator_bed_room_keylock
-              - sensor.temperature_158d0001b8c96c
-              - sensor.valve_bed_room
-      - id: f2baf9dcaa31414b9d7da844c7a1d785
-        type: entities
-        #title: Büro
-        show_header_toggle: false
-        entities:
-          - climate.int0000002
-          - sensor.oeq1667238_humidity
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Mehr
-            items:
-              - script.1538143893265
-              - switch.radiator_office_keylock
-              - sensor.oeq1667238_temperature
-              - sensor.valve_office
-      - id: 884ca7aafc654d7eb6af9ca2d248970d
-        type: entities
-        #title: Küche
-        show_header_toggle: false
-        entities:
-          - sensor.temperature_158d0002239fb5
-          - sensor.humidity_158d0002239fb5
+# title: Home
+# views:
+# ##### Licht #####
+  # - title: Licht
+    # id: light
+    # icon: mdi:ceiling-light
+    # cards:
+      # - id: af72c9fa5de745b592a186795efddd08
+        # type: entities
+        # #title: Licht
+        # show_header_toggle: false
+        # entities:
+          # - light.lights_all
+      # - id: 8f01ce04c719444899ffae242bea75cc
+        # type: entities
+        # #title: Wohnzimmer
+        # show_header_toggle: false
+        # entities:
+          # - light.lights_living_room
+          # - type: section
+          # - light.decke
+          # - light.tisch
+          # - light.leselampe
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Szenen
+            # items:
+              # - input_select.scenes_living_room
+      # - id: 7a4cb19d49f14d6883c3cd8a399268b6
+        # type: entities
+        # #title: Schlafzimmer
+        # show_header_toggle: false
+        # entities:
+          # - light.lights_bed_room
+          # - type: section
+          # - light.nachtischlampe_wolfgang
+          # - light.schlafzimmer
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Szenen
+            # items:
+              # - input_select.scenes_bed_room
+      # - id: add88382ed0d477193aa6388e3ed8cb2
+        # type: entities
+        # #title: Büro
+        # show_header_toggle: false
+        # entities:
+          # - light.sonoff_office
+      # - id: add88382ed0d477193aa6388e3ed8cb4
+        # type: entities
+        # #title: Küche
+        # show_header_toggle: false
+        # entities:
+          # - light.lights_kitchen
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Lampen
+            # items:
+              # - light.kuche
+              # - light.steckdose_2
+      # - id: a65c87cf3b014b12824a4e5e75cc4921
+        # type: entities
+        # #title: Flur
+        # show_header_toggle: false
+        # entities:
+          # - light.gateway_light_7811dcb258d1
+          # - sensor.illumination_7811dcb258d1
 
-##### Staubsauger #####
-  - title: Staubsauger
-    id: vacuum
-    icon: mdi:robot-vacuum
-    cards:
-      - id: a1b3d3fba78e4a9ab5c77bd8108c6eag
-        type: glance
-        show_name: false
-        show_state: false
-        #title: Xiaomi StaubRobo
-        entities:
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: call-service
-            service: vacuum.start
-            icon: mdi:play
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: call-service
-            service: vacuum.pause
-            icon: mdi:pause
+# ##### Heizung #####
+  # - title: Heizung
+    # id: radiator
+    # icon: mdi:radiator
+    # cards:
+      # - id: 505f2d27af31444fb53485c7d84a35cb
+        # type: entities
+        # show_header_toggle: false
+        # entities:
+          # - input_boolean.automation_radiator
+          # - automation.heizung_abwesenheitsschaltung
+          # - script.1540232132608
+          # - script.1541264856783
+      # - id: a7fd54ae32284e4abd643b893d276f4c
+        # type: entities
+        # #title: Bad
+        # show_header_toggle: false
+        # entities:
+          # - climate.oeq1714751
+          # - sensor.humidity_158d00023258bd
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Timer
+            # items:
+              # - automation.heizung_bad_timer
+              # - entity: input_datetime.radiator_bath_1
+                # name: Startzeit
+                # type: custom:time-input-row
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Mehr
+            # items:
+              # - script.1538502214360
+              # - switch.radiator_bath_keylock
+              # - sensor.temperature_158d00023258bd
+              # - sensor.valve_bath
+              # - binary_sensor.door_window_sensor_158d00022f13a0
+      # - id: dd2f1db062f14b229ae41ca732bccc71
+        # type: entities
+        # #title: Wohnzimmer
+        # show_header_toggle: false
+        # entities:
+          # - climate.oeq1696358
+          # - sensor.humidity_158d0001b8c998
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Mehr
+            # items:
+              # - script.1538143929416
+              # - switch.radiator_living_room_keylock
+              # - sensor.temperature_158d0001b8c998
+              # - sensor.valve_living_room
+      # - id: a116e7dc9fc64aa7876d47744c89c4d9
+        # type: entities
+        # #title: Schlafzimmer
+        # show_header_toggle: false
+        # entities:
+          # - climate.oeq1696369
+          # - sensor.humidity_158d0001b8c96c
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Mehr
+            # items:
+              # - script.1538143964007
+              # - switch.radiator_bed_room_keylock
+              # - sensor.temperature_158d0001b8c96c
+              # - sensor.valve_bed_room
+      # - id: f2baf9dcaa31414b9d7da844c7a1d785
+        # type: entities
+        # #title: Büro
+        # show_header_toggle: false
+        # entities:
+          # - climate.int0000002
+          # - sensor.oeq1667238_humidity
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Mehr
+            # items:
+              # - script.1538143893265
+              # - switch.radiator_office_keylock
+              # - sensor.oeq1667238_temperature
+              # - sensor.valve_office
+      # - id: 884ca7aafc654d7eb6af9ca2d248970d
+        # type: entities
+        # #title: Küche
+        # show_header_toggle: false
+        # entities:
+          # - sensor.temperature_158d0002239fb5
+          # - sensor.humidity_158d0002239fb5
+
+# ##### Staubsauger #####
+  # - title: Staubsauger
+    # id: vacuum
+    # icon: mdi:robot-vacuum
+    # cards:
+      # - id: a1b3d3fba78e4a9ab5c77bd8108c6eag
+        # type: glance
+        # show_name: false
+        # show_state: false
+        # #title: Xiaomi StaubRobo
+        # entities:
           # - entity: vacuum.xiaomi_vacuum_cleaner
             # tap_action: call-service
-            # service: vacuum.stop
-            # icon: mdi:stop
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: call-service
-            service: vacuum.return_to_base
-            icon: mdi:home
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: call-service
-            service: vacuum.locate
-            icon: mdi:map-marker
-      - id: a1b3d3fba78e4a9ab5c77bd8108c6eae
-        type: entities
-        #title: Staubsauger
-        show_header_toggle: false
-        entities:
-          - vacuum.xiaomi_vacuum_cleaner
-          - sensor.xiaomi_vacum_sensor_battery
-          - type: section
-          - automation.xiaomi_staubsauger_automatisch_starten
-          - automation.xiaomi_staubsauger_taglich_saugen
-          #- type: section
-          #- input_select.vacuum_rooms
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Zonen (Räume)
-            items:
-              # - input_select.vacuum_rooms
-              - script.1543667402104
-              - script.1543666580682
-              - script.1543666947492
-              - script.1543666909272
-              - script.1543666985219
-              - script.1543666771838
-              - script.1543666867257
-              - script.1543666831509
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Wartung
-            items:
-              - sensor.xiaomi_vacum_side_brush_left
-              - sensor.xiaomi_vacum_sensor_dirty_left
-              - sensor.xiaomi_vacum_main_brush_left
-              - sensor.xiaomi_vacum_filter_left
+            # service: vacuum.start
+            # icon: mdi:play
+          # - entity: vacuum.xiaomi_vacuum_cleaner
+            # tap_action: call-service
+            # service: vacuum.pause
+            # icon: mdi:pause
+          # # - entity: vacuum.xiaomi_vacuum_cleaner
+            # # tap_action: call-service
+            # # service: vacuum.stop
+            # # icon: mdi:stop
+          # - entity: vacuum.xiaomi_vacuum_cleaner
+            # tap_action: call-service
+            # service: vacuum.return_to_base
+            # icon: mdi:home
+          # - entity: vacuum.xiaomi_vacuum_cleaner
+            # tap_action: call-service
+            # service: vacuum.locate
+            # icon: mdi:map-marker
+      # - id: a1b3d3fba78e4a9ab5c77bd8108c6eae
+        # type: entities
+        # #title: Staubsauger
+        # show_header_toggle: false
+        # entities:
+          # - vacuum.xiaomi_vacuum_cleaner
+          # - sensor.xiaomi_vacum_sensor_battery
+          # - type: section
+          # - automation.xiaomi_staubsauger_automatisch_starten
+          # - automation.xiaomi_staubsauger_taglich_saugen
+          # #- type: section
+          # #- input_select.vacuum_rooms
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Zonen (Räume)
+            # items:
+              # # - input_select.vacuum_rooms
+              # - script.1543667402104
+              # - script.1543666580682
+              # - script.1543666947492
+              # - script.1543666909272
+              # - script.1543666985219
+              # - script.1543666771838
+              # - script.1543666867257
+              # - script.1543666831509
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Wartung
+            # items:
+              # - sensor.xiaomi_vacum_side_brush_left
+              # - sensor.xiaomi_vacum_sensor_dirty_left
+              # - sensor.xiaomi_vacum_main_brush_left
+              # - sensor.xiaomi_vacum_filter_left
 
-##### Entertainment #####
-  - title: Entertainment
-    id: entertainment
-    icon: mdi:arrow-right-drop-circle-outline
-    cards:
-      - id: f7040ea6d3a64eb1a4fa3506f2e018c8
-        type: entities
-        #title: Wohnzimmer Multimedia
-        show_header_toggle: false
-        entities:
-          - light.steckdose
-          - type: section
-          - sensor.remote_state
-          - switch.samsung_tv
-          - switch.telekom_mr_401
-          - switch.avr_151
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: AVR 151
-            items:
-              - type: custom:mini-media-player
-                entity: media_player.harman_kardon_avr
-                hide_controls: true
-                volume_stateless: true
-                hide_power: true
-                group: true
-              - input_select.avr_source
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Fernbedienung
-            items:
-              #- script.1538058955033
-              - script.1538068809592
-              - script.1538072504227
-              - script.1538057479069
-      - id: adb02f1033c0456cbc51ac87fd4ee9de
-        #title: Sonos
-        type: conditional
-        conditions:
-          - entity: switch.sonos_group
-            state: "on"
-        card:
-          type: entities
-          #title: Sonos MediaPlayer
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.sonos_boxen
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-      - id: adb02f1033c0456cbc51ac87fd4ee9df
-        type: conditional
-        #title: Sonos
-        conditions:
-          - entity: switch.sonos_group
-            state: "off"
-        card:
-          type: entities
-          #title: Sonos MediaPlayer
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.bad
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-              #artwork_border: true
-            - type: section
-            - type: custom:mini-media-player
-              entity: media_player.schlafzimmer
-              icon: 'mdi:cast'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-      - id: adb02f1033c0456cbc51ac87fd4ee9c4
-        type: entities
-        #title: Sonos Einstellungen
-        show_header_toggle: false
-        entities:
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Gruppe
-            items:
-              - input_select.master_sonos
-              - switch.sonos_group
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Super FlyFM
-            items:
-              - script.1532173931522
-              - script.1532175994947
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Wecker
-            items:
-              - script.1534621188695
-              - script.1534621226775
-          - type: section
-          - automation.sonos_automatisch_einschalten
+# ##### Entertainment #####
+  # - title: Entertainment
+    # id: entertainment
+    # icon: mdi:arrow-right-drop-circle-outline
+    # cards:
+      # - id: f7040ea6d3a64eb1a4fa3506f2e018c8
+        # type: entities
+        # #title: Wohnzimmer Multimedia
+        # show_header_toggle: false
+        # entities:
+          # - light.steckdose
+          # - type: section
+          # - sensor.remote_state
+          # - switch.samsung_tv
+          # - switch.telekom_mr_401
+          # - switch.avr_151
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: AVR 151
+            # items:
+              # - type: custom:mini-media-player
+                # entity: media_player.harman_kardon_avr
+                # hide_controls: true
+                # volume_stateless: true
+                # hide_power: true
+                # group: true
+              # - input_select.avr_source
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Fernbedienung
+            # items:
+              # #- script.1538058955033
+              # - script.1538068809592
+              # - script.1538072504227
+              # - script.1538057479069
+      # - id: adb02f1033c0456cbc51ac87fd4ee9de
+        # #title: Sonos
+        # type: conditional
+        # conditions:
+          # - entity: switch.sonos_group
+            # state: "on"
+        # card:
+          # type: entities
+          # #title: Sonos MediaPlayer
+          # entities:
+            # - type: custom:mini-media-player
+              # entity: media_player.sonos_boxen
+              # icon: 'mdi:cast'
+              # artwork_border: true
+              # power_color: true
+              # show_source: true
+              # group: true
+      # - id: adb02f1033c0456cbc51ac87fd4ee9df
+        # type: conditional
+        # #title: Sonos
+        # conditions:
+          # - entity: switch.sonos_group
+            # state: "off"
+        # card:
+          # type: entities
+          # #title: Sonos MediaPlayer
+          # entities:
+            # - type: custom:mini-media-player
+              # entity: media_player.bad
+              # icon: 'mdi:cast'
+              # artwork_border: true
+              # power_color: true
+              # show_source: true
+              # group: true
+              # #artwork_border: true
+            # - type: section
+            # - type: custom:mini-media-player
+              # entity: media_player.schlafzimmer
+              # icon: 'mdi:cast'
+              # artwork_border: true
+              # power_color: true
+              # show_source: true
+              # group: true
+      # - id: adb02f1033c0456cbc51ac87fd4ee9c4
+        # type: entities
+        # #title: Sonos Einstellungen
+        # show_header_toggle: false
+        # entities:
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Gruppe
+            # items:
+              # - input_select.master_sonos
+              # - switch.sonos_group
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Super FlyFM
+            # items:
+              # - script.1532173931522
+              # - script.1532175994947
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Wecker
+            # items:
+              # - script.1534621188695
+              # - script.1534621226775
+          # - type: section
+          # - automation.sonos_automatisch_einschalten
 
-##### Steckdosen #####
-  - title: Steckdosen
-    id: socket
-    icon: mdi:power-socket-eu
-    cards:
-      - id: 79b1b8e94af645c192affaac3c725bda
-        type: entities
-        #title: Steckdosen
-        show_header_toggle: false
-        entities:
-          - light.steckdose
-          - light.steckdose_3
-          - light.onoff_plug_1
+# ##### Steckdosen #####
+  # - title: Steckdosen
+    # id: socket
+    # icon: mdi:power-socket-eu
+    # cards:
+      # - id: 79b1b8e94af645c192affaac3c725bda
+        # type: entities
+        # #title: Steckdosen
+        # show_header_toggle: false
+        # entities:
+          # - light.steckdose
+          # - light.steckdose_3
+          # - light.onoff_plug_1
 
-##### Personen #####
-  - title: Personen
-    id: presence
-    icon: mdi:account-multiple
-    cards:
-      - id: af7f3464ec654129b2c4cb73d9cb7c39
-        type: entities
-        #title: Anwesenheit
-        show_header_toggle: false
-        entities:
-          - device_tracker.iphone8
-          - device_tracker.anitasiphone
-          - type: section
-          - automation.abwesenheitsschaltung
-      - id: 2402c60089f9494ab6d16f85ca87f50b
-        type: entities
-        #title: Bewegung
-        show_header_toggle: flase
-        entities:
-          - binary_sensor.motion_sensor_158d00023e77cb
-          - sensor.illumination_158d00023e77cb
-          - type: section
-          - automation.bewegungsmelder__alarm
-          - script.1541097052191
-          - type: section
-          - automation.benachrichtigung__bewegung_erkannt
-      - id: b230e10f94824a3e928420cbeac0fcd6
-        type: entities
-        #title: Überwachung
-        show_header_toggle: false
-        entities:
-          - light.onoff_plug_1
-          - input_boolean.camera_cctv
-      - id: 351335930abe4c4887c5387bd78ed9e9
-        type: conditional
-        conditions:
-          - entity: light.onoff_plug_1
-            state: "on"
-        card:
-          type: picture-entity
-          entity: camera.ffmpeg
-          camera_image: camera.ffmpeg
-          show_info: true
-          tap_action: dialog
-          title: Kamera
+# ##### Personen #####
+  # - title: Personen
+    # id: presence
+    # icon: mdi:account-multiple
+    # cards:
+      # - id: af7f3464ec654129b2c4cb73d9cb7c39
+        # type: entities
+        # #title: Anwesenheit
+        # show_header_toggle: false
+        # entities:
+          # - device_tracker.iphone8
+          # - device_tracker.anitasiphone
+          # - type: section
+          # - automation.abwesenheitsschaltung
+      # - id: 2402c60089f9494ab6d16f85ca87f50b
+        # type: entities
+        # #title: Bewegung
+        # show_header_toggle: flase
+        # entities:
+          # - binary_sensor.motion_sensor_158d00023e77cb
+          # - sensor.illumination_158d00023e77cb
+          # - type: section
+          # - automation.bewegungsmelder__alarm
+          # - script.1541097052191
+          # - type: section
+          # - automation.benachrichtigung__bewegung_erkannt
+      # - id: b230e10f94824a3e928420cbeac0fcd6
+        # type: entities
+        # #title: Überwachung
+        # show_header_toggle: false
+        # entities:
+          # - light.onoff_plug_1
+          # - input_boolean.camera_cctv
+      # - id: 351335930abe4c4887c5387bd78ed9e9
+        # type: conditional
+        # conditions:
+          # - entity: light.onoff_plug_1
+            # state: "on"
+        # card:
+          # type: picture-entity
+          # entity: camera.ffmpeg
+          # camera_image: camera.ffmpeg
+          # show_info: true
+          # tap_action: dialog
+          # title: Kamera
 
-##### Auto ##### 
-  - title: BMW X2
-    id: bmw_x2
-    icon: mdi:car-hatchback
-    cards:
-      - id: x2_overview
-        type: entities
-        #title: "BMW X2 Übersicht"
-        show_header_toggle: false
-        entities:
-          - type: custom:fold-entity-row
-            head: device_tracker.x2_sdrive18i
-            items:
-              - type: section
-              - binary_sensor.x2_sdrive18i_condition_based_services
-              - binary_sensor.x2_sdrive18i_door_lock_state
-              - binary_sensor.x2_sdrive18i_lids
-              - binary_sensor.x2_sdrive18i_windows
-              - sensor.x2_sdrive18i_mileage
-              - sensor.x2_sdrive18i_remaining_fuel
-              - sensor.x2_sdrive18i_remaining_range_total
-              - binary_sensor.x2_sdrive18i_lights_parking
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Funktionen
-            items:
-              - lock.x2_sdrive18i_lock
-              - script.1543166767000
-              - script.1543167202912
-              - script.1543167430941
-              - script.1543218125342
-      - id: x2_map
-        type: map
-        default_zoom: 14
-        aspect_ratio: 50%
-        entities:
-          - entity: device_tracker.x2_sdrive18i
+# ##### Auto ##### 
+  # - title: BMW X2
+    # id: bmw_x2
+    # icon: mdi:car-hatchback
+    # cards:
+      # - id: x2_overview
+        # type: entities
+        # #title: "BMW X2 Übersicht"
+        # show_header_toggle: false
+        # entities:
+          # - type: custom:fold-entity-row
+            # head: device_tracker.x2_sdrive18i
+            # items:
+              # - type: section
+              # - binary_sensor.x2_sdrive18i_condition_based_services
+              # - binary_sensor.x2_sdrive18i_door_lock_state
+              # - binary_sensor.x2_sdrive18i_lids
+              # - binary_sensor.x2_sdrive18i_windows
+              # - sensor.x2_sdrive18i_mileage
+              # - sensor.x2_sdrive18i_remaining_fuel
+              # - sensor.x2_sdrive18i_remaining_range_total
+              # - binary_sensor.x2_sdrive18i_lights_parking
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Funktionen
+            # items:
+              # - lock.x2_sdrive18i_lock
+              # - script.1543166767000
+              # - script.1543167202912
+              # - script.1543167430941
+              # - script.1543218125342
+      # - id: x2_map
+        # type: map
+        # default_zoom: 14
+        # aspect_ratio: 50%
+        # entities:
+          # - entity: device_tracker.x2_sdrive18i
 
-##### Sonstiges #####
-  - title: Sonstiges
-    id: other
-    icon: mdi:library-books
-    cards:
-      - id: 841ec2f903ae44789dd8b9bc5c8e7cb2
-        type: entities
-        #title: Wetter
-        show_header_toggle: false
-        entities:
-          - sensor.pws_weather
-          - sensor.pws_temp_c
-          - sensor.pws_feelslike_c
-          - sun.sun
-      - id: cfd3e4013c904e5ca5c512f15395a932
-        type: entities
-        #title: Sensoren
-        show_header_toggle: false
-        entities:
-          - sensor.pressure_158d0002239fb5
-          - sensor.pressure_158d00023258bd
-      - id: 22a013a9451c45a38f72387356665fac
-        type: entities
-        #title: FritzBox
-        show_header_toggle: false
-        entities:
-          - sensor.fritz_netmonitor
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Gastzugang
-            items:
-              - script.1543087176551
-              - script.1543087223684
-      - id: 215ed5c95850451790e4913e6df778d3
-        type: entities
-        #title: HA Status
-        show_header_toggle: true
-        entities:
-          - sensor.online_time
-          - sensor.ssl_certificate_expiry
-          - sensor.ccu_servicemessages
-      - id: c1e9935cae854cf3a5c754a31d443a93
-        type: custom:tracker-card
-        #title: Updates
-        trackers:
-          - sensor.custom_card_tracker
-          - sensor.custom_component_tracker
+# ##### Sonstiges #####
+  # - title: Sonstiges
+    # id: other
+    # icon: mdi:library-books
+    # cards:
+      # - id: 841ec2f903ae44789dd8b9bc5c8e7cb2
+        # type: entities
+        # #title: Wetter
+        # show_header_toggle: false
+        # entities:
+          # - sensor.pws_weather
+          # - sensor.pws_temp_c
+          # - sensor.pws_feelslike_c
+          # - sun.sun
+      # - id: cfd3e4013c904e5ca5c512f15395a932
+        # type: entities
+        # #title: Sensoren
+        # show_header_toggle: false
+        # entities:
+          # - sensor.pressure_158d0002239fb5
+          # - sensor.pressure_158d00023258bd
+      # - id: 22a013a9451c45a38f72387356665fac
+        # type: entities
+        # #title: FritzBox
+        # show_header_toggle: false
+        # entities:
+          # - sensor.fritz_netmonitor
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Gastzugang
+            # items:
+              # - script.1543087176551
+              # - script.1543087223684
+      # - id: 215ed5c95850451790e4913e6df778d3
+        # type: entities
+        # #title: HA Status
+        # show_header_toggle: true
+        # entities:
+          # - sensor.online_time
+          # - sensor.ssl_certificate_expiry
+          # - sensor.ccu_servicemessages
+      # - id: c1e9935cae854cf3a5c754a31d443a93
+        # type: custom:tracker-card
+        # #title: Updates
+        # trackers:
+          # - sensor.custom_card_tracker
+          # - sensor.custom_component_tracker
