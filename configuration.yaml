@@ -29,6 +29,9 @@ frontend:
     own:
       paper-font-headline_-_font-size: 18px
 
+lovelace:
+  mode: yaml
+
 # Enables configuration UI
 config:
 

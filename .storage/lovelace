@@ -4,7 +4,7 @@
             "resources": [
                 {
                     "type": "module",
-                    "url": "/local/mini-media-player-bundle.js?v=0.9.5"
+                    "url": "/local/mini-media-player-bundle.js?v=0.9.7"
                 },
                 {
                     "type": "js",
@@ -12,7 +12,7 @@
                 },
                 {
                     "type": "js",
-                    "url": "/local/fold-entity-row.js?v=0636eg"
+                    "url": "/local/fold-entity-row.js?v=0636ee"
                 },
                 {
                     "type": "js",

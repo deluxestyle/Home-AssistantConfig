@@ -2,7 +2,7 @@
   host: 192.168.200.53
   
 - platform: universal
-  name: Sonos Boxen
+  name: Sonos MediaPlayer
   children:
     - media_player.schlafzimmer
     - media_player.bad
