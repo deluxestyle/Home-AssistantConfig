@@ -6,11 +6,13 @@ resources:
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/fold-entity-row.js?v=0636ee
+  - url: /local/fold-entity-row.js?v=f28e6e1
+    type: js
+  - url: /local/card-tools.js?v=e96d8c
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.0.5
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.0.7
     type: js
 
 title: Home
@@ -401,7 +403,7 @@ views:
       - id: 2402c60089f9494ab6d16f85ca87f50b
         type: entities
         #title: Bewegung
-        show_header_toggle: flase
+        show_header_toggle: false
         entities:
           - binary_sensor.motion_sensor_158d00023e77cb
           - sensor.illumination_158d00023e77cb
