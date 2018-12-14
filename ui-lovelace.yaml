@@ -259,6 +259,14 @@ views:
               - sensor.xiaomi_vacum_sensor_dirty_left
               - sensor.xiaomi_vacum_main_brush_left
               - sensor.xiaomi_vacum_filter_left
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Benachrichtigungen
+            items:
+              - automation.xiaomi_staubsauger_benachrichtigung__error
+              - automation.xiaomi_staubsauger_benachrichtigung__fertig
+              - automation.xiaomi_staubsauger_benachrichtigung__gestartet
 
 ##### Entertainment #####
   - title: Entertainment

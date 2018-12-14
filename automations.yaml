@@ -178,6 +178,7 @@
   alias: 'Xiaomi Staubsauger: Benachrichtigung - gestartet'
   trigger:
   - entity_id: vacuum.xiaomi_vacuum_cleaner
+    from: docked
     platform: state
     to: cleaning
   action:
@@ -201,13 +202,6 @@
       message: 'Staubsauger blockiert - Error: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.error
         }} '
     service: notify.ios_iphone8
-  - alias: ''
-    data:
-      entity_id: automation.xiaomi_staubsauger_automatisch_starten
-    service: automation.turn_off
-  - data:
-      entity_id: automation.xiaomi_staubsauger_taglich_saugen
-    service: automation.turn_off
 - id: '1521743370575'
   alias: 'Heizung: Abwesenheitsschaltung'
   trigger:
@@ -731,3 +725,17 @@
       entity_id: climate.int0000002
       temperature: '{{ states.input_number.radiator_temp_office.state | float }}'
     service: climate.set_temperature
+- id: '1544816542688'
+  alias: Xiaomi Staubsauger - Error
+  trigger:
+  - entity_id: sensor.xiaomi_vacuum_status
+    platform: state
+    to: Error
+  condition: []
+  action:
+  - data:
+      entity_id: automation.xiaomi_staubsauger_automatisch_starten
+    service: automation.turn_off
+  - data:
+      entity_id: automation.xiaomi_staubsauger_taglich_saugen
+    service: automation.turn_off
