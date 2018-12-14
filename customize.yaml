@@ -344,3 +344,9 @@ light.kuche:
 light.lights_kitchen:
   friendly_name: Küchenlicht
   icon: mdi:ceiling-light
+automation.xiaomi_staubsauger_benachrichtigung__error:
+  friendly_name: Benachrichtigung - Error
+automation.xiaomi_staubsauger_benachrichtigung__fertig:
+  friendly_name: Benachrichtigung - fertig
+automation.xiaomi_staubsauger_benachrichtigung__gestartet:
+  friendly_name: Benachrichtigung - gestartet

@@ -1,6 +1,3 @@
-### deprecated due to the new use of the UI editor
-###
-
 resources:
   - url: /local/mini-media-player-bundle.js?v=0.9.7
     type: module
@@ -85,6 +82,9 @@ views:
         entities:
           - light.gateway_light_7811dcb258d1
           - sensor.illumination_7811dcb258d1
+      - type: custom:compact-custom-header
+        user_agent: iPhone
+        options: true, false
 
 ##### Heizung #####
   - title: Heizung
@@ -180,6 +180,9 @@ views:
         entities:
           - sensor.temperature_158d0002239fb5
           - sensor.humidity_158d0002239fb5
+      - type: custom:compact-custom-header
+        user_agent: iPhone
+        options: true, false
 
 ##### Staubsauger #####
   - title: Staubsauger
@@ -267,6 +270,9 @@ views:
               - automation.xiaomi_staubsauger_benachrichtigung__error
               - automation.xiaomi_staubsauger_benachrichtigung__fertig
               - automation.xiaomi_staubsauger_benachrichtigung__gestartet
+      - type: custom:compact-custom-header
+        user_agent: iPhone
+        options: true, false
 
 ##### Entertainment #####
   - title: Entertainment
@@ -379,6 +385,9 @@ views:
               - script.1534621226775
           - type: section
           - automation.sonos_automatisch_einschalten
+      - type: custom:compact-custom-header
+        user_agent: iPhone
+        options: true, false
 
 ##### Steckdosen #####
   - title: Steckdosen
@@ -393,6 +402,9 @@ views:
           - light.steckdose
           - light.steckdose_3
           - light.onoff_plug_1
+      - type: custom:compact-custom-header
+        user_agent: iPhone
+        options: true, false
 
 ##### Personen #####
   - title: Personen
@@ -439,6 +451,9 @@ views:
           show_info: true
           tap_action: dialog
           title: Kamera
+      - type: custom:compact-custom-header
+        user_agent: iPhone
+        options: true, false
 
 ##### Auto ##### 
   - title: BMW X2
@@ -477,6 +492,9 @@ views:
         default_zoom: 14
         entities:
           - entity: device_tracker.x2_sdrive18i
+      - type: custom:compact-custom-header
+        user_agent: iPhone
+        options: true, false
 
 ##### Sonstiges #####
   - title: Sonstiges
@@ -526,3 +544,6 @@ views:
         trackers:
           - sensor.custom_card_tracker
           - sensor.custom_component_tracker
+      - type: custom:compact-custom-header
+        user_agent: iPhone
+        options: true, false

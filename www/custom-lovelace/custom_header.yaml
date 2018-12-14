@@ -1,0 +1,3 @@
+  - type: custom:compact-custom-header
+    user_agent: iPhone
+    options: true, false
