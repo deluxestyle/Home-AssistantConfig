@@ -3,7 +3,7 @@ resources:
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/fold-entity-row.js?v=f28e6e1
+  - url: /local/fold-entity-row.js?v=f28e6e
     type: js
   - url: /local/card-tools.js?v=e96d8c
     type: js
@@ -215,7 +215,7 @@ views:
             # icon: mdi:stop
           - entity: vacuum.xiaomi_vacuum_cleaner
             tap_action: 
-                actioN: call-service
+                action: call-service
                 service: vacuum.return_to_base
                 service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
@@ -420,6 +420,7 @@ views:
           - device_tracker.anitasiphone
           - type: section
           - automation.abwesenheitsschaltung
+          - automation.anwesenheitsschaltung
       - id: 2402c60089f9494ab6d16f85ca87f50b
         type: entities
         #title: Bewegung

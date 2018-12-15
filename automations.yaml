@@ -739,3 +739,14 @@
   - data:
       entity_id: automation.xiaomi_staubsauger_taglich_saugen
     service: automation.turn_off
+- id: '1544899204871'
+  alias: Harmony - Steckdosenleiste
+  trigger:
+  - entity_id: remote.harmony_hub
+    platform: state
+    to: Steckdosenleiste
+  condition: []
+  action:
+  - data:
+      entity_id: light.steckdose
+    service: light.turn_on
