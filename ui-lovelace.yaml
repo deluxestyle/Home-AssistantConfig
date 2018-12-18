@@ -3,13 +3,13 @@ resources:
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/fold-entity-row.js?v=f28e6e
+  - url: /local/fold-entity-row.js?v=f28e6e4
     type: js
-  - url: /local/card-tools.js?v=e96d8c
+  - url: /local/card-tools.js?v=445b68
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.0.7
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.1.6
     type: js
 
 title: Home
@@ -209,10 +209,6 @@ views:
                 service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
             icon: mdi:pause
-          # - entity: vacuum.xiaomi_vacuum_cleaner
-            # tap_action: call-service
-            # service: vacuum.stop
-            # icon: mdi:stop
           - entity: vacuum.xiaomi_vacuum_cleaner
             tap_action: 
                 action: call-service
@@ -308,7 +304,6 @@ views:
               type: section
               label: Fernbedienung
             items:
-              #- script.1538058955033
               - script.1538068809592
               - script.1538072504227
               - script.1538057479069

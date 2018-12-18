@@ -17,10 +17,10 @@ light.steckdose_2:
   friendly_name: Küchenspots
   icon: mdi:spotlight-beam
 climate.oeq1696358:
-  friendly_name: Wohnzimmer Heizung
+  friendly_name: 'Heizung Wohnzimmer '
   icon: mdi:radiator
 climate.oeq1696369:
-  friendly_name: Schlafzimmer Heizung
+  friendly_name: Heizung Schlafzimmer
   icon: mdi:radiator
 sensor.oeq1667238_humidity:
   friendly_name: Luftfeuchtigkeit Büro
