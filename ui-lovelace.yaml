@@ -3,13 +3,15 @@ resources:
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/fold-entity-row.js?v=f28e6e4
+  - url: /local/fold-entity-row.js?v=f28e6e5
     type: js
   - url: /local/card-tools.js?v=445b68
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.1.6
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.1.8
+    type: js
+  - url: /local/vertical-stack-in-card.js?v=0.0.9
     type: js
 
 title: Home
@@ -189,83 +191,86 @@ views:
     id: vacuum
     icon: mdi:robot-vacuum
     cards:
-      - id: a1b3d3fba78e4a9ab5c77bd8108c6eag
-        type: glance
-        show_name: false
-        show_state: false
-        #title: Xiaomi StaubRobo
-        entities:
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: 
-                action: call-service
-                service: vacuum.start
-                service_data:
-                    entity_id: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:play
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: 
-                action: call-service
-                service: vacuum.pause
-                service_data:
-                    entity_id: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:pause
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: 
-                action: call-service
-                service: vacuum.return_to_base
-                service_data:
-                    entity_id: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:home
-          - entity: vacuum.xiaomi_vacuum_cleaner
-            tap_action: 
-                action: call-service
-                service: vacuum.locate
-                service_data:
-                    entity_id: vacuum.xiaomi_vacuum_cleaner
-            icon: mdi:map-marker
-      - id: a1b3d3fba78e4a9ab5c77bd8108c6eae
-        type: entities
-        #title: Staubsauger
-        show_header_toggle: false
-        entities:
-          - vacuum.xiaomi_vacuum_cleaner
-          - sensor.xiaomi_vacum_sensor_battery
-          - type: section
-          - automation.xiaomi_staubsauger_automatisch_starten
-          - automation.xiaomi_staubsauger_taglich_saugen
-          #- type: section
-          #- input_select.vacuum_rooms
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Zonen (Räume)
-            items:
-              # - input_select.vacuum_rooms
-              - script.1543667402104
-              - script.1543666580682
-              - script.1543666947492
-              - script.1543666909272
-              - script.1543666985219
-              - script.1543666771838
-              - script.1543666867257
-              - script.1543666831509
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Wartung
-            items:
-              - sensor.xiaomi_vacum_side_brush_left
-              - sensor.xiaomi_vacum_sensor_dirty_left
-              - sensor.xiaomi_vacum_main_brush_left
-              - sensor.xiaomi_vacum_filter_left
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Benachrichtigungen
-            items:
-              - automation.xiaomi_staubsauger_benachrichtigung__error
-              - automation.xiaomi_staubsauger_benachrichtigung__fertig
-              - automation.xiaomi_staubsauger_benachrichtigung__gestartet
+      - type: custom:vertical-stack-in-card
+        cards:
+          - id: a1b3d3fba78e4a9ab5c77bd8108c6eag
+            type: glance
+            show_name: false
+            show_state: false
+            #title: Xiaomi StaubRobo
+            entities:
+              - entity: vacuum.xiaomi_vacuum_cleaner
+                tap_action: 
+                    action: call-service
+                    service: vacuum.start
+                    service_data:
+                        entity_id: vacuum.xiaomi_vacuum_cleaner
+                icon: mdi:play
+              - entity: vacuum.xiaomi_vacuum_cleaner
+                tap_action: 
+                    action: call-service
+                    service: vacuum.pause
+                    service_data:
+                        entity_id: vacuum.xiaomi_vacuum_cleaner
+                icon: mdi:pause
+              - entity: vacuum.xiaomi_vacuum_cleaner
+                tap_action: 
+                    action: call-service
+                    service: vacuum.return_to_base
+                    service_data:
+                        entity_id: vacuum.xiaomi_vacuum_cleaner
+                icon: mdi:home
+              - entity: vacuum.xiaomi_vacuum_cleaner
+                tap_action: 
+                    action: call-service
+                    service: vacuum.locate
+                    service_data:
+                        entity_id: vacuum.xiaomi_vacuum_cleaner
+                icon: mdi:map-marker
+          - id: a1b3d3fba78e4a9ab5c77bd8108c6eae
+            type: entities
+            #title: Staubsauger
+            show_header_toggle: false
+            entities:
+              - type: section
+              - vacuum.xiaomi_vacuum_cleaner
+              - sensor.xiaomi_vacum_sensor_battery
+              - type: section
+              - automation.xiaomi_staubsauger_automatisch_starten
+              - automation.xiaomi_staubsauger_taglich_saugen
+              #- type: section
+              #- input_select.vacuum_rooms
+              - type: custom:fold-entity-row
+                head:
+                  type: section
+                  label: Zonen (Räume)
+                items:
+                  # - input_select.vacuum_rooms
+                  - script.1543667402104
+                  - script.1543666580682
+                  - script.1543666947492
+                  - script.1543666909272
+                  - script.1543666985219
+                  - script.1543666771838
+                  - script.1543666867257
+                  - script.1543666831509
+              - type: custom:fold-entity-row
+                head:
+                  type: section
+                  label: Wartung
+                items:
+                  - sensor.xiaomi_vacum_side_brush_left
+                  - sensor.xiaomi_vacum_sensor_dirty_left
+                  - sensor.xiaomi_vacum_main_brush_left
+                  - sensor.xiaomi_vacum_filter_left
+              - type: custom:fold-entity-row
+                head:
+                  type: section
+                  label: Benachrichtigungen
+                items:
+                  - automation.xiaomi_staubsauger_benachrichtigung__error
+                  - automation.xiaomi_staubsauger_benachrichtigung__fertig
+                  - automation.xiaomi_staubsauger_benachrichtigung__gestartet
       - type: custom:compact-custom-header
         user_agent: iPhone
         options: true, false

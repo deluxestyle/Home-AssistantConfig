@@ -116,7 +116,7 @@
       entity_id: remote.harmony_hub
     service: remote.turn_on
 '1538128738934':
-  alias: Samsung off
+  alias: Samsung UE55j6250 ausschalten
   sequence:
   - data:
       command: PowerOff
@@ -169,7 +169,7 @@
       entity_id: remote.harmony_hub
     service: remote.send_command
 '1538167144011':
-  alias: Samsung on
+  alias: Samsung UE55j6250 einschalten
   sequence:
   - data:
       command: PowerOn

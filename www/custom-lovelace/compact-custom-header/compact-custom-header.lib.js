@@ -73,7 +73,7 @@ if (proceed) {
   }
 
   // Find the compact-custom-header card under normal circumstances.
-  if (div_view.querySelector('hui-view') != null) {
+  if (div_view.querySelector('hui-view') != null && !card_in_panel) {
     for (let i = 0; i < column.length; i++) {
       if (column[i].querySelector('compact-custom-header')) {
         cch_card = column[i].querySelector('compact-custom-header');
@@ -147,8 +147,11 @@ if (proceed) {
     tab_chevron[0].style.cssText = 'display:none;';
     tab_chevron[1].style.cssText = 'display:none;';
     // Pad bottom for image backgrounds as we're shifted -64px.
-    div_view.style.paddingBottom = '64px';
-
+    if (window.cch_background_image) {
+      div_view.style.paddingBottom = '64px';
+    } else {
+      div_view.style.paddingBottom = '';
+    }  
     // Hide header if set to false in config
     if (!window.cch_header) {
       hui_root.querySelector('app-header').style.cssText = 'display:none;';
