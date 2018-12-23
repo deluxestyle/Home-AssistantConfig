@@ -1,15 +1,15 @@
 resources:
-  - url: /local/mini-media-player-bundle.js?v=0.9.7
+  - url: /local/mini-media-player-bundle.js?v=0.9.8
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/fold-entity-row.js?v=f28e6e5
+  - url: /local/fold-entity-row.js?v=f28e6e
     type: js
   - url: /local/card-tools.js?v=445b68
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.1.8
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.1.9
     type: js
   - url: /local/vertical-stack-in-card.js?v=0.0.9
     type: js

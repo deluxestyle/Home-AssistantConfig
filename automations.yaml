@@ -27,6 +27,9 @@
   - data:
       entity_id: automation.benachrichtigung__bewegung_erkannt
     service: automation.turn_on
+  - data:
+      entity_id: light.steckdose_3
+    service: light.turn_off
 - id: camera_cctv_off
   alias: Kamera Surveillance - aus
   trigger:
