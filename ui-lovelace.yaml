@@ -9,7 +9,7 @@ resources:
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.1.9
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.0
     type: js
   - url: /local/vertical-stack-in-card.js?v=0.0.9
     type: js
@@ -259,6 +259,7 @@ views:
                   type: section
                   label: Wartung
                 items:
+                  - automation.xiaomi_staubsauger__error
                   - sensor.xiaomi_vacum_side_brush_left
                   - sensor.xiaomi_vacum_sensor_dirty_left
                   - sensor.xiaomi_vacum_main_brush_left
@@ -416,7 +417,7 @@ views:
         #title: Anwesenheit
         show_header_toggle: false
         entities:
-          - device_tracker.iphone8
+          - device_tracker.iphonex
           - device_tracker.anitasiphone
           - type: section
           - automation.abwesenheitsschaltung

@@ -60,7 +60,7 @@ light.hue_white_lamp_1:
 switch.lights_all:
   friendly_name: alle Lichter
   icon: mdi:lightbulb-on
-device_tracker.iphone8:
+device_tracker.iphonex:
   friendly_name: iPhone Wolfgang
 sensor.humidity_158d0002239fb5:
   friendly_name: Luftfeuchtigkeit Küche
@@ -185,10 +185,10 @@ script.1532175994947:
 script.1532275617247:
   icon: mdi:power
 script.1534621188695:
-  friendly_name: Wecker Schlafzimmer einschalten
+  friendly_name: Wecker einschalten
   icon: mdi:alarm
 script.1534621226775:
-  friendly_name: Wecker Schlafzimmer ausschalten
+  friendly_name: Wecker ausschalten
   icon: mdi:alarm-off
 input_boolean.camera_cctv:
   friendly_name: Aufnahme
