@@ -411,7 +411,7 @@
         states.input_select.avr_source.state ==  "AirPlay" %}Audio {% elif states.input_select.avr_source.state
         ==  "TV" %}TV {% elif states.input_select.avr_source.state ==  "Home Network"
         %}Home Network {% elif states.input_select.avr_source.state ==  "vTurner"
-        %}vTurner {% elif states.input_select.avr_source.state ==  "Turntable" %}AUX
+        %}vTuner {% elif states.input_select.avr_source.state ==  "Turntable" %}AUX
         {% endif %}'
     service: media_player.select_source
   - data:
@@ -557,16 +557,16 @@
 - id: '1540974552306'
   alias: Benachrichtigung - Luftfeuchtigkeit
   trigger:
-  - above: '65'
+  - above: '62'
     entity_id: sensor.humidity_158d0001b8c96c
     platform: numeric_state
-  - above: '65'
+  - above: '62'
     entity_id: sensor.humidity_158d0001b8c998
     platform: numeric_state
-  - above: '65'
+  - above: '62'
     entity_id: sensor.humidity_158d0002239fb5
     platform: numeric_state
-  - above: '65'
+  - above: '62'
     entity_id: sensor.oeq1667238_humidity
     platform: numeric_state
   condition:
@@ -626,12 +626,6 @@
   condition: []
   action:
   - data:
-      entity_id: vacuum.xiaomi_vacuum_cleaner
-    service: vacuum.stop
-  - data:
-      entity_id: vacuum.xiaomi_vacuum_cleaner
-    service: vacuum.return_to_base
-  - data:
       entity_id: automation.benachrichtigung__bewegung_erkannt
     service: automation.turn_off
 - id: '1543074323979'
@@ -646,7 +640,7 @@
       message: Niemand zu Hause
     service: notify.ios_iphonex
 - id: '1543519090605'
-  alias: ui_lovelace Zugriff
+  alias: Lovelace Datei-Zugriff
   trigger:
   - entity_id: sensor.custom_card_tracker
     platform: state
@@ -742,6 +736,11 @@
   - data:
       entity_id: automation.xiaomi_staubsauger_taglich_saugen
     service: automation.turn_off
+  - data:
+      message: Automatisierungen deaktiviert
+      notification_id: xiaomi_sensor
+      title: Xiaomi StaubRobo
+    service: persistent_notification.create
 - id: '1544899204871'
   alias: Harmony - Steckdosenleiste
   trigger:

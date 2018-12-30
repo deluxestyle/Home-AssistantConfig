@@ -37,7 +37,7 @@ avr_source:
         - TV
         - AirPlay
         - Turntable
-        - vTurner
+        - vTuner
         - Home Network
 
 vacuum_rooms:

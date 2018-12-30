@@ -5,7 +5,7 @@ resources:
     type: js
   - url: /local/fold-entity-row.js?v=f28e6e
     type: js
-  - url: /local/card-tools.js?v=445b68
+  - url: /local/card-tools.js?v=0a97d3
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
@@ -370,13 +370,13 @@ views:
             items:
               - input_select.master_sonos
               - switch.sonos_group
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Super FlyFM
-            items:
-              - script.1532173931522
-              - script.1532175994947
+          # - type: custom:fold-entity-row
+            # head:
+              # type: section
+              # label: Super FlyFM
+            # items:
+              # - script.1532173931522
+              # - script.1532175994947
           - type: custom:fold-entity-row
             head:
               type: section
