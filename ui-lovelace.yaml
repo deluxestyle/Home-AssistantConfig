@@ -9,10 +9,16 @@ resources:
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.0
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.4
     type: js
-  - url: /local/vertical-stack-in-card.js?v=0.0.9
+  - url: /local/vertical-stack-in-card.js?v=0.1.0
     type: js
+
+# Compact header
+x-compact-header: &compact-header
+- type: custom:compact-custom-header
+  user_agent: iPhone
+  options: true, false
 
 title: Home
 views:
@@ -84,9 +90,7 @@ views:
         entities:
           - light.gateway_light_7811dcb258d1
           - sensor.illumination_7811dcb258d1
-      - type: custom:compact-custom-header
-        user_agent: iPhone
-        options: true, false
+      - <<: *compact-header
 
 ##### Heizung #####
   - title: Heizung
@@ -182,9 +186,7 @@ views:
         entities:
           - sensor.temperature_158d0002239fb5
           - sensor.humidity_158d0002239fb5
-      - type: custom:compact-custom-header
-        user_agent: iPhone
-        options: true, false
+      - <<: *compact-header
 
 ##### Staubsauger #####
   - title: Staubsauger
@@ -272,9 +274,7 @@ views:
                   - automation.xiaomi_staubsauger_benachrichtigung__error
                   - automation.xiaomi_staubsauger_benachrichtigung__fertig
                   - automation.xiaomi_staubsauger_benachrichtigung__gestartet
-      - type: custom:compact-custom-header
-        user_agent: iPhone
-        options: true, false
+      - <<: *compact-header
 
 ##### Entertainment #####
   - title: Entertainment
@@ -386,9 +386,7 @@ views:
               - script.1534621226775
           - type: section
           - automation.sonos_automatisch_einschalten
-      - type: custom:compact-custom-header
-        user_agent: iPhone
-        options: true, false
+      - <<: *compact-header
 
 ##### Steckdosen #####
   - title: Steckdosen
@@ -453,9 +451,7 @@ views:
           show_info: true
           tap_action: dialog
           title: Kamera
-      - type: custom:compact-custom-header
-        user_agent: iPhone
-        options: true, false
+      - <<: *compact-header
 
 ##### Auto ##### 
   - title: BMW X2
@@ -546,6 +542,4 @@ views:
         trackers:
           - sensor.custom_card_tracker
           - sensor.custom_component_tracker
-      - type: custom:compact-custom-header
-        user_agent: iPhone
-        options: true, false
+      - <<: *compact-header
