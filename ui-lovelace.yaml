@@ -14,7 +14,7 @@ resources:
   - url: /local/vertical-stack-in-card.js?v=0.1.0
     type: js
 
-# Compact header
+##### Compact header ##### 
 x-compact-header: &compact-header
 - type: custom:compact-custom-header
   user_agent: iPhone
@@ -490,9 +490,7 @@ views:
         default_zoom: 14
         entities:
           - entity: device_tracker.x2_sdrive18i
-      - type: custom:compact-custom-header
-        user_agent: iPhone
-        options: true, false
+      - <<: *compact-header
 
 ##### Sonstiges #####
   - title: Sonstiges
