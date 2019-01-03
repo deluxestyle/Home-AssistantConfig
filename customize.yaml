@@ -338,7 +338,7 @@ script.1541264856783:
   icon: mdi:radiator-off
 script.1540232132608:
   icon: mdi:radiator-disabled
-light.kuche:
+light.deckenlampe:
   friendly_name: Deckenlampe
   icon: mdi:ceiling-light
 light.lights_kitchen:

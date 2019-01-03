@@ -131,7 +131,6 @@ ios: !include push.yaml
 homekit: !include homekit.yaml
 media_player: !include media_player.yaml
 camera: !include camera.yaml
-weblink: !include weblink.yaml
 
 homematic:
   interfaces:

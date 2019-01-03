@@ -1,5 +1,0 @@
-entities:
-    - name: Start here
-      url: https://raspberrypi.xpvirv5oypo6duyr.myfritz.net:8123/lovelace
-    - name: Info
-      url: https://raspberrypi.xpvirv5oypo6duyr.myfritz.net:8123/dev-info

@@ -9,7 +9,7 @@ resources:
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.4
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.5
     type: js
   - url: /local/vertical-stack-in-card.js?v=0.1.0
     type: js
@@ -81,7 +81,7 @@ views:
               type: section
               label: Lampen
             items:
-              - light.kuche
+              - light.deckenlampe
               - light.steckdose_2
       - id: a65c87cf3b014b12824a4e5e75cc4921
         type: entities
