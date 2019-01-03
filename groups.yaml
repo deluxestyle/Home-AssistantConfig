@@ -343,14 +343,12 @@ default_view:
     # icon: mdi:account-multiple
     # entities:
         # - device_tracker.anitasiphone
-        # - device_tracker.iphone8
 
 # family:
     # name: "Anwesenheit"
     # icon: mdi:account-multiple
     # entities:
         # - device_tracker.anitasiphone
-        # - device_tracker.iphone8
 
 # weather:
     # name: Wetter

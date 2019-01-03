@@ -400,7 +400,7 @@ views:
         entities:
           - light.steckdose
           - light.steckdose_3
-          - light.onoff_plug_1
+          - light.steckdose_4
       - type: custom:compact-custom-header
         user_agent: iPhone
         options: true, false
@@ -437,12 +437,12 @@ views:
         #title: Überwachung
         show_header_toggle: false
         entities:
-          - light.onoff_plug_1
+          - light.steckdose_4
           - input_boolean.camera_cctv
       - id: 351335930abe4c4887c5387bd78ed9e9
         type: conditional
         conditions:
-          - entity: light.onoff_plug_1
+          - entity: light.steckdose_4
             state: "on"
         card:
           type: picture-entity

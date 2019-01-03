@@ -171,8 +171,10 @@ group.power_sockets:
   control: hidden
   friendly_name: 'Steckdosen '
 light.steckdose_3:
+  friendly_name: Drucker
   icon: mdi:printer
-light.onoff_plug_1:
+light.steckdose_4:
+  friendly_name: Kamera
   icon: mdi:cctv
 group.power_sockets_group:
   control: hidden
@@ -241,6 +243,7 @@ script.1538143929416:
 sensor.valve_bath:
   icon: mdi:fan
 climate.oeq1714751:
+  friendly_name: Heizung Bad
   icon: mdi:radiator
 script.1538502214360:
   icon: mdi:radiator-off
@@ -350,3 +353,9 @@ automation.xiaomi_staubsauger_benachrichtigung__fertig:
   friendly_name: Benachrichtigung - fertig
 automation.xiaomi_staubsauger_benachrichtigung__gestartet:
   friendly_name: Benachrichtigung - gestartet
+binary_sensor.door_window_sensor_158d00022f13a0:
+  friendly_name: Badfenster
+sensor.illumination_158d00023e77cb:
+  friendly_name: Lichtsensor
+binary_sensor.motion_sensor_158d00023e77cb:
+  friendly_name: Bewegungsmelder
