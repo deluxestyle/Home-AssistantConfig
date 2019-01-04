@@ -83,6 +83,7 @@ views:
             items:
               - light.deckenlampe
               - light.steckdose_2
+              - light.steckdose_4
       - id: a65c87cf3b014b12824a4e5e75cc4921
         type: entities
         #title: Flur
@@ -400,7 +401,6 @@ views:
         entities:
           - light.steckdose
           - light.steckdose_3
-          - light.steckdose_4
       - type: custom:compact-custom-header
         user_agent: iPhone
         options: true, false
@@ -432,25 +432,24 @@ views:
           - script.1541097052191
           - type: section
           - automation.benachrichtigung__bewegung_erkannt
-      - id: b230e10f94824a3e928420cbeac0fcd6
-        type: entities
-        #title: Überwachung
-        show_header_toggle: false
-        entities:
-          - light.steckdose_4
-          - input_boolean.camera_cctv
-      - id: 351335930abe4c4887c5387bd78ed9e9
-        type: conditional
-        conditions:
-          - entity: light.steckdose_4
-            state: "on"
-        card:
-          type: picture-entity
-          entity: camera.ffmpeg
-          camera_image: camera.ffmpeg
-          show_info: true
-          tap_action: dialog
-          title: Kamera
+      # - id: b230e10f94824a3e928420cbeac0fcd6
+        # type: entities
+        # #title: Überwachung
+        # show_header_toggle: false
+        # entities:
+          # - input_boolean.camera_cctv
+      # - id: 351335930abe4c4887c5387bd78ed9e9
+        # type: conditional
+        # conditions:
+          # - entity: input_boolean.camera_cctv
+            # state: "on"
+        # card:
+          # type: picture-entity
+          # entity: camera.ffmpeg
+          # camera_image: camera.ffmpeg
+          # show_info: true
+          # tap_action: dialog
+          # title: Kamera
       - <<: *compact-header
 
 ##### Auto ##### 

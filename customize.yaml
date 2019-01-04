@@ -14,7 +14,7 @@ light.steckdose:
   - ''
   icon: mdi:power-socket-eu
 light.steckdose_2:
-  friendly_name: Küchenspots
+  friendly_name: Küchenspot - links
   icon: mdi:spotlight-beam
 climate.oeq1696358:
   friendly_name: 'Heizung Wohnzimmer '
@@ -174,8 +174,8 @@ light.steckdose_3:
   friendly_name: Drucker
   icon: mdi:printer
 light.steckdose_4:
-  friendly_name: Kamera
-  icon: mdi:cctv
+  friendly_name: Küchenspot - rechts
+  icon: mdi:spotlight-beam
 group.power_sockets_group:
   control: hidden
 script.1532173931522:

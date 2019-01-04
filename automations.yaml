@@ -48,9 +48,6 @@
     to: 'on'
   action:
   - service: shell_command.surveillance_on
-  - data:
-      entity_id: light.onoff_plug_1
-    service: light.turn_on
 - id: scenes_living_room
   alias: 'Lichtszenen: Wohnzimmer auswählen'
   trigger:
@@ -453,17 +450,6 @@
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.return_to_base
-- id: '1535994680040'
-  alias: Kamera aus
-  trigger:
-  - entity_id: light.onoff_plug_1
-    platform: state
-    to: 'off'
-  condition: []
-  action:
-  - data:
-      entity_id: input_boolean.camera_cctv
-    service: input_boolean.turn_off
 - id: '1537870591748'
   alias: Benachrichtigung - HomeMatic CCU Servicemessage
   trigger:

@@ -36,6 +36,7 @@
   entities:
       - light.deckenlampe
       - light.steckdose_2
+      - light.steckdose_4
 
 - platform: group
   name: lights_all

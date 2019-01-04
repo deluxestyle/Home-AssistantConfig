@@ -16,6 +16,7 @@ filter:
     - light.steckdose
     - light.steckdose_3
     - light.steckdose_2
+    - light.steckdose_4
     - light.onoff_plug_1
     - media_player.bad
     - media_player.schlafzimmer
