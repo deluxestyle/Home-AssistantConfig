@@ -219,15 +219,15 @@
   sequence:
   - data:
       entity_id: climate.int0000002
-      temperature: '19'
+      temperature: '20'
     service: climate.set_temperature
   - data:
       entity_id: climate.oeq1696358
-      temperature: '17'
+      temperature: '19'
     service: climate.set_temperature
   - data:
       entity_id: climate.oeq1696369
-      temperature: '17'
+      temperature: '19'
     service: climate.set_temperature
   - data:
       entity_id: climate.oeq1714751
