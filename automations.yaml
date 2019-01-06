@@ -220,7 +220,7 @@
   alias: 'Heizung: Wohnzimmer an'
   trigger:
   - below: '10'
-    entity_id: sensor.pws_temp_c
+    entity_id: sensor.dark_sky_temperature
     platform: numeric_state
   condition:
   - condition: template
@@ -240,7 +240,7 @@
   alias: 'Heizung: Schlafzimmer an'
   trigger:
   - below: '10'
-    entity_id: sensor.pws_temp_c
+    entity_id: sensor.dark_sky_temperature
     platform: numeric_state
   condition:
   - condition: template
@@ -260,7 +260,7 @@
   alias: 'Heizung: Büro an'
   trigger:
   - below: '10'
-    entity_id: sensor.pws_temp_c
+    entity_id: sensor.dark_sky_temperature
     platform: numeric_state
   condition:
   - condition: template
@@ -280,7 +280,7 @@
   alias: 'Heizung: Wohnzimmer aus'
   trigger:
   - above: '10'
-    entity_id: sensor.pws_temp_c
+    entity_id: sensor.dark_sky_temperature
     platform: numeric_state
   condition:
   - condition: template
@@ -298,7 +298,7 @@
   alias: 'Heizung: Schlafzimmer aus'
   trigger:
   - above: '10'
-    entity_id: sensor.pws_temp_c
+    entity_id: sensor.dark_sky_temperature
     platform: numeric_state
   condition:
   - condition: template
@@ -316,7 +316,7 @@
   alias: 'Heizung: Büro aus'
   trigger:
   - above: '10'
-    entity_id: sensor.pws_temp_c
+    entity_id: sensor.dark_sky_temperature
     platform: numeric_state
   condition:
   - condition: template
@@ -473,7 +473,7 @@
   alias: 'Heizung: Bad aus'
   trigger:
   - above: '10'
-    entity_id: sensor.pws_temp_c
+    entity_id: sensor.dark_sky_temperature
     platform: numeric_state
   condition:
   - condition: state
@@ -490,7 +490,7 @@
   alias: 'Heizung: Bad an'
   trigger:
   - below: '10'
-    entity_id: sensor.pws_temp_c
+    entity_id: sensor.dark_sky_temperature
     platform: numeric_state
   condition:
   - condition: state

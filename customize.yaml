@@ -363,3 +363,9 @@ binary_sensor.motion_sensor_158d00023e77cb:
 device_tracker.anni:
   friendly_name: iPhone Anita
   icon: mdi:cellphone
+sensor.dark_sky_temperature:
+  friendly_name: aktuelle Temperatur
+sensor.dark_sky_apparent_temperature:
+  friendly_name: gefühlte Temperatur
+weather.dark_sky:
+  friendly_name: Wetter

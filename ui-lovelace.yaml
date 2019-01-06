@@ -11,7 +11,7 @@ resources:
     type: js
   - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.7
     type: js
-  - url: /local/vertical-stack-in-card.js?v=0.1.0
+  - url: /local/vertical-stack-in-card.js?v=v0.0.9
     type: js
 
 ##### Compact header ##### 
@@ -501,9 +501,9 @@ views:
         #title: Wetter
         show_header_toggle: false
         entities:
-          - sensor.pws_weather
-          - sensor.pws_temp_c
-          - sensor.pws_feelslike_c
+          - weather.dark_sky
+          - sensor.dark_sky_temperature
+          - sensor.dark_sky_apparent_temperature
           - sun.sun
       - id: cfd3e4013c904e5ca5c512f15395a932
         type: entities

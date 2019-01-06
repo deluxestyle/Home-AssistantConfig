@@ -223,3 +223,7 @@ bmw_connected_drive:
    username: !secret bmw_user
    password: !secret bmw_password
    region: "rest_of_world"
+
+weather:
+  - platform: darksky
+    api_key: c2b4310975a1bd2f5dbcdb409ff5157e
