@@ -36,7 +36,7 @@ sensor.valve_bed_room:
 sensor.valve_living_room:
   icon: mdi:fan
 device_tracker.anitasiphone:
-  friendly_name: iPhone Anita
+  friendly_name: iPhone Anita (alt)
 sensor.temperature_158d0001b8c96c:
   friendly_name: Temperatursensor Schlafzimmer
 sensor.temperature_158d0001b8c998:
@@ -62,6 +62,7 @@ switch.lights_all:
   icon: mdi:lightbulb-on
 device_tracker.iphonex:
   friendly_name: iPhone Wolfgang
+  icon: mdi:cellphone
 sensor.humidity_158d0002239fb5:
   friendly_name: Luftfeuchtigkeit Küche
   icon: mdi:water-percent
@@ -359,3 +360,6 @@ sensor.illumination_158d00023e77cb:
   friendly_name: Lichtsensor
 binary_sensor.motion_sensor_158d00023e77cb:
   friendly_name: Bewegungsmelder
+device_tracker.anni:
+  friendly_name: iPhone Anita
+  icon: mdi:cellphone
