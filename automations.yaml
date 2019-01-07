@@ -709,7 +709,7 @@
       temperature: '{{ states.input_number.radiator_temp_office.state | float }}'
     service: climate.set_temperature
 - id: '1544816542688'
-  alias: Xiaomi Staubsauger - Error
+  alias: 'Xiaomi Staubsauger: Error'
   trigger:
   - entity_id: sensor.xiaomi_vacuum_status
     platform: state
