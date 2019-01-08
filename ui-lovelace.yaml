@@ -531,7 +531,7 @@ views:
         entity_summary_4: sensor.dark_sky_summary_4
         entity_summary_5: sensor.dark_sky_summary_5
         locale: de
-        static_icons: false
+        static_icons: true
         sunset: true
         tooltips: true
         tooltip_bg_color: 'rgb( 75,155,239)'
