@@ -536,7 +536,7 @@ views:
         tooltips: true
         tooltip_bg_color: 'rgb( 75,155,239)'
         tooltip_border_color: orange
-        tooltip_border_width: 3
+        tooltip_border_width: 1
         tooltip_caret_size: 10
         tooltip_fg_color: '#fff'
         tooltip_left_offset: -5
