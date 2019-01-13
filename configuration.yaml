@@ -146,10 +146,11 @@ homematic:
       username: !secret homematic_user
       password: !secret ccu_password
 
-vacuum:
-  - platform: xiaomi_miio
-    host: 192.168.200.28
-    token: !secret xiaomi_vacuum
+# temporary removed due to battery issues
+# vacuum:
+  # - platform: xiaomi_miio
+    # host: 192.168.200.28
+    # token: !secret xiaomi_vacuum
 
 device_tracker:
   - platform: fritz
