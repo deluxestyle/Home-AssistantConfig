@@ -5,7 +5,7 @@ resources:
     type: js
   - url: /local/fold-entity-row.js?v=f28e6e
     type: js
-  - url: /local/card-tools.js?v=0a97d3
+  - url: /local/card-tools.js?v=6ce5d0
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
@@ -275,9 +275,9 @@ views:
                   type: section
                   label: Benachrichtigungen
                 items:
-                  - automation.xiaomi_staubsauger_benachrichtigung__error
-                  - automation.xiaomi_staubsauger_benachrichtigung__fertig
-                  - automation.xiaomi_staubsauger_benachrichtigung__gestartet
+                  - automation.xiaomi_staubsauger_benachrichtigung_error
+                  - automation.xiaomi_staubsauger_benachrichtigung_fertig
+                  - automation.xiaomi_staubsauger_benachrichtigung_gestartet
       - <<: *compact-header
 
 ##### Entertainment #####
@@ -431,10 +431,10 @@ views:
           - binary_sensor.motion_sensor_158d00023e77cb
           - sensor.illumination_158d00023e77cb
           - type: section
-          - automation.bewegungsmelder__alarm
+          - automation.bewegungsmelder_alarm
           - script.1541097052191
           - type: section
-          - automation.benachrichtigung__bewegung_erkannt
+          - automation.benachrichtigung_bewegung_erkannt
       # - id: b230e10f94824a3e928420cbeac0fcd6
         # type: entities
         # #title: Überwachung
