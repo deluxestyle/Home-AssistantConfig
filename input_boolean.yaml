@@ -9,3 +9,6 @@ automation_xiaomi_vacuum:
 automation_radiator:
     name: Heizungsautomatisierung
     icon: mdi:home-assistant
+
+radiator_on_off:
+    name: heizungsstatus

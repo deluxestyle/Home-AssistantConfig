@@ -663,51 +663,6 @@
         , \"Katzenklo\") %}\n  script.1543667402104\n{% elif is_state(\"input_select.vacuum_rooms\"\
         , \"Büro\") %}\n  script.1543666580682\n{% endif %}\n"
     service: script.turn_on
-- id: '1544362634273'
-  alias: Heizung Wohnzimmer Temperatur
-  trigger:
-  - entity_id: input_number.radiator_temp_living_room
-    platform: state
-  condition: []
-  action:
-  - data_template:
-      entity_id: climate.oeq1696358
-      temperature: '{{ states.input_number.radiator_temp_living_room.state | float
-        }}'
-    service: climate.set_temperature
-- id: '1544362634274'
-  alias: Heizung Bad Temperatur
-  trigger:
-  - entity_id: input_number.radiator_temp_bath
-    platform: state
-  condition: []
-  action:
-  - data_template:
-      entity_id: climate.oeq1714751
-      temperature: '{{ states.input_number.radiator_temp_bath.state | float }}'
-    service: climate.set_temperature
-- id: '1544362634275'
-  alias: Heizung Schlafzimmer Temperatur
-  trigger:
-  - entity_id: input_number.radiator_temp_bed_room
-    platform: state
-  condition: []
-  action:
-  - data_template:
-      entity_id: climate.oeq1696369
-      temperature: '{{ states.input_number.radiator_temp_bed_room.state | float }}'
-    service: climate.set_temperature
-- id: '1544362634276'
-  alias: Heizung Büro Temperatur
-  trigger:
-  - entity_id: input_number.radiator_temp_office
-    platform: state
-  condition: []
-  action:
-  - data_template:
-      entity_id: climate.int0000002
-      temperature: '{{ states.input_number.radiator_temp_office.state | float }}'
-    service: climate.set_temperature
 - id: '1544816542688'
   alias: 'Xiaomi Staubsauger: Error'
   trigger:
@@ -738,3 +693,16 @@
   - data:
       entity_id: light.steckdose
     service: light.turn_on
+- id: '1547393321318'
+  alias: Heizungsschaltung
+  trigger:
+  - event_data:
+      click_type: single
+      entity_id: binary_sensor.switch_158d000213621b
+    event_type: xiaomi_aqara.click
+    platform: event
+  condition: []
+  action:
+  - data:
+      entity_id: switch.radiator_on_off
+    service: switch.toggle

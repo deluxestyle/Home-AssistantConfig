@@ -233,6 +233,9 @@
       entity_id: climate.oeq1714751
       temperature: 10
     service: climate.set_temperature
+  - data:
+      entity_id: input_boolean.radiator_on_off
+    service: input_boolean.turn_on
 '1541097052191':
   alias: Xiaomi - Alarm ausschalten
   sequence:
@@ -248,6 +251,9 @@
   - service: script.1538143893265
   - service: script.1538143964007
   - service: script.1538143929416
+  - data:
+      entity_id: input_boolean.radiator_on_off
+    service: input_boolean.turn_off
 '1542309376690':
   alias: Sonos gruppieren
   sequence:

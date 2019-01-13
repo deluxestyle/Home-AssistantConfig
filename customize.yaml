@@ -369,3 +369,5 @@ sensor.dark_sky_apparent_temperature:
   friendly_name: gefühlte Temperatur
 weather.dark_sky:
   friendly_name: Wetter
+switch.radiator_on_off:
+  friendly_name: Heizung

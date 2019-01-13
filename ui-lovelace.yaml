@@ -92,7 +92,12 @@ views:
         show_header_toggle: false
         entities:
           - light.gateway_light_7811dcb258d1
-          - sensor.illumination_7811dcb258d1
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Mehr
+            items:
+                - sensor.illumination_7811dcb258d1
       - <<: *compact-header
 
 ##### Heizung #####
@@ -104,10 +109,11 @@ views:
         type: entities
         show_header_toggle: false
         entities:
+          - switch.radiator_on_off
           - input_boolean.automation_radiator
-          - automation.heizung_abwesenheitsschaltung
-          - script.1540232132608
-          - script.1541264856783
+          # - automation.heizung_abwesenheitsschaltung
+          # - script.1540232132608
+          # - script.1541264856783
       - id: a7fd54ae32284e4abd643b893d276f4c
         type: entities
         #title: Bad
