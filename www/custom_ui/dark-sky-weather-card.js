@@ -1,4 +1,4 @@
-import { LitElement, html, } from 'https://unpkg.com/@polymer/lit-element@^0.5.2/lit-element.js?module';
+import { LitElement, html, } from 'https://unpkg-gcp.firebaseapp.com/@polymer/lit-element@0.5.2/lit-element.js?module';
 
 // Create your custom component
 class DarkSkyWeatherCard extends LitElement {
