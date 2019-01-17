@@ -371,3 +371,5 @@ weather.dark_sky:
   friendly_name: Wetter
 switch.radiator_on_off:
   friendly_name: Heizung
+device_tracker.x2_sdrive18i:
+  friendly_name: BMW X2 sDrive18i
