@@ -159,7 +159,7 @@
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.start
 - id: xiaomi_vacuum_notification_off
-  alias: 'Xiaomi Staubsauger: Benachrichtigung - fertig'
+  alias: 'Xiaomi Staubsauger: fertig'
   trigger:
   - entity_id: sensor.xiaomi_vacuum_status
     platform: state
@@ -175,7 +175,7 @@
       option: --
     service: input_select.select_option
 - id: xiaomi_vacuum_notification_on
-  alias: 'Xiaomi Staubsauger: Benachrichtigung - gestartet'
+  alias: 'Xiaomi Staubsauger: gestartet'
   trigger:
   - entity_id: vacuum.xiaomi_vacuum_cleaner
     from: docked
@@ -189,7 +189,7 @@
       message: Staubsauger gestartet
     service: notify.ios_iphonex
 - id: xiaomi_vacuum_notification_blocked
-  alias: 'Xiaomi Staubsauger: Benachrichtigung - Error'
+  alias: 'Xiaomi Staubsauger: Fehler'
   trigger:
   - entity_id: sensor.xiaomi_vacuum_status
     platform: state
@@ -664,7 +664,7 @@
         , \"Büro\") %}\n  script.1543666580682\n{% endif %}\n"
     service: script.turn_on
 - id: '1544816542688'
-  alias: 'Xiaomi Staubsauger: Error'
+  alias: 'Xiaomi Staubsauger: Error stop'
   trigger:
   - entity_id: sensor.xiaomi_vacuum_status
     platform: state

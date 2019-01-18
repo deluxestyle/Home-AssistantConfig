@@ -257,7 +257,7 @@ views:
                   label: Wartung
                 items:
                   - automation.xiaomi_staubsauger_neustart
-                  - automation.xiaomi_staubsauger_error
+                  - automation.xiaomi_staubsauger_error_stop
                   - sensor.xiaomi_vacum_side_brush_left
                   - sensor.xiaomi_vacum_sensor_dirty_left
                   - sensor.xiaomi_vacum_main_brush_left
@@ -267,9 +267,9 @@ views:
                   type: section
                   label: Benachrichtigungen
                 items:
-                  - automation.xiaomi_staubsauger_benachrichtigung_error
-                  - automation.xiaomi_staubsauger_benachrichtigung_fertig
-                  - automation.xiaomi_staubsauger_benachrichtigung_gestartet
+                  - automation.xiaomi_staubsauger_fehler
+                  - automation.xiaomi_staubsauger_fertig
+                  - automation.xiaomi_staubsauger_gestartet
       - <<: *compact-header
 
 ##### Entertainment #####
