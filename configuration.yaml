@@ -194,8 +194,9 @@ influxdb:
     entities:
       - sun.sun
       - sensor.time
-      - sensor.time__date
-      - sensor.date__time
+      - sensor.time_date
+      - sensor.date_time
+      - weather.dark_sky
 
 hue:
   bridges:

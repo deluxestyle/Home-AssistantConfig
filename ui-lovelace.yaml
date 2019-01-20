@@ -258,10 +258,23 @@ views:
                 items:
                   - automation.xiaomi_staubsauger_neustart
                   - automation.xiaomi_staubsauger_error_stop
-                  - sensor.xiaomi_vacum_side_brush_left
-                  - sensor.xiaomi_vacum_sensor_dirty_left
-                  - sensor.xiaomi_vacum_main_brush_left
-                  - sensor.xiaomi_vacum_filter_left
+                  - type: section
+                  - type: custom:fold-entity-row
+                    head: sensor.xiaomi_vacum_side_brush_left
+                    items:
+                      - script.1547995869377
+                  - type: custom:fold-entity-row
+                    head: sensor.xiaomi_vacum_sensor_dirty_left
+                    items:
+                      - script.1547995682348
+                  - type: custom:fold-entity-row
+                    head: sensor.xiaomi_vacum_main_brush_left
+                    items:
+                      - script.1547995909810
+                  - type: custom:fold-entity-row
+                    head: sensor.xiaomi_vacum_filter_left
+                    items:
+                      - script.1547995832032
               - type: custom:fold-entity-row
                 head:
                   type: section

@@ -373,3 +373,11 @@ switch.radiator_on_off:
   friendly_name: Heizung
 device_tracker.x2_sdrive18i:
   friendly_name: BMW X2 sDrive18i
+script.1547995909810:
+  icon: mdi:radiobox-blank
+script.1547995682348:
+  icon: mdi:radiobox-blank
+script.1547995832032:
+  icon: mdi:radiobox-blank
+script.1547995869377:
+  icon: mdi:radiobox-blank
