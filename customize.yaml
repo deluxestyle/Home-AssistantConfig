@@ -82,7 +82,7 @@ sensor.online_time:
 light.lights_all:
   friendly_name: Alle Lampen
 light.lights_living_room:
-  friendly_name: Wohnzimmer Lampen
+  friendly_name: Wohnzimmerlicht
   icon: mdi:ceiling-light
 group.bed_room:
   control: hidden
@@ -327,7 +327,7 @@ input_number.radiator_temp_bath:
 input_number.radiator_temp_bed_room:
   friendly_name: Soll °C
 light.lights_bed_room:
-  friendly_name: Schlafzimmer Lampen
+  friendly_name: Schlafzimmerlicht
 light.nachtischlampe_wolfgang:
   icon: mdi:lamp
 light.leselampe:

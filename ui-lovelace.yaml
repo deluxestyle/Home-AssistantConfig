@@ -39,30 +39,30 @@ views:
         show_header_toggle: false
         entities:
           - light.lights_living_room
-          - type: section
-          - light.decke
-          - light.tisch
-          - light.leselampe
           - type: custom:fold-entity-row
             head:
               type: section
-              label: Szenen
+              label: Lampen
             items:
-              - input_select.scenes_living_room
+              - light.decke
+              - light.tisch
+              - light.leselampe
+          - type: section
+          - input_select.scenes_living_room
       - type: entities
         #title: Schlafzimmer
         show_header_toggle: false
         entities:
           - light.lights_bed_room
-          - type: section
-          - light.nachtischlampe_wolfgang
-          - light.schlafzimmer
           - type: custom:fold-entity-row
             head:
               type: section
-              label: Szenen
+              label: Lampen
             items:
-              - input_select.scenes_bed_room
+              - light.nachtischlampe_wolfgang
+              - light.schlafzimmer
+          - type: section
+          - input_select.scenes_bed_room
       - type: entities
         #title: Büro
         show_header_toggle: false
