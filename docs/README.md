@@ -17,6 +17,7 @@ Following components are used:
 * Homematic
 * Sonos
 * Harmony Hub
+* BMW connected drive
 * and a lot of more
 
 Using a lot of custom elements for lovelace:
