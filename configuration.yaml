@@ -153,6 +153,7 @@ vacuum:
 
 device_tracker:
   - platform: fritz
+    consider_home: 600
 
 xiaomi_aqara:
   discovery_retry: 5

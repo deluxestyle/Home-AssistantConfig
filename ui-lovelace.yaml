@@ -418,7 +418,6 @@ views:
         entities:
           - device_tracker.iphone_x
           - device_tracker.anni
-          - sensor.presence
           - type: section
           - automation.abwesenheitsschaltung
           - automation.anwesenheitsschaltung
