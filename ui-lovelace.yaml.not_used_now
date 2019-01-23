@@ -1,11 +1,11 @@
 resources:
+  - url: /local/card-tools.js?v=6ce5d0
+    type: js
   - url: /local/mini-media-player-bundle.js?v=0.9.8
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
   - url: /local/fold-entity-row.js?v=5ab35c
-    type: js
-  - url: /local/card-tools.js?v=6ce5d0
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js

@@ -166,25 +166,20 @@ views:
         #title: Staubsauger
         show_header_toggle: false
         entities:
-          - type: section
           - vacuum.xiaomi_vacuum_cleaner
           - sensor.xiaomi_vacum_sensor_battery
           - type: section
           - automation.xiaomi_staubsauger_automatisch_starten
           - automation.xiaomi_staubsauger_taglich_saugen
-          - type: section
-          - script.1543667402104
-          - script.1543666580682
-          - script.1543666947492
-          - script.1543666909272
-          - script.1543666985219
-          - script.1543666771838
-          - script.1543666867257
-          - script.1543666831509
-          - type: section
-          - automation.xiaomi_staubsauger_neustart
-          - automation.xiaomi_staubsauger_error_stop
-          - type: section
+      - type: entities
+        #title: Staubsauger
+        show_header_toggle: false
+        entities:
+          - input_select.vacuum_rooms
+      - type: entities
+        #title: Staubsauger
+        show_header_toggle: false
+        entities:
           - sensor.xiaomi_vacum_side_brush_left
           - script.1547995869377
           - sensor.xiaomi_vacum_sensor_dirty_left
@@ -193,6 +188,12 @@ views:
           - script.1547995909810
           - sensor.xiaomi_vacum_filter_left
           - script.1547995832032
+      - type: entities
+        #title: Staubsauger
+        show_header_toggle: false
+        entities:
+          - automation.xiaomi_staubsauger_neustart
+          - automation.xiaomi_staubsauger_error_stop
           - type: section
           - automation.xiaomi_staubsauger_fehler
           - automation.xiaomi_staubsauger_fertig
@@ -353,7 +354,10 @@ views:
           - sensor.x2_sdrive18i_remaining_fuel
           - sensor.x2_sdrive18i_remaining_range_total
           - binary_sensor.x2_sdrive18i_lights_parking
-          - type: section
+      - type: entities
+        #title: Staubsauger
+        show_header_toggle: false
+        entities:
           - lock.x2_sdrive18i_lock
           - script.1543166767000
           - script.1543167202912
