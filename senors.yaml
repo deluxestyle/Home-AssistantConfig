@@ -71,6 +71,12 @@
       battery_sensor_button_2:
         friendly_name: "Batterie Sensor Button 2"
         value_template: '{{ states.binary_sensor.switch_158d000213621b.attributes.battery_level }}'
+      battery_sensor_wall_switch:
+        friendly_name: "Batterie Sensor Wall Switch"
+        value_template: '{{ states.binary_sensor.wall_switch_158d00025303aa.attributes.battery_level }}'      
+      battery_sensor_wall_switch_double:
+        friendly_name: "Batterie Sensor Wall Switch Double"
+        value_template: '{{ states.binary_sensor.wall_switch_both_158d000254275c.attributes.battery_level }}'
       xiaomi_vacuum_status:
         friendly_name: "Staubsauger Status"
         value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.status }}'
