@@ -10,10 +10,10 @@
 - id: family_not_home
   alias: Abwesenheitsschaltung
   trigger:
-  # - entity_id: sensor.presence
-    # for: 0:10:00
-    # platform: state
-    # to: not_home
+  - entity_id: sensor.presence
+    #for: 0:10:00
+    platform: state
+    to: not_home
   condition: []
   action:
   - data:
@@ -136,10 +136,10 @@
 - id: xiaomi_vacuum_start
   alias: 'Xiaomi Staubsauger: automatisch starten'
   trigger:
-  # - entity_id: sensor.presence
-    # for: 0:10:00
-    # platform: state
-    # to: not_home
+  - entity_id: sensor.presence
+    #for: 0:10:00
+    platform: state
+    to: not_home
   condition:
   - after: 08:00:00
     before: '17:00:00'
@@ -205,10 +205,10 @@
 - id: '1521743370575'
   alias: 'Heizung: Abwesenheitsschaltung'
   trigger:
-  # - entity_id: sensor.presence
-    # for: 0:10:00
-    # platform: state
-    # to: not_home
+  - entity_id: sensor.presence
+    #for: 0:10:00
+    platform: state
+    to: not_home
   condition: []
   action:
   - data: {}
