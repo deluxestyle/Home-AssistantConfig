@@ -18,7 +18,8 @@ Following components are used:
 * Sonos
 * Harmony Hub
 * BMW connected drive
-* and a lot of more
+* Fritz.Box (as presence tracker)
+* and a lot more
 
 Using a lot of custom elements for lovelace:
 * https://github.com/maykar/compact-custom-header
