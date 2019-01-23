@@ -9,7 +9,7 @@ resources:
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.7
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.8
     type: js
   - url: /local/vertical-stack-in-card.js?v=v0.1.0
     type: js
@@ -78,7 +78,7 @@ views:
               type: section
               label: Lampen
             items:
-              - light.deckenlampe
+              - light.deckenlicht
               - light.steckdose_2
               - light.steckdose_4
       - type: entities
@@ -416,8 +416,9 @@ views:
         #title: Anwesenheit
         show_header_toggle: false
         entities:
-          - device_tracker.iphonex
+          - device_tracker.iphone_x
           - device_tracker.anni
+          - sensor.presence
           - type: section
           - automation.abwesenheitsschaltung
           - automation.anwesenheitsschaltung

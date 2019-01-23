@@ -34,7 +34,7 @@
 - platform: group
   name: lights_kitchen
   entities:
-      - light.deckenlampe
+      - light.deckenlicht
       - light.steckdose_2
       - light.steckdose_4
 
@@ -48,6 +48,6 @@
       - light.gateway_light_7811dcb258d1
       - light.sonoff_office
       - light.nachtischlampe_wolfgang
-      - light.deckenlampe
+      - light.deckenlicht
       - light.steckdose_2
       - light.steckdose_4

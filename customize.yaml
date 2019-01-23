@@ -60,7 +60,7 @@ light.hue_white_lamp_1:
 switch.lights_all:
   friendly_name: alle Lichter
   icon: mdi:lightbulb-on
-device_tracker.iphonex:
+device_tracker.iphone_x:
   friendly_name: iPhone Wolfgang
   icon: mdi:cellphone
 sensor.humidity_158d0002239fb5:
@@ -342,7 +342,7 @@ script.1541264856783:
   icon: mdi:radiator-off
 script.1540232132608:
   icon: mdi:radiator-disabled
-light.deckenlampe:
+light.deckenlicht:
   friendly_name: Deckenlampe
   icon: mdi:ceiling-light
 light.lights_kitchen:
