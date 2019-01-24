@@ -11,7 +11,6 @@
   alias: Abwesenheitsschaltung
   trigger:
   - entity_id: sensor.presence
-    #for: 0:10:00
     platform: state
     to: not_home
   condition: []
@@ -137,11 +136,10 @@
   alias: 'Xiaomi Staubsauger: automatisch starten'
   trigger:
   - entity_id: sensor.presence
-    #for: 0:10:00
     platform: state
     to: not_home
   condition:
-  - after: 08:00:00
+  - after: 07:00:00
     before: '17:00:00'
     condition: time
     weekday:
@@ -206,7 +204,6 @@
   alias: 'Heizung: Abwesenheitsschaltung'
   trigger:
   - entity_id: sensor.presence
-    #for: 0:10:00
     platform: state
     to: not_home
   condition: []

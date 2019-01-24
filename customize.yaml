@@ -260,7 +260,7 @@ script.1538057479069:
   icon: mdi:television-off
 input_datetime.radiator_bath_1:
   friendly_name: Startzeit
-automation.bewegungsmelder__alarm:
+automation.bewegungsmelder_alarm:
   icon: mdi:alarm-light
 light.hgrp0000015422:
   hidden: true
@@ -348,11 +348,11 @@ light.deckenlicht:
 light.lights_kitchen:
   friendly_name: Küchenlicht
   icon: mdi:ceiling-light
-automation.xiaomi_staubsauger_benachrichtigung__error:
+automation.xiaomi_staubsauger_benachrichtigung_error:
   friendly_name: Benachrichtigung - Error
-automation.xiaomi_staubsauger_benachrichtigung__fertig:
+automation.xiaomi_staubsauger_benachrichtigung_fertig:
   friendly_name: Benachrichtigung - fertig
-automation.xiaomi_staubsauger_benachrichtigung__gestartet:
+automation.xiaomi_staubsauger_benachrichtigung_gestartet:
   friendly_name: Benachrichtigung - gestartet
 binary_sensor.door_window_sensor_158d00022f13a0:
   friendly_name: Badfenster
