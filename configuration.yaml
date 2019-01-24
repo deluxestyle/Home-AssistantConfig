@@ -112,7 +112,7 @@ panel_iframe:
     icon: mdi:wrench
     url: !secret configurator_url
 
-group: !include groups.yaml
+# group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 shell_command: !include shell_command.yaml

@@ -1,11 +1,11 @@
 resources:
-  - url: /local/card-tools.js?v=6ce5d0
+  - url: /local/card-tools.js?v=297fcc
     type: js
   - url: /local/mini-media-player-bundle.js?v=0.9.8
     type: module
   - url: /local/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/fold-entity-row.js?v=5ab35c
+  - url: /local/fold-entity-row.js?v=6d11d3
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
@@ -39,6 +39,8 @@ views:
         show_header_toggle: false
         entities:
           - light.lights_living_room
+          - type: section
+          - input_select.scenes_living_room
           - type: custom:fold-entity-row
             head:
               type: section
@@ -47,13 +49,13 @@ views:
               - light.decke
               - light.tisch
               - light.leselampe
-          - type: section
-          - input_select.scenes_living_room
       - type: entities
         #title: Schlafzimmer
         show_header_toggle: false
         entities:
           - light.lights_bed_room
+          - type: section
+          - input_select.scenes_bed_room
           - type: custom:fold-entity-row
             head:
               type: section
@@ -61,8 +63,6 @@ views:
             items:
               - light.nachtischlampe_wolfgang
               - light.schlafzimmer
-          - type: section
-          - input_select.scenes_bed_room
       - type: entities
         #title: Büro
         show_header_toggle: false
