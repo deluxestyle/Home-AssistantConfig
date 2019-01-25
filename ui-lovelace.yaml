@@ -13,7 +13,7 @@ resources:
     type: js
   - url: /local/vertical-stack-in-card.js?v=v0.1.0
     type: js
-  - url: /local/custom_ui/dark-sky-weather-card.js?v=7.3
+  - url: /local/custom_ui/dark-sky-weather-card.js?v=7.1
     type: module
 
 ##### Compact header ##### 

@@ -141,6 +141,9 @@
             {% else %}
               not_home
             {% endif %}
+      dark_sky_temperature:
+        friendly_name: Temperatur
+        value_template: '{{ states.weather.dark_sky.attributes.temperature }}'
 
 - platform: cert_expiry
   host: raspberrypi.xpvirv5oypo6duyr.myfritz.net
@@ -149,53 +152,10 @@
 - platform: uptime
   name: online_time
   unit_of_measurement: hours 
-  
-# - platform: wunderground
-  # api_key: abe9479b57fcc0a1
-  # lang: DL
-  # monitored_conditions:
-    # - location
-    # - feelslike_c
-    # - temp_c
-    # - weather
-    
+
 - platform: time_date
   display_options:
     - 'time'
     - 'date'
     - 'date_time'
     - 'time_date'
-
-- platform: darksky
-  api_key: c2b4310975a1bd2f5dbcdb409ff5157e
-  language: de
-  forecast:
-    - 0
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-  monitored_conditions:
-    - icon
-    - summary
-    - nearest_storm_distance
-    - nearest_storm_bearing
-    - humidity
-    - temperature
-    - temperature_high
-    - temperature_low
-    - apparent_temperature
-    - apparent_temperature_high
-    - apparent_temperature_low
-    - wind_speed
-    - wind_bearing
-    - precip_type
-    - precip_probability
-    - precip_accumulation
-    - precip_intensity
-    - precip_intensity_max
-    - uv_index
-    - daily_summary
-    - pressure
-    - visibility
