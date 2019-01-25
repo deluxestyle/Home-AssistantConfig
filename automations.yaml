@@ -166,7 +166,7 @@
   - data:
       message: 'Staubsauger fertig - Dauer: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaning_time
         }} min - gesaugte Fläche: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaned_area
-        }} qm'
+        }} qm | Fehler {{ states.counter.xiaomo_errors.state }}'
     service: notify.ios_iphonex
   - data:
       entity_id: input_select.vacuum_rooms
@@ -357,6 +357,9 @@
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.start
+  - data:
+      entity_id: counter.xiaomo_errors
+    service: counter.increment
 - id: '1532176861984'
   alias: Sonos automatisch einschalten
   initial_state: false
@@ -703,3 +706,15 @@
   - data:
       entity_id: switch.radiator_on_off
     service: switch.toggle
+- id: '1548418632803'
+  alias: 'Xiaomi Staubsauger: Zähler zurücksetzen'
+  trigger:
+  - entity_id: vacuum.xiaomi_vacuum_cleaner
+    from: docked
+    platform: state
+    to: cleaning
+  condition: []
+  action:
+  - data:
+      entity_id: counter.xiaomo_errors
+    service: counter.reset

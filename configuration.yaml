@@ -126,7 +126,7 @@ input_datetime: !include input_datetime.yaml
 # input_number: !include input_number.yaml
 sensor: !include senors.yaml
 # binary_sensor: !include binary_sensors.yaml
-# counter: !include counter.yaml
+counter: !include counter.yaml
 ios: !include push.yaml
 homekit: !include homekit.yaml
 media_player: !include media_player.yaml
@@ -228,4 +228,4 @@ bmw_connected_drive:
 
 weather:
   - platform: darksky
-    api_key: c2b4310975a1bd2f5dbcdb409ff5157e
+    api_key: !secret dark_syk

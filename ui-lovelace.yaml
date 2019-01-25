@@ -104,7 +104,7 @@ views:
         entities:
           - switch.radiator_on_off
           - input_boolean.automation_radiator
-          # - automation.heizung_abwesenheitsschaltung
+          - automation.heizung_abwesenheitsschaltung
           # - script.1540232132608
           # - script.1541264856783
       - type: entities
@@ -256,6 +256,7 @@ views:
                 items:
                   - automation.xiaomi_staubsauger_neustart
                   - automation.xiaomi_staubsauger_error_stop
+                  - counter.xiaomo_errors
                   - type: section
                   - type: custom:fold-entity-row
                     head: sensor.xiaomi_vacum_side_brush_left

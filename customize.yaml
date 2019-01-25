@@ -381,3 +381,5 @@ script.1547995832032:
   icon: mdi:radiobox-blank
 script.1547995869377:
   icon: mdi:radiobox-blank
+counter.xiaomo_errors:
+  friendly_name: Anzahl Fehler
