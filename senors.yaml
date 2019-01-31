@@ -145,9 +145,9 @@
         friendly_name: Temperatur
         value_template: '{{ states.weather.dark_sky.attributes.temperature }}'
 
-- platform: cert_expiry
-  host: raspberrypi.xpvirv5oypo6duyr.myfritz.net
-  port: 8123
+# - platform: cert_expiry
+  # host: raspberrypi.xpvirv5oypo6duyr.myfritz.net
+  # port: 8123
 
 - platform: uptime
   name: online_time

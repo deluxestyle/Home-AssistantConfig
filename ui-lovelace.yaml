@@ -3,7 +3,7 @@ resources:
     type: js
   - url: /local/mini-media-player-bundle.js?v=0.9.8
     type: module
-  - url: /local/tracker-card.js?v=0.1.5
+  - url: /local/tracker-card.js?v=0.2.0
     type: js
   - url: /local/fold-entity-row.js?v=6d11d3
     type: js
@@ -518,7 +518,7 @@ views:
         show_header_toggle: false
         entities:
           - sensor.online_time
-          - sensor.ssl_certificate_expiry
+          # - sensor.ssl_certificate_expiry
           - sensor.ccu_servicemessages
       - type: custom:tracker-card
         #title: Updates

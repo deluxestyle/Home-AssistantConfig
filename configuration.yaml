@@ -229,3 +229,8 @@ bmw_connected_drive:
 weather:
   - platform: darksky
     api_key: !secret dark_syk
+
+# Custom Components
+fritzbox_guestwifi:
+  username: !secret fritz_user
+  password: !secret fritz_password
