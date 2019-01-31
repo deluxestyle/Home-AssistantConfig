@@ -356,7 +356,7 @@
   action:
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
-    service: vacuum.start
+    service: vacuum.return_to_base
   - data:
       entity_id: counter.xiaomo_errors
     service: counter.increment
