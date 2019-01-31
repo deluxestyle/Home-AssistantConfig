@@ -414,7 +414,7 @@ views:
         #title: Anwesenheit
         show_header_toggle: false
         entities:
-          - device_tracker.iphone_x
+          - device_tracker.iphonex
           - device_tracker.anni
           - type: section
           - automation.abwesenheitsschaltung

@@ -136,7 +136,7 @@
       presence:
         friendly_name: Anwesenheit
         value_template: >
-            {% if is_state('device_tracker.anni', 'home') or is_state('device_tracker.iphone_x', 'home')  %}
+            {% if is_state('device_tracker.anni', 'home') or is_state('device_tracker.iphonex', 'home')  %}
               home
             {% else %}
               not_home

@@ -60,7 +60,7 @@ light.hue_white_lamp_1:
 switch.lights_all:
   friendly_name: alle Lichter
   icon: mdi:lightbulb-on
-device_tracker.iphone_x:
+device_tracker.iphonex:
   friendly_name: iPhone Wolfgang
   icon: mdi:cellphone
 sensor.humidity_158d0002239fb5:
