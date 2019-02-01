@@ -20,4 +20,4 @@ home-assistant_v2.db-shm
 home-assistant_v2.db-wal
 www/pictures/guest_wifi.png
 www/pictures/wifi.png
-
+custom_components/__pycache__
