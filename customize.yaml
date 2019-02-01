@@ -243,7 +243,7 @@ script.1538143929416:
   icon: mdi:radiator-off
 sensor.valve_bath:
   icon: mdi:fan
-climate.oeq1714751:
+climate.oeq1701003:
   friendly_name: Heizung Bad
   icon: mdi:radiator
 script.1538502214360:
@@ -329,6 +329,7 @@ input_number.radiator_temp_bed_room:
 light.lights_bed_room:
   friendly_name: Schlafzimmerlicht
 light.nachtischlampe_wolfgang:
+  friendly_name: Nachttischlampe Wolfgang
   icon: mdi:lamp
 light.leselampe:
   icon: mdi:desk-lamp
@@ -383,3 +384,5 @@ script.1547995869377:
   icon: mdi:radiobox-blank
 counter.xiaomo_errors:
   friendly_name: Anzahl Fehler
+climate.oeq1714751:
+  friendly_name: Heizapparat Büro

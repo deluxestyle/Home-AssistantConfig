@@ -204,14 +204,14 @@
   alias: Heizung Bad ausschalten
   sequence:
   - data:
-      entity_id: climate.oeq1714751
+      entity_id: climate.oeq1701003
       temperature: 4.5
     service: climate.set_temperature
 '1538646823835':
   alias: Heizung Bad einschalten
   sequence:
   - data:
-      entity_id: climate.oeq1714751
+      entity_id: climate.oeq1701003
       temperature: 22
     service: climate.set_temperature
 '1540232132608':
@@ -230,7 +230,7 @@
       temperature: '19'
     service: climate.set_temperature
   - data:
-      entity_id: climate.oeq1714751
+      entity_id: climate.oeq1701003
       temperature: 10
     service: climate.set_temperature
   - data:

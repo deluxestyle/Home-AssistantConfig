@@ -111,7 +111,7 @@ views:
         #title: Bad
         show_header_toggle: false
         entities:
-          - climate.oeq1714751
+          - climate.oeq1701003
           - sensor.humidity_158d00023258bd
           - type: custom:fold-entity-row
             head:

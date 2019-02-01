@@ -480,7 +480,7 @@
     entity_id: input_boolean.automation_radiator
     state: 'on'
   - condition: template
-    value_template: '{{ states.climate.oeq1714751.attributes.temperature > 4.5 }}'
+    value_template: '{{ states.climate.oeq1701003.attributes.temperature > 4.5 }}'
   action:
   - service: script.1538502214360
   - data:
@@ -497,13 +497,13 @@
     entity_id: input_boolean.automation_radiator
     state: 'on'
   - condition: template
-    value_template: '{{ states.climate.oeq1714751.attributes.temperature < 10 }}'
+    value_template: '{{ states.climate.oeq1701003.attributes.temperature < 10 }}'
   - condition: state
     entity_id: binary_sensor.door_window_sensor_158d00022f13a0
     state: 'off'
   action:
   - data:
-      entity_id: climate.oeq1714751
+      entity_id: climate.oeq1701003
       temperature: '10'
     service: climate.set_temperature
   - data:

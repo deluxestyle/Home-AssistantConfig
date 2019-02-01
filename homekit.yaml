@@ -5,7 +5,7 @@ filter:
     - light.sonoff_office
     - light.nachtischlampe_wolfgang
     - light.lights_kitchen
-    - climate.oeq1714751
+    - climate.oeq1701003
     - climate.oeq1696358
     - climate.oeq1696369
     - climate.int0000002
