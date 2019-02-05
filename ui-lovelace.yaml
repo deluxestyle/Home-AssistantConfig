@@ -13,6 +13,8 @@ resources:
     type: js
   - url: /local/vertical-stack-in-card.js?v=v0.1.1
     type: js
+  - url: /local/button-card.js?v=0.0.5
+    type: module
 # -----------------------------
 
 # -----------------------------
@@ -300,6 +302,52 @@ views:
                   - automation.xiaomi_staubsauger_gestartet
       - <<: *compact-header
 
+##### Musik #####
+  - title: Musik
+    id: music
+    icon: mdi:music-box-outline
+    cards:
+      - type: entities
+        #title: Sonos Einstellungen
+        show_header_toggle: false
+        entities:
+          - type: custom:mini-media-player
+            entity: media_player.schlafzimmer
+            <<: *music-player
+            sonos:
+              show_group_count: true
+              #sync_volume: true
+              entities:
+                - entity_id: media_player.schlafzimmer
+                  name: Sonos Schlafzimmer
+                - entity_id: media_player.bad
+                  name: Sonos Bad
+      - type: conditional
+        #title: Sonos
+        conditions:
+          - entity: sensor.sonos_grouped
+            state: "off"
+        card:
+          type: entities
+          #title: Sonos MediaPlayer
+          entities:
+            - type: custom:mini-media-player
+              entity: media_player.bad
+              <<: *music-player
+      - type: entities
+        #title: Sonos Einstellungen
+        show_header_toggle: false
+        entities:
+          - automation.sonos_automatisch_einschalten
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Wecker
+            items:
+              - script.1534621188695
+              - script.1534621226775
+
+
 ##### Entertainment #####
   - title: Entertainment
     id: entertainment
@@ -343,45 +391,27 @@ views:
               - script.1538068809592
               - script.1538072504227
               - script.1538057479069
-      - type: entities
-        #title: Sonos Einstellungen
-        show_header_toggle: false
-        entities:
-          - type: custom:mini-media-player
-            entity: media_player.schlafzimmer
-            <<: *music-player
-            sonos:
-              show_group_count: true
-              #sync_volume: true
-              entities:
-                - entity_id: media_player.schlafzimmer
-                  name: Sonos Schlafzimmer
-                - entity_id: media_player.bad
-                  name: Sonos Bad
-      - type: conditional
-        #title: Sonos
-        conditions:
-          - entity: sensor.sonos_grouped
-            state: "off"
-        card:
-          type: entities
-          #title: Sonos MediaPlayer
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.bad
-              <<: *music-player
-      - type: entities
-        #title: Sonos Einstellungen
-        show_header_toggle: false
-        entities:
-          - automation.sonos_automatisch_einschalten
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Wecker
-            items:
-              - script.1534621188695
-              - script.1534621226775
+      # - type: horizontal-stack
+        # cards:
+          # - type: "custom:button-card"
+            # entity: script.1538068809592
+            # icon: mdi:television
+            # #name: Fernsehen
+            # #size: 20%
+          # - type: "custom:button-card"
+            # entity: script.1538072504227
+            # icon: mdi:music
+            # #name: Musik
+            # #size: 20%
+          # - type: "custom:button-card"
+            # entity: script.1538057479069
+            # icon: mdi:power
+            # #name: "off"
+            # #size: 20%
+          # - type: "custom:button-card"
+            # color_type: blank-card          
+          # - type: "custom:button-card"
+            # color_type: blank-card
       - <<: *compact-header
 
 ##### Steckdosen #####
