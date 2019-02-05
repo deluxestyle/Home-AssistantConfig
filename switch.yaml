@@ -107,16 +107,6 @@
           - service: script.turn_on
             entity_id: script.1538143115062
         icon_template: mdi:youtube-tv
-    ###### Sonos ######
-    sonos_group:
-        friendly_name: Sonos Gruppe
-        value_template: "{{ is_state('sensor.sonos_grouped', 'on') }}"
-        turn_on:
-          - service: script.turn_on
-            entity_id: script.1542309376690
-        turn_off:
-          - service: script.turn_on
-            entity_id: script.1542309480271
     ###### Steckdosen (nur für HomeKit) ######
     power_plug_multimedia:
         friendly_name: Steckdosenleiste

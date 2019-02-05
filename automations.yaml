@@ -356,7 +356,7 @@
   action:
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
-    service: vacuum.return_to_base
+    service: vacuum.start
   - data:
       entity_id: counter.xiaomo_errors
     service: counter.increment
@@ -378,21 +378,6 @@
   - alias: ''
     data: {}
     service: script.1532173931522
-- id: '1532272367335'
-  alias: Sonos Gruppenstatus ein
-  trigger:
-  - entity_id: sensor.sonos_grouped
-    from: 'off'
-    platform: state
-    to: 'on'
-  - event: start
-    platform: homeassistant
-  condition: []
-  action:
-  - alias: ''
-    data:
-      entity_id: input_boolean.sonos_group
-    service: input_boolean.turn_on
 - id: '1532273712071'
   alias: Harman Kardon AVR - Quelle auswählen
   trigger:
@@ -415,18 +400,6 @@
       entity_id: input_select.avr_source
       option: --
     service: input_select.select_option
-- id: '1532626662990'
-  alias: Sonos Gruppenstatus aus
-  trigger:
-  - entity_id: sensor.sonos_grouped
-    from: 'on'
-    platform: state
-    to: 'off'
-  condition: []
-  action:
-  - data:
-      entity_id: input_boolean.sonos_group
-    service: input_boolean.turn_off
 - id: '1533660030341'
   alias: Harman Kardon AVR - verbinden
   trigger:

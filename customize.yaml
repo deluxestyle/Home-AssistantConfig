@@ -264,8 +264,6 @@ automation.bewegungsmelder_alarm:
   icon: mdi:alarm-light
 light.hgrp0000015422:
   hidden: true
-switch.sonos_group:
-  icon: mdi:speaker-wireless
 light.schlafzimmer:
   friendly_name: Deckenlicht
   icon: mdi:ceiling-light

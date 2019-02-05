@@ -128,8 +128,8 @@
         friendly_name: "Tastensperre Bad"
         value_template: '{{ states.homematic.ccu2.attributes.block_bath }}'
       ccu_servicemessages:
-        friendly_name: "CCU Servicemeldungen"
-        value_template: '{{ states.homematic.ccu2.attributes.Systemmeldungen }}'
+        friendly_name: "CCU Meldungen"
+        value_template: '{{ states.homematic.ccu2.attributes.ccu_messages }}'
       remote_state:
         friendly_name: "Multimedia"
         value_template: '{{ states.remote.harmony_hub.attributes.current_activity }}'

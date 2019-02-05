@@ -21,13 +21,6 @@ scenes_bed_room:
       - Gedimmt
     initial: '--'
 
-master_sonos:
-    name: Master Sonos Player
-    icon: mdi:itunes
-    options:
-      - Schlafzimmer
-      - Bad
-
 avr_source:
     name: AVR Quelle
     icon: mdi:playlist-play

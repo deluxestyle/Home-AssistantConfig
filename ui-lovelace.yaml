@@ -1,9 +1,9 @@
 resources:
   - url: /local/card-tools.js?v=297fcc
     type: js
-  - url: /local/mini-media-player-bundle.js?v=0.9.8
+  - url: /local/mini-media-player-bundle.js?v=1.0.0
     type: module
-  - url: /local/tracker-card.js?v=0.2.0
+  - url: /local/tracker-card.js?v=0.3.0
     type: js
   - url: /local/fold-entity-row.js?v=6d11d3
     type: js
@@ -11,17 +11,33 @@ resources:
     type: js
   - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.9
     type: js
-  - url: /local/vertical-stack-in-card.js?v=v0.1.0
+  - url: /local/vertical-stack-in-card.js?v=v0.1.1
     type: js
-  # - url: /local/custom_ui/dark-sky-weather-card.js?v=7.1
-    # type: module
+# -----------------------------
 
-##### Compact header ##### 
+# -----------------------------
+## Variables
+## Compact header
 x-compact-header: &compact-header
 - type: custom:compact-custom-header
   user_agent: iPhone
   options: true, false
 
+## music player
+x-music-player: &music-player
+  icon: 'mdi:speaker-wireless'
+  hide:
+    power_state: false
+    source: false
+    icon: true
+  group: true
+  artwork: none
+  source: full
+  more_info: false
+# -----------------------------
+
+# -----------------------------
+## Views
 title: Home
 views:
 ##### Licht #####
@@ -306,11 +322,15 @@ views:
             items:
               - type: custom:mini-media-player
                 entity: media_player.harman_kardon_avr
-                hide_controls: true
+                hide:
+                    power: true
+                    controls: true
+                    source: true
+                    icon: true
                 volume_stateless: true
-                hide_power: true
                 group: true
                 artwork: none
+                more_info: false
               - input_select.avr_source
           - type: custom:fold-entity-row
             head:
@@ -320,26 +340,25 @@ views:
               - script.1538068809592
               - script.1538072504227
               - script.1538057479069
-      - type: conditional
-        conditions:
-          - entity: switch.sonos_group
-            state: "on"
-        card:
-          type: entities
-          #title: Sonos MediaPlayer
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.sonos_mediaplayer
-              icon: 'mdi:speaker-wireless'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-              artwork: none
+      - type: entities
+        #title: Sonos Einstellungen
+        show_header_toggle: false
+        entities:
+          - type: custom:mini-media-player
+            entity: media_player.schlafzimmer
+            <<: *music-player
+            sonos:
+              show_group_count: true
+              #sync_volume: true
+              entities:
+                - entity_id: media_player.schlafzimmer
+                  name: Sonos Schlafzimmer
+                - entity_id: media_player.bad
+                  name: Sonos Bad
       - type: conditional
         #title: Sonos
         conditions:
-          - entity: switch.sonos_group
+          - entity: sensor.sonos_grouped
             state: "off"
         card:
           type: entities
@@ -347,39 +366,11 @@ views:
           entities:
             - type: custom:mini-media-player
               entity: media_player.bad
-              icon: 'mdi:speaker-wireless'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-              artwork: none
-            - type: section
-            - type: custom:mini-media-player
-              entity: media_player.schlafzimmer
-              icon: 'mdi:speaker-wireless'
-              artwork_border: true
-              power_color: true
-              show_source: true
-              group: true
-              artwork: none
+              <<: *music-player
       - type: entities
         #title: Sonos Einstellungen
         show_header_toggle: false
         entities:
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Gruppe
-            items:
-              - input_select.master_sonos
-              - switch.sonos_group
-          # - type: custom:fold-entity-row
-            # head:
-              # type: section
-              # label: Super FlyFM
-            # items:
-              # - script.1532173931522
-              # - script.1532175994947
           - type: custom:fold-entity-row
             head:
               type: section
