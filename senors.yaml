@@ -144,6 +144,9 @@
       dark_sky_temperature:
         friendly_name: Temperatur
         value_template: '{{ states.weather.dark_sky.attributes.temperature }}'
+      sonos_volume_sync:
+        friendly_name: Sonos Lautstärke
+        value_template: '{{ states.media_player.schlafzimmer.attributes.volume_level }}'
 
 # - platform: cert_expiry
   # host: raspberrypi.xpvirv5oypo6duyr.myfritz.net

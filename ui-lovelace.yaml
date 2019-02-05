@@ -362,15 +362,6 @@ views:
         #title: Sonos
         conditions:
           - entity: sensor.sonos_grouped
-            state: "on"
-        card:
-          type: entities
-          entities:
-            - script.1549394241669
-      - type: conditional
-        #title: Sonos
-        conditions:
-          - entity: sensor.sonos_grouped
             state: "off"
         card:
           type: entities
