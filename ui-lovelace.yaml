@@ -13,8 +13,6 @@ resources:
     type: js
   - url: /local/vertical-stack-in-card.js?v=v0.1.1
     type: js
-  - url: /local/button-card.js?v=0.0.5
-    type: module
 # -----------------------------
 
 # -----------------------------
