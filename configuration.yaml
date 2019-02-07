@@ -19,9 +19,6 @@ homeassistant:
 # Enables the frontend
 frontend:
   javascript_version: latest
-  themes:
-    own:
-      paper-font-headline_-_font-size: 18px
 
 lovelace:
   mode: yaml
