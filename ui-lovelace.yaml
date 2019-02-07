@@ -345,7 +345,6 @@ views:
               - script.1534621188695
               - script.1534621226775
 
-
 ##### Entertainment #####
   - title: Entertainment
     id: entertainment
@@ -357,7 +356,6 @@ views:
         entities:
           - light.steckdose
           - type: section
-
           - type: custom:fold-entity-row
             head: sensor.remote_state
             items:
