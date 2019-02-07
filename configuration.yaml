@@ -28,7 +28,6 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml #!secret http_password
-  # api_password: !secret http_password 
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
 
