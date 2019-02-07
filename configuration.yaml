@@ -59,6 +59,8 @@ updater:
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
 
+system_health:
+
 recorder:
   purge_interval: 1
   purge_keep_days: 1
