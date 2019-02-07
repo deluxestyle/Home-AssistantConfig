@@ -26,6 +26,12 @@
       - light.leselampe
 
 - platform: group
+  name: schlafzimmer
+  entities:
+      - light.schlafzimmer_1
+      - light.schlafzimmer_2
+
+- platform: group
   name: lights_bed_room
   entities:
       - light.schlafzimmer
