@@ -192,6 +192,10 @@
   - entity_id: sensor.xiaomi_vacuum_status
     platform: state
     to: Error
+  condition:
+  - condition: template
+    value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.error != ''Clean
+      main brush'' }}'
   action:
   - data:
       data:
