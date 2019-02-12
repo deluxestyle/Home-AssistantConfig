@@ -9,8 +9,8 @@ resources:
     type: js
   - url: /local/time-input-row.js?v=f503b7
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.2.9
-    type: js
+  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=1.0.0b1
+    type: module
   - url: /local/vertical-stack-in-card.js?v=v0.1.1
     type: js
 # -----------------------------
@@ -18,10 +18,10 @@ resources:
 # -----------------------------
 ## Variables
 ## Compact header
-x-compact-header: &compact-header
-- type: custom:compact-custom-header
-  user_agent: iPhone
-  options: true, false
+# x-compact-header: &compact-header
+# - type: custom:compact-custom-header
+  # user_agent: iPhone
+  # options: show, hide
 
 ## music player
 x-music-player: &music-player
@@ -109,7 +109,16 @@ views:
               label: Mehr
             items:
                 - sensor.illumination_7811dcb258d1
-      - <<: *compact-header
+      - type: 'custom:compact-custom-header'
+        main_config: true
+        menu: show
+        notifications: show
+        options: show
+        exceptions:
+          - conditions:
+              user_agent: iPhone
+            config:
+              options: hide
 
 ##### Heizung #####
   - title: Heizung
@@ -200,7 +209,7 @@ views:
         entities:
           - sensor.temperature_158d0002239fb5
           - sensor.humidity_158d0002239fb5
-      - <<: *compact-header
+      - type: 'custom:compact-custom-header'
 
 #### Staubsauger #####
   - title: Staubsauger
@@ -299,7 +308,7 @@ views:
                   - automation.xiaomi_staubsauger_fehler
                   - automation.xiaomi_staubsauger_fertig
                   - automation.xiaomi_staubsauger_gestartet
-      - <<: *compact-header
+      - type: 'custom:compact-custom-header'
 
 ##### Musik #####
   - title: Musik
@@ -409,7 +418,7 @@ views:
             # color_type: blank-card          
           # - type: "custom:button-card"
             # color_type: blank-card
-      - <<: *compact-header
+      - type: 'custom:compact-custom-header'
 
 ##### Steckdosen #####
   - title: Steckdosen
@@ -422,7 +431,7 @@ views:
         entities:
           - light.steckdose
           - light.steckdose_3
-      - <<: *compact-header
+      - type: 'custom:compact-custom-header'
 
 ##### Personen #####
   - title: Personen
@@ -465,7 +474,7 @@ views:
           # show_info: true
           # tap_action: dialog
           # title: Kamera
-      - <<: *compact-header
+      - type: 'custom:compact-custom-header'
 
 ##### Auto ##### 
   - title: BMW X2
@@ -502,7 +511,7 @@ views:
         default_zoom: 14
         entities:
           - entity: device_tracker.x2_sdrive18i
-      - <<: *compact-header
+      - type: 'custom:compact-custom-header'
 
 ##### Sonstiges #####
   - title: Sonstiges
@@ -545,4 +554,4 @@ views:
         trackers:
           - sensor.custom_card_tracker
           - sensor.custom_component_tracker
-      - <<: *compact-header
+      - type: 'custom:compact-custom-header'
