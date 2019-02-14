@@ -1,9 +1,9 @@
 resources:
   - url: /local/card-tools.js?v=297fcc
     type: js
-  - url: /local/mini-media-player-bundle.js?v=1.0.0
+  - url: /local/mini-media-player-bundle.js?v=1.0.1
     type: module
-  - url: /local/tracker-card.js?v=0.3.0
+  - url: /local/tracker-card.js?v=0.3.2
     type: js
   - url: /local/fold-entity-row.js?v=6d11d3
     type: js
@@ -324,7 +324,7 @@ views:
             <<: *music-player
             sonos:
               show_group_count: true
-              #sync_volume: true
+              sync_volume: true
               entities:
                 - entity_id: media_player.schlafzimmer
                   name: Sonos Schlafzimmer

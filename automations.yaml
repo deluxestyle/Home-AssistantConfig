@@ -695,14 +695,14 @@
   - data:
       entity_id: counter.xiaomo_errors
     service: counter.reset
-- id: '1549397524297'
-  alias: Sonos Volume Sync
-  trigger:
-  - entity_id: sensor.sonos_volume_sync
-    platform: state
-  condition:
-  - condition: state
-    entity_id: sensor.sonos_grouped
-    state: 'on'
-  action:
-  - service: script.1549394241669
+# - id: '1549397524297'
+  # alias: Sonos Volume Sync
+  # trigger:
+  # - entity_id: sensor.sonos_volume_sync
+    # platform: state
+  # condition:
+  # - condition: state
+    # entity_id: sensor.sonos_grouped
+    # state: 'on'
+  # action:
+  # - service: script.1549394241669
