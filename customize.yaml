@@ -355,6 +355,7 @@ automation.xiaomi_staubsauger_benachrichtigung_gestartet:
   friendly_name: Benachrichtigung - gestartet
 binary_sensor.door_window_sensor_158d00022f13a0:
   friendly_name: Badfenster
+  icon: mdi:window-closed
 sensor.illumination_158d00023e77cb:
   friendly_name: Lichtsensor
 binary_sensor.motion_sensor_158d00023e77cb:

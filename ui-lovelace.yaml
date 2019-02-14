@@ -139,6 +139,7 @@ views:
         entities:
           - climate.oeq1701003
           - sensor.humidity_158d00023258bd
+          - binary_sensor.door_window_sensor_158d00022f13a0
           - type: custom:fold-entity-row
             head:
               type: section
@@ -157,7 +158,6 @@ views:
               - switch.radiator_bath_keylock
               - sensor.temperature_158d00023258bd
               - sensor.valve_bath
-              - binary_sensor.door_window_sensor_158d00022f13a0
       - type: entities
         #title: Wohnzimmer
         show_header_toggle: false
