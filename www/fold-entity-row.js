@@ -28,7 +28,7 @@ class FoldEntityRow extends cardTools.litElement() {
     return cardTools.litHtml()`
     <style>
     #items {
-      padding: 0 0 0 40px;
+      padding: 0 0 0 0;
       margin: 0;
     }
     [closed] > div {
