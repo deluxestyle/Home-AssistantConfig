@@ -15,7 +15,7 @@ class TrackerCard extends HTMLElement {
 
     const cardConfig = Object.assign({}, config);
     if (!cardConfig.title) {
-      cardConfig.title = '📣 Updates';
+      cardConfig.title = '?? Updates';
     } else {
       cardConfig.title = cardConfig.title;
     }
@@ -58,9 +58,8 @@ class TrackerCard extends HTMLElement {
             overflow: auto;
             padding: 16px;
           }
-          mwc-button {
+          paper-button {
             float: right;
-            margin-right: 16px;
           }
           tbody td.name a {
             color: var(--primary-text-color);
@@ -81,8 +80,8 @@ class TrackerCard extends HTMLElement {
       <div id='content'>
       </div>
       <div class='button'>
-        <mwc-button raised id='update'>` + cardConfig.update_all_text + `</mwc-button>
-        <mwc-button raised id='check'>` + cardConfig.check_text + `</mwc-button>
+        <paper-button raised id='update'>` + cardConfig.update_all_text + `</paper-button>
+        <paper-button raised id='check'>` + cardConfig.check_text + `</paper-button>
       </div>
     `;
     card.header = cardConfig.title

@@ -3,8 +3,8 @@ resources:
     type: js
   - url: /local/mini-media-player-bundle.js?v=1.0.1
     type: module
-  - url: /local/tracker-card.js?v=0.3.2
-    type: js
+  # - url: /local/tracker-card.js?v=0.3.1
+    # type: js
   - url: /local/fold-entity-row.js?v=6d11d3
     type: js
   - url: /local/time-input-row.js?v=f503b7
@@ -549,9 +549,9 @@ views:
           - sensor.online_time
           # - sensor.ssl_certificate_expiry
           - sensor.ccu_servicemessages
-      - type: custom:tracker-card
-        #title: Updates
-        trackers:
-          - sensor.custom_card_tracker
-          - sensor.custom_component_tracker
+      # - type: custom:tracker-card
+        # #title: Updates
+        # trackers:
+          # - sensor.custom_card_tracker
+          # - sensor.custom_component_tracker
       - type: 'custom:compact-custom-header'
