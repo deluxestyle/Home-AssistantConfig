@@ -3,7 +3,7 @@ resources:
     type: js
   - url: /local/mini-media-player-bundle.js?v=1.0.1
     type: module
-  # - url: /local/tracker-card.js?v=0.3.1
+  # - url: /customcards/tracker-card.js
     # type: js
   - url: /local/fold-entity-row.js?v=6d11d4
     type: js

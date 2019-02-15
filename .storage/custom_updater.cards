@@ -1,23 +1,26 @@
 {
     "card-tools": {
-        "version": "297fcc"
+        "version": "97d985"
     },
     "fold-entity-row": {
         "version": "6d11d3"
     },
     "tracker-card": {
-        "version": null
+        "version": "0.3.2"
     },
     "vertical-stack-in-card": {
         "version": "v0.1.1"
     },
     "compact-custom-header": {
-        "version": "1.0.0b1"
+        "version": "1.0.0b4"
+    },
+    "player": {
+        "version": "43020c"
     },
     "mini-media-player-bundle": {
-        "version": null
+        "version": "1.0.1"
     },
     "time-input-row": {
-        "version": null
+        "version": "f503b7"
     }
 }

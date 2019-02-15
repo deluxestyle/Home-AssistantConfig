@@ -1,8 +1,9 @@
-import "./compact-custom-header-editor.js?v=1.0.0b1";
+import "./compact-custom-header-editor.js?v=1.0.0b4";
 
 export const LitElement = Object.getPrototypeOf(
   customElements.get("ha-panel-lovelace")
 );
+
 export const html = LitElement.prototype.html;
 
 export const fireEvent = (node, type, detail, options) => {
@@ -24,12 +25,12 @@ export const defaultConfig = {
   notifications: "show",
   voice: "show",
   options: "show",
-  clock: "none",
   clockFormat: 12,
   clock_am_pm: true,
   disable: false,
   background_image: false,
-  main_config: false
+  main_config: false,
+  hide_tabs: []
 };
 
 if (!customElements.get("compact-custom-header")) {
@@ -119,6 +120,13 @@ if (!customElements.get("compact-custom-header")) {
     }
 
     buildConfig() {
+      if (window.location.href.includes("clear_cch_cache")) {
+        localStorage.removeItem("cchCache");
+        window.location.replace(
+          window.location.href.replace("?clear_cch_cache","")
+        );
+      }
+
       if (this.firstRun) {
         this.firstRun = false;
         this.userVars = {
@@ -139,10 +147,6 @@ if (!customElements.get("compact-custom-header")) {
         });
       }
 
-      if (window.location.href.includes("clear_cch_cache") && !cleared) {
-        localStorage.removeItem("cchCache");
-      }
-
       this.cchCache = {};
       let retrievedCache = localStorage.getItem("cchCache");
       if (!this.config.main_config && retrievedCache) {
@@ -156,6 +160,7 @@ if (!customElements.get("compact-custom-header")) {
       };
 
       if (this.config.main_config) {
+        localStorage.removeItem("cchCache");
         delete this.cchConfig.main_config;
         localStorage.setItem("cchCache", JSON.stringify(this.cchConfig));
       }
@@ -387,7 +392,6 @@ if (!customElements.get("compact-custom-header")) {
     }
 
     hideTabs(tabContainer, tabs, hidden_tabs) {
-      // Convert hide_tabs config to array
       for (const tab of hidden_tabs) {
         if (!tabs[tab]) {
           continue;
@@ -398,7 +402,10 @@ if (!customElements.get("compact-custom-header")) {
       // Check if current tab is a hidden tab.
       const activeTab = tabContainer.querySelector("paper-tab.iron-selected");
       const activeTabIndex = tabs.indexOf(activeTab);
-      if (hidden_tabs.includes(activeTabIndex)) {
+      if (
+        hidden_tabs.includes(activeTabIndex) &&
+        hidden_tabs.length != tabs.length
+      ) {
         let i = 0;
         // Find first not hidden view
         while (hidden_tabs.includes(i)) {
