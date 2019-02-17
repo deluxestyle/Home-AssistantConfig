@@ -20,7 +20,7 @@ push:
         actions:
           - identifier: 'STOP_VACUUM'
             title: 'Staubsauger ausschalten'
-            activationMode: 'foreground'
+            activationMode: 'background'
             authenticationRequired: yes
             destructive: no
             behavior: 'default'
