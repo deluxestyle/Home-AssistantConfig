@@ -1,17 +1,17 @@
 resources:
-  - url: /local/card-tools.js?v=297fcc
+  - url: /customcards/card-tools.js
     type: js
-  - url: /local/mini-media-player-bundle.js?v=1.0.1
+  - url: /customcards/mini-media-player-bundle.js
     type: module
-  # - url: /customcards/tracker-card.js
-    # type: js
-  - url: /local/fold-entity-row.js?v=6d11d4
+  - url: /customcards/tracker-card.js
     type: js
-  - url: /local/time-input-row.js?v=f503b7
+  - url: /customcards/fold-entity-row.js
     type: js
-  - url: /local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=1.0.0b1
+  - url: /customcards/time-input-row.js
+    type: js
+  - url: /customcards/custom-lovelace/compact-custom-header/compact-custom-header.js
     type: module
-  - url: /local/vertical-stack-in-card.js?v=v0.1.1
+  - url: /customcards/vertical-stack-in-card.js
     type: js
 # -----------------------------
 
@@ -30,6 +30,7 @@ x-music-player: &music-player
     power_state: false
     source: false
     icon: true
+    progress: true
   group: true
   artwork: none
   source: full
@@ -549,9 +550,12 @@ views:
           - sensor.online_time
           # - sensor.ssl_certificate_expiry
           - sensor.ccu_servicemessages
-      # - type: custom:tracker-card
-        # #title: Updates
-        # trackers:
-          # - sensor.custom_card_tracker
-          # - sensor.custom_component_tracker
+      - type: custom:tracker-card
+        title: " "
+        available_text: Verfügbar
+        current_text: Aktuell
+        update_all_text: "alle aktualisieren"
+        trackers:
+          - sensor.custom_card_tracker
+          - sensor.custom_component_tracker
       - type: 'custom:compact-custom-header'
