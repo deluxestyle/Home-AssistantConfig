@@ -1,26 +1,26 @@
 {
     "card-tools": {
-        "version": "97d985"
-    },
-    "fold-entity-row": {
-        "version": "6d11d3"
-    },
-    "tracker-card": {
-        "version": "0.3.2"
+        "version": "f5bb8e"
     },
     "vertical-stack-in-card": {
         "version": "v0.1.1"
     },
-    "compact-custom-header": {
-        "version": "1.0.0b4"
+    "mini-media-player-bundle": {
+        "version": "1.0.1"
+    },
+    "fold-entity-row": {
+        "version": "6d11d3"
     },
     "player": {
         "version": "43020c"
     },
-    "mini-media-player-bundle": {
-        "version": "1.0.1"
+    "tracker-card": {
+        "version": "0.3.2"
     },
     "time-input-row": {
         "version": "f503b7"
+    },
+    "compact-custom-header": {
+        "version": "1.0.0b5"
     }
 }
