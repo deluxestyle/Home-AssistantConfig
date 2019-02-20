@@ -27,7 +27,8 @@ const defaultConfig = {
   disable: false,
   background_image: false,
   main_config: false,
-  hide_tabs: []
+  hide_tabs: [],
+  show_tabs: []
 };
 
 export class CompactCustomHeaderEditor extends LitElement {
@@ -48,6 +49,20 @@ export class CompactCustomHeaderEditor extends LitElement {
   }
 
   render() {
+    const mwc_button = customElements.get("mwc-button") ? true : false;
+    const clear_cache_button = mwc_button
+      ? html`
+        <mwc-button style="margin-left:-15px" class="toggle-button"
+          @click="${localStorage.removeItem("cchCache")}"
+          >Clear CCH Cache</mwc-button
+        >
+      `
+      : html`
+        <paper-button class="toggle-button"
+          @click="${localStorage.removeItem("cchCache")}"
+          >Clear CCH Cache</paper-button
+        >
+      `;
     return html`
       ${this.renderStyle()}
       <cch-config-editor
@@ -72,9 +87,17 @@ export class CompactCustomHeaderEditor extends LitElement {
           })
         : ""}
       <br />
-      <paper-button raised @click="${this._addException}"
-        >Add Exception
-      </paper-button>
+      ${mwc_button
+        ? html`
+          <mwc-button raised @click="${this._addException}"
+            >Add Exception
+          </mwc-button>
+        `
+        : html`
+          <paper-button raised @click="${this._addException}"
+            >Add Exception
+          </paper-button>
+        `}
       <br />
       <br />
       <hr />
@@ -85,10 +108,7 @@ export class CompactCustomHeaderEditor extends LitElement {
       ${!this.exception
         ? html`
             <br />
-            <paper-button class="toggle-button"
-              @click="${localStorage.removeItem("cchCache")}"
-              >Clear CCH Cache</paper-button
-            >
+            ${clear_cache_button}
           `
         : ""}
     `;
@@ -198,6 +218,10 @@ export class CchConfigEditor extends LitElement {
 
   get _hide_tabs() {
     return this.config.hide_tabs || this.defaultConfig.hide_tabs || "";
+  }
+
+  get _show_tabs() {
+    return this.config.show_tabs || this.defaultConfig.show_tabs || "";
   }
 
   get _clock() {
@@ -330,7 +354,7 @@ export class CchConfigEditor extends LitElement {
           : ""}
       </div>
 
-      <h4>Button Visability:</h4>
+      <h4>Button Visibility:</h4>
       <div class="buttons side-by-side">
         <div
           class="${this.exception && this.config.menu === undefined
@@ -459,18 +483,56 @@ export class CchConfigEditor extends LitElement {
             </div>
           `
         : ""}
-      <h4>Hide Tabs:</h4>
-      <paper-input
-        class="${this.exception && this.config.hide_tabs === undefined
-          ? "inherited"
-          : ""}"
-        label="Comma-separated list of tab numbers to hide:"
-        .value="${this._hide_tabs}"
-        .configValue="${"hide_tabs"}"
-        @value-changed="${this._valueChanged}"
+      <h4>Tab Visibility:</h4>
+        <paper-dropdown-menu id="tabs" @value-changed="${this._tabVisibility}">
+        <paper-listbox slot="dropdown-content"
+          .selected="${this._show_tabs.length > 0 ? "1" : "0"}"
+        >
+          <paper-item>Hide Tabs</paper-item>
+          <paper-item>Show Tabs</paper-item>
+        </paper-listbox>
+      </paper-dropdown-menu>
+      <div id="show"
+        style="display:${this._show_tabs.length > 0 ? "initial" : "none"}"
       >
-      </paper-input>
+        <paper-input
+          class="${this.exception && this.config.show_tabs === undefined
+            ? "inherited"
+            : ""}"
+          label="Comma-separated list of tab numbers to show:"
+          .value="${this._show_tabs}"
+          .configValue="${"show_tabs"}"
+          @value-changed="${this._valueChanged}"
+        >
+        </paper-input>
+      </div>
+      <div id="hide"
+        style="display:${this._show_tabs.length > 0 ? "none" : "initial"}"
+      >
+        <paper-input
+          class="${this.exception && this.config.hide_tabs === undefined
+            ? "inherited"
+            : ""}"
+          label="Comma-separated list of tab numbers to hide:"
+          .value="${this._hide_tabs}"
+          .configValue="${"hide_tabs"}"
+          @value-changed="${this._valueChanged}"
+        >
+        </paper-input>
+      </div>
     `;
+  }
+
+  _tabVisibility() {
+    let show = this.shadowRoot.querySelector('[id="show"]');
+    let hide = this.shadowRoot.querySelector('[id="hide"]');
+    if (this.shadowRoot.querySelector('[id="tabs"]').value == "Hide Tabs") {
+      show.style.display = "none";
+      hide.style.display = "initial";
+    } else {
+      hide.style.display = "none";
+      show.style.display = "initial";
+    }
   }
 
   _valueChanged(ev) {
