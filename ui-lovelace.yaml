@@ -3,8 +3,8 @@ resources:
     type: js
   - url: /customcards/mini-media-player-bundle.js
     type: module
-  - url: /customcards/tracker-card.js
-    type: js
+  - url: /customcards/tracker-card.js?track=true
+    type: module
   - url: /customcards/fold-entity-row.js
     type: js
   - url: /customcards/time-input-row.js
