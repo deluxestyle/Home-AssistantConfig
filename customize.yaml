@@ -326,8 +326,9 @@ input_number.radiator_temp_bed_room:
   friendly_name: Soll °C
 light.lights_bed_room:
   friendly_name: Schlafzimmerlicht
-light.nachtischlampe_wolfgang:
-  friendly_name: Nachttischlampe Wolfgang
+light.nachttischlampe_wolfgang:
+  icon: mdi:lamp
+light.nachttischlampe_anita:
   icon: mdi:lamp
 light.leselampe:
   icon: mdi:desk-lamp

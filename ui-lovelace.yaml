@@ -79,7 +79,8 @@ views:
               type: section
               label: Lampen
             items:
-              - light.nachtischlampe_wolfgang
+              - light.nachttischlampe_wolfgang
+              - light.nachttischlampe_anita
               - light.schlafzimmer
       - type: entities
         #title: Büro

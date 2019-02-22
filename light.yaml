@@ -2,8 +2,10 @@
 - platform: yeelight
   devices:
     192.168.200.59:
-      name: Nachtischlampe Wolfgang
-  
+      name: Nachttischlampe Wolfgang
+    192.168.200.42:
+      name: Nachttischlampe Anita
+
 #### Sonoff ####
 - platform: mqtt
   name: "sonoff_office"
@@ -35,7 +37,8 @@
   name: lights_bed_room
   entities:
       - light.schlafzimmer
-      - light.nachtischlampe_wolfgang
+      - light.nachttischlampe_wolfgang
+      - light.nachttischlampe_anita
 
 - platform: group
   name: lights_kitchen
@@ -53,7 +56,8 @@
       - light.schlafzimmer
       - light.gateway_light_7811dcb258d1
       - light.sonoff_office
-      - light.nachtischlampe_wolfgang
+      - light.nachttischlampe_wolfgang
+      - light.nachttischlampe_anita
       - light.deckenlicht
       - light.steckdose_2
       - light.steckdose_4

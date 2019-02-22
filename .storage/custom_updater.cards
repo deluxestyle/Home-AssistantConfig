@@ -3,6 +3,14 @@
         "version": "f503b7",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
+    "compact-custom-header": {
+        "version": "1.0.1b2",
+        "dir": "/home/homeassistant/.homeassistant/www/custom-lovelace/compact-custom-header/"
+    },
+    "fold-entity-row": {
+        "version": "6d11d3",
+        "dir": "/home/homeassistant/.homeassistant/www/"
+    },
     "player": {
         "version": "43020c"
     },
@@ -10,24 +18,16 @@
         "version": "1.2.3",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
-    "compact-custom-header": {
-        "version": "1.0.1b2",
-        "dir": "/home/homeassistant/.homeassistant/www/custom-lovelace/compact-custom-header/"
-    },
-    "vertical-stack-in-card": {
-        "version": "v0.1.1",
+    "card-tools": {
+        "version": "deb8e3",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "mini-media-player-bundle": {
         "version": "1.0.2",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
-    "fold-entity-row": {
-        "version": "6d11d3",
-        "dir": "/home/homeassistant/.homeassistant/www/"
-    },
-    "card-tools": {
-        "version": "deb8e3",
+    "vertical-stack-in-card": {
+        "version": "v0.1.1",
         "dir": "/home/homeassistant/.homeassistant/www/"
     }
 }
