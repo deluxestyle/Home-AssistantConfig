@@ -210,11 +210,6 @@ class TrackerCard extends HTMLElement {
   }
 }
 
-if (!customElements.get("paper-input")) {
-  console.log("imported", "paper-input");
-  import("https://unpkg.com/@polymer/paper-input/paper-input.js?module");
-}
-
 const fireEvent = (node, type, detail, options) => {
   options = options || {};
   detail = detail === null || detail === undefined ? {} : detail;
@@ -233,7 +228,7 @@ const LitElement = Object.getPrototypeOf(
 );
 const html = LitElement.prototype.html;
 
-export class TrackerCardEditor extends LitElement {
+class TrackerCardEditor extends LitElement {
   setConfig(config) {
     this._config = config;
   }
@@ -261,6 +256,9 @@ export class TrackerCardEditor extends LitElement {
             .configValue="${"title"}"
             @value-changed="${this._valueChanged}"
           ></paper-input>
+        </div>
+        <div class="side-by-side">
+          <a href ="https://github.com/custom-components/custom_updater/issues/new?template=issue.md" target="_blank"><mwc-button style="float: right;" title="Open an issue @ GitHub">Open an issue</mwc-button></a>
         </div>
         <div>For more advanced configuration use the yaml editor</div>
       </div>
