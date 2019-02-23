@@ -384,10 +384,14 @@ views:
               # - type: section
               # - vacuum.xiaomi_vacuum_cleaner
               # - sensor.xiaomi_vacum_sensor_battery
-              - type: section
+              - type: custom:fold-entity-row
+                head:
+                  type: section
+                  label: Automatisierung
+                items:
               #- automation.xiaomi_staubsauger_automatisch_starten
-              - automation.xiaomi_staubsauger_abwesenheit
-              - automation.xiaomi_staubsauger_taglich_saugen
+                  - automation.xiaomi_staubsauger_abwesenheit
+                  - automation.xiaomi_staubsauger_taglich_saugen
               - type: custom:fold-entity-row
                 head:
                   type: section
