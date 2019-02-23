@@ -23,7 +23,7 @@ climate.oeq1696369:
   friendly_name: Heizung Schlafzimmer
   icon: mdi:radiator
 sensor.oeq1667238_humidity:
-  friendly_name: Luftfeuchtigkeit Büro
+  friendly_name: Luftfeuchtigkeit
 sensor.oeq1667238_temperature:
   friendly_name: Temperatursensor Büro
 climate.int0000002:
@@ -45,7 +45,7 @@ sensor.humidity_158d0001b8c96c:
   friendly_name: Luftfeuchtigkeit Schlafzimmer
   icon: mdi:water-percent
 sensor.humidity_158d0001b8c998:
-  friendly_name: Luftfeuchtigkeit Wohnzimmer
+  friendly_name: Luftfeuchtigkeit
   icon: mdi:water-percent
 light.gateway_light_7811dcb258d1:
   friendly_name: Xiaomi Nachtlicht
@@ -64,7 +64,7 @@ device_tracker.iphonex:
   friendly_name: iPhone Wolfgang
   icon: mdi:cellphone
 sensor.humidity_158d0002239fb5:
-  friendly_name: Luftfeuchtigkeit Küche
+  friendly_name: Luftfeuchtigkeit
   icon: mdi:water-percent
 sensor.pressure_158d0002239fb5:
   friendly_name: Luftdruck Küche
@@ -222,7 +222,7 @@ group.all_scripts:
 input_select.avr_source:
   icon: mdi:playlist-play
 sensor.humidity_158d00023258bd:
-  friendly_name: Luftfeuchtigkeit Bad
+  friendly_name: Luftfeuchtigkeit
   icon: mdi:water-percent
 sensor.temperature_158d00023258bd:
   friendly_name: Temperatursensor Bad

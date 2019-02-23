@@ -3,17 +3,19 @@ resources:
     type: js
   - url: /customcards/mini-media-player-bundle.js
     type: module
-  - url: /customcards/tracker-card.js?track=true
+  - url: /customcards/github/custom-cards/tracker-card.js?track=true
     type: module
   - url: /customcards/fold-entity-row.js
     type: js
   - url: /customcards/time-input-row.js
     type: js
-  - url: /customcards/custom-lovelace/compact-custom-header/compact-custom-header.js
+  - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
   - url: /customcards/vertical-stack-in-card.js
     type: js
-  - url: /customcards/button-card.js?track=true
+  - url: /customcards/github/custom-cards/button-card.js?track=true
+    type: module
+  - url: /customcards/github/nervetattoo/simple-thermostat.js?track=true
     type: module
 # -----------------------------
 
@@ -86,6 +88,7 @@ views:
             # color_type: card
             # color: rgb(66, 134, 244)
             # name: Schlafzimmer
+            # action: toggle | more_info
           # - type: horizontal-stack
             # cards:
               # - type: "custom:button-card"
@@ -187,6 +190,20 @@ views:
           - automation.heizung_abwesenheitsschaltung
           # - script.1540232132608
           # - script.1541264856783
+      # - type: custom:simple-thermostat
+        # entity: climate.oeq1701003
+        # step_size: 1
+        # hide:
+          # state: true
+        # sensors:
+          # - entity: sensor.humidity_158d00023258bd
+      # - type: custom:simple-thermostat
+        # entity: climate.oeq1696358
+        # step_size: 1
+        # hide:
+          # state: true
+        # sensors:
+          # - entity: sensor.humidity_158d0001b8c998
       - type: entities
         #title: Bad
         show_header_toggle: false
