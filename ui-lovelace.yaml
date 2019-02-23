@@ -40,6 +40,16 @@ x-music-player: &music-player
   source: full
   more_info: false
   replace_mute: stop
+  
+## vacuum_buttons
+x-vacuum-buttons: &vacuum-buttons
+#- type: "custom:button-card"
+  color: auto
+  # color_type: card
+  color_off: rgb(68, 115, 158)
+  entity: vacuum.xiaomi_vacuum_cleaner
+  size: 25%
+
 # -----------------------------
 
 # -----------------------------
@@ -289,46 +299,91 @@ views:
     cards:
       - type: custom:vertical-stack-in-card
         cards:
-          - type: glance
-            show_name: false
-            show_state: false
-            #title: Xiaomi StaubRobo
-            entities:
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                tap_action: 
-                    action: call-service
-                    service: vacuum.start
-                    service_data:
-                        entity_id: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:play
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                tap_action: 
-                    action: call-service
-                    service: vacuum.pause
-                    service_data:
-                        entity_id: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:pause
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                tap_action: 
-                    action: call-service
-                    service: vacuum.return_to_base
-                    service_data:
-                        entity_id: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:home
-              - entity: vacuum.xiaomi_vacuum_cleaner
-                tap_action: 
-                    action: call-service
-                    service: vacuum.locate
-                    service_data:
-                        entity_id: vacuum.xiaomi_vacuum_cleaner
-                icon: mdi:map-marker
           - type: entities
             #title: Staubsauger
             show_header_toggle: false
             entities:
-              - type: section
               - vacuum.xiaomi_vacuum_cleaner
               - sensor.xiaomi_vacum_sensor_battery
+              - type: section
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                icon: mdi:play
+                <<: *vacuum-buttons
+                action: service
+                service:
+                  domain: vacuum
+                  action: start
+                  data:
+                    entity_id: vacuum.xiaomi_vacuum_cleaner
+              - type: "custom:button-card"
+                icon: mdi:pause
+                <<: *vacuum-buttons
+                action: service
+                service:
+                  domain: vacuum
+                  action: pause
+                  data:
+                    entity_id: vacuum.xiaomi_vacuum_cleaner
+              - type: "custom:button-card"
+                icon: mdi:home
+                <<: *vacuum-buttons
+                action: service
+                service:
+                  domain: vacuum
+                  action: return_to_base
+                  data:
+                    entity_id: vacuum.xiaomi_vacuum_cleaner
+              - type: "custom:button-card"
+                icon: mdi:map-marker
+                <<: *vacuum-buttons
+                action: service
+                service:
+                  domain: vacuum
+                  action: locate
+                  data:
+                    entity_id: vacuum.xiaomi_vacuum_cleaner
+          # - type: glance
+            # show_name: false
+            # show_state: false
+            # #title: Xiaomi StaubRobo
+            # entities:
+              # - entity: vacuum.xiaomi_vacuum_cleaner
+                # tap_action: 
+                    # action: call-service
+                    # service: vacuum.start
+                    # service_data:
+                        # entity_id: vacuum.xiaomi_vacuum_cleaner
+                # icon: mdi:play
+              # - entity: vacuum.xiaomi_vacuum_cleaner
+                # tap_action: 
+                    # action: call-service
+                    # service: vacuum.pause
+                    # service_data:
+                        # entity_id: vacuum.xiaomi_vacuum_cleaner
+                # icon: mdi:pause
+              # - entity: vacuum.xiaomi_vacuum_cleaner
+                # tap_action: 
+                    # action: call-service
+                    # service: vacuum.return_to_base
+                    # service_data:
+                        # entity_id: vacuum.xiaomi_vacuum_cleaner
+                # icon: mdi:home
+              # - entity: vacuum.xiaomi_vacuum_cleaner
+                # tap_action: 
+                    # action: call-service
+                    # service: vacuum.locate
+                    # service_data:
+                        # entity_id: vacuum.xiaomi_vacuum_cleaner
+                # icon: mdi:map-marker
+          - type: entities
+            #title: Staubsauger
+            show_header_toggle: false
+            entities:
+              # - type: section
+              # - vacuum.xiaomi_vacuum_cleaner
+              # - sensor.xiaomi_vacum_sensor_battery
               - type: section
               #- automation.xiaomi_staubsauger_automatisch_starten
               - automation.xiaomi_staubsauger_abwesenheit
