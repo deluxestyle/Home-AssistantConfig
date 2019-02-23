@@ -3,7 +3,7 @@ filter:
   include_entities:
     - light.gateway_light_7811dcb258d1
     - light.sonoff_office
-    - light.nachtischlampe_wolfgang
+    - light.nachttischlampe_wolfgang
     - light.lights_kitchen
     - climate.oeq1701003
     - climate.oeq1696358
