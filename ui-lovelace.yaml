@@ -13,6 +13,8 @@ resources:
     type: module
   - url: /customcards/vertical-stack-in-card.js
     type: js
+  - url: /customcards/button-card.js?track=true
+    type: module
 # -----------------------------
 
 # -----------------------------
@@ -52,6 +54,56 @@ views:
         show_header_toggle: false
         entities:
           - light.lights_all
+      # - type: vertical-stack
+        # cards:
+          # - type: "custom:button-card"
+            # entity: light.lights_living_room
+            # color_type: card
+            # color: rgb(66, 134, 244)
+            # name: Wohnzimmer
+          # - type: horizontal-stack
+            # cards:
+              # - type: "custom:button-card"
+                # entity: light.decke
+                # icon: mdi:ceiling-light
+                # color: auto
+              # - type: "custom:button-card"
+                # entity: light.tisch
+                # icon: mdi:floor-lamp
+                # color: auto
+              # - type: "custom:button-card"
+                # entity: light.leselampe
+                # icon: mdi:desk-lamp
+                # color: auto
+          # - type: entities
+            # show_header_toggle: false
+            # entities:
+              # - input_select.scenes_living_room
+      # - type: vertical-stack
+        # cards:
+          # - type: "custom:button-card"
+            # entity: light.lights_bed_room
+            # color_type: card
+            # color: rgb(66, 134, 244)
+            # name: Schlafzimmer
+          # - type: horizontal-stack
+            # cards:
+              # - type: "custom:button-card"
+                # entity: light.schlafzimmer
+                # icon: mdi:ceiling-light
+                # color: auto
+              # - type: "custom:button-card"
+                # entity: light.nachttischlampe_anita
+                # icon: mdi:lamp
+                # color: auto
+              # - type: "custom:button-card"
+                # entity: light.nachttischlampe_wolfgang
+                # icon: mdi:lamp
+                # color: auto
+          # - type: entities
+            # show_header_toggle: false
+            # entities:
+              # - input_select.scenes_bed_room
       - type: entities
         #title: Wohnzimmer
         show_header_toggle: false
