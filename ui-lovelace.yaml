@@ -196,24 +196,69 @@ views:
         show_header_toggle: false
         entities:
           - switch.radiator_on_off
-          - input_boolean.automation_radiator
-          - automation.heizung_abwesenheitsschaltung
-          # - script.1540232132608
-          # - script.1541264856783
-      # - type: custom:simple-thermostat
-        # entity: climate.oeq1701003
-        # step_size: 1
-        # hide:
-          # state: true
-        # sensors:
-          # - entity: sensor.humidity_158d00023258bd
-      # - type: custom:simple-thermostat
-        # entity: climate.oeq1696358
-        # step_size: 1
-        # hide:
-          # state: true
-        # sensors:
-          # - entity: sensor.humidity_158d0001b8c998
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Automatisierung
+            items:
+              - input_boolean.automation_radiator
+              - automation.heizung_abwesenheitsschaltung
+      # - type: custom:vertical-stack-in-card
+        # cards:
+          # - type: custom:simple-thermostat
+            # entity: climate.oeq1701003
+            # #name: false
+            # step_size: 1
+            # hide:
+              # state: true
+            # sensors:
+              # - entity: sensor.humidity_158d00023258bd
+          # - type: entities
+            # #title: Bad
+            # show_header_toggle: false
+            # entities:
+              # - binary_sensor.door_window_sensor_158d00022f13a0
+              # - type: custom:fold-entity-row
+                # head:
+                  # type: section
+                  # label: Timer
+                # items:
+                  # - automation.heizung_bad_timer
+                  # - entity: input_datetime.radiator_bath_1
+                    # name: Startzeit
+                    # type: custom:time-input-row
+              # - type: custom:fold-entity-row
+                # head:
+                  # type: section
+                  # label: Mehr
+                # items:
+                  # - script.1538502214360
+                  # - switch.radiator_bath_keylock
+                  # - sensor.temperature_158d00023258bd
+                  # - sensor.valve_bath
+      # - type: custom:vertical-stack-in-card
+        # cards:
+          # - type: custom:simple-thermostat
+            # entity: climate.oeq1696358
+            # #name: false
+            # step_size: 1
+            # hide:
+              # state: true
+            # sensors:
+              # - entity: sensor.humidity_158d0001b8c998
+          # - type: entities
+            # #title: Bad
+            # show_header_toggle: false
+            # entities:
+              # - type: custom:fold-entity-row
+                # head:
+                  # type: section
+                  # label: Mehr
+                # items:
+                  # - script.1538143929416
+                  # - switch.radiator_living_room_keylock
+                  # - sensor.temperature_158d0001b8c998
+                  # - sensor.valve_living_room
       - type: entities
         #title: Bad
         show_header_toggle: false
