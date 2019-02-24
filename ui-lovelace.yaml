@@ -497,12 +497,13 @@ views:
         entities:
           - light.steckdose
           - type: section
-          - type: custom:fold-entity-row
-            head: sensor.remote_state
-            items:
-              - switch.samsung_tv
-              - switch.telekom_mr_401
-              - switch.avr_151
+          - sensor.remote_state
+          # - type: custom:fold-entity-row
+            # head: sensor.remote_state
+            # items:
+              # - switch.samsung_tv
+              # - switch.telekom_mr_401
+              # # - switch.avr_151
           - type: custom:fold-entity-row
             head:
               type: section
@@ -515,6 +516,7 @@ views:
                     controls: true
                     source: true
                     icon: true
+                    volume: false
                 volume_stateless: true
                 group: true
                 artwork: none

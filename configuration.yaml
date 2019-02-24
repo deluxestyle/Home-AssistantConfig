@@ -226,3 +226,5 @@ weather:
 fritzbox_guestwifi:
   username: !secret fritz_user
   password: !secret fritz_password
+
+python_script:
