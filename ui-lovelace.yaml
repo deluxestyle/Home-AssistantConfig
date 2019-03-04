@@ -17,6 +17,8 @@ resources:
     type: module
   - url: /customcards/github/nervetattoo/simple-thermostat.js?track=true
     type: module
+  - url: /customcards/group-card.js
+    type: js
 # -----------------------------
 
 # -----------------------------
@@ -727,6 +729,11 @@ views:
           - sensor.online_time
           # - sensor.ssl_certificate_expiry
           - sensor.ccu_servicemessages
+      - type: custom:group-card
+        card:
+          type: entities
+          show_header_toggle: false
+        group: group.battery_alert
       - type: custom:tracker-card
         title: " "
         available_text: Verfügbar

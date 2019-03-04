@@ -12,6 +12,8 @@ homeassistant:
   time_zone: Europe/Berlin
   # Customization file
   customize: !include customize.yaml
+  
+  packages: !include_dir_named packages
 
 # Show links to resources in log and frontend
 #introduction:
@@ -159,6 +161,8 @@ mqtt:
   keepalive: 60
   username: homeassistant  
   password: !secret mqtt_password
+  discovery: true
+  discovery_prefix: homeassistant
 
 influxdb:
   host: 192.168.200.50

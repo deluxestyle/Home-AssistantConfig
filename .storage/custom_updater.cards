@@ -1,41 +1,45 @@
 {
-    "tracker-card": {
-        "version": "1.2.6",
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
+    "simple-thermostat": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/",
+        "version": "0.18.1"
     },
-    "mini-media-player-bundle": {
-        "version": "1.0.2",
-        "dir": "/home/homeassistant/.homeassistant/www/"
-    },
-    "compact-custom-header": {
-        "version": "1.0.1b3",
-        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
+    "button-card": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
+        "version": "0.0.6"
     },
     "player": {
         "version": "43020c"
     },
-    "vertical-stack-in-card": {
-        "version": "v0.1.1",
-        "dir": "/home/homeassistant/.homeassistant/www/"
+    "tracker-card": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
+        "version": "1.2.6"
     },
     "time-input-row": {
-        "version": "f503b7",
-        "dir": "/home/homeassistant/.homeassistant/www/"
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "f503b7"
+    },
+    "group-card": {
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "0.0.2"
+    },
+    "vertical-stack-in-card": {
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "v0.1.1"
+    },
+    "mini-media-player-bundle": {
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "1.0.2"
     },
     "fold-entity-row": {
-        "version": "6d11d3",
-        "dir": "/home/homeassistant/.homeassistant/www/"
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "6d11d3"
     },
     "card-tools": {
-        "version": "5fbed4",
-        "dir": "/home/homeassistant/.homeassistant/www/"
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "5fbed4"
     },
-    "simple-thermostat": {
-        "version": "0.18.1",
-        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
-    },
-    "button-card": {
-        "version": "0.0.6",
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
+    "compact-custom-header": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/",
+        "version": "1.0.1b3"
     }
 }
