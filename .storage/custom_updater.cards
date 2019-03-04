@@ -1,41 +1,41 @@
 {
+    "tracker-card": {
+        "version": "1.2.6",
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
+    },
+    "mini-media-player-bundle": {
+        "version": "1.0.2",
+        "dir": "/home/homeassistant/.homeassistant/www/"
+    },
+    "compact-custom-header": {
+        "version": "1.0.1b3",
+        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
+    },
     "player": {
         "version": "43020c"
     },
-    "button-card": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
-        "version": "0.0.6"
-    },
-    "tracker-card": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
-        "version": "1.2.5"
-    },
-    "simple-thermostat": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/",
-        "version": "0.18.1"
-    },
     "vertical-stack-in-card": {
-        "dir": "/home/homeassistant/.homeassistant/www/",
-        "version": "v0.1.1"
+        "version": "v0.1.1",
+        "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "time-input-row": {
-        "dir": "/home/homeassistant/.homeassistant/www/",
-        "version": "f503b7"
-    },
-    "compact-custom-header": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/",
-        "version": "1.0.1b2"
-    },
-    "card-tools": {
-        "dir": "/home/homeassistant/.homeassistant/www/",
-        "version": "deb8e3"
-    },
-    "mini-media-player-bundle": {
-        "dir": "/home/homeassistant/.homeassistant/www/",
-        "version": "1.0.2"
+        "version": "f503b7",
+        "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "fold-entity-row": {
-        "dir": "/home/homeassistant/.homeassistant/www/",
-        "version": "6d11d3"
+        "version": "6d11d3",
+        "dir": "/home/homeassistant/.homeassistant/www/"
+    },
+    "card-tools": {
+        "version": "5fbed4",
+        "dir": "/home/homeassistant/.homeassistant/www/"
+    },
+    "simple-thermostat": {
+        "version": "0.18.1",
+        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
+    },
+    "button-card": {
+        "version": "0.0.6",
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
     }
 }
