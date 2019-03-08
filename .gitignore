@@ -14,6 +14,8 @@ git_token.txt
 .storage/core.device_registry
 .storage/core.restore_state
 .storage/onboarding
+.storage/core.area_registry
+.storage/custom_updater.cards
 .uuid
 .HA_VERSION
 home-assistant_v2.db-shm
@@ -22,7 +24,3 @@ www/pictures/guest_wifi.png
 www/pictures/wifi.png
 custom_components/__pycache__
 *pycache*
-.storage/core.area_registry
-.storage/custom_updater.cards
-.storage/custom_updater.cards
-.storage/custom_updater.cards
