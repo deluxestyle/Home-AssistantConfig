@@ -742,4 +742,12 @@ views:
         trackers:
           - sensor.custom_card_tracker
           - sensor.custom_component_tracker
+      - type: entities
+        #title: Sensoren
+        show_header_toggle: false
+        entities:
+          - automation.battery_persistent_notification
+          - input_number.battery_alert_homatic
+          - input_number.battery_alert_xiaomi
+          - script.battery_persistent_notification_clear
       - type: 'custom:compact-custom-header'

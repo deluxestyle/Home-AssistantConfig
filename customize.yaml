@@ -388,3 +388,5 @@ climate.oeq1714751:
   friendly_name: Heizapparat Büro
 automation.xiaomi_staubsauger_abwesenheit:
   friendly_name: Abwesenheit
+automation.battery_persistent_notification:
+  friendly_name: Batterie Alarm

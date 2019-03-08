@@ -423,10 +423,3 @@
       entity_id: vacuum.xiaomi_vacuum_cleaner
       params: main_brush_work_time
     service: vacuum.send_command
-# '1549394241669':
-  # alias: Sonos - Lautstärke sync
-  # sequence:
-  # - service: media_player.volume_set
-    # data_template:
-      # volume_level: "{{ states.media_player.schlafzimmer.attributes.volume_level }}"
-      # entity_id: media_player.bad

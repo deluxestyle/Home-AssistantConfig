@@ -2,9 +2,25 @@
     "player": {
         "version": "43020c"
     },
+    "tracker-card": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
+        "version": "1.2.6"
+    },
     "fold-entity-row": {
         "dir": "/home/homeassistant/.homeassistant/www/",
         "version": "6d11d3"
+    },
+    "button-card": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
+        "version": "0.0.6"
+    },
+    "compact-custom-header": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/",
+        "version": "1.0.1b3"
+    },
+    "mini-media-player-bundle": {
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "1.0.3"
     },
     "simple-thermostat": {
         "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/",
@@ -14,25 +30,9 @@
         "dir": "/home/homeassistant/.homeassistant/www/",
         "version": "af5ada"
     },
-    "button-card": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
-        "version": "0.0.6"
-    },
-    "tracker-card": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
-        "version": "1.2.6"
-    },
-    "compact-custom-header": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/",
-        "version": "1.0.1b3"
-    },
     "vertical-stack-in-card": {
         "dir": "/home/homeassistant/.homeassistant/www/",
         "version": "v0.1.1"
-    },
-    "mini-media-player-bundle": {
-        "dir": "/home/homeassistant/.homeassistant/www/",
-        "version": "1.0.3"
     },
     "time-input-row": {
         "dir": "/home/homeassistant/.homeassistant/www/",
