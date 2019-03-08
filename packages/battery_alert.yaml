@@ -40,7 +40,7 @@ input_boolean:
 ################################################
 input_number:
   battery_alert_homatic:
-    name: "Batterie Homeatic Min"
+    name: "Batterie Homematic Min"
     icon: mdi:arrow-collapse-down
     mode: slider
     min: 2.0
