@@ -1,14 +1,15 @@
 {
-    "mini-media-player-bundle": {
-        "version": "1.0.3",
-        "dir": "/home/homeassistant/.homeassistant/www/"
+    "compact-custom-header": {
+        "version": "1.0.1b3",
+        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
     },
-    "vertical-stack-in-card": {
-        "version": "v0.1.1",
-        "dir": "/home/homeassistant/.homeassistant/www/"
+    "tracker-card": {
+        "version": "1.2.6",
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
     },
-    "player": {
-        "version": "43020c"
+    "fold-entity-row": {
+        "version": "6d11d3",
+        "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "time-input-row": {
         "version": "f503b7",
@@ -18,28 +19,27 @@
         "version": "0.0.6",
         "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
     },
-    "compact-custom-header": {
-        "version": "1.0.1b3",
-        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
-    },
     "group-card": {
         "version": "0.0.2",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
-    "simple-thermostat": {
-        "version": "0.19.0",
-        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
-    },
-    "fold-entity-row": {
-        "version": "6d11d3",
+    "vertical-stack-in-card": {
+        "version": "v0.1.1",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "card-tools": {
         "version": "af5ada",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
-    "tracker-card": {
-        "version": "1.2.6",
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
+    "player": {
+        "version": "43020c"
+    },
+    "mini-media-player-bundle": {
+        "version": "1.0.3",
+        "dir": "/home/homeassistant/.homeassistant/www/"
+    },
+    "simple-thermostat": {
+        "version": "0.19.0",
+        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
     }
 }

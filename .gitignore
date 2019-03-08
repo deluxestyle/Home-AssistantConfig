@@ -25,3 +25,4 @@ custom_components/__pycache__
 .storage/core.area_registry
 .storage/custom_updater.cards
 .storage/custom_updater.cards
+.storage/custom_updater.cards
