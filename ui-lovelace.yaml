@@ -699,19 +699,16 @@ views:
     icon: mdi:library-books
     cards:
       - type: entities
-        #title: Wetter
         show_header_toggle: false
         entities:
           - weather.dark_sky
           - sun.sun
       - type: entities
-        #title: Sensoren
         show_header_toggle: false
         entities:
           - sensor.pressure_158d0002239fb5
           - sensor.pressure_158d00023258bd
       - type: entities
-        #title: FritzBox
         show_header_toggle: false
         entities:
           - sensor.fritz_netmonitor
@@ -723,17 +720,18 @@ views:
               - script.1543087176551
               - script.1543087223684
       - type: entities
-        #title: HA Status
         show_header_toggle: false
         entities:
           - sensor.online_time
           # - sensor.ssl_certificate_expiry
           - sensor.ccu_servicemessages
-      # - type: custom:group-card
-        # card:
-          # type: entities
-          # show_header_toggle: false
-        # group: group.battery_alert
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - automation.battery_persistent_notification
+          - input_number.battery_alert_homatic
+          - input_number.battery_alert_xiaomi
+          - script.battery_persistent_notification_clear
       - type: custom:tracker-card
         title: " "
         available_text: Verfügbar
@@ -742,12 +740,4 @@ views:
         trackers:
           - sensor.custom_card_tracker
           - sensor.custom_component_tracker
-      - type: entities
-        #title: Sensoren
-        show_header_toggle: false
-        entities:
-          - automation.battery_persistent_notification
-          - input_number.battery_alert_homatic
-          - input_number.battery_alert_xiaomi
-          - script.battery_persistent_notification_clear
       - type: 'custom:compact-custom-header'
