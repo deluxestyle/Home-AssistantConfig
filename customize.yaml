@@ -388,3 +388,16 @@ climate.oeq1714751:
   friendly_name: Heizapparat Büro
 automation.xiaomi_staubsauger_abwesenheit:
   friendly_name: Abwesenheit
+automation.xiaomi_staubsauger_fertig:
+  friendly_name: Reinigung abgeschlossen
+  icon: mdi:message
+automation.xiaomi_staubsauger_fehler:
+  friendly_name: Fehler
+  icon: mdi:message-alert
+automation.xiaomi_staubsauger_gestartet:
+  friendly_name: Gestartet
+  icon: mdi:message
+automation.xiaomi_staubsauger_neustart:
+  friendly_name: Neustarten (Bürste blockiert)
+automation.xiaomi_staubsauger_error_stop:
+  friendly_name: Deaktivieren (b. Fehler)
