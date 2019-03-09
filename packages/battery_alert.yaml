@@ -40,7 +40,7 @@ input_boolean:
 ################################################
 input_number:
   battery_alert_homatic:
-    name: "Batterie Homematic Min"
+    name: "Homematic"
     icon: mdi:arrow-collapse-down
     mode: slider
     min: 2.0
@@ -49,7 +49,7 @@ input_number:
     initial: 2.8
 
   battery_alert_xiaomi:
-    name: "Batterie Xiaomi Min"
+    name: "Xiaomi"
     icon: mdi:arrow-collapse-down
     mode: slider
     min: -1
@@ -173,7 +173,7 @@ automation:
 ################################################
 script:
   battery_persistent_notification_clear:
-    alias: Alarm zurÃ¼cksetzen
+    alias: Alarm zurücksetzen
     sequence:
       - data:
           entity_id: input_boolean.low_batteries
