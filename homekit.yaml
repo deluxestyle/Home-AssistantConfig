@@ -23,6 +23,9 @@ filter:
     - switch.radiator_on_off
     - switch.power_plug_multimedia
     - switch.power_plug_printer
+    - script.1538068809592
+    - script.1538057479069
+    - script.1538072504227
 entity_config:
     media_player.schlafzimmer:
       feature_list:

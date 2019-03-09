@@ -206,7 +206,10 @@
   - entity_id: sensor.presence
     platform: state
     to: not_home
-  condition: []
+  condition:
+  - below: '10'
+    condition: numeric_state
+    entity_id: sensor.dark_sky_temperature
   action:
   - data: {}
     service: script.1540232132608
