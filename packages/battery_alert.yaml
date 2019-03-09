@@ -1,4 +1,19 @@
 ################################################
+## customize
+################################################
+homeassistant:
+  customize:
+    automation.battery_persistent_notification:
+      friendly_name: Batterie Alarm
+      icon: mdi:battery-alert
+    script.battery_persistent_notification_clear:
+      icon: mdi:bell-off-outline
+    input_number.battery_alert_homatic:
+      friendly_name: "Homematic"
+    input_number.battery_alert_xiaomi:
+      friendly_name: "Xiaomi"
+
+################################################
 ## Group
 ################################################
 group:
@@ -40,8 +55,6 @@ input_boolean:
 ################################################
 input_number:
   battery_alert_homatic:
-    name: "Homematic"
-    icon: mdi:arrow-collapse-down
     mode: slider
     min: 2.0
     max: 4.0
@@ -49,8 +62,6 @@ input_number:
     initial: 2.8
 
   battery_alert_xiaomi:
-    name: "Xiaomi"
-    icon: mdi:arrow-collapse-down
     mode: slider
     min: -1
     max: 60
@@ -173,7 +184,7 @@ automation:
 ################################################
 script:
   battery_persistent_notification_clear:
-    alias: Alarm zurücksetzen
+    alias: Alarm zurÃ¼cksetzen
     sequence:
       - data:
           entity_id: input_boolean.low_batteries
