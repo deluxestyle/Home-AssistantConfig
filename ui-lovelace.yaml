@@ -68,11 +68,6 @@ views:
             - light.steckdose_4
     cards:
       - type: entities
-        #title: Licht
-        show_header_toggle: false
-        entities:
-          - light.lights_all
-      - type: entities
         #title: Wohnzimmer
         show_header_toggle: false
         entities:
@@ -114,6 +109,11 @@ views:
             head: light.gateway_light_7811dcb258d1
             items:
                 - sensor.illumination_7811dcb258d1
+      - type: entities
+        #title: Licht
+        show_header_toggle: false
+        entities:
+          - light.lights_all
       - type: 'custom:compact-custom-header'
         main_config: true
         menu: show
