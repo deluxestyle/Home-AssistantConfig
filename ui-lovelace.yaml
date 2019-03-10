@@ -1,13 +1,13 @@
 resources:
-  - url: /customcards/card-tools.js
+  - url: /customcards/github/thomasloven/card-tools.js
     type: js
   - url: /customcards/mini-media-player-bundle.js
     type: module
   - url: /customcards/github/custom-cards/tracker-card.js?track=true
     type: module
-  - url: /customcards/fold-entity-row.js
+  - url: /customcards/github/thomasloven/fold-entity-row.js
     type: js
-  - url: /customcards/time-input-row.js
+  - url: /customcards/github/thomasloven/time-input-row.js
     type: js
   - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
@@ -17,18 +17,13 @@ resources:
     type: module
   - url: /customcards/github/nervetattoo/simple-thermostat.js?track=true
     type: module
-  - url: /customcards/group-card.js
+  - url: /customcards/group-card.js?track=true
+    type: js  
+  - url: /customcards/github/thomasloven/popup-card.js?track=true
     type: js
 # -----------------------------
 
 # -----------------------------
-## Variables
-## Compact header
-# x-compact-header: &compact-header
-# - type: custom:compact-custom-header
-  # user_agent: iPhone
-  # options: show, hide
-
 ## music player
 x-music-player: &music-player
   icon: 'mdi:speaker-wireless'
@@ -62,93 +57,45 @@ views:
   - title: Licht
     id: light
     icon: mdi:ceiling-light
+    popup_cards:
+      light.lights_kitchen:
+        title: Küchenlichter
+        card:
+          type: entities
+          entities:
+            - light.deckenlicht
+            - light.steckdose_2
+            - light.steckdose_4
     cards:
       - type: entities
         #title: Licht
         show_header_toggle: false
         entities:
           - light.lights_all
-      # - type: vertical-stack
-        # cards:
-          # - type: "custom:button-card"
-            # entity: light.lights_living_room
-            # color_type: card
-            # color: rgb(66, 134, 244)
-            # name: Wohnzimmer
-          # - type: horizontal-stack
-            # cards:
-              # - type: "custom:button-card"
-                # entity: light.decke
-                # icon: mdi:ceiling-light
-                # color: auto
-              # - type: "custom:button-card"
-                # entity: light.tisch
-                # icon: mdi:floor-lamp
-                # color: auto
-              # - type: "custom:button-card"
-                # entity: light.leselampe
-                # icon: mdi:desk-lamp
-                # color: auto
-          # - type: entities
-            # show_header_toggle: false
-            # entities:
-              # - input_select.scenes_living_room
-      # - type: vertical-stack
-        # cards:
-          # - type: "custom:button-card"
-            # entity: light.lights_bed_room
-            # color_type: card
-            # color: rgb(66, 134, 244)
-            # name: Schlafzimmer
-            # action: toggle | more_info
-          # - type: horizontal-stack
-            # cards:
-              # - type: "custom:button-card"
-                # entity: light.schlafzimmer
-                # icon: mdi:ceiling-light
-                # color: auto
-              # - type: "custom:button-card"
-                # entity: light.nachttischlampe_anita
-                # icon: mdi:lamp
-                # color: auto
-              # - type: "custom:button-card"
-                # entity: light.nachttischlampe_wolfgang
-                # icon: mdi:lamp
-                # color: auto
-          # - type: entities
-            # show_header_toggle: false
-            # entities:
-              # - input_select.scenes_bed_room
       - type: entities
         #title: Wohnzimmer
         show_header_toggle: false
         entities:
-          - light.lights_living_room
-          - type: section
-          - input_select.scenes_living_room
           - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Lampen
+            head: light.lights_living_room
             items:
               - light.decke
               - light.tisch
               - light.leselampe
+          # - type: section
+          - input_select.scenes_living_room
       - type: entities
         #title: Schlafzimmer
         show_header_toggle: false
         entities:
-          - light.lights_bed_room
-          - type: section
-          - input_select.scenes_bed_room
           - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Lampen
+            head: light.lights_bed_room
             items:
               - light.nachttischlampe_wolfgang
               - light.nachttischlampe_anita
               - light.schlafzimmer
+          # - type: section
+          - input_select.scenes_bed_room
       - type: entities
         #title: Büro
         show_header_toggle: false
@@ -159,23 +106,12 @@ views:
         show_header_toggle: false
         entities:
           - light.lights_kitchen
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Lampen
-            items:
-              - light.deckenlicht
-              - light.steckdose_2
-              - light.steckdose_4
       - type: entities
         #title: Flur
         show_header_toggle: false
         entities:
-          - light.gateway_light_7811dcb258d1
           - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Mehr
+            head: light.gateway_light_7811dcb258d1
             items:
                 - sensor.illumination_7811dcb258d1
       - type: 'custom:compact-custom-header'
@@ -205,62 +141,6 @@ views:
             items:
               - input_boolean.automation_radiator
               - automation.heizung_abwesenheitsschaltung
-      # - type: custom:vertical-stack-in-card
-        # cards:
-          # - type: custom:simple-thermostat
-            # entity: climate.oeq1701003
-            # #name: false
-            # step_size: 1
-            # hide:
-              # state: true
-            # sensors:
-              # - entity: sensor.humidity_158d00023258bd
-          # - type: entities
-            # #title: Bad
-            # show_header_toggle: false
-            # entities:
-              # - binary_sensor.door_window_sensor_158d00022f13a0
-              # - type: custom:fold-entity-row
-                # head:
-                  # type: section
-                  # label: Timer
-                # items:
-                  # - automation.heizung_bad_timer
-                  # - entity: input_datetime.radiator_bath_1
-                    # name: Startzeit
-                    # type: custom:time-input-row
-              # - type: custom:fold-entity-row
-                # head:
-                  # type: section
-                  # label: Mehr
-                # items:
-                  # - script.1538502214360
-                  # - switch.radiator_bath_keylock
-                  # - sensor.temperature_158d00023258bd
-                  # - sensor.valve_bath
-      # - type: custom:vertical-stack-in-card
-        # cards:
-          # - type: custom:simple-thermostat
-            # entity: climate.oeq1696358
-            # #name: false
-            # step_size: 1
-            # hide:
-              # state: true
-            # sensors:
-              # - entity: sensor.humidity_158d0001b8c998
-          # - type: entities
-            # #title: Bad
-            # show_header_toggle: false
-            # entities:
-              # - type: custom:fold-entity-row
-                # head:
-                  # type: section
-                  # label: Mehr
-                # items:
-                  # - script.1538143929416
-                  # - switch.radiator_living_room_keylock
-                  # - sensor.temperature_158d0001b8c998
-                  # - sensor.valve_living_room
       - type: entities
         #title: Bad
         show_header_toggle: false

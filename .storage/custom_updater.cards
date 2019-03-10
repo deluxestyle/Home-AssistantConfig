@@ -1,45 +1,49 @@
 {
-    "mini-media-player-bundle": {
-        "version": "1.0.3",
-        "dir": "/home/homeassistant/.homeassistant/www/"
-    },
-    "simple-thermostat": {
-        "version": "0.19.0",
-        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
-    },
-    "card-tools": {
-        "version": "af5ada",
+    "group-card": {
+        "version": "0.0.2",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "player": {
         "version": "43020c"
     },
+    "compact-custom-header": {
+        "version": "1.0.1b3",
+        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
+    },
+    "mini-media-player-bundle": {
+        "version": "1.0.3",
+        "dir": "/home/homeassistant/.homeassistant/www/"
+    },
     "fold-entity-row": {
         "version": "6d11d3",
         "dir": "/home/homeassistant/.homeassistant/www/"
-    },
-    "tracker-card": {
-        "version": "1.2.6",
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
     },
     "vertical-stack-in-card": {
         "version": "v0.1.1",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
-    "compact-custom-header": {
-        "version": "1.0.1b3",
-        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
-    },
-    "group-card": {
-        "version": "0.0.2",
+    "card-tools": {
+        "version": "af5ada",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "button-card": {
         "version": "0.0.6",
         "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
     },
+    "simple-thermostat": {
+        "version": "0.19.0",
+        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
+    },
+    "popup-card": {
+        "version": "2be87e",
+        "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/"
+    },
     "time-input-row": {
         "version": "f503b7",
         "dir": "/home/homeassistant/.homeassistant/www/"
+    },
+    "tracker-card": {
+        "version": "1.2.6",
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
     }
 }

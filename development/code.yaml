@@ -1,0 +1,111 @@
+########## Light buttons ##############
+
+      # - type: vertical-stack
+        # cards:
+          # - type: "custom:button-card"
+            # entity: light.lights_living_room
+            # color_type: card
+            # color: rgb(66, 134, 244)
+            # name: Wohnzimmer
+          # - type: horizontal-stack
+            # cards:
+              # - type: "custom:button-card"
+                # entity: light.decke
+                # icon: mdi:ceiling-light
+                # color: auto
+              # - type: "custom:button-card"
+                # entity: light.tisch
+                # icon: mdi:floor-lamp
+                # color: auto
+              # - type: "custom:button-card"
+                # entity: light.leselampe
+                # icon: mdi:desk-lamp
+                # color: auto
+          # - type: entities
+            # show_header_toggle: false
+            # entities:
+              # - input_select.scenes_living_room
+      # - type: vertical-stack
+        # cards:
+          # - type: "custom:button-card"
+            # entity: light.lights_bed_room
+            # color_type: card
+            # color: rgb(66, 134, 244)
+            # name: Schlafzimmer
+            # action: toggle | more_info
+          # - type: horizontal-stack
+            # cards:
+              # - type: "custom:button-card"
+                # entity: light.schlafzimmer
+                # icon: mdi:ceiling-light
+                # color: auto
+              # - type: "custom:button-card"
+                # entity: light.nachttischlampe_anita
+                # icon: mdi:lamp
+                # color: auto
+              # - type: "custom:button-card"
+                # entity: light.nachttischlampe_wolfgang
+                # icon: mdi:lamp
+                # color: auto
+          # - type: entities
+            # show_header_toggle: false
+            # entities:
+              # - input_select.scenes_bed_room
+              
+############### Heizung #######################
+      # - type: custom:vertical-stack-in-card
+        # cards:
+          # - type: custom:simple-thermostat
+            # entity: climate.oeq1701003
+            # #name: false
+            # step_size: 1
+            # hide:
+              # state: true
+            # sensors:
+              # - entity: sensor.humidity_158d00023258bd
+          # - type: entities
+            # #title: Bad
+            # show_header_toggle: false
+            # entities:
+              # - binary_sensor.door_window_sensor_158d00022f13a0
+              # - type: custom:fold-entity-row
+                # head:
+                  # type: section
+                  # label: Timer
+                # items:
+                  # - automation.heizung_bad_timer
+                  # - entity: input_datetime.radiator_bath_1
+                    # name: Startzeit
+                    # type: custom:time-input-row
+              # - type: custom:fold-entity-row
+                # head:
+                  # type: section
+                  # label: Mehr
+                # items:
+                  # - script.1538502214360
+                  # - switch.radiator_bath_keylock
+                  # - sensor.temperature_158d00023258bd
+                  # - sensor.valve_bath
+      # - type: custom:vertical-stack-in-card
+        # cards:
+          # - type: custom:simple-thermostat
+            # entity: climate.oeq1696358
+            # #name: false
+            # step_size: 1
+            # hide:
+              # state: true
+            # sensors:
+              # - entity: sensor.humidity_158d0001b8c998
+          # - type: entities
+            # #title: Bad
+            # show_header_toggle: false
+            # entities:
+              # - type: custom:fold-entity-row
+                # head:
+                  # type: section
+                  # label: Mehr
+                # items:
+                  # - script.1538143929416
+                  # - switch.radiator_living_room_keylock
+                  # - sensor.temperature_158d0001b8c998
+                  # - sensor.valve_living_room
