@@ -401,3 +401,15 @@ automation.xiaomi_staubsauger_neustart:
   friendly_name: Neustarten (Bürste blockiert)
 automation.xiaomi_staubsauger_error_stop:
   friendly_name: Deaktivieren (b. Fehler)
+sensor.battery_radiator_bath:
+  icon: mdi:battery-50
+sensor.battery_sensor_motion:
+  icon: mdi:battery-50
+sensor.battery_sensor_door:
+  icon: mdi:battery-50
+sensor.battery_sensor_outdoor:
+  icon: mdi:battery-50
+sensor.battery_sensor_wall_switch:
+  icon: mdi:battery-50
+sensor.battery_sensor_wall_switch_double:
+  icon: mdi:battery-50

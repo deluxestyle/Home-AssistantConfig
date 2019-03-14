@@ -7,7 +7,7 @@
         "version": "43020c"
     },
     "compact-custom-header": {
-        "version": "1.0.1b3",
+        "version": "1.0.1b6",
         "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
     },
     "mini-media-player-bundle": {
@@ -23,7 +23,7 @@
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "card-tools": {
-        "version": "af5ada",
+        "version": "05e1a9",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "button-card": {
@@ -35,11 +35,11 @@
         "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
     },
     "popup-card": {
-        "version": "2be87e",
+        "version": "78d39a",
         "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/"
     },
     "time-input-row": {
-        "version": "f503b7",
+        "version": "0eafa1",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
     "tracker-card": {
