@@ -70,6 +70,8 @@ recorder:
       - climate
     entities:
       - sun.sun
+      - automation.battery_persistent_notification
+      - weather.dark_sky
       
 # Enables support for tracking state changes over time
 history:

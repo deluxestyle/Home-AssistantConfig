@@ -412,6 +412,7 @@ views:
             items:
               - script.1534621188695
               - script.1534621226775
+      - type: 'custom:compact-custom-header'
 
 ##### Entertainment #####
   - title: Entertainment
