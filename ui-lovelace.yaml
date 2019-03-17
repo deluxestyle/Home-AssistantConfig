@@ -227,7 +227,6 @@ views:
       - type: custom:vertical-stack-in-card
         cards:
           - type: entities
-            #title: Staubsauger
             show_header_toggle: false
             entities:
               - vacuum.xiaomi_vacuum_cleaner
@@ -271,46 +270,9 @@ views:
                   action: locate
                   data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
-          # - type: glance
-            # show_name: false
-            # show_state: false
-            # #title: Xiaomi StaubRobo
-            # entities:
-              # - entity: vacuum.xiaomi_vacuum_cleaner
-                # tap_action: 
-                    # action: call-service
-                    # service: vacuum.start
-                    # service_data:
-                        # entity_id: vacuum.xiaomi_vacuum_cleaner
-                # icon: mdi:play
-              # - entity: vacuum.xiaomi_vacuum_cleaner
-                # tap_action: 
-                    # action: call-service
-                    # service: vacuum.pause
-                    # service_data:
-                        # entity_id: vacuum.xiaomi_vacuum_cleaner
-                # icon: mdi:pause
-              # - entity: vacuum.xiaomi_vacuum_cleaner
-                # tap_action: 
-                    # action: call-service
-                    # service: vacuum.return_to_base
-                    # service_data:
-                        # entity_id: vacuum.xiaomi_vacuum_cleaner
-                # icon: mdi:home
-              # - entity: vacuum.xiaomi_vacuum_cleaner
-                # tap_action: 
-                    # action: call-service
-                    # service: vacuum.locate
-                    # service_data:
-                        # entity_id: vacuum.xiaomi_vacuum_cleaner
-                # icon: mdi:map-marker
           - type: entities
-            #title: Staubsauger
             show_header_toggle: false
             entities:
-              # - type: section
-              # - vacuum.xiaomi_vacuum_cleaner
-              # - sensor.xiaomi_vacum_sensor_battery
               - type: custom:fold-entity-row
                 head:
                   type: section
@@ -366,6 +328,12 @@ views:
                   - automation.xiaomi_staubsauger_fehler
                   - automation.xiaomi_staubsauger_fertig
                   - automation.xiaomi_staubsauger_gestartet
+      - type: picture-entity
+        entity: camera.vacuum_map
+        camera_image: camera.vacuum_map
+        show_info: true
+        show_name: false
+        show_state: false
       - type: 'custom:compact-custom-header'
 
 ##### Musik #####

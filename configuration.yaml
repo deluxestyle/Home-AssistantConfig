@@ -106,6 +106,10 @@ panel_iframe:
     title: Configurator
     icon: mdi:wrench
     url: !secret configurator_url
+  vacuum:
+    title: Xiaomi Roborock
+    icon: mdi:robot-vacuum
+    url: !secret vacuum_url
 
 # group: !include groups.yaml
 automation: !include automations.yaml

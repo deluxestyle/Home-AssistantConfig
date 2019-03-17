@@ -1,38 +1,42 @@
 {
+    "tracker-card": {
+        "version": "1.2.6",
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
+    },
+    "fold-entity-row": {
+        "version": "6d11d3",
+        "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/"
+    },
     "group-card": {
         "version": "0.0.2",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
+    "vertical-stack-in-card": {
+        "version": "v0.1.2",
+        "dir": "/home/homeassistant/.homeassistant/www/"
+    },
+    "simple-thermostat": {
+        "version": "0.20.0",
+        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
+    },
     "player": {
         "version": "43020c"
-    },
-    "compact-custom-header": {
-        "version": "1.0.1b8",
-        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
     },
     "mini-media-player-bundle": {
         "version": "1.0.3",
         "dir": "/home/homeassistant/.homeassistant/www/"
     },
-    "fold-entity-row": {
-        "version": "6d11d3",
-        "dir": "/home/homeassistant/.homeassistant/www/"
-    },
-    "vertical-stack-in-card": {
-        "version": "v0.1.1",
-        "dir": "/home/homeassistant/.homeassistant/www/"
+    "compact-custom-header": {
+        "version": "1.0.1b9",
+        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/"
     },
     "card-tools": {
         "version": "05e1a9",
-        "dir": "/home/homeassistant/.homeassistant/www/"
+        "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/"
     },
     "button-card": {
         "version": "0.0.6",
         "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
-    },
-    "simple-thermostat": {
-        "version": "0.20.0",
-        "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/"
     },
     "popup-card": {
         "version": "78d39a",
@@ -40,10 +44,6 @@
     },
     "time-input-row": {
         "version": "0eafa1",
-        "dir": "/home/homeassistant/.homeassistant/www/"
-    },
-    "tracker-card": {
-        "version": "1.2.6",
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/"
+        "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/"
     }
 }
