@@ -24,3 +24,4 @@ www/pictures/guest_wifi.png
 www/pictures/wifi.png
 custom_components/__pycache__
 *pycache*
+.storage/custom_updater.cards
