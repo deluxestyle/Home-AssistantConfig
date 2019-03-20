@@ -162,8 +162,3 @@
     - 'date'
     - 'date_time'
     - 'time_date'
-
-- platform: rest
-  resource: http://192.168.200.28/api/remote/map
-  name: VacuumMap
-  value_template: '{{ value_json.mapsrc }}'

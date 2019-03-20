@@ -328,12 +328,6 @@ views:
                   - automation.xiaomi_staubsauger_fehler
                   - automation.xiaomi_staubsauger_fertig
                   - automation.xiaomi_staubsauger_gestartet
-      - type: picture-entity
-        entity: camera.vacuum_map
-        camera_image: camera.vacuum_map
-        show_info: true
-        show_name: false
-        show_state: false
       - type: 'custom:compact-custom-header'
 
 ##### Musik #####
