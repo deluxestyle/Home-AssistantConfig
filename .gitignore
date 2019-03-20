@@ -7,15 +7,7 @@ home-assistant_v2.db
 home-assistant.log
 git_token.txt
 .homekit.state
-.storage/auth
-.storage/auth_provider.homeassistant
-.storage/core.config_entries
-.storage/core.entity_registry
-.storage/core.device_registry
-.storage/core.restore_state
-.storage/onboarding
-.storage/core.area_registry
-.storage/custom_updater.cards
+.storage/*
 .uuid
 .HA_VERSION
 home-assistant_v2.db-shm
@@ -24,4 +16,4 @@ www/pictures/guest_wifi.png
 www/pictures/wifi.png
 custom_components/__pycache__
 *pycache*
-.storage/custom_updater.cards
+
