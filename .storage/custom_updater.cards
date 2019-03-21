@@ -1,11 +1,19 @@
 {
-    "compact-custom-header": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/",
-        "version": "1.0.2b1"
-    },
-    "card-tools": {
+    "popup-card": {
         "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/",
-        "version": "ca9579"
+        "version": "78d39a"
+    },
+    "mini-media-player-bundle": {
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "1.0.3"
+    },
+    "tracker-card": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
+        "version": "1.2.6"
+    },
+    "vertical-stack-in-card": {
+        "dir": "/home/homeassistant/.homeassistant/www/",
+        "version": "v0.1.2"
     },
     "group-card": {
         "dir": "/home/homeassistant/.homeassistant/www/",
@@ -15,35 +23,27 @@
         "dir": "/home/homeassistant/.homeassistant/www/github/nervetattoo/",
         "version": "0.20.0"
     },
-    "tracker-card": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
-        "version": "1.2.6"
-    },
-    "player": {
-        "version": "43020c"
-    },
-    "popup-card": {
+    "fold-entity-row": {
         "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/",
-        "version": "78d39a"
+        "version": "ba9588"
+    },
+    "card-tools": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/",
+        "version": "c885db"
     },
     "button-card": {
         "dir": "/home/homeassistant/.homeassistant/www/github/custom-cards/",
         "version": "0.0.6"
     },
-    "mini-media-player-bundle": {
-        "dir": "/home/homeassistant/.homeassistant/www/",
-        "version": "1.0.3"
+    "compact-custom-header": {
+        "dir": "/home/homeassistant/.homeassistant/www/github/maykar/",
+        "version": "1.0.2b1"
     },
-    "fold-entity-row": {
-        "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/",
-        "version": "6d11d3"
+    "player": {
+        "version": "43020c"
     },
     "time-input-row": {
         "dir": "/home/homeassistant/.homeassistant/www/github/thomasloven/",
         "version": "0eafa1"
-    },
-    "vertical-stack-in-card": {
-        "dir": "/home/homeassistant/.homeassistant/www/",
-        "version": "v0.1.2"
     }
 }

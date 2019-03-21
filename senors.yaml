@@ -101,12 +101,6 @@
         unit_of_measurement: '%'
         value_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level }}'
         icon_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_icon }}'
-      fritz_bytes_sent:
-        friendly_name: "Daten gesendet"
-        value_template: '{{ states.sensor.fritz_netmonitor.attributes.bytes_sent }}'
-      fritz_bytes_received:
-        friendly_name: "Daten empfangen"
-        value_template: '{{ states.sensor.fritz_netmonitor.attributes.bytes_received }}'
       sonos_grouped:
         friendly_name: "Sonos gruppiert"
         value_template: >-
