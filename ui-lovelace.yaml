@@ -46,7 +46,6 @@ x-vacuum-buttons: &vacuum-buttons
   color_off: rgb(68, 115, 158)
   entity: vacuum.xiaomi_vacuum_cleaner
   size: 25%
-
 # -----------------------------
 
 # -----------------------------
