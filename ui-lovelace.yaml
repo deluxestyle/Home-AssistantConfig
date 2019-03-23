@@ -40,7 +40,6 @@ x-music-player: &music-player
   
 ## vacuum_buttons
 x-vacuum-buttons: &vacuum-buttons
-#- type: "custom:button-card"
   color: auto
   # color_type: card
   color_off: rgb(68, 115, 158)
