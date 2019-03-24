@@ -132,26 +132,6 @@
   - data:
       entity_id: light.lights_kitchen
     service: light.toggle
-# - id: xiaomi_vacuum_start
-#   alias: 'Xiaomi Staubsauger: automatisch starten'
-#   trigger:
-#   - entity_id: sensor.presence
-#     platform: state
-#     to: not_home
-#   condition:
-#   - after: 07:00:00
-#     before: '17:00:00'
-#     condition: time
-#     weekday:
-#     - sat
-#     - sun
-#   - condition: template
-#     value_template: '{{ as_timestamp(utcnow()) + 1200 - as_timestamp(states.vacuum.xiaomi_vacuum_cleaner.last_updated)  >
-#       10080 }}'
-#   action:
-#   - data:
-#       entity_id: vacuum.xiaomi_vacuum_cleaner
-#     service: vacuum.start
 - id: xiaomi_vacuum_notification_off
   alias: 'Xiaomi Staubsauger: fertig'
   trigger:
@@ -215,120 +195,6 @@
     service: script.1540232132608
   - data:
       message: 'Heizung: Abwesenheitsschaltung'
-    service: notify.ios_iphonex
-- id: '1521886159584'
-  alias: 'Heizung: Wohnzimmer an'
-  trigger:
-  - below: '10'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: template
-    value_template: '{{ states.climate.oeq1696358.attributes.temperature < 17 }}'
-  - condition: state
-    entity_id: input_boolean.automation_radiator
-    state: 'on'
-  action:
-  - data:
-      entity_id: climate.oeq1696358
-      temperature: '17'
-    service: climate.set_temperature
-  - data:
-      message: 'Heizung: Wohnzimmer an'
-    service: notify.ios_iphonex
-- id: '1521886159585'
-  alias: 'Heizung: Schlafzimmer an'
-  trigger:
-  - below: '10'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: template
-    value_template: '{{ states.climate.oeq1696369.attributes.temperature < 17 }}'
-  - condition: state
-    entity_id: input_boolean.automation_radiator
-    state: 'on'
-  action:
-  - data:
-      entity_id: climate.oeq1696369
-      temperature: '17'
-    service: climate.set_temperature
-  - data:
-      message: 'Heizung: Schlafzimmer an'
-    service: notify.ios_iphonex
-- id: '1521886159586'
-  alias: 'Heizung: Büro an'
-  trigger:
-  - below: '10'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: template
-    value_template: '{{ states.climate.int0000002.attributes.temperature < 17 }}'
-  - condition: state
-    entity_id: input_boolean.automation_radiator
-    state: 'on'
-  action:
-  - data:
-      entity_id: climate.int0000002
-      temperature: '18'
-    service: climate.set_temperature
-  - data:
-      message: 'Heizung: Büro an'
-    service: notify.ios_iphonex
-- id: '1521886159594'
-  alias: 'Heizung: Wohnzimmer aus'
-  trigger:
-  - above: '10'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: template
-    value_template: '{{ states.climate.oeq1696358.attributes.temperature > 4.5 }}'
-  - condition: state
-    entity_id: input_boolean.automation_radiator
-    state: 'on'
-  action:
-  - data: {}
-    service: script.1538143929416
-  - data:
-      message: 'Heizung: Wohnzimmer aus'
-    service: notify.ios_iphonex
-- id: '1521886159595'
-  alias: 'Heizung: Schlafzimmer aus'
-  trigger:
-  - above: '10'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: template
-    value_template: '{{ states.climate.oeq1696369.attributes.temperature > 4.5 }}'
-  - condition: state
-    entity_id: input_boolean.automation_radiator
-    state: 'on'
-  action:
-  - data: {}
-    service: script.1538143964007
-  - data:
-      message: 'Heizung: Schlafzimmer aus'
-    service: notify.ios_iphonex
-- id: '1521886159596'
-  alias: 'Heizung: Büro aus'
-  trigger:
-  - above: '10'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: template
-    value_template: '{{ states.climate.int0000002.attributes.temperature > 4.5 }}'
-  - condition: state
-    entity_id: input_boolean.automation_radiator
-    state: 'on'
-  action:
-  - data: {}
-    service: script.1538143893265
-  - data:
-      message: 'Heizung: Büro aus'
     service: notify.ios_iphonex
 - id: '1521894687949'
   alias: 'Xiaomi Staubsauger: Täglich saugen'
@@ -452,46 +318,6 @@
   condition: []
   action:
   - service: script.1538502214360
-- id: '1538674889813'
-  alias: 'Heizung: Bad aus'
-  trigger:
-  - above: '10'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: state
-    entity_id: input_boolean.automation_radiator
-    state: 'on'
-  - condition: template
-    value_template: '{{ states.climate.oeq1701003.attributes.temperature > 4.5 }}'
-  action:
-  - service: script.1538502214360
-  - data:
-      message: 'Heizung: Bad aus'
-    service: notify.ios_iphonex
-- id: '1538676627427'
-  alias: 'Heizung: Bad an'
-  trigger:
-  - below: '10'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: state
-    entity_id: input_boolean.automation_radiator
-    state: 'on'
-  - condition: template
-    value_template: '{{ states.climate.oeq1701003.attributes.temperature < 10 }}'
-  - condition: state
-    entity_id: binary_sensor.door_window_sensor_158d00022f13a0
-    state: 'off'
-  action:
-  - data:
-      entity_id: climate.oeq1701003
-      temperature: '10'
-    service: climate.set_temperature
-  - data:
-      message: 'Heizung: Bad an'
-    service: notify.ios_iphonex
 - id: dsfasdfasdfsafsadfsdfdsf
   alias: 'Heizung: Bad Timer'
   trigger:
@@ -727,3 +553,31 @@
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.start
+- id: '1553418352092'
+  alias: Heizung aus - Temperatur
+  trigger:
+  - above: '10'
+    entity_id: sensor.dark_sky_temperature
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_boolean.automation_radiator
+    state: 'on'
+  action:
+  - data:
+      entity_id: switch.radiator_on_off
+    service: switch.turn_off
+- id: '1553418411637'
+  alias: Heizung an - Temperatur
+  trigger:
+  - below: '10'
+    entity_id: sensor.dark_sky_temperature
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_boolean.automation_radiator
+    state: 'on'
+  action:
+  - data:
+      entity_id: switch.radiator_on_off
+    service: switch.turn_on

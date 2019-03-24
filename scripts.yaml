@@ -233,9 +233,9 @@
       entity_id: climate.oeq1701003
       temperature: 10
     service: climate.set_temperature
-  - data:
-      entity_id: input_boolean.radiator_on_off
-    service: input_boolean.turn_on
+  # - data:
+  #     entity_id: input_boolean.radiator_on_off
+  #   service: input_boolean.turn_on
 '1541097052191':
   alias: Xiaomi Gateway - Alarm ausschalten
   sequence:
