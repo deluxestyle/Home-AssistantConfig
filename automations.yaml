@@ -190,6 +190,9 @@
   - below: '10'
     condition: numeric_state
     entity_id: sensor.dark_sky_temperature
+  - condition: state
+    entity_id: switch.radiator_on_off
+    state: 'on'
   action:
   - data: {}
     service: script.1540232132608
