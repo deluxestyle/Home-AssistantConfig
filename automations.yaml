@@ -132,26 +132,26 @@
   - data:
       entity_id: light.lights_kitchen
     service: light.toggle
-- id: xiaomi_vacuum_start
-  alias: 'Xiaomi Staubsauger: automatisch starten'
-  trigger:
-  - entity_id: sensor.presence
-    platform: state
-    to: not_home
-  condition:
-  - after: 07:00:00
-    before: '17:00:00'
-    condition: time
-    weekday:
-    - sat
-    - sun
-  - condition: template
-    value_template: '{{ as_timestamp(utcnow()) + 1200 - as_timestamp(states.vacuum.xiaomi_vacuum_cleaner.last_updated)  >
-      10080 }}'
-  action:
-  - data:
-      entity_id: vacuum.xiaomi_vacuum_cleaner
-    service: vacuum.start
+# - id: xiaomi_vacuum_start
+#   alias: 'Xiaomi Staubsauger: automatisch starten'
+#   trigger:
+#   - entity_id: sensor.presence
+#     platform: state
+#     to: not_home
+#   condition:
+#   - after: 07:00:00
+#     before: '17:00:00'
+#     condition: time
+#     weekday:
+#     - sat
+#     - sun
+#   - condition: template
+#     value_template: '{{ as_timestamp(utcnow()) + 1200 - as_timestamp(states.vacuum.xiaomi_vacuum_cleaner.last_updated)  >
+#       10080 }}'
+#   action:
+#   - data:
+#       entity_id: vacuum.xiaomi_vacuum_cleaner
+#     service: vacuum.start
 - id: xiaomi_vacuum_notification_off
   alias: 'Xiaomi Staubsauger: fertig'
   trigger:
