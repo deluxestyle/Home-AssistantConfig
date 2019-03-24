@@ -146,6 +146,10 @@
       entity_id: climate.int0000002
       temperature: 4.5
     service: climate.set_temperature
+  - data:
+      entity_id: climate.int0000002
+      operation_mode: manual
+    service: climate.set_operation_mode
 '1538143929416':
   alias: Heizung Wohnzimmer ausschalten
   sequence:
@@ -153,6 +157,10 @@
       entity_id: climate.oeq1696358
       temperature: 4.5
     service: climate.set_temperature
+  - data:
+      entity_id: climate.oeq1696358
+      operation_mode: manual
+    service: climate.set_operation_mode
 '1538143964007':
   alias: Heizung Schlafzimmer ausschalten
   sequence:
@@ -160,6 +168,10 @@
       entity_id: climate.oeq1696369
       temperature: 4.5
     service: climate.set_temperature
+  - data:
+      entity_id: climate.oeq1696369
+      operation_mode: manual
+    service: climate.set_operation_mode
 '1538167052403':
   alias: Telekom MR 400 on
   sequence:
@@ -207,6 +219,10 @@
       entity_id: climate.oeq1701003
       temperature: 4.5
     service: climate.set_temperature
+  - data:
+      entity_id: climate.oeq1701003
+      operation_mode: manual
+    service: climate.set_operation_mode
 '1538646823835':
   alias: Heizung Bad einschalten
   sequence:
@@ -219,16 +235,16 @@
   sequence:
   - data:
       entity_id: climate.int0000002
-      temperature: '19'
-    service: climate.set_temperature
+      operation_mode: auto
+    service: climate.set_operation_mode
   - data:
       entity_id: climate.oeq1696358
-      temperature: '19'
-    service: climate.set_temperature
+      operation_mode: auto
+    service: climate.set_operation_mode
   - data:
       entity_id: climate.oeq1696369
-      temperature: '19'
-    service: climate.set_temperature
+      operation_mode: auto
+    service: climate.set_operation_mode
   - data:
       entity_id: climate.oeq1701003
       temperature: 10
