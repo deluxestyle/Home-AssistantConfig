@@ -1,54 +1,33 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
   latitude: !secret latitude
   longitude: !secret longitude
-  # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 141
-  # metric for Metric, imperial for Imperial
   unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Berlin
-  # Customization file
   customize: !include customize.yaml
   packages: !include_dir_named packages
 
-# Show links to resources in log and frontend
-#introduction:
-
-# Enables the frontend
 frontend:
   javascript_version: latest
 
 lovelace:
   mode: yaml
 
-# Enables configuration UI
 config:
 
 http:
-  # Secrets are defined in the file secrets.yaml #!secret http_password
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
 
 api:
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+
 updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
   include_used_components: true
 
-# Discover some devices automatically
 # discovery:
     # ignore:
     # - samsung_tv
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-#conversation:
 
 system_health:
 
@@ -74,31 +53,22 @@ recorder:
       - automation.battery_persistent_notification
       - weather.dark_sky
       
-# Enables support for tracking state changes over time
 history:
   exclude:
     domains:
       - group
       - calendar
 
-#history_graph: !include graphs.yaml
-
-# View all events in a logbook
 logbook:
   exclude:
     domains:
       - group
       - calendar
       
-# Enables a map showing the location of tracked devices
 map:
 
 # Track the sun
 sun:
-
-# Text to speech
-#tts:
-#  - platform: google
 
 panel_iframe:
   grafana:
@@ -109,6 +79,9 @@ panel_iframe:
     title: Configurator
     icon: mdi:wrench
     url: !secret configurator_url
+
+##########################################################
+######### Includes #########
 # group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -128,7 +101,10 @@ ios: !include push.yaml
 homekit: !include homekit.yaml
 media_player: !include media_player.yaml
 camera: !include camera.yaml
+##########################################################
 
+##########################################################
+######### Components #########
 homematic:
   interfaces:
     rf:
