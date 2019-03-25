@@ -21,6 +21,8 @@ resources:
     type: js  
   - url: /customcards/github/thomasloven/popup-card.js?track=true
     type: js
+  - url: /customcards/tiles-card.js
+    type: js
 # -----------------------------
 
 # -----------------------------
@@ -65,13 +67,33 @@ views:
             - light.steckdose_2
             - light.steckdose_4
     cards:
-      - type: glance
-        # show_state: false
-        show_icon: false
-        entities: 
+      - type: custom:tiles-card
+        card_settings:
+          # title: Summary
+          columns: 1
+          row_height: 45px
+          # padding: 0 2px 0 2px
+          padding: 10px
+        global_settings:
+          align: 'center middle'
+          orientation: horizontal
+          label:
+            color:
+              value: white
+          label_sec:
+            color:
+              value: white
+          icon:
+            color:
+              value: white
+        entities:
           - entity: light.lights_all
-            tap_action:
-              action: toggle
+            label: Alle Lichter
+            row: 1
+            column: 1
+            background:
+              value_on: '#03A9F4'
+              value_off: '#999999'
       - type: entities
         #title: Wohnzimmer
         show_header_toggle: false

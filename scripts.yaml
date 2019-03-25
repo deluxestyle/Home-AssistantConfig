@@ -246,12 +246,15 @@
       operation_mode: auto
     service: climate.set_operation_mode
   - data:
+      entity_id: input_boolean.radiator_on_off
+    service: input_boolean.turn_on
+  - condition: state
+    entity_id: binary_sensor.door_window_sensor_158d00022f13a0
+    state: 'off'
+  - data:
       entity_id: climate.oeq1701003
       temperature: 10
     service: climate.set_temperature
-  - data:
-      entity_id: input_boolean.radiator_on_off
-    service: input_boolean.turn_on
 '1541097052191':
   alias: Xiaomi Gateway - Alarm ausschalten
   sequence:
