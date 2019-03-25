@@ -21,7 +21,7 @@ resources:
     type: js  
   - url: /customcards/github/thomasloven/popup-card.js?track=true
     type: js
-  - url: /customcards/tiles-card.js
+  - url: /customcards/tiles-card.js?track=true
     type: js
 # -----------------------------
 
