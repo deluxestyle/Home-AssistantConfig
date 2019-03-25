@@ -21,6 +21,9 @@
   - condition: state
     entity_id: calendar.privat_putzfrau
     state: 'off'
+  - condition: state
+    entity_id: sensor.presence
+    state: not_home
   action:
   - data:
       entity_id: light.lights_all
