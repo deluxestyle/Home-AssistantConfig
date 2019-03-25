@@ -67,7 +67,6 @@ logbook:
       
 map:
 
-# Track the sun
 sun:
 
 panel_iframe:
