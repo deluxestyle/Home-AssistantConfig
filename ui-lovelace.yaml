@@ -69,10 +69,8 @@ views:
     cards:
       - type: custom:tiles-card
         card_settings:
-          # title: Summary
           columns: 1
           row_height: 45px
-          # padding: 0 2px 0 2px
           padding: 10px
         global_settings:
           align: 'center middle'
@@ -88,12 +86,15 @@ views:
               value: white
         entities:
           - entity: light.lights_all
-            label: Alle Lichter
+            # label: Alle Lichter
             row: 1
             column: 1
             background:
               value_on: '#03A9F4'
               value_off: '#999999'
+            icon: 
+                value_on: mdi:lightbulb-on 
+                value_off: mdi:lightbulb 
       - type: entities
         #title: Wohnzimmer
         show_header_toggle: false
