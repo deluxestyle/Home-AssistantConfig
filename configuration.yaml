@@ -68,6 +68,7 @@ recorder:
       - switch
       - binary_sensor
       - climate
+      - calendar
     entities:
       - sun.sun
       - automation.battery_persistent_notification
@@ -78,6 +79,7 @@ history:
   exclude:
     domains:
       - group
+      - calendar
 
 #history_graph: !include graphs.yaml
 
@@ -86,6 +88,7 @@ logbook:
   exclude:
     domains:
       - group
+      - calendar
       
 # Enables a map showing the location of tracked devices
 map:
@@ -186,6 +189,7 @@ influxdb:
       - media_player
       - light
       - binary_sensor
+      - calendar
     entities:
       - sun.sun
       - sensor.time
@@ -223,6 +227,22 @@ bmw_connected_drive:
 weather:
   - platform: darksky
     api_key: !secret dark_syk
+
+calendar:
+  - platform: caldav
+    username: !secret next_user
+    password: !secret next_password
+    url: !secret next_url
+    custom_calendars:
+      - name: 'Putzfrau'
+        calendar: 'Privat'
+        search: 'Putzfrau'
+      - name: 'Urlaub'
+        calendar: 'Privat'
+        search: 'Urlaub'
+      - name: 'BusinessTrip'
+        calendar: 'Arbeit'
+        search: 'Business Trip'
 
 # Custom Components
 fritzbox_guestwifi:
