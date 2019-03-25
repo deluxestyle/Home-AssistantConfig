@@ -550,6 +550,9 @@
   - condition: state
     entity_id: calendar.privat_putzfrau
     state: 'off'
+  - condition: state
+    entity_id: vacuum.xiaomi_vacuum_cleaner
+    state: docked
   action:
   - data:
       data:
