@@ -162,10 +162,10 @@ group.vacuum:
   control: hidden
 group.vacuum_group:
   control: hidden
-sensor.xiaomi_vacum_main_brush_left:
+sensor.xiaomi_vacuum_main_brush_left:
   friendly_name: Hauptbürste
   icon: mdi:blur-linear
-sensor.xiaomi_vacum_side_brush_left:
+sensor.xiaomi_vacuum_side_brush_left:
   friendly_name: Seitenbürste
   icon: mdi:blur-linear
 group.power_sockets:
@@ -267,10 +267,10 @@ light.hgrp0000015422:
 light.schlafzimmer:
   friendly_name: Deckenlicht
   icon: mdi:ceiling-light
-sensor.xiaomi_vacum_filter_left:
+sensor.xiaomi_vacuum_filter_left:
   friendly_name: Filter
   icon: mdi:blur-linear
-sensor.xiaomi_vacum_sensor_dirty_left:
+sensor.xiaomi_vacuum_sensor_dirty_left:
   friendly_name: Sensor
   icon: mdi:blur-linear
 script.1543087176551:

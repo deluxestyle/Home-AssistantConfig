@@ -261,7 +261,7 @@ views:
             show_header_toggle: false
             entities:
               - vacuum.xiaomi_vacuum_cleaner
-              - sensor.xiaomi_vacum_sensor_battery
+              - sensor.xiaomi_vacuum_sensor_battery
               - type: section
           - type: horizontal-stack
             cards:
@@ -336,19 +336,19 @@ views:
                   - counter.xiaomo_errors
                   - type: section
                   - type: custom:fold-entity-row
-                    head: sensor.xiaomi_vacum_side_brush_left
+                    head: sensor.xiaomi_vacuum_side_brush_left
                     items:
                       - script.1547995869377
                   - type: custom:fold-entity-row
-                    head: sensor.xiaomi_vacum_sensor_dirty_left
+                    head: sensor.xiaomi_vacuum_sensor_dirty_left
                     items:
                       - script.1547995682348
                   - type: custom:fold-entity-row
-                    head: sensor.xiaomi_vacum_main_brush_left
+                    head: sensor.xiaomi_vacuum_main_brush_left
                     items:
                       - script.1547995909810
                   - type: custom:fold-entity-row
-                    head: sensor.xiaomi_vacum_filter_left
+                    head: sensor.xiaomi_vacuum_filter_left
                     items:
                       - script.1547995832032
               - type: custom:fold-entity-row

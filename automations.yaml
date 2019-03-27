@@ -415,12 +415,12 @@
   alias: 'Xiaomi Staubsauger: Sensor kritisch'
   trigger:
   - below: '4'
-    entity_id: sensor.xiaomi_vacum_sensor_dirty_left
+    entity_id: sensor.xiaomi_vacuum_sensor_dirty_left
     platform: numeric_state
   condition: []
   action:
   - data:
-      message: 'Sensor reinigen: {{ states.sensor.xiaomi_vacum_sensor_dirty_left.state
+      message: 'Sensor reinigen: {{ states.sensor.xiaomi_vacuum_sensor_dirty_left.state
         }} h übrig'
       notification_id: xiaomi_sensor
       title: Xiaomi StaubRobo
