@@ -67,34 +67,6 @@ views:
             - light.steckdose_2
             - light.steckdose_4
     cards:
-      - type: custom:tiles-card
-        card_settings:
-          columns: 1
-          row_height: 45px
-          padding: 10px
-        global_settings:
-          align: 'center middle'
-          orientation: horizontal
-          label:
-            color:
-              value: white
-          label_sec:
-            color:
-              value: white
-          icon:
-            color:
-              value: white
-        entities:
-          - entity: light.lights_all
-            # label: Alle Lichter
-            row: 1
-            column: 1
-            background:
-              value_on: '#03A9F4'
-              value_off: '#999999'
-            icon: 
-                value_on: mdi:lightbulb-on 
-                value_off: mdi:lightbulb 
       - type: entities
         #title: Wohnzimmer
         show_header_toggle: false
@@ -145,6 +117,34 @@ views:
       #   show_header_toggle: false
       #   entities:
       #     - light.lights_all
+      - type: custom:tiles-card
+        card_settings:
+          columns: 1
+          row_height: 45px
+          padding: 10px
+        global_settings:
+          align: 'center middle'
+          orientation: horizontal
+          label:
+            color:
+              value: white
+          label_sec:
+            color:
+              value: white
+          icon:
+            color:
+              value: white
+        entities:
+          - entity: light.lights_all
+            label: Alle Lichter
+            row: 1
+            column: 1
+            background:
+              value_on: '#03A9F4'
+              value_off: '#999999'
+            # icon: 
+            #     value_on: mdi:lightbulb-on 
+            #     value_off: mdi:lightbulb 
       - type: 'custom:compact-custom-header'
         main_config: true
         menu: show
