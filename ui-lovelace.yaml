@@ -47,6 +47,21 @@ x-vacuum-buttons: &vacuum-buttons
   color_off: rgb(68, 115, 158)
   entity: vacuum.xiaomi_vacuum_cleaner
   size: 25%
+
+## buttons_general
+x-buttons_general: &buttons_general
+  global_settings:
+    align: 'center middle'
+    orientation: horizontal
+    label:
+      color:
+        value: white
+    label_sec:
+      color:
+        value: white
+    icon:
+      color:
+        value: white
 # -----------------------------
 
 # -----------------------------
@@ -112,28 +127,12 @@ views:
         show_header_toggle: false
         entities:
           - light.gateway_light_7811dcb258d1
-      # - type: entities
-      #   #title: Licht
-      #   show_header_toggle: false
-      #   entities:
-      #     - light.lights_all
       - type: custom:tiles-card
         card_settings:
           columns: 1
           row_height: 45px
           padding: 10px
-        global_settings:
-          align: 'center middle'
-          orientation: horizontal
-          label:
-            color:
-              value: white
-          label_sec:
-            color:
-              value: white
-          icon:
-            color:
-              value: white
+        <<: *buttons_general
         entities:
           - entity: light.lights_all
             label: Alle Lichter
@@ -142,9 +141,6 @@ views:
             background:
               value_on: '#03A9F4'
               value_off: '#999999'
-            # icon: 
-            #     value_on: mdi:lightbulb-on 
-            #     value_off: mdi:lightbulb 
       - type: 'custom:compact-custom-header'
         main_config: true
         menu: show
@@ -161,17 +157,22 @@ views:
     id: radiator
     icon: mdi:radiator
     cards:
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - switch.radiator_on_off
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Automatisierung
-            items:
-              - input_boolean.automation_radiator
-              - automation.heizung_abwesenheitsschaltung
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: custom:tiles-card
+            card_settings:
+              columns: 1
+              row_height: 45px
+              padding: 10px
+            <<: *buttons_general
+            entities:
+              - entity: switch.radiator_on_off
+                label: Heizung
+                row: 1
+                column: 1
+                background:
+                  value_on: '#03A9F4'
+                  value_off: '#999999'
       - type: entities
         #title: Bad
         show_header_toggle: false
@@ -248,6 +249,12 @@ views:
         entities:
           - sensor.temperature_158d0002239fb5
           - sensor.humidity_158d0002239fb5
+      - type: entities
+        #title: Automatisierung
+        show_header_toggle: false
+        entities: 
+          - input_boolean.automation_radiator
+          - automation.heizung_abwesenheitsschaltung
       - type: 'custom:compact-custom-header'
 
 #### Staubsauger #####
@@ -309,7 +316,6 @@ views:
                   type: section
                   label: Automatisierung
                 items:
-              #- automation.xiaomi_staubsauger_automatisch_starten
                   - automation.xiaomi_staubsauger_abwesenheit
                   - automation.xiaomi_staubsauger_taglich_saugen
               - type: custom:fold-entity-row
@@ -367,7 +373,7 @@ views:
     icon: mdi:music-box-outline
     cards:
       - type: entities
-        #title: Sonos Einstellungen
+        #title: Sonos Schlafzimmer
         show_header_toggle: false
         entities:
           - type: custom:mini-media-player
@@ -382,13 +388,12 @@ views:
                 - entity_id: media_player.bad
                   name: Sonos Bad
       - type: conditional
-        #title: Sonos
         conditions:
           - entity: sensor.sonos_grouped
             state: "off"
         card:
           type: entities
-          #title: Sonos MediaPlayer
+          #title: Sonos Bad
           entities:
             - type: custom:mini-media-player
               entity: media_player.bad
@@ -451,27 +456,6 @@ views:
               - script.1538068809592
               - script.1538072504227
               - script.1538057479069
-      # - type: horizontal-stack
-        # cards:
-          # - type: "custom:button-card"
-            # entity: script.1538068809592
-            # icon: mdi:television
-            # #name: Fernsehen
-            # #size: 20%
-          # - type: "custom:button-card"
-            # entity: script.1538072504227
-            # icon: mdi:music
-            # #name: Musik
-            # #size: 20%
-          # - type: "custom:button-card"
-            # entity: script.1538057479069
-            # icon: mdi:power
-            # #name: "off"
-            # #size: 20%
-          # - type: "custom:button-card"
-            # color_type: blank-card          
-          # - type: "custom:button-card"
-            # color_type: blank-card
       - type: 'custom:compact-custom-header'
 
 ##### Steckdosen #####
@@ -580,13 +564,11 @@ views:
             - type: custom:group-card
               card:
                 type: entities
-                #title: Group card
                 show_header_toggle: false
               group: group.battery_status_homeatic
             - type: custom:group-card
               card:
                 type: entities
-                #title: Group card
                 show_header_toggle: false
               group: group.battery_status_xiaomi
     cards:
