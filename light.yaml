@@ -1,11 +1,3 @@
-#### yeelight ####
-- platform: yeelight
-  devices:
-    192.168.200.59:
-      name: Nachttischlampe Wolfgang
-    192.168.200.42:
-      name: Nachttischlampe Anita
-
 #### Sonoff ####
 - platform: mqtt
   name: "sonoff_office"
