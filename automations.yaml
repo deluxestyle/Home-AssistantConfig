@@ -250,8 +250,7 @@
       entity_id: counter.xiaomo_errors
     service: counter.increment
 - id: '1532176861984'
-  alias: Sonos automatisch einschalten
-  initial_state: false
+  alias: Sonos starten
   trigger:
   - entity_id: device_tracker.iphonex
     platform: state
@@ -267,6 +266,7 @@
   - alias: ''
     data: {}
     service: script.1532173931522
+  initial_state: false
 - id: '1532273712071'
   alias: Harman Kardon AVR - Quelle auswählen
   trigger:
@@ -600,3 +600,17 @@
   - data:
       entity_id: switch.radiator_on_off
     service: switch.turn_on
+- id: '1554536389566'
+  alias: Sonos stoppen
+  trigger:
+  - entity_id: device_tracker.iphonex
+    platform: state
+    to: not_hom
+  condition: []
+  action:
+  - data:
+      entity_id: media_player.schlafzimmer
+    service: media_player.turn_off
+  - data:
+      entity_id: media_player.bad
+    service: media_player.turn_off

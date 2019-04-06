@@ -402,7 +402,8 @@ views:
         #title: Sonos Einstellungen
         show_header_toggle: false
         entities:
-          - automation.sonos_automatisch_einschalten
+          - automation.sonos_starten
+          - automation.sonos_stoppen
           - type: custom:fold-entity-row
             head:
               type: section
