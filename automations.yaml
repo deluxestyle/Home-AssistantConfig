@@ -605,7 +605,7 @@
   trigger:
   - entity_id: device_tracker.iphonex
     platform: state
-    to: not_hom
+    to: not_home
   condition: []
   action:
   - data:
