@@ -42,10 +42,10 @@ x-music-player: &music-player
   
 ## vacuum_buttons
 x-vacuum-buttons: &vacuum-buttons
-  color: auto
+  #color: auto
   show_name: false
-  # color_type: card
-  color_off: rgb(68, 115, 158)
+  color_type: icon
+  color: rgb(68, 115, 158)
   entity: vacuum.xiaomi_vacuum_cleaner
   size: 25%
 
@@ -276,38 +276,34 @@ views:
               - type: "custom:button-card"
                 icon: mdi:play
                 <<: *vacuum-buttons
-                action: service
-                service:
-                  domain: vacuum
-                  action: start
-                  data:
+                tap_action:
+                  action: service
+                  service: vacuum.start
+                  service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
               - type: "custom:button-card"
                 icon: mdi:pause
                 <<: *vacuum-buttons
-                action: service
-                service:
-                  domain: vacuum
-                  action: pause
-                  data:
+                tap_action:
+                  action: service
+                  service: vacuum.pause
+                  service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
               - type: "custom:button-card"
                 icon: mdi:home
                 <<: *vacuum-buttons
-                action: service
-                service:
-                  domain: vacuum
-                  action: return_to_base
-                  data:
+                tap_action:
+                  action: service
+                  service: vacuum.return_to_base
+                  service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
               - type: "custom:button-card"
                 icon: mdi:map-marker
                 <<: *vacuum-buttons
-                action: service
-                service:
-                  domain: vacuum
-                  action: locate
-                  data:
+                tap_action:
+                  action: service
+                  service: vacuum.locate
+                  service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
           - type: entities
             show_header_toggle: false
