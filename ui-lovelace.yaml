@@ -43,6 +43,7 @@ x-music-player: &music-player
 ## vacuum_buttons
 x-vacuum-buttons: &vacuum-buttons
   color: auto
+  show_name: false
   # color_type: card
   color_off: rgb(68, 115, 158)
   entity: vacuum.xiaomi_vacuum_cleaner
