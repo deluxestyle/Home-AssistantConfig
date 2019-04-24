@@ -419,7 +419,7 @@
       params: sensor_dirty_time
     service: vacuum.send_command
 '1547995832032':
-  alias: Filter gereinigt
+  alias: Filter gewechselt
   sequence:
   - data:
       command: reset_consumable
@@ -427,7 +427,7 @@
       params: filter_work_time
     service: vacuum.send_command
 '1547995869377':
-  alias: Seitenbürste gereinigt
+  alias: Seitenbürste gewechselt
   sequence:
   - data:
       command: reset_consumable
@@ -435,7 +435,7 @@
       params: side_brush_work_time
     service: vacuum.send_command
 '1547995909810':
-  alias: Hauptbürste gereinigt
+  alias: Hauptbürste gewechselt
   sequence:
   - data:
       command: reset_consumable
