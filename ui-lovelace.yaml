@@ -277,7 +277,7 @@ views:
                 icon: mdi:play
                 <<: *vacuum-buttons
                 tap_action:
-                  action: service
+                  action: call-service
                   service: vacuum.start
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
@@ -285,7 +285,7 @@ views:
                 icon: mdi:pause
                 <<: *vacuum-buttons
                 tap_action:
-                  action: service
+                  action: call-service
                   service: vacuum.pause
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
@@ -293,7 +293,7 @@ views:
                 icon: mdi:home
                 <<: *vacuum-buttons
                 tap_action:
-                  action: service
+                  action: call-service
                   service: vacuum.return_to_base
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
@@ -301,7 +301,7 @@ views:
                 icon: mdi:map-marker
                 <<: *vacuum-buttons
                 tap_action:
-                  action: service
+                  action: call-service
                   service: vacuum.locate
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
