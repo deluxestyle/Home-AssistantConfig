@@ -7,6 +7,7 @@ https://github.com/danielperna84/hass-configurator
 """
 import os
 import sys
+import argparse
 import json
 import ssl
 import socket
@@ -57,6 +58,9 @@ PASSWORD = None
 # Limit access to the configurator by adding allowed IP addresses / networks to
 # the list, e.g ALLOWED_NETWORKS = ["192.168.0.0/24", "172.16.47.23"]
 ALLOWED_NETWORKS = []
+# Allow access to the configurator to client IP addesses which match the result
+# of DNS lookups for the specified domains.
+ALLOWED_DOMAINS = []
 # List of statically banned IP addresses, e.g. ["1.1.1.1", "2.2.2.2"]
 BANNED_IPS = []
 # Ban IPs after n failed login attempts. Restart service to reset banning.
@@ -105,7 +109,7 @@ SO.setFormatter(
     logging.Formatter('%(levelname)s:%(asctime)s:%(name)s:%(message)s'))
 LOG.addHandler(SO)
 RELEASEURL = "https://api.github.com/repos/danielperna84/hass-configurator/releases/latest"
-VERSION = "0.3.4"
+VERSION = "0.3.5"
 BASEDIR = "."
 DEV = False
 LISTENPORT = None
@@ -121,7 +125,7 @@ INDEX = Template(r"""<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <title>HASS Configurator</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.3.92/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.4.93/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <style type="text/css" media="screen">
         body {
@@ -1692,7 +1696,7 @@ INDEX = Template(r"""<!DOCTYPE html>
     </div>
     <!-- Main Editor Area -->
     <div class="row">
-        <div class="col m4 l3 hide-on-small-only">
+        <div id="hass_menu_l" class="col m4 l3 hide-on-small-only">
             <br>
             <div class="input-field col s12">
                 <select onchange="insert(this.value)">
@@ -1738,7 +1742,7 @@ INDEX = Template(r"""<!DOCTYPE html>
                 <label>Services</label>
             </div>
         </div>
-        <div class="col s12 m8 l9">
+        <div id="filename_row" class="col s12 m8 l9">
           <div class="card input-field col s12 grey lighten-4 hoverable pathtip">
               <input class="currentfile_input" value="" id="currentfile" type="text">
               <i class="material-icons" id="lint-status" onclick="show_lint_error()"></i>
@@ -1798,7 +1802,7 @@ INDEX = Template(r"""<!DOCTYPE html>
             <ul id="fbelements"></ul>
           </li>
           <div class="row col s12 shadow"></div>
-          <div class="z-depth-3 hide-on-med-and-up">
+          <div id="hass_menu_s" class="z-depth-3 hide-on-med-and-up">
             <div class="input-field col s12" style="margin-top: 30px;">
               <select onchange="insert(this.value)">
                 <option value="" disabled selected>Select trigger platform</option>
@@ -2229,6 +2233,37 @@ INDEX = Template(r"""<!DOCTYPE html>
     var global_current_filepath = null;
     var global_current_filename = null;
 
+    function toggle_hass_panels() {
+        if (document.getElementById("hass_menu_l").style.display == "none") {
+            document.getElementById("hass_menu_l").style.display = "";
+            document.getElementById("editor").classList.remove("l12");
+            document.getElementById("editor").classList.add("l9");
+            document.getElementById("filename_row").classList.remove("l12");
+            document.getElementById("filename_row").classList.add("l9");
+        }
+        else {
+            document.getElementById("hass_menu_l").style.display = "none";
+            document.getElementById("editor").classList.remove("l9");
+            document.getElementById("editor").classList.add("l12");
+            document.getElementById("filename_row").classList.remove("l9");
+            document.getElementById("filename_row").classList.add("l12");
+        }
+        if (document.getElementById("hass_menu_s").style.display == "none") {
+            document.getElementById("hass_menu_s").style.display = "";
+            document.getElementById("editor").classList.remove("l12");
+            document.getElementById("editor").classList.add("l9");
+            document.getElementById("filename_row").classList.remove("l12");
+            document.getElementById("filename_row").classList.add("l9");
+        }
+        else {
+            document.getElementById("hass_menu_s").style.display = "none";
+            document.getElementById("editor").classList.remove("l9");
+            document.getElementById("editor").classList.add("l12");
+            document.getElementById("filename_row").classList.remove("l9");
+            document.getElementById("filename_row").classList.add("l12");
+        }
+    }
+
     function got_focus_or_visibility() {
         if (global_current_filename && global_current_filepath) {
             // The globals are set, set the localStorage to those values
@@ -2350,6 +2385,7 @@ INDEX = Template(r"""<!DOCTYPE html>
             },
             minLength: 1,
         });
+        $standalone
     });
 </script>
 <script type="text/javascript">
@@ -3485,14 +3521,15 @@ def signal_handler(sig, frame):
     HTTPD.server_close()
     sys.exit(0)
 
-def load_settings(settingsfile):
+def load_settings(args):
     """Load settings from file and environment."""
     global LISTENIP, LISTENPORT, BASEPATH, SSL_CERTIFICATE, SSL_KEY, HASS_API, \
     HASS_API_PASSWORD, CREDENTIALS, ALLOWED_NETWORKS, BANNED_IPS, BANLIMIT, \
     DEV, IGNORE_PATTERN, DIRSFIRST, SESAME, VERIFY_HOSTNAME, ENFORCE_BASEPATH, \
     ENV_PREFIX, NOTIFY_SERVICE, USERNAME, PASSWORD, SESAME_TOTP_SECRET, TOTP, \
-    GIT, REPO, PORT, IGNORE_SSL, HASS_WS_API
+    GIT, REPO, PORT, IGNORE_SSL, HASS_WS_API, ALLOWED_DOMAINS
     settings = {}
+    settingsfile = args.settings
     if settingsfile:
         try:
             if os.path.isfile(settingsfile):
@@ -3500,6 +3537,8 @@ def load_settings(settingsfile):
                     settings = json.loads(fptr.read())
                     LOG.debug("Settings from file:")
                     LOG.debug(settings)
+            else:
+                LOG.warning("File not found: %s", settingsfile)
         except Exception as err:
             LOG.warning(err)
             LOG.warning("Not loading settings from file")
@@ -3521,23 +3560,41 @@ def load_settings(settingsfile):
             settings[key[len(ENV_PREFIX):]] = value
     LOG.debug("Settings after looking at environment:")
     LOG.debug(settings)
-    GIT = settings.get("GIT", GIT)
+    if args.git:
+        GIT = args.git
+    else:
+        GIT = settings.get("GIT", GIT)
     if GIT:
         try:
             # pylint: disable=redefined-outer-name
             from git import Repo as REPO
         except ImportError:
             LOG.warning("Unable to import Git module")
-    LISTENIP = settings.get("LISTENIP", LISTENIP)
-    LISTENPORT = settings.get("LISTENPORT", None)
+    if args.listen:
+        LISTENIP = args.listen
+    else:
+        LISTENIP = settings.get("LISTENIP", LISTENIP)
+    if args.port is not None:
+        PORT = args.port
+    else:
+        LISTENPORT = settings.get("LISTENPORT", None)
     PORT = settings.get("PORT", PORT)
     if LISTENPORT is not None:
         PORT = LISTENPORT
-    BASEPATH = settings.get("BASEPATH", BASEPATH)
-    ENFORCE_BASEPATH = settings.get("ENFORCE_BASEPATH", ENFORCE_BASEPATH)
+    if args.basepath:
+        BASEPATH = args.basepath
+    else:
+        BASEPATH = settings.get("BASEPATH", BASEPATH)
+    if args.enforce:
+        ENFORCE_BASEPATH = True
+    else:
+        ENFORCE_BASEPATH = settings.get("ENFORCE_BASEPATH", ENFORCE_BASEPATH)
     SSL_CERTIFICATE = settings.get("SSL_CERTIFICATE", SSL_CERTIFICATE)
     SSL_KEY = settings.get("SSL_KEY", SSL_KEY)
-    HASS_API = settings.get("HASS_API", HASS_API)
+    if args.standalone:
+        HASS_API = None
+    else:
+        HASS_API = settings.get("HASS_API", HASS_API)
     HASS_WS_API = settings.get("HASS_WS_API", HASS_WS_API)
     HASS_API_PASSWORD = settings.get("HASS_API_PASSWORD", HASS_API_PASSWORD)
     CREDENTIALS = settings.get("CREDENTIALS", CREDENTIALS)
@@ -3551,6 +3608,10 @@ def load_settings(settingsfile):
         except Exception:
             LOG.warning("Invalid network in ALLOWED_NETWORKS: %s", net)
             ALLOWED_NETWORKS.remove(net)
+    ALLOWED_DOMAINS = settings.get("ALLOWED_DOMAINS", ALLOWED_DOMAINS)
+    if ALLOWED_DOMAINS and not all(ALLOWED_DOMAINS):
+        LOG.warning("Invalid value for ALLOWED_DOMAINS. Using empty list.")
+        ALLOWED_DOMAINS = []
     BANNED_IPS = settings.get("BANNED_IPS", BANNED_IPS)
     if BANNED_IPS and not all(BANNED_IPS):
         LOG.warning("Invalid value for BANNED_IPS. Using empty list.")
@@ -3562,12 +3623,18 @@ def load_settings(settingsfile):
             LOG.warning("Invalid IP address in BANNED_IPS: %s", banned_ip)
             BANNED_IPS.remove(banned_ip)
     BANLIMIT = settings.get("BANLIMIT", BANLIMIT)
-    DEV = settings.get("DEV", DEV)
+    if args.dev:
+        DEV = True
+    else:
+        DEV = settings.get("DEV", DEV)
     IGNORE_PATTERN = settings.get("IGNORE_PATTERN", IGNORE_PATTERN)
     if IGNORE_PATTERN and not all(IGNORE_PATTERN):
         LOG.warning("Invalid value for IGNORE_PATTERN. Using empty list.")
         IGNORE_PATTERN = []
-    DIRSFIRST = settings.get("DIRSFIRST", DIRSFIRST)
+    if args.dirsfirst:
+        DIRSFIRST = args.dirsfirst
+    else:
+        DIRSFIRST = settings.get("DIRSFIRST", DIRSFIRST)
     SESAME = settings.get("SESAME", SESAME)
     SESAME_TOTP_SECRET = settings.get("SESAME_TOTP_SECRET", SESAME_TOTP_SECRET)
     VERIFY_HOSTNAME = settings.get("VERIFY_HOSTNAME", VERIFY_HOSTNAME)
@@ -3576,9 +3643,13 @@ def load_settings(settingsfile):
     if IGNORE_SSL:
         # pylint: disable=protected-access
         ssl._create_default_https_context = ssl._create_unverified_context
-    USERNAME = settings.get("USERNAME", USERNAME)
-    PASSWORD = settings.get("PASSWORD", PASSWORD)
-    PASSWORD = str(PASSWORD) if PASSWORD else None
+    if args.username and args.password:
+        USERNAME = args.username
+        PASSWORD = args.password
+    else:
+        USERNAME = settings.get("USERNAME", USERNAME)
+        PASSWORD = settings.get("PASSWORD", PASSWORD)
+        PASSWORD = str(PASSWORD) if PASSWORD else None
     if CREDENTIALS and (USERNAME is None or PASSWORD is None):
         USERNAME = CREDENTIALS.split(":")[0]
         PASSWORD = ":".join(CREDENTIALS.split(":")[1:])
@@ -3591,7 +3662,7 @@ def load_settings(settingsfile):
         except ImportError:
             LOG.warning("Unable to import pyotp module")
         except Exception as err:
-            LOG.warning("Unable to create TOTP object: %s" % err)
+            LOG.warning("Unable to create TOTP object: %s", err)
 
 def is_jwt(token):
     """Perform basic check if token is a JWT token."""
@@ -3682,7 +3753,8 @@ def get_html():
     """Load the HTML from file in dev-mode, otherwise embedded."""
     if DEV:
         try:
-            with open("dev.html") as fptr:
+            with open(os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                                   "dev.html")) as fptr:
                 html = Template(fptr.read())
                 return html
         except Exception as err:
@@ -3697,20 +3769,20 @@ def password_problems(password, name="UNKNOWN"):
     if password is None:
         return problems
     if len(password) < 8:
-        LOG.warning("Password %s is too short" % name)
+        LOG.warning("Password %s is too short", name)
         problems += 1
     if password.isalpha():
-        LOG.warning("Password %s does not contain digits" % name)
+        LOG.warning("Password %s does not contain digits", name)
         problems += 2
     if password.isdigit():
-        LOG.warning("Password %s does not contain alphabetic characters" % name)
+        LOG.warning("Password %s does not contain alphabetic characters", name)
         problems += 4
     quota = len(set(password)) / len(password)
     exp = len(password) ** len(set(password))
     score = exp / quota / 8
     if score < 65536:
-        LOG.warning("Password %s does not contain enough unique characters (%i)" % (
-            name, len(set(password))))
+        LOG.warning("Password %s does not contain enough unique characters (%i)",
+                    name, len(set(password)))
         problems += 8
     return problems
 
@@ -3727,6 +3799,18 @@ def check_access(clientip):
         if ipobject in ipaddress.ip_network(net):
             return True
     LOG.warning("Client IP not within allowed networks.")
+    if ALLOWED_DOMAINS:
+        for domain in ALLOWED_DOMAINS:
+            try:
+                domain_data = socket.getaddrinfo(domain, None)
+            except Exception as err:
+                LOG.warning("Unable to lookup domain data: %s", err)
+                continue
+            for res in domain_data:
+                if res[0] in [socket.AF_INET, socket.AF_INET6]:
+                    if res[4][0] == clientip:
+                        return True
+        LOG.warning("Client IP not within allowed domains.")
     BANNED_IPS.append(clientip)
     return False
 
@@ -3741,7 +3825,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     """Request handler."""
     # pylint: disable=redefined-builtin
     def log_message(self, format, *args):
-        LOG.info("%s - %s" % (self.client_address[0], format % args))
+        LOG.info("%s - %s", self.client_address[0], format % args)
 
     # pylint: disable=invalid-name
     def do_BLOCK(self, status=420, reason="Policy not fulfilled"):
@@ -3884,7 +3968,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                                 for branch in repo.branches:
                                     branches.append(branch.name)
                             except Exception as err:
-                                LOG.debug("Exception (no repo): %s" % str(err))
+                                LOG.debug("Exception (no repo): %s", str(err))
                         dircontent = get_dircontent(dirpath.decode('utf-8'), repo)
                         filedata = {
                             'content': dircontent,
@@ -3979,9 +4063,6 @@ class RequestHandler(BaseHTTPRequestHandler):
                 req = urllib.request.Request(
                     "%sservices/homeassistant/check_config" % HASS_API,
                     headers=headers, method='POST')
-                # with urllib.request.urlopen(req) as response:
-                #     print(json.loads(response.read().decode('utf-8')))
-                #     res['service'] = "called successfully"
             except Exception as err:
                 LOG.warning(err)
                 res['restart'] = str(err)
@@ -4146,6 +4227,9 @@ class RequestHandler(BaseHTTPRequestHandler):
                 )
             if HASS_WS_API:
                 ws_api = HASS_WS_API
+            standalone = ""
+            if not HASS_API:
+                standalone = "toggle_hass_panels();"
             html = get_html().safe_substitute(
                 services=services,
                 events=events,
@@ -4161,7 +4245,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                     'https' if SSL_CERTIFICATE else 'http', LISTENIP, PORT),
                 hass_api_address="%s" % (HASS_API, ),
                 hass_ws_address=ws_api,
-                api_password=HASS_API_PASSWORD if HASS_API_PASSWORD else "")
+                api_password=HASS_API_PASSWORD if HASS_API_PASSWORD else "",
+                standalone=standalone)
             self.wfile.write(bytes(html, "utf8"))
             return
         else:
@@ -4438,7 +4523,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                     except Exception as err:
                         response['message'] = "Not a git repository: %s" % (str(err))
-                        LOG.warning("Exception (no repo): %s" % str(err))
+                        LOG.warning("Exception (no repo): %s", str(err))
             else:
                 response['message'] = "Missing path"
         elif req.path.endswith('/api/checkout'):
@@ -4475,7 +4560,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                     except Exception as err:
                         response['message'] = "Not a git repository: %s" % (str(err))
-                        LOG.warning("Exception (no repo): %s" % str(err))
+                        LOG.warning("Exception (no repo): %s", str(err))
             else:
                 response['message'] = "Missing path or branch"
         elif req.path.endswith('/api/newbranch'):
@@ -4511,7 +4596,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                     except Exception as err:
                         response['message'] = "Not a git repository: %s" % (str(err))
-                        LOG.warning("Exception (no repo): %s" % str(err))
+                        LOG.warning("Exception (no repo): %s", str(err))
             else:
                 response['message'] = "Missing path or branch"
         elif req.path.endswith('/api/init'):
@@ -4543,7 +4628,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                     except Exception as err:
                         response['message'] = "Not a git repository: %s" % (str(err))
-                        LOG.warning("Exception (no repo): %s" % str(err))
+                        LOG.warning("Exception (no repo): %s", str(err))
             else:
                 response['message'] = "Missing path or branch"
         elif req.path.endswith('/api/push'):
@@ -4585,7 +4670,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                     except Exception as err:
                         response['message'] = "Not a git repository: %s" % (str(err))
-                        LOG.warning("Exception (no repo): %s" % str(err))
+                        LOG.warning("Exception (no repo): %s", str(err))
             else:
                 response['message'] = "Missing path or branch"
         elif req.path.endswith('/api/stash'):
@@ -4619,7 +4704,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                     except Exception as err:
                         response['message'] = "Not a git repository: %s" % (str(err))
-                        LOG.warning("Exception (no repo): %s" % str(err))
+                        LOG.warning("Exception (no repo): %s", str(err))
             else:
                 response['message'] = "Missing path or branch"
         elif req.path.endswith('/api/newfolder'):
@@ -4806,7 +4891,7 @@ class AuthHandler(RequestHandler):
             if BANLIMIT:
                 bancounter = FAIL2BAN_IPS.get(self.client_address[0], 1)
                 if bancounter >= BANLIMIT:
-                    LOG.warning("Blocking access from %s" % self.client_address[0])
+                    LOG.warning("Blocking access from %s", self.client_address[0])
                     self.do_BLOCK()
                     return
                 FAIL2BAN_IPS[self.client_address[0]] = bancounter + 1
@@ -4838,7 +4923,7 @@ class AuthHandler(RequestHandler):
             if BANLIMIT:
                 bancounter = FAIL2BAN_IPS.get(self.client_address[0], 1)
                 if bancounter >= BANLIMIT:
-                    LOG.warning("Blocking access from %s" % self.client_address[0])
+                    LOG.warning("Blocking access from %s", self.client_address[0])
                     self.do_BLOCK()
                     return
                 FAIL2BAN_IPS[self.client_address[0]] = bancounter + 1
@@ -4877,21 +4962,66 @@ def notify(title="HASS Configurator",
         "%sservices/%s" % (HASS_API, NOTIFY_SERVICE.replace('.', '/')),
         data=bytes(json.dumps(data).encode('utf-8')),
         headers=headers, method='POST')
-    LOG.info("%s" % data)
+    LOG.info("%s", data)
     try:
         with urllib.request.urlopen(req) as response:
             message = response.read().decode('utf-8')
             LOG.debug(message)
     except Exception as err:
-        LOG.warning("Exception while creating notification: %s" % err)
+        LOG.warning("Exception while creating notification: %s", err)
 
-def main(args):
+def main():
     """Main function, duh!"""
     global HTTPD
-    if args:
-        load_settings(args[0])
-    else:
-        load_settings(None)
+    signal.signal(signal.SIGINT, signal_handler)
+    parser = argparse.ArgumentParser(description="Visit " \
+    "https://github.com/danielperna84/hass-configurator for more details " \
+    "about the availble options.")
+    parser.add_argument(
+        'settings', nargs='?',
+        help="Path to file with persistent settings.")
+    parser.add_argument(
+        '--listen', '-l', nargs='?',
+        help="The IP address the service is listening on. Default: 0.0.0.0")
+    parser.add_argument(
+        '--port', '-p', nargs='?', type=int,
+        help="The port the service is listening on. " \
+        "0 allocates a dynamic port. Default: 3218")
+    parser.add_argument(
+        '--allowed_networks', '-a', nargs='?',
+        help="Comma-separated list of allowed networks / IP addresses " \
+        "from which access is allowed. Eg. 127.0.0.1,192.168.0.0/16. " \
+        "By default access is allowed from anywhere.")
+    parser.add_argument(
+        '--username', '-U', nargs='?',
+        help="Username required for access.")
+    parser.add_argument(
+        '--password', '-P', nargs='?',
+        help="Password required for access.")
+    parser.add_argument(
+        '--sesame', '-S', nargs='?',
+        help="SESAME token for whitelisting client IPs by accessing " \
+        "a scret URL: http://1.2.3.4:3218/secret_sesame_token")
+    parser.add_argument(
+        '--basepath', '-b', nargs='?',
+        help="Path to initially serve files from")
+    parser.add_argument(
+        '--enforce', '-e', action='store_true',
+        help="Lock the configurator into the basepath.")
+    parser.add_argument(
+        '--standalone', '-s', action='store_true',
+        help="Don't fetch data from HASS_API.")
+    parser.add_argument(
+        '--dirsfirst', '-d', action='store_true',
+        help="Display directories first.")
+    parser.add_argument(
+        '--git', '-g', action='store_true',
+        help="Enable GIT support.")
+    parser.add_argument(
+        '--dev', '-D', action='store_true',
+        help="Enable Dev-Mode (serve dev.html instead of embedded HTML).")
+    args = parser.parse_args()
+    load_settings(args)
     LOG.info("Starting server")
 
     try:
@@ -4931,7 +5061,7 @@ def main(args):
             }
             notify(**data)
     except Exception as err:
-        LOG.warning("Exception while checking passwords: %s" % err)
+        LOG.warning("Exception while checking passwords: %s", err)
 
     custom_server = SimpleServer
     if ':' in LISTENIP:
@@ -4947,13 +5077,12 @@ def main(args):
                                        certfile=SSL_CERTIFICATE,
                                        keyfile=SSL_KEY,
                                        server_side=True)
-    LOG.info('Listening on: %s://%s:%i' % ('https' if SSL_CERTIFICATE else 'http',
-                                           LISTENIP,
-                                           PORT))
+    LOG.info('Listening on: %s://%s:%i',
+             'https' if SSL_CERTIFICATE else 'http',
+             HTTPD.server_address[0], HTTPD.server_address[1])
     if BASEPATH:
         os.chdir(BASEPATH)
     HTTPD.serve_forever()
 
 if __name__ == "__main__":
-    signal.signal(signal.SIGINT, signal_handler)
-    main(sys.argv[1:])
+    main()
