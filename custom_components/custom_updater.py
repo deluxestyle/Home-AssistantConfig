@@ -15,7 +15,7 @@ import homeassistant.helpers.config_validation as cv
 from homeassistant.components.http import HomeAssistantView
 from homeassistant.helpers.event import async_track_time_interval
 
-VERSION = '5.0.0'
+VERSION = '4.2.19'
 
 _LOGGER = logging.getLogger(__name__)
 
