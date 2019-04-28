@@ -198,14 +198,6 @@ remote:
     name: harmony_hub
     host: 192.168.200.55
 
-# custom_updater:
-#   track:
-#     - cards
-#     - components
-#   card_urls:
-#     - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
-#     - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
-
 bmw_connected_drive:
  name:
    username: !secret bmw_user
@@ -238,6 +230,14 @@ yeelight:
       name: Nachttischlampe Wolfgang
     192.168.200.42:
       name: Nachttischlampe Anita
+
+# custom_updater:
+#   track:
+#     - cards
+#     - components
+#   card_urls:
+#     - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+#     - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
 
 # Custom Components
 # fritzbox_guestwifi:
