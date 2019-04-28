@@ -584,13 +584,13 @@ views:
         show_header_toggle: false
         entities:
           - sensor.fritz_netmonitor
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Gastzugang
-            items:
-              - script.1543087176551
-              - script.1543087223684
+          # - type: custom:fold-entity-row
+          #   head:
+          #     type: section
+          #     label: Gastzugang
+          #   items:
+          #     - script.1543087176551
+          #     - script.1543087223684
       - type: entities
         show_header_toggle: false
         entities:
@@ -609,12 +609,12 @@ views:
             items:
               - input_number.battery_alert_homatic
               - input_number.battery_alert_xiaomi
-      - type: custom:tracker-card
-        title: " "
-        available_text: Verfügbar
-        current_text: Aktuell
-        update_all_text: "alle aktualisieren"
-        trackers:
-          - sensor.custom_card_tracker
-          - sensor.custom_component_tracker
+      # - type: custom:tracker-card
+      #   title: " "
+      #   available_text: Verfügbar
+      #   current_text: Aktuell
+      #   update_all_text: "alle aktualisieren"
+      #   trackers:
+      #     - sensor.custom_card_tracker
+      #     - sensor.custom_component_tracker
       - type: 'custom:compact-custom-header'
