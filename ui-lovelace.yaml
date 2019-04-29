@@ -1,29 +1,29 @@
 resources:
-  - url: /local/github/thomasloven/card-tools.js
+  - url: /customcards/github/thomasloven/card-tools.js
     type: js
-  - url: /local/mini-media-player-bundle.js
+  - url: /customcards/mini-media-player-bundle.js
     type: module
-  - url: /local/github/custom-cards/tracker-card.js?track=true
+  - url: /customcards/github/custom-cards/tracker-card.js?track=true
     type: module
-  - url: /local/github/thomasloven/fold-entity-row.js
+  - url: /customcards/github/thomasloven/fold-entity-row.js
     type: js
-  - url: /local/github/thomasloven/time-input-row.js
+  - url: /customcards/github/thomasloven/time-input-row.js
     type: js
-  - url: /local/github/maykar/compact-custom-header.js?track=true
+  - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
-  - url: /local/vertical-stack-in-card.js
+  - url: /customcards/vertical-stack-in-card.js
     type: js
-  - url: /local/github/custom-cards/button-card.js?track=true
+  - url: /customcards/github/custom-cards/button-card.js?track=true
     type: module
-  - url: /local/github/nervetattoo/simple-thermostat.js?track=true
+  - url: /customcards/github/nervetattoo/simple-thermostat.js?track=true
     type: module
-  - url: /local/group-card.js?track=true
+  - url: /customcards/group-card.js?track=true
     type: js  
-  - url: /local/github/thomasloven/popup-card.js?track=true
+  - url: /customcards/github/thomasloven/popup-card.js?track=true
     type: js
-  - url: /local/tiles-card.js?track=true
+  - url: /customcards/tiles-card.js?track=true
     type: js
-  - url: /local/github/maykar/lovelace-swipe-navigation.js?track=true
+  - url: /customcards/github/maykar/lovelace-swipe-navigation.js?track=true
     type: js
 # -----------------------------
 
