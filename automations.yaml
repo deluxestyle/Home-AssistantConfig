@@ -13,17 +13,10 @@
   - entity_id: sensor.presence
     platform: state
     to: not_home
-  - entity_id: calendar.privat_putzfrau
-    from: 'on'
-    platform: state
-    to: 'off'
   condition:
   - condition: state
     entity_id: calendar.privat_putzfrau
     state: 'off'
-  - condition: state
-    entity_id: sensor.presence
-    state: not_home
   action:
   - data:
       entity_id: light.lights_all
