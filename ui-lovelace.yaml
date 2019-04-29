@@ -23,6 +23,8 @@ resources:
     type: js
   - url: /local/tiles-card.js?track=true
     type: js
+  - url: /local/github/maykar/lovelace-swipe-navigation.js?track=true
+    type: js
 # -----------------------------
 
 # -----------------------------
