@@ -74,10 +74,10 @@ panel_iframe:
     title: Statistik
     url: !secret grafana_url
     icon: mdi:elevation-rise
-  configurator:
-    title: Configurator
-    icon: mdi:wrench
-    url: !secret configurator_url
+  # configurator:
+  #   title: Configurator
+  #   icon: mdi:wrench
+  #   url: !secret configurator_url
 
 # group: !include groups.yaml
 
