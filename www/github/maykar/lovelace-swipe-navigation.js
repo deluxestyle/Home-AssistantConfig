@@ -1,42 +1,57 @@
 // CONFIG START //////////////////////////////////////////////////////////////
 
 let swipe_amount = 15; // Minimum percent of screen needed to swipe, 1-100.
+let skip_tabs = []; // List of tabs to skip over. e.g., [1,3,5].
 let wrap = true; // Wrap around first and last tabs. Set as false to disable.
+let prevent_default = false // Prevent browsers swipe action for back/forward.
 
 // CONFIG END ////////////////////////////////////////////////////////////////
 
-document.addEventListener("touchstart", handleTouchStart, false);
-document.addEventListener("touchmove", handleTouchMove, false);
-document.addEventListener("touchend", handleTouchEnd, false);
-
-let activeTab, xDown, yDown, xDiff, yDiff, tabs, firstTab, lastTab;
-const tabContainer = getTabContainer();
 swipe_amount /= Math.pow(10, 2);
+const appLayout = findAppLayout();
+const tabContainer = appLayout.querySelector("paper-tabs");
+let xDown, yDown, xDiff, yDiff, activeTab, firstTab, lastTab;
+let tabs = Array.from(tabContainer.querySelectorAll("paper-tab"));
 
-function handleTouchStart(evt) {
-  xDown = evt.touches[0].clientX;
-  yDown = evt.touches[0].clientY;
-  xDiff = null;
-  yDiff = null;
-  getTabs();
+appLayout.addEventListener("touchstart", handleTouchStart, {passive: true});
+appLayout.addEventListener("touchmove", handleTouchMove, {passive: false});
+appLayout.addEventListener("touchend", handleTouchEnd, {passive: true});
+
+function handleTouchStart(event) {
+  for (let element of event.path) {
+    if (element.nodeName == "SWIPE-CARD") return;
+    else if (element.nodeName == "HUI-VIEW") break;
+  }
+  xDown = event.touches[0].clientX;
+  yDown = event.touches[0].clientY;
+  if (!lastTab) filterTabs();
+  activeTab = tabs.indexOf(tabContainer.querySelector(".iron-selected"));
+}
+
+function handleTouchMove(event) {
+  if (xDown && yDown) {
+    xDiff = xDown - event.touches[0].clientX;
+    yDiff = yDown - event.touches[0].clientY;
+    if (Math.abs(xDiff) > Math.abs(yDiff) && prevent_default) {
+      event.preventDefault();
+    }
+  }
 }
 
 function handleTouchEnd() {
+  if (activeTab < 0 || Math.abs(xDiff) < Math.abs(yDiff)) {
+    xDown = yDown = xDiff = yDiff = null;
+    return;
+  }
   if (xDiff > Math.abs(screen.width * swipe_amount)) {
     activeTab == tabs.length - 1 ? click(firstTab) : click(activeTab + 1);
   } else if (xDiff < -Math.abs(screen.width * swipe_amount)) {
     activeTab == 0 ? click(lastTab) : click(activeTab - 1);
   }
+  xDown = yDown = xDiff = yDiff = null;
 }
 
-function handleTouchMove(evt) {
-  if (xDown && yDown) {
-    xDiff = xDown - evt.touches[0].clientX;
-    yDiff = yDown - evt.touches[0].clientY;
-  }
-}
-
-function getTabContainer() {
+function findAppLayout() {
   try {
     let panelResolver = document
       .querySelector("home-assistant")
@@ -46,36 +61,36 @@ function getTabContainer() {
       return panelResolver.shadowRoot
         .querySelector("ha-panel-lovelace")
         .shadowRoot.querySelector("hui-root")
-        .shadowRoot.querySelector("ha-app-layout paper-tabs");
+        .shadowRoot.querySelector("ha-app-layout");
     } else {
       return document
         .querySelector("home-assistant")
         .shadowRoot.querySelector("home-assistant-main")
         .shadowRoot.querySelector("ha-panel-lovelace")
         .shadowRoot.querySelector("hui-root")
-        .shadowRoot.querySelector("ha-app-layout paper-tabs");
+        .shadowRoot.querySelector("ha-app-layout");
     }
   } catch (e) {
-    console.log("Can't find 'paper-tabs' element.");
+    console.log("Can't find 'ha-app-layout'.");
   }
 }
 
-function getTabs() {
-  if (!tabs) {
-    tabs = Array.from(
-      tabContainer.querySelectorAll("paper-tab:not([style*='display: none'])")
+function filterTabs() {
+  tabs = tabs.filter(element => {
+    return (
+      !skip_tabs.includes(tabs.indexOf(element)) &&
+      getComputedStyle(element, null).display != "none"
     );
-    firstTab = wrap ? 0 : null;
-    lastTab = wrap ? tabs.length - 1 : null;
-  }
-  activeTab = tabs.indexOf(tabContainer.querySelector(".iron-selected"));
+  });
+  firstTab = wrap ? 0 : null;
+  lastTab = wrap ? tabs.length - 1 : null;
 }
 
-function simulateClick(elem) {
-  const evt = new MouseEvent("click", { bubbles: false, cancelable: true });
-  const canceled = !elem.dispatchEvent(evt);
+function simulateClick(element) {
+  const event = new MouseEvent("click", { bubbles: false, cancelable: true });
+  const canceled = !element.dispatchEvent(event);
 }
 
-function click(tabIndex) {
-  simulateClick(tabs[tabIndex]);
+function click(index) {
+  simulateClick(tabs[index]);
 }
