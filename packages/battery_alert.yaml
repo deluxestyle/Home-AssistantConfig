@@ -72,6 +72,16 @@ input_number:
 ## Automation
 ################################################
 automation:
+- alias: reset_batterie_message
+  initial_state: 'on'
+  trigger:
+  - at: 00:00
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: input_boolean.low_batteries
+    service: input_boolean.turn_off
 - alias: battery_persistent_notification
   initial_state: 'on'
   trigger:
