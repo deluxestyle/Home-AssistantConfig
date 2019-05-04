@@ -597,8 +597,6 @@ views:
         show_header_toggle: false
         entities:
           - sensor.online_time
-          # - sensor.ssl_certificate_expiry
-          - sensor.ccu_servicemessages
       - type: entities
         show_header_toggle: false
         entities:

@@ -305,16 +305,6 @@
   - data:
       entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.return_to_base
-- id: '1537870591748'
-  alias: Benachrichtigung - HomeMatic CCU Servicemessage
-  trigger:
-  - entity_id: sensor.ccu_servicemessages
-    platform: state
-  condition: []
-  action:
-  - data:
-      message: 'CCU Servicemeldung: {{ states.sensor.ccu_servicemessages.state }}'
-    service: notify.ios_iphonex
 - id: '1538505553055'
   alias: 'Heizung: Badfenster offen'
   trigger:
