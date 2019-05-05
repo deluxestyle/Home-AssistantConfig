@@ -153,3 +153,5 @@
     - 'date'
     - 'date_time'
     - 'time_date'
+
+- platform: cpuspeed
