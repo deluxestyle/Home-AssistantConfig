@@ -413,3 +413,21 @@ sensor.battery_sensor_wall_switch:
   icon: mdi:battery-50
 sensor.battery_sensor_wall_switch_double:
   icon: mdi:battery-50
+binary_sensor.x2_sdrive18i_door_lock_state:
+  friendly_name: X2 - Schlösser
+binary_sensor.x2_sdrive18i_windows:
+  friendly_name: X2 - Fenster
+binary_sensor.x2_sdrive18i_lids:
+  friendly_name: X2 - Alle Türen
+sensor.x2_sdrive18i_mileage:
+  friendly_name: X2 - Kilometerstand
+sensor.x2_sdrive18i_remaining_fuel:
+  friendly_name: X2 - Tankfüllstand
+sensor.x2_sdrive18i_remaining_range_total:
+  friendly_name: X2 - Reichweite
+binary_sensor.x2_sdrive18i_lights_parking:
+  friendly_name: X2 - Parklicht
+binary_sensor.x2_sdrive18i_condition_based_services:
+  friendly_name: X2 - Service Status
+binary_sensor.x2_sdrive18i_check_control_messages:
+  friendly_name: X2 - Check Control Meldungen

@@ -527,7 +527,6 @@ views:
             head: device_tracker.x2_sdrive18i
             items:
               - type: section
-              - binary_sensor.x2_sdrive18i_condition_based_services
               - binary_sensor.x2_sdrive18i_door_lock_state
               - binary_sensor.x2_sdrive18i_lids
               - binary_sensor.x2_sdrive18i_windows
@@ -535,6 +534,8 @@ views:
               - sensor.x2_sdrive18i_remaining_fuel
               - sensor.x2_sdrive18i_remaining_range_total
               - binary_sensor.x2_sdrive18i_lights_parking
+              - binary_sensor.x2_sdrive18i_condition_based_services
+              - binary_sensor.x2_sdrive18i_check_control_messages
           - type: custom:fold-entity-row
             head:
               type: section
