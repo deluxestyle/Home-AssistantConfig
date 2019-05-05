@@ -4,6 +4,7 @@ filter:
     - light.gateway_light_7811dcb258d1
     - light.sonoff_office
     - light.nachttischlampe_wolfgang
+    - light.nachttischlampe_anita
     - light.lights_kitchen
     - light.lights_living_room
     - climate.oeq1701003
