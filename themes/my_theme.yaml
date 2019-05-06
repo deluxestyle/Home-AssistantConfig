@@ -1,0 +1,3 @@
+my_theme:
+  background-color: '#DCDCDC'                                                     # Dark grey background
+  primary-background-color: 'var(--background-color)'                             # Background (also title background in left menu)
