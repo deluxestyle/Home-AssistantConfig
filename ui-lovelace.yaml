@@ -86,7 +86,6 @@ views:
             - light.steckdose_4
     cards:
       - type: entities
-        #title: Wohnzimmer
         show_header_toggle: false
         entities:
           - light.lights_living_room
@@ -101,7 +100,6 @@ views:
               - light.leselampe
           # - type: section
       - type: entities
-        #title: Schlafzimmer
         show_header_toggle: false
         entities:
           - light.lights_bed_room
@@ -116,17 +114,14 @@ views:
               - light.schlafzimmer
           # - type: section
       - type: entities
-        #title: Büro
         show_header_toggle: false
         entities:
           - light.sonoff_office
       - type: entities
-        #title: Küche
         show_header_toggle: false
         entities:
           - light.lights_kitchen
       - type: entities
-        #title: Flur
         show_header_toggle: false
         entities:
           - light.gateway_light_7811dcb258d1
@@ -163,7 +158,6 @@ views:
     icon: mdi:radiator
     cards:
       - type: entities
-        #title: Bad
         show_header_toggle: false
         entities:
           - climate.oeq1701003
@@ -188,7 +182,6 @@ views:
               - sensor.temperature_158d00023258bd
               - sensor.valve_bath
       - type: entities
-        #title: Wohnzimmer
         show_header_toggle: false
         entities:
           - climate.oeq1696358
@@ -203,7 +196,6 @@ views:
               - sensor.temperature_158d0001b8c998
               - sensor.valve_living_room
       - type: entities
-        #title: Schlafzimmer
         show_header_toggle: false
         entities:
           - climate.oeq1696369
@@ -218,7 +210,6 @@ views:
               - sensor.temperature_158d0001b8c96c
               - sensor.valve_bed_room
       - type: entities
-        #title: Büro
         show_header_toggle: false
         entities:
           - climate.int0000002
@@ -233,7 +224,6 @@ views:
               - sensor.oeq1667238_temperature
               - sensor.valve_office
       - type: entities
-        #title: Küche
         show_header_toggle: false
         entities:
           - sensor.temperature_158d0002239fb5
@@ -255,7 +245,6 @@ views:
                   value_on: '#03A9F4'
                   value_off: '#999999'
       - type: entities
-        #title: Automatisierung
         show_header_toggle: false
         entities: 
           - input_boolean.automation_radiator
@@ -374,7 +363,6 @@ views:
     icon: mdi:music-box-outline
     cards:
       - type: entities
-        #title: Sonos Schlafzimmer
         show_header_toggle: false
         entities:
           - type: custom:mini-media-player
@@ -394,13 +382,11 @@ views:
             state: "off"
         card:
           type: entities
-          #title: Sonos Bad
           entities:
             - type: custom:mini-media-player
               entity: media_player.bad
               <<: *music-player
       - type: entities
-        #title: Sonos Einstellungen
         show_header_toggle: false
         entities:
           - automation.sonos_starten
@@ -422,7 +408,6 @@ views:
       - type: custom:vertical-stack-in-card
         cards:
           - type: entities
-            #title: Wohnzimmer Multimedia
             show_header_toggle: false
             entities:
               - light.steckdose
@@ -493,12 +478,6 @@ views:
           show_name: false
         - type: "custom:button-card"
           color_type: blank-card
-      # - type: entities
-      #   #title: Steckdosen
-      #   show_header_toggle: false
-      #   entities:
-      #     - light.steckdose
-      #     - light.steckdose_3
       - type: 'custom:compact-custom-header'
 
 ##### Personen #####
@@ -507,7 +486,6 @@ views:
     icon: mdi:account-multiple
     cards:
       - type: entities
-        #title: Anwesenheit
         show_header_toggle: false
         entities:
           - device_tracker.iphonex
@@ -516,7 +494,6 @@ views:
           - automation.abwesenheitsschaltung
           - automation.anwesenheitsschaltung
       - type: entities
-        #title: Bewegung
         show_header_toggle: false
         entities:
           - binary_sensor.motion_sensor_158d00023e77cb
@@ -527,7 +504,6 @@ views:
           - type: section
           - automation.benachrichtigung_bewegung_erkannt
       # - type: entities
-        # #title: Überwachung
         # show_header_toggle: false
         # entities:
           # - input_boolean.camera_cctv
@@ -550,7 +526,6 @@ views:
     icon: mdi:car-hatchback
     cards:
       - type: entities
-        #title: "BMW X2 Übersicht"
         show_header_toggle: false
         entities:
           - type: custom:fold-entity-row
