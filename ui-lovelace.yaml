@@ -65,11 +65,6 @@ x-buttons_general: &buttons_general
     icon:
       color:
         value: white
-
-## blank button
-x-blank-button: &blank_button
-- type: "custom:button-card"
-  color_type: blank-card
 # -----------------------------
 
 # -----------------------------
