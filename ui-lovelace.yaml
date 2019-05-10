@@ -419,45 +419,59 @@ views:
     id: entertainment
     icon: mdi:arrow-right-drop-circle-outline
     cards:
-      - type: entities
-        #title: Wohnzimmer Multimedia
-        show_header_toggle: false
-        entities:
-          - light.steckdose
-          - type: section
-          - sensor.remote_state
-          # - type: custom:fold-entity-row
-            # head: sensor.remote_state
-            # items:
-              # - switch.samsung_tv
-              # - switch.telekom_mr_401
-              # # - switch.avr_151
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: AVR 151
-            items:
-              - type: custom:mini-media-player
-                entity: media_player.harman_kardon_avr
-                hide:
-                    power: true
-                    controls: true
-                    source: true
-                    icon: true
-                    volume: false
-                volume_stateless: true
-                group: true
-                artwork: none
-                more_info: false
-              - input_select.avr_source
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Fernbedienung
-            items:
-              - script.1538068809592
-              - script.1538072504227
-              - script.1538057479069
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: entities
+            #title: Wohnzimmer Multimedia
+            show_header_toggle: false
+            entities:
+              - light.steckdose
+              - type: section
+              - sensor.remote_state
+              - type: section
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                entity: script.1538068809592
+                size: 70%
+                show_name: false
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                entity: script.1538057479069
+                size: 70%
+                show_name: false
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                entity: script.1538072504227
+                size: 70%
+                show_name: false
+              - type: "custom:button-card"
+                color_type: blank-card
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - type: custom:fold-entity-row
+                head:
+                  type: section
+                  label: AVR 151
+                items:
+                  - type: custom:mini-media-player
+                    entity: media_player.harman_kardon_avr
+                    hide:
+                        power: true
+                        controls: true
+                        source: true
+                        icon: true
+                        volume: false
+                    volume_stateless: true
+                    group: true
+                    artwork: none
+                    more_info: false
+                  - input_select.avr_source
       - type: 'custom:compact-custom-header'
 
 ##### Steckdosen #####
@@ -465,12 +479,26 @@ views:
     id: socket
     icon: mdi:power-socket-eu
     cards:
-      - type: entities
-        #title: Steckdosen
-        show_header_toggle: false
-        entities:
-          - light.steckdose
-          - light.steckdose_3
+      - type: horizontal-stack
+        cards:
+        - type: "custom:button-card"
+          color_type: blank-card
+        - type: "custom:button-card"
+          entity: light.steckdose
+          size: 50%
+          show_name: false
+        - type: "custom:button-card"
+          entity: light.steckdose_3
+          size: 50%
+          show_name: false
+        - type: "custom:button-card"
+          color_type: blank-card
+      # - type: entities
+      #   #title: Steckdosen
+      #   show_header_toggle: false
+      #   entities:
+      #     - light.steckdose
+      #     - light.steckdose_3
       - type: 'custom:compact-custom-header'
 
 ##### Personen #####
