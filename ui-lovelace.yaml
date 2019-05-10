@@ -49,7 +49,7 @@ x-vacuum-buttons: &vacuum-buttons
   color_type: icon
   color: rgb(68, 115, 158)
   entity: vacuum.xiaomi_vacuum_cleaner
-  size: 25%
+  size: 70%
 
 ## buttons_general
 x-buttons_general: &buttons_general
@@ -65,6 +65,11 @@ x-buttons_general: &buttons_general
     icon:
       color:
         value: white
+
+## blank button
+x-blank-button: &blank_button
+- type: "custom:button-card"
+  color_type: blank-card
 # -----------------------------
 
 # -----------------------------
@@ -267,6 +272,8 @@ views:
           - type: horizontal-stack
             cards:
               - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
                 icon: mdi:play
                 <<: *vacuum-buttons
                 tap_action:
@@ -274,6 +281,8 @@ views:
                   service: vacuum.start
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
+              - type: "custom:button-card"
+                color_type: blank-card
               - type: "custom:button-card"
                 icon: mdi:pause
                 <<: *vacuum-buttons
@@ -283,6 +292,8 @@ views:
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
               - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
                 icon: mdi:home
                 <<: *vacuum-buttons
                 tap_action:
@@ -291,6 +302,8 @@ views:
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
               - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
                 icon: mdi:map-marker
                 <<: *vacuum-buttons
                 tap_action:
@@ -298,6 +311,8 @@ views:
                   service: vacuum.locate
                   service_data:
                     entity_id: vacuum.xiaomi_vacuum_cleaner
+              - type: "custom:button-card"
+                color_type: blank-card
           - type: entities
             show_header_toggle: false
             entities:
@@ -410,8 +425,6 @@ views:
           - type: entities
             show_header_toggle: false
             entities:
-              - light.steckdose
-              - type: section
               - sensor.remote_state
               - type: section
           - type: horizontal-stack
@@ -432,6 +445,12 @@ views:
                 color_type: blank-card
               - type: "custom:button-card"
                 entity: script.1538072504227
+                size: 70%
+                show_name: false
+              - type: "custom:button-card"
+                color_type: blank-card
+              - type: "custom:button-card"
+                entity: light.steckdose
                 size: 70%
                 show_name: false
               - type: "custom:button-card"
