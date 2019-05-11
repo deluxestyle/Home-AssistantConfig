@@ -476,20 +476,14 @@ views:
     id: socket
     icon: mdi:power-socket-eu
     cards:
-      - type: horizontal-stack
-        cards:
-        - type: "custom:button-card"
-          color_type: blank-card
-        - type: "custom:button-card"
-          entity: light.steckdose
-          size: 50%
-          show_name: false
-        - type: "custom:button-card"
-          entity: light.steckdose_3
-          size: 50%
-          show_name: false
-        - type: "custom:button-card"
-          color_type: blank-card
+      - type: "custom:button-card"
+        entity: light.steckdose
+        size: 20%  
+        layout: icon_name 
+      - type: "custom:button-card"
+        entity: light.steckdose_3
+        size: 20%  
+        layout: icon_name   
       - type: 'custom:compact-custom-header'
 
 ##### Personen #####
