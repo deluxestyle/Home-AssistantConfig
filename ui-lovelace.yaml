@@ -461,15 +461,17 @@ views:
                   - type: custom:mini-media-player
                     entity: media_player.harman_kardon_avr
                     hide:
-                        power: true
+                        # power: true
                         controls: true
-                        source: true
-                        icon: true
-                        volume: false
+                        # source: true
+                        # icon: true
+                        # volume: false
                     volume_stateless: true
+                    source: full
                     group: true
                     artwork: none
                     more_info: false
+                    sound_mode: icon
                   - input_select.avr_source
       - type: 'custom:compact-custom-header'
 
