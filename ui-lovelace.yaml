@@ -464,14 +464,10 @@ views:
                         # power: true
                         controls: true
                         # source: true
-                        # icon: true
-                        # volume: false
                     volume_stateless: true
-                    source: full
                     group: true
                     artwork: none
                     more_info: false
-                    sound_mode: icon
                   - input_select.avr_source
       - type: 'custom:compact-custom-header'
 

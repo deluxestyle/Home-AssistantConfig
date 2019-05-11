@@ -260,7 +260,6 @@
     entity_id: device_tracker.anni
     state: not_home
   action:
-  - alias: ''
     data: {}
     service: script.1532173931522
   initial_state: false
