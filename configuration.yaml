@@ -152,7 +152,7 @@ influxdb:
   exclude:
     domains:
       - group
-      - automations
+      - automation
       - device_tracker
       - script
       - camera
