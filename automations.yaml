@@ -539,6 +539,9 @@
   - condition: state
     entity_id: vacuum.xiaomi_vacuum_cleaner
     state: docked
+  - after: 07:00
+    before: '18:00'
+    condition: time
   action:
   - data:
       data:

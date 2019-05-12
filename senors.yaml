@@ -13,6 +13,9 @@
         arg: /
       - type: disk_free
         arg: /
+      - type: load_1m 
+      - type: load_5m
+      - type: load_15m
 
 - platform: template
   sensors:
