@@ -65,6 +65,15 @@ x-buttons_general: &buttons_general
     icon:
       color:
         value: white
+
+## button card style
+x-button_style: &button_style
+  size: 20%  
+  layout: icon_name 
+  styles: 
+    name:
+    - font-size: 14px
+    - text-align: right
 # -----------------------------
 
 # -----------------------------
@@ -478,12 +487,10 @@ views:
     cards:
       - type: "custom:button-card"
         entity: light.steckdose
-        size: 20%  
-        layout: icon_name 
+        <<: *button_style
       - type: "custom:button-card"
         entity: light.steckdose_3
-        size: 20%  
-        layout: icon_name   
+        <<: *button_style
       - type: 'custom:compact-custom-header'
 
 ##### Personen #####
