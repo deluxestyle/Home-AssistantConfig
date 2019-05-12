@@ -68,7 +68,7 @@ x-buttons_general: &buttons_general
 
 ## button card style
 x-button_style: &button_style
-  size: 20%  
+  size: 15%  
   layout: icon_name 
   styles: 
     name:
