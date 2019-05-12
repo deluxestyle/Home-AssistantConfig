@@ -437,25 +437,25 @@ views:
                 color_type: blank-card
               - type: "custom:button-card"
                 entity: script.1538068809592
-                size: 70%
+                size: 60%
                 show_name: false
               - type: "custom:button-card"
                 color_type: blank-card
               - type: "custom:button-card"
                 entity: script.1538057479069
-                size: 70%
+                size: 60%
                 show_name: false
               - type: "custom:button-card"
                 color_type: blank-card
               - type: "custom:button-card"
                 entity: script.1538072504227
-                size: 70%
+                size: 60%
                 show_name: false
               - type: "custom:button-card"
                 color_type: blank-card
               - type: "custom:button-card"
                 entity: light.steckdose
-                size: 70%
+                size: 60%
                 show_name: false
               - type: "custom:button-card"
                 color_type: blank-card
