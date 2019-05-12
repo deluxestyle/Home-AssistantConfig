@@ -65,14 +65,6 @@ x-buttons_general: &buttons_general
     icon:
       color:
         value: white
-
-## button card style
-x-button_style: &button_style
-  size: 15%  
-  layout: icon_name 
-  styles: 
-    name:
-    - font-size: 14px
 # -----------------------------
 
 # -----------------------------
@@ -252,11 +244,12 @@ views:
                 background:
                   value_on: '#03A9F4'
                   value_off: '#999999'
-      - type: entities
-        show_header_toggle: false
-        entities: 
-          - input_boolean.automation_radiator
-          - automation.heizung_abwesenheitsschaltung
+          - type: entities
+            show_header_toggle: false
+            entities: 
+              - type: section
+              - input_boolean.automation_radiator
+              - automation.heizung_abwesenheitsschaltung
       - type: 'custom:compact-custom-header'
 
 #### Staubsauger #####
@@ -380,47 +373,49 @@ views:
     id: music
     icon: mdi:music-box-outline
     cards:
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - type: custom:mini-media-player
-            entity: media_player.schlafzimmer
-            <<: *music-player
-            sonos:
-              show_group_count: true
-              sync_volume: true
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.schlafzimmer
+                <<: *music-player
+                sonos:
+                  show_group_count: true
+                  sync_volume: true
+                  entities:
+                    - entity_id: media_player.schlafzimmer
+                      name: Sonos Schlafzimmer
+                    - entity_id: media_player.bad
+                      name: Sonos Bad
+          - type: conditional
+            conditions:
+              - entity: sensor.sonos_grouped
+                state: "off"
+            card:
+              type: entities
               entities:
-                - entity_id: media_player.schlafzimmer
-                  name: Sonos Schlafzimmer
-                - entity_id: media_player.bad
-                  name: Sonos Bad
-      - type: conditional
-        conditions:
-          - entity: sensor.sonos_grouped
-            state: "off"
-        card:
-          type: entities
-          entities:
-            - type: custom:mini-media-player
-              entity: media_player.bad
-              <<: *music-player
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Automatisierung
-            items:
-              - automation.sonos_starten
-              - automation.sonos_stoppen
-          - type: custom:fold-entity-row
-            head:
-              type: section
-              label: Wecker
-            items:
-              - script.1534621188695
-              - script.1534621226775
+                - type: custom:mini-media-player
+                  entity: media_player.bad
+                  <<: *music-player
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - type: custom:fold-entity-row
+                head:
+                  type: section
+                  label: Automatisierung
+                items:
+                  - automation.sonos_starten
+                  - automation.sonos_stoppen
+              - type: custom:fold-entity-row
+                head:
+                  type: section
+                  label: Wecker
+                items:
+                  - script.1534621188695
+                  - script.1534621226775
       - type: 'custom:compact-custom-header'
 
 ##### Entertainment #####
@@ -489,12 +484,12 @@ views:
     id: socket
     icon: mdi:power-socket-eu
     cards:
-      - type: "custom:button-card"
-        entity: light.steckdose
-        <<: *button_style
-      - type: "custom:button-card"
-        entity: light.steckdose_3
-        <<: *button_style
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - light.steckdose
+          - type: section
+          - light.steckdose_3
       - type: 'custom:compact-custom-header'
 
 ##### Personen #####
