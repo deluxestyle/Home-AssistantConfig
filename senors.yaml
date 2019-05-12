@@ -156,3 +156,21 @@
     - 'date'
     - 'date_time'
     - 'time_date'
+
+- platform: glances
+  host: localhost
+  version: 3
+  resources:
+    - disk_use_percent
+    - disk_use
+    - disk_free
+    - memory_use_percent
+    - memory_use
+    - memory_free
+    - processor_load
+    - process_running
+    - process_total 
+    - process_thread
+    - process_sleeping
+    - cpu_use_percent
+    - cpu_temp
