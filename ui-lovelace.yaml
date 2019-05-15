@@ -1,17 +1,17 @@
 resources:
-  - url: /customcards/github/thomasloven/card-tools.js
+  - url: /customcards/github/thomasloven/card-tools.js?track=true
     type: js
-  - url: /customcards/mini-media-player-bundle.js
+  - url: /customcards/mini-media-player-bundle.js?track=true
     type: module
   - url: /customcards/github/custom-cards/tracker-card.js?track=true
     type: module
-  - url: /customcards/github/thomasloven/fold-entity-row.js
+  - url: /customcards/github/thomasloven/fold-entity-row.js?track=true
     type: js
-  - url: /customcards/github/thomasloven/time-input-row.js
+  - url: /customcards/github/thomasloven/time-input-row.js?track=true
     type: js
   - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
-  - url: /customcards/vertical-stack-in-card.js
+  - url: /customcards/vertical-stack-in-card.js?track=true
     type: js
   - url: /customcards/github/custom-cards/button-card.js?track=true
     type: module
