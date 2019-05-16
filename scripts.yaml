@@ -264,8 +264,7 @@
 '1541264856783':
   alias: Heizung ausschalten
   sequence:
-  - alias: ''
-    data: {}
+  - data: {}
     service: script.1538502214360
   - service: script.1538143893265
   - service: script.1538143964007
