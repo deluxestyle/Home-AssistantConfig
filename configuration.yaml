@@ -172,19 +172,25 @@ influxdb:
       - persistent_notification
       - homematic
       - lock
+      - weather
     entities:
       - sun.sun
       - sensor.time
       - sensor.time_date
       - sensor.date_time
+      - sensor.date
       - weather.dark_sky
       - sensor.sonos_volume_sync
       - sensor.sonos_grouped
       - sensor.fritz_netmonitor
       - sensor.ipad_von_wolfgang_battery_state
+      - sensor.ipad_battery_state
       - sensor.iphonex_battery_state
+      - sensor.iphonex_battery_level
       - sensor.anni_battery_state
+      - sensor.anni_battery_level
       - sensor.anitas_iphone_battery_state
+      - sensor.anni_battery_level
 
 hue:
   bridges:
