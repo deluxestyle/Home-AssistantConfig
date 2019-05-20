@@ -23,8 +23,6 @@ resources:
     type: js
   - url: /customcards/tiles-card.js?track=true
     type: js
-  - url: /customcards/github/maykar/lovelace-swipe-navigation.js?track=true
-    type: js
 # -----------------------------
 
 # -----------------------------
@@ -146,6 +144,7 @@ views:
         menu: show
         notifications: show
         options: show
+        swipe: true
         exceptions:
           - conditions:
               user_agent: iPhone
