@@ -4,7 +4,7 @@
   - data:
       entity_id: media_player.bad, media_player.schlafzimmer
       master: media_player.schlafzimmer
-    service: media_player.sonos_join
+    service: sonos.join
   - data:
       entity_id: media_player.schlafzimmer
       source: Superfly FM
@@ -38,7 +38,7 @@
       alarm_id: '324'
       enabled: 'true'
       entity_id: media_player.schlafzimmer
-    service: media_player.sonos_update_alarm
+    service: sonos.update_alarm
 '1534621226775':
   alias: sonos_bed_room_alarm_disable
   sequence:
@@ -46,7 +46,7 @@
       alarm_id: '324'
       enabled: 'false'
       entity_id: media_player.schlafzimmer
-    service: media_player.sonos_update_alarm
+    service: sonos.update_alarm
 '1535747172583':
   alias: Heizung Schlafzimmer sperren
   sequence:
