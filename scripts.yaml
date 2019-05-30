@@ -13,6 +13,9 @@
       entity_id: media_player.bad, media_player.schlafzimmer
       volume_level: '0.10'
     service: media_player.volume_set
+  - data:
+      entity_id: media_player.schlafzimmer
+    service: media_player.media_play
 '1532175994947':
   alias: Sonos_Stop
   sequence:
