@@ -137,11 +137,11 @@ xiaomi_aqara:
     - key: !secret xiaomi_gateway
 
 mqtt:
-  broker: 192.168.200.50
+  broker: 192.168.200.33
   port: 1883
   client_id: home-assistant-1
   keepalive: 60
-  username: homeassistant  
+  username: mqtt_user  
   password: !secret mqtt_password
 
 influxdb:
